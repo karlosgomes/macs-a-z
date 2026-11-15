@@ -8,10 +8,59 @@
 | **Avaliação** | em dinheiro | 100 pontos | marcas numa fila |
 | **Precisa de dinheiro?** | sim | não | não |
 | **Parte justa garantida?** | sim | sim | sim (com marcas exatas) |
-| **Livre de inveja?** | não | sim | não |
+| **Livre de inveja?** | só com 2 jogadores | sim | não |
 | **O que sobra** | excedente em dinheiro | — | itens (sorteio) |
 :::
 
 ::: {.destaque .teal .fragment}
 Não há um método «melhor»: a escolha depende da **situação** (heranças, divórcios, tarefas, doces…).
 :::
+
+## Proporcional ou livre de inveja? {#inveja}
+
+::: {.columns}
+::: {.column width="48%"}
+::: {.cartao .verde .fragment}
+[⚖️ Proporcional]{.tcartao}
+Cada um recebe, **na sua avaliação**, pelo menos $\frac{1}{N}$ do total: a sua **parte justa**.
+:::
+
+::: {.cartao .roxo .fragment}
+[🙂 Livre de inveja]{.tcartao}
+Ninguém prefere a parte de outro à sua. A parte do outro avalia-se **com os olhos de quem inveja**.
+:::
+:::
+
+::: {.column width="52%"}
+::: {.destaque .teal .fragment}
+**Livre de inveja ⟹ proporcional**: se a minha parte vale pelo menos tanto como cada uma das outras, vale pelo menos a média, $\frac{1}{N}$.
+:::
+
+::: {.destaque .fragment}
+**Com 2 jogadores, também ⟸**: as duas partes somam o meu total; se a minha vale $\geq \frac12$, a do outro vale $\leq \frac12$.
+:::
+
+::: {.destaque .coral .fragment}
+**Com 3 ou mais, não**: na minha avaliação, eu fico com 35 %, o Bruno com 50 % e o Carlos com 15 %. Tenho mais do que $\frac13$… e invejo o Bruno.
+:::
+:::
+:::
+
+## Inveja nos três métodos {#inveja-metodos}
+
+::: {style="font-size: .85em"}
+| | Proporcional | Livre de inveja | Porquê |
+|:--|:--:|:--:|:--|
+| **Licitações secretas** | sim | só com 2 jogadores | Exame 2015: para a Alice, a parte da Camila vale $730$ e a sua $710$ ([Problema 2](#lic-p2)) |
+| **Ajuste na Partilha** | sim | sim | Cada um fica com $\geq 50$ pontos: a parte do outro vale-lhe $\leq 50$ |
+| **Marcadores** | sim (marcas exatas) | não | Antes das sobras, para o Bruno, a sua parte vale $2$ e a da Carla $3$ ([Problema 4](#mk-p4)) |
+:::
+
+::: {.destaque .teal .fragment}
+**Para verificar:** faz-se uma tabela «quanto vale, **para X**, a parte de cada um», uma linha por jogador. Há inveja se, numa linha, outro valor for **maior** do que o da própria pessoa.
+:::
+
+::: {.fragment}
+Nas licitações, o excedente é dividido em partes iguais, mas cada um avalia os itens à sua maneira: o dinheiro compensa cada um **na sua escala**, não na dos outros. [↗ Ver na app Divisão Justa (opção «Inveja»)](https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=lic&ex=2&inv&passo=8){.app-python target="_blank"}
+:::
+

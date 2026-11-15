@@ -305,7 +305,7 @@ document.addEventListener('fullscreenchange', () => {
 <li><strong>Ajuste na Partilha</strong> <em>(Adjusted Winner)</em> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></li>
 <li><strong>Marcadores</strong> · <a href="#/mk">Resumo</a> · <a href="#/mk-problemas">Problemas</a></li>
 </ol>
-<p><a href="#/sintese">Síntese: os três métodos</a> · <em>Caso contínuo: em preparação</em></p>
+<p><a href="#/sintese">Síntese: os três métodos</a> · <a href="#/inveja">Proporcional ou livre de inveja?</a> · <em>Caso contínuo: em preparação</em></p>
 </div>
 </div>
 </section>
@@ -7649,6 +7649,7 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div></div>
 </section></section>
+<section>
 <section id="sintese" class="title-slide slide level1 center">
 <h1>Os três métodos do caso discreto</h1>
 <div style="font-size: .9em">
@@ -7700,7 +7701,7 @@ document.addEventListener('fullscreenchange', () => {
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Livre de inveja?</strong></td>
-<td style="text-align: center;">não</td>
+<td style="text-align: center;">só com 2 jogadores</td>
 <td style="text-align: center;">sim</td>
 <td style="text-align: center;">não</td>
 </tr>
@@ -7716,8 +7717,71 @@ document.addEventListener('fullscreenchange', () => {
 <div class="destaque teal fragment">
 <p>Não há um método «melhor»: a escolha depende da <strong>situação</strong> (heranças, divórcios, tarefas, doces…).</p>
 </div>
-
 </section>
+<section id="inveja" class="slide level2">
+<h2>Proporcional ou livre de inveja?</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="cartao verde fragment">
+<p><span class="tcartao">⚖️ Proporcional</span> Cada um recebe, <strong>na sua avaliação</strong>, pelo menos <span class="math inline">\(\frac{1}{N}\)</span> do total: a sua <strong>parte justa</strong>.</p>
+</div>
+<div class="cartao roxo fragment">
+<p><span class="tcartao">🙂 Livre de inveja</span> Ninguém prefere a parte de outro à sua. A parte do outro avalia-se <strong>com os olhos de quem inveja</strong>.</p>
+</div>
+</div><div class="column" style="width:52%;">
+<div class="destaque teal fragment">
+<p><strong>Livre de inveja ⟹ proporcional</strong>: se a minha parte vale pelo menos tanto como cada uma das outras, vale pelo menos a média, <span class="math inline">\(\frac{1}{N}\)</span>.</p>
+</div>
+<div class="destaque fragment">
+<p><strong>Com 2 jogadores, também ⟸</strong>: as duas partes somam o meu total; se a minha vale <span class="math inline">\(\geq \frac12\)</span>, a do outro vale <span class="math inline">\(\leq \frac12\)</span>.</p>
+</div>
+<div class="destaque coral fragment">
+<p><strong>Com 3 ou mais, não</strong>: na minha avaliação, eu fico com 35 %, o Bruno com 50 % e o Carlos com 15 %. Tenho mais do que <span class="math inline">\(\frac13\)</span>… e invejo o Bruno.</p>
+</div>
+</div></div>
+</section>
+<section id="inveja-metodos" class="slide level2">
+<h2>Inveja nos três métodos</h2>
+<div style="font-size: .85em">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Proporcional</th>
+<th style="text-align: center;">Livre de inveja</th>
+<th style="text-align: left;">Porquê</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Licitações secretas</strong></td>
+<td style="text-align: center;">sim</td>
+<td style="text-align: center;">só com 2 jogadores</td>
+<td style="text-align: left;">Exame 2015: para a Alice, a parte da Camila vale <span class="math inline">\(730\)</span> e a sua <span class="math inline">\(710\)</span> (<a href="#/lic-p2">Problema 2</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Ajuste na Partilha</strong></td>
+<td style="text-align: center;">sim</td>
+<td style="text-align: center;">sim</td>
+<td style="text-align: left;">Cada um fica com <span class="math inline">\(\geq 50\)</span> pontos: a parte do outro vale-lhe <span class="math inline">\(\leq 50\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Marcadores</strong></td>
+<td style="text-align: center;">sim (marcas exatas)</td>
+<td style="text-align: center;">não</td>
+<td style="text-align: left;">Antes das sobras, para o Bruno, a sua parte vale <span class="math inline">\(2\)</span> e a da Carla <span class="math inline">\(3\)</span> (<a href="#/mk-p4">Problema 4</a>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="destaque teal fragment">
+<p><strong>Para verificar:</strong> faz-se uma tabela «quanto vale, <strong>para X</strong>, a parte de cada um», uma linha por jogador. Há inveja se, numa linha, outro valor for <strong>maior</strong> do que o da própria pessoa.</p>
+</div>
+<div class="fragment">
+<p>Nas licitações, o excedente é dividido em partes iguais, mas cada um avalia os itens à sua maneira: o dinheiro compensa cada um <strong>na sua escala</strong>, não na dos outros. <a href="https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=lic&amp;ex=2&amp;inv&amp;passo=8" class="app-python" target="_blank">↗ Ver na app Divisão Justa (opção «Inveja»)</a></p>
+</div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
