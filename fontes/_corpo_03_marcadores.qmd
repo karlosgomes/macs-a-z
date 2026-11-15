@@ -186,10 +186,10 @@ Todos acabam **acima** da parte justa: 4 €, 4 € e 4,50 €.
 
 ## Método dos marcadores
 
-[Proposto por William F. Lucas (1975). $N$ jogadores e **muitos** bens pequenos, dispostos **em fila**.]{.pequeno}
+[Proposto por William F. Lucas (1975). $N$ jogadores e **muitos** itens pequenos, dispostos **em fila**.]{.pequeno}
 
 ::: {.passo .fragment}
-[0]{.num} **Preparação.** Os bens são colocados ao acaso numa fila, cuja ordem não se altera.
+[0]{.num} **Preparação.** Os itens são colocados ao acaso numa fila, cuja ordem não se altera.
 :::
 ::: {.passo .fragment}
 [1]{.num} **Licitação.** Cada jogador coloca, em segredo, $N-1$ **marcas**, dividindo a fila em $N$ segmentos que considera justos.
@@ -201,7 +201,7 @@ Todos acabam **acima** da parte justa: 4 €, 4 € e 4,50 €.
 [3]{.num} O **último** jogador recebe o seu último segmento (da sua última marca até ao fim).
 :::
 ::: {.passo .fragment}
-[4]{.num} **Excedente.** Os bens que sobram são distribuídos por **sorteio** (cada um escolhe à vez) ou aplicando de novo o método.
+[4]{.num} **Excedente.** Os itens que sobram são distribuídos por **sorteio** (cada um escolhe à vez) ou aplicando de novo o método.
 :::
 
 ## Porque é que cada um recebe a sua parte justa?
@@ -231,8 +231,8 @@ Todos acabam **acima** da parte justa: 4 €, 4 € e 4,50 €.
 ::: {.columns}
 ::: {.column width="50%"}
 ::: {.cartao}
-[📦 Muitos bens]{.tcartao}
-Muito mais bens do que jogadores, de valor **pequeno** e **semelhante** (19 bombons e um telemóvel não serve!).
+[📦 Muitos itens]{.tcartao}
+Muito mais itens do que jogadores, de valor **pequeno** e **semelhante** (19 bombons e um telemóvel não serve!).
 :::
 ::: {.cartao .mostarda .fragment}
 [✉️ Segredo e honestidade]{.tcartao}

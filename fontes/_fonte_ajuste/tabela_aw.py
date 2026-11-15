@@ -5,8 +5,8 @@ No modelo, {{A:caso:estados}} é substituído pela tabela do «caso» com as lin
 (um número, uma lista 3,4 ou um intervalo 3-6). Estados das linhas:
   1 pontos · 2 1.ª fase (totais) · 3 ordem do ajuste (razões) · 4 transferências por inteiro (testes)
   5 equação do ajuste · 6 partilha final e pontos finais · 7 parte do outro (inveja) · 8 linha extra
-Convenção: x = fração do bem dividido que PASSA do vencedor inicial para o outro jogador:
-  V − v·x = P + p·x  (V, P: pontos de cada um nesse momento; v, p: pontos que cada um deu ao bem).
+Convenção: x = fração do item dividido que PASSA do vencedor inicial para o outro jogador:
+  V − v·x = P + p·x  (V, P: pontos de cada um nesse momento; v, p: pontos que cada um deu ao item).
 Todos os cálculos em frações exatas."""
 import re, pathlib
 from fractions import Fraction as F
@@ -85,7 +85,7 @@ class Caso:
         self.tf = dict(t)
         assert t[A] == t[B]
         # o que cada um fica a valer, para si e para o outro
-        def parte(q):  # fração de cada bem que fica com q
+        def parte(q):  # fração de cada item que fica com q
             return {b: (self.frac[b] if self.dono[b] == q else 1 - self.frac[b]) for b in ids}
         self.parte = {q: parte(q) for q in jog}
         self.outro = {q: sum(pts[q][b] * self.parte[jog[1] if q == A else A][b] for b in ids) for q in jog}

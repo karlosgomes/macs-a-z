@@ -49,7 +49,7 @@ mas um apartamento pode ser usado parte do ano por cada um (ou vendido e o dinhe
 {{A:intro:1}}
 :::
 ::: {.column width="42%" .texto-passo}
-Cada um distribui, **em segredo**, **100 pontos** pelos bens, conforme a importância que lhes dá.
+Cada um distribui, **em segredo**, **100 pontos** pelos itens, conforme a importância que lhes dá.
 
 ::: {.destaque .fragment}
 Os pontos medem **preferências**: a Madalena dá metade dos seus pontos ao gato!
@@ -57,7 +57,7 @@ Os pontos medem **preferências**: a Madalena dá metade dos seus pontos ao gato
 :::
 :::
 
-## 2.º passo: cada bem para quem mais o valoriza {auto-animate=true}
+## 2.º passo: cada item para quem mais o valoriza {auto-animate=true}
 
 ::: {.columns}
 ::: {.column width="58%"}
@@ -151,36 +151,36 @@ Na prática: a Madalena usa o apartamento $\frac35$ do ano (cerca de 7 meses), o
 
 ## Método do Ajuste na Partilha (*Adjusted Winner*)
 
-[Steven Brams e Alan Taylor (1996). **Dois** jogadores e vários bens.]{.pequeno}
+[Steven Brams e Alan Taylor (1996). **Dois** jogadores e vários itens.]{.pequeno}
 
 ::: {.passo .fragment}
-[1]{.num} **Pontos.** Cada jogador distribui, em segredo, **100 pontos** pelos bens.
+[1]{.num} **Pontos.** Cada jogador distribui, em segredo, **100 pontos** pelos itens.
 :::
 ::: {.passo .fragment}
-[2]{.num} **1.ª fase.** Cada bem vai para quem lhe deu **mais pontos**. Bens com pontos iguais vão para quem tem, nesse momento, **menos pontos**.
+[2]{.num} **1.ª fase.** Cada item vai para quem lhe deu **mais pontos**. Itens com pontos iguais vão para quem tem, nesse momento, **menos pontos**.
 :::
 ::: {.passo .fragment}
-[3]{.num} Se os totais forem **iguais**, a partilha termina. Senão, quem tem **mais** pontos é o **vencedor inicial** e vai ceder bens.
+[3]{.num} Se os totais forem **iguais**, a partilha termina. Senão, quem tem **mais** pontos é o **vencedor inicial** e vai ceder itens.
 :::
 ::: {.passo .fragment}
-[4]{.num} **2.ª fase (ajuste).** Ordenam-se os bens do vencedor inicial pela razão $\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}$, da menor para a maior, e transferem-se **por essa ordem**…
+[4]{.num} **2.ª fase (ajuste).** Ordenam-se os itens do vencedor inicial pela razão $\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}$, da menor para a maior, e transferem-se **por essa ordem**…
 :::
 ::: {.passo .fragment}
-[5]{.num} …até que um bem, transferido por inteiro, inverta a situação. Esse bem é **dividido** de modo a que ambos fiquem com o mesmo número de pontos.
+[5]{.num} …até que um item, transferido por inteiro, inverta a situação. Esse item é **dividido** de modo a que ambos fiquem com o mesmo número de pontos.
 :::
 
 ## A equação do ajuste
 
 ::: {.columns}
 ::: {.column width="55%"}
-Quando se chega ao bem que vai ser dividido:
+Quando se chega ao item que vai ser dividido:
 
 $$V - v\,x = P + p\,x \iff x = \frac{V - P}{v + p}$$
 
 ::: {.pequeno}
 - $V$, $P$: pontos do vencedor inicial e do outro jogador, **nesse momento**;
-- $v$, $p$: pontos que cada um deu ao bem a dividir;
-- $x$: fração do bem que **passa** para o outro jogador.
+- $v$, $p$: pontos que cada um deu ao item a dividir;
+- $x$: fração do item que **passa** para o outro jogador.
 :::
 :::
 
@@ -211,7 +211,7 @@ Cada um recebe pelo menos 50 pontos; a parte do outro vale, para si, no máximo 
 :::
 ::: {.cartao .verde .fragment}
 [✔ Eficiente]{.tcartao}
-Não há outra partilha que melhore um sem piorar o outro. **No máximo um bem** é dividido.
+Não há outra partilha que melhore um sem piorar o outro. **No máximo um item** é dividido.
 :::
 :::
 
@@ -221,8 +221,8 @@ Não há outra partilha que melhore um sem piorar o outro. **No máximo um bem**
 Com 3 ou mais, estas propriedades deixam de estar garantidas.
 :::
 ::: {.cartao .coral .fragment}
-[✘ Bens divisíveis]{.tcartao}
-Pode ser preciso dividir um bem, e não se sabe à partida qual.
+[✘ Itens divisíveis]{.tcartao}
+Pode ser preciso dividir um item, e não se sabe à partida qual.
 :::
 ::: {.cartao .coral .fragment}
 [✘ Honestidade]{.tcartao}
@@ -254,28 +254,28 @@ Cada um obtém $\approx 65{,}8$ pontos. No acordo real, o Egito recuperou o Sina
 ## O algoritmo em Python
 
 ```{.python code-line-numbers="|1-3|4-7|8-10|11-19"}
-bens = ["iate", "gato", "apartamento", "quadro"]
+itens = ["iate", "gato", "apartamento", "quadro"]
 A = [10, 50, 30, 10]                     # pontos da Madalena
 B = [30, 20, 20, 30]                     # pontos do Gonçalo
-# 1.ª fase: cada bem para quem dá mais pontos (sem empates)
+# 1.ª fase: cada item para quem dá mais pontos (sem empates)
 fica_A = [A[i] > B[i] for i in range(4)]
 tA = sum(A[i] for i in range(4) if fica_A[i])
 tB = sum(B[i] for i in range(4) if not fica_A[i])
-# 2.ª fase: bens da Madalena (tA > tB) por ordem crescente da razão A/B
+# 2.ª fase: itens da Madalena (tA > tB) por ordem crescente da razão A/B
 dela = [i for i in range(4) if fica_A[i]]
 dela.sort(key=lambda i: A[i] / B[i])
 for i in dela:
-    if tA - A[i] >= tB + B[i]:           # transferir o bem todo ainda não inverte
+    if tA - A[i] >= tB + B[i]:           # transferir o item todo ainda não inverte
         tA, tB = tA - A[i], tB + B[i]
-        print("Transfere", bens[i])
-    else:                                # divide-se este bem
+        print("Transfere", itens[i])
+    else:                                # divide-se este item
         x = (tA - tB) / (A[i] + B[i])
-        print("Passa", x, "do(a)", bens[i])          # 0.4 do apartamento
+        print("Passa", x, "do(a)", itens[i])          # 0.4 do apartamento
         print("Pontos finais:", tA - A[i] * x, tB + B[i] * x)   # 68.0 68.0
         break
 ```
 
-[▶ Abrir e correr na app Python](https://karlosgomes.github.io/apps-matematica/python/#codigo=YmVucyA9IFsiaWF0ZSIsICJnYXRvIiwgImFwYXJ0YW1lbnRvIiwgInF1YWRybyJdCkEgPSBbMTAsIDUwLCAzMCwgMTBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZGEgTWFkYWxlbmEKQiA9IFszMCwgMjAsIDIwLCAzMF0gICAgICAgICAgICAgICAgICAgICAjIHBvbnRvcyBkbyBHb27Dp2FsbwojIDEuwqogZmFzZTogY2FkYSBiZW0gcGFyYSBxdWVtIGTDoSBtYWlzIHBvbnRvcyAoc2VtIGVtcGF0ZXMpCmZpY2FfQSA9IFtBW2ldID4gQltpXSBmb3IgaSBpbiByYW5nZSg0KV0KdEEgPSBzdW0oQVtpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBmaWNhX0FbaV0pCnRCID0gc3VtKEJbaV0gZm9yIGkgaW4gcmFuZ2UoNCkgaWYgbm90IGZpY2FfQVtpXSkKIyAyLsKqIGZhc2U6IGJlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBiZW0gdG9kbyBhaW5kYSBuw6NvIGludmVydGUKICAgICAgICB0QSwgdEIgPSB0QSAtIEFbaV0sIHRCICsgQltpXQogICAgICAgIHByaW50KCJUcmFuc2ZlcmUiLCBiZW5zW2ldKQogICAgZWxzZTogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZGl2aWRlLXNlIGVzdGUgYmVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBiZW5zW2ldKSAgICAgICAgICAjIDAuNCBkbyBhcGFydGFtZW50bwogICAgICAgIHByaW50KCJQb250b3MgZmluYWlzOiIsIHRBIC0gQVtpXSAqIHgsIHRCICsgQltpXSAqIHgpICAgIyA2OC4wIDY4LjAKICAgICAgICBicmVhawo%3D&nome=ajuste_na_partilha.py){.app-python target="_blank"}
+[▶ Abrir e correr na app Python](https://karlosgomes.github.io/apps-matematica/python/#codigo=aXRlbnMgPSBbImlhdGUiLCAiZ2F0byIsICJhcGFydGFtZW50byIsICJxdWFkcm8iXQpBID0gWzEwLCA1MCwgMzAsIDEwXSAgICAgICAgICAgICAgICAgICAgICMgcG9udG9zIGRhIE1hZGFsZW5hCkIgPSBbMzAsIDIwLCAyMCwgMzBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZG8gR29uw6dhbG8KIyAxLsKqIGZhc2U6IGNhZGEgaXRlbSBwYXJhIHF1ZW0gZMOhIG1haXMgcG9udG9zIChzZW0gZW1wYXRlcykKZmljYV9BID0gW0FbaV0gPiBCW2ldIGZvciBpIGluIHJhbmdlKDQpXQp0QSA9IHN1bShBW2ldIGZvciBpIGluIHJhbmdlKDQpIGlmIGZpY2FfQVtpXSkKdEIgPSBzdW0oQltpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBub3QgZmljYV9BW2ldKQojIDIuwqogZmFzZTogaXRlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBpdGVtIHRvZG8gYWluZGEgbsOjbyBpbnZlcnRlCiAgICAgICAgdEEsIHRCID0gdEEgLSBBW2ldLCB0QiArIEJbaV0KICAgICAgICBwcmludCgiVHJhbnNmZXJlIiwgaXRlbnNbaV0pCiAgICBlbHNlOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBkaXZpZGUtc2UgZXN0ZSBpdGVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBpdGVuc1tpXSkgICAgICAgICAgIyAwLjQgZG8gYXBhcnRhbWVudG8KICAgICAgICBwcmludCgiUG9udG9zIGZpbmFpczoiLCB0QSAtIEFbaV0gKiB4LCB0QiArIEJbaV0gKiB4KSAgICMgNjguMCA2OC4wCiAgICAgICAgYnJlYWsK&nome=ajuste_na_partilha.py){.app-python target="_blank"}
 
 ::: notes
 Versão simplificada: supõe que a Madalena é a vencedora inicial e que não há empates. Pode pedir-se aos alunos que
@@ -284,7 +284,7 @@ generalizem (trocar os papéis quando tB > tA; tratar empates).
 
 ## Experimenta!
 
-Muda os pontos (o 4.º bem recebe o que falta para 100). [↗ Abrir na app Divisão Justa](https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=aw&ex=0){.app-python target="_blank"}
+Muda os pontos (o 4.º item recebe o que falta para 100). [↗ Abrir na app Divisão Justa](https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=aw&ex=0){.app-python target="_blank"}
 
 ::: {.columns}
 ::: {.column width="40%"}
@@ -345,7 +345,7 @@ W = {
 }
 html`<div class="ojs-tabela">
 ${PA[3] < 0 || PB[3] < 0 ? html`<p class="neg">⚠ Os pontos de cada jogador não podem passar de 100!</p>` : html`<table>
-<tr><th>Bem</th><th>Madalena</th><th>Gonçalo</th><th>Fica com…</th></tr>
+<tr><th>Item</th><th>Madalena</th><th>Gonçalo</th><th>Fica com…</th></tr>
 ${emo.map((e, i) => html`<tr><td>${e}</td><td>${PA[i]}</td><td>${PB[i]}</td><td>${
   W.s[i] === 1 ? "Madalena" : W.s[i] === 0 ? "Gonçalo" : `M ${pc(W.s[i])} · G ${pc(1 - W.s[i])}`}</td></tr>`)}
 <tr><td><b>Pontos</b></td><td><b>${f1(W.vA)}</b></td><td><b>${f1(W.vB)}</b></td><td></td></tr>
@@ -362,24 +362,24 @@ ${emo.map((e, i) => html`<tr><td>${e}</td><td>${PA[i]}</td><td>${PB[i]}</td><td>
 ::: {.cartao}
 [💯]{.emoji}
 
-Cada jogador distribui **100 pontos** pelos bens
+Cada jogador distribui **100 pontos** pelos itens
 :::
 
 ::: {.cartao .coral}
 [🏆]{.emoji}
 
-1.ª fase: cada bem para quem lhe dá **mais pontos**
+1.ª fase: cada item para quem lhe dá **mais pontos**
 :::
 
 ::: {.cartao .mostarda}
 [⚖️]{.emoji}
 
-Ajuste por ordem **crescente da razão**; no máximo um bem é dividido
+Ajuste por ordem **crescente da razão**; no máximo um item é dividido
 :::
 :::
 
 ::: {.destaque .teal .fragment}
-Para **dois** jogadores, a partilha é **equitativa**, **livre de inveja** e **eficiente**, mas pode obrigar a dividir um bem.
+Para **dois** jogadores, a partilha é **equitativa**, **livre de inveja** e **eficiente**, mas pode obrigar a dividir um item.
 :::
 
 # Ajuste na Partilha · Problemas {#aw-problemas .lista-problemas}
@@ -521,7 +521,7 @@ O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 po
 Leonido: 📣 🎨 🛠️ → $74$; Marco: as outras quatro → $38$.
 
 ::: {.fragment}
-Razões dos bens do Leonido, por ordem crescente: 🎨 $1{,}125$ < 🛠️ $\approx 1{,}143$ < 📣 $1{,}25$.
+Razões dos itens do Leonido, por ordem crescente: 🎨 $1{,}125$ < 🛠️ $\approx 1{,}143$ < 📣 $1{,}25$.
 :::
 :::
 :::

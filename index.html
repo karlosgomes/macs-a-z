@@ -996,18 +996,19 @@ document.addEventListener('fullscreenchange', () => {
 </section>
 <section id="método-das-licitações-secretas" class="slide level2">
 <h2>Método das licitações secretas</h2>
-<p><span class="pequeno">Atribuído a <strong>Bronisław Knaster</strong> e <strong>Hugo Steinhaus</strong> (c.&nbsp;1948). Há <span class="math inline">\(N\)</span> jogadores e vários bens indivisíveis.</span></p>
+<p><span class="pequeno">Atribuído a <strong>Bronisław Knaster</strong> e <strong>Hugo Steinhaus</strong> (c.&nbsp;1948). Há <span class="math inline">\(N\)</span> jogadores e vários itens indivisíveis.</span></p>
+<p><span class="pequeno">Um <strong>item</strong> pode ser um <strong>bem</strong>, que todos querem (uma casa, um prémio), ou uma <strong>tarefa</strong>, que ninguém quer fazer.</span></p>
 <div class="passo fragment">
-<p><span class="num">1</span> <strong>Licitações.</strong> Cada jogador atribui, em segredo, um valor em dinheiro a cada bem.</p>
+<p><span class="num">1</span> <strong>Licitações.</strong> Cada jogador atribui, em segredo, um valor em dinheiro a cada item.</p>
 </div>
 <div class="passo fragment">
 <p><span class="num">2</span> <strong>Parte justa.</strong> Cada jogador soma as suas licitações e divide por <span class="math inline">\(N\)</span>.</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">3</span> <strong>Atribuição.</strong> Cada bem vai para quem fez a licitação mais alta (empate: sorteio).</p>
+<p><span class="num">3</span> <strong>Atribuição.</strong> Cada item vai para quem fez a licitação mais alta (empate: sorteio).</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">4</span> <strong>Alocação provisória.</strong> Quem recebe bens que valem <strong>mais</strong> do que a sua parte justa <strong>paga</strong> a diferença para um fundo comum; quem recebe <strong>menos</strong> <strong>recebe</strong> a diferença.</p>
+<p><span class="num">4</span> <strong>Alocação provisória.</strong> Quem recebe itens que valem <strong>mais</strong> do que a sua parte justa <strong>paga</strong> a diferença para um fundo comum; quem recebe <strong>menos</strong> <strong>recebe</strong> a diferença.</p>
 </div>
 <div class="passo fragment">
 <p><span class="num">5</span> <strong>Excedente.</strong> O dinheiro que sobra no fundo é dividido em partes iguais → <strong>alocação final</strong>.</p>
@@ -1017,9 +1018,9 @@ document.addEventListener('fullscreenchange', () => {
 <h2>Em linguagem matemática</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p><span class="math inline">\(v_{ik}\)</span> — licitação do jogador <span class="math inline">\(i\)</span> pelo bem <span class="math inline">\(k\)</span></p>
+<p><span class="math inline">\(v_{ik}\)</span> — licitação do jogador <span class="math inline">\(i\)</span> pelo item <span class="math inline">\(k\)</span></p>
 <p><span class="fragment"><strong>Parte justa</strong> do jogador <span class="math inline">\(i\)</span>: <span class="math display">\[P_i = \frac{1}{N}\sum_{k} v_{ik}\]</span></span></p>
-<p><span class="fragment"><strong>Alocação provisória</strong> (se <span class="math inline">\(V_i\)</span> é o valor, para <span class="math inline">\(i\)</span>, dos bens que recebe): <span class="math display">\[A_i = V_i - P_i \quad \begin{cases} A_i &gt; 0 &amp; \text{paga} \\ A_i &lt; 0 &amp; \text{recebe}\end{cases}\]</span></span></p>
+<p><span class="fragment"><strong>Alocação provisória</strong> (se <span class="math inline">\(V_i\)</span> é o valor, para <span class="math inline">\(i\)</span>, dos itens que recebe): <span class="math display">\[A_i = V_i - P_i \quad \begin{cases} A_i &gt; 0 &amp; \text{paga} \\ A_i &lt; 0 &amp; \text{recebe}\end{cases}\]</span></span></p>
 </div><div class="column" style="width:45%;">
 <p><span class="fragment"><strong>Excedente:</strong> <span class="math display">\[E = \sum_{i} A_i = \sum_k \max_i v_{ik} - \sum_i P_i\]</span></span></p>
 <p><span class="fragment"><strong>Alocação final:</strong> <span class="math display">\[F_i = A_i - \frac{E}{N}\]</span></span></p>
@@ -1032,7 +1033,7 @@ document.addEventListener('fullscreenchange', () => {
 <h2>Pode o excedente ser negativo?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Para cada bem, compara-se a <strong>licitação mais alta</strong> com a <strong>média</strong> das licitações:</p>
+<p>Para cada item, compara-se a <strong>licitação mais alta</strong> com a <strong>média</strong> das licitações:</p>
 <p><span class="math display">\[E = \sum_{k}\Big(\underbrace{\max_i v_{ik}}_{\text{quem fica}} - \underbrace{\tfrac{1}{N}\textstyle\sum_i v_{ik}}_{\text{média}}\Big)\]</span></p>
 <div class="fragment">
 <p>O máximo de vários números nunca é menor do que a sua média, logo <span class="math display">\[E \geq 0\]</span></p>
@@ -1043,7 +1044,7 @@ document.addEventListener('fullscreenchange', () => {
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Bem</th>
+<th style="text-align: left;">Item</th>
 <th style="text-align: center;">máximo</th>
 <th style="text-align: center;">média</th>
 <th style="text-align: center;">diferença</th>
@@ -1072,7 +1073,7 @@ document.addEventListener('fullscreenchange', () => {
 </table>
 </div>
 <div class="destaque coral fragment">
-<p><span class="math inline">\(E = 0\)</span> só quando <strong>todos</strong> fazem as <strong>mesmas</strong> licitações em todos os bens.</p>
+<p><span class="math inline">\(E = 0\)</span> só quando <strong>todos</strong> fazem as <strong>mesmas</strong> licitações em todos os itens.</p>
 </div>
 </div></div>
 </section>
@@ -1082,11 +1083,11 @@ document.addEventListener('fullscreenchange', () => {
 <div class="quarto-layout-row">
 <div class="cartao quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p><span class="emoji">💰</span></p>
-<p><span class="tcartao">Dinheiro</span> Cada jogador tem dinheiro suficiente para pagar os bens que possa receber.</p>
+<p><span class="tcartao">Dinheiro</span> Cada jogador tem dinheiro suficiente para pagar os itens que possa receber.</p>
 </div>
 <div class="cartao coral quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p><span class="emoji">🏷️</span></p>
-<p><span class="tcartao">Tudo tem preço</span> Nenhum bem é «inestimável»: o dinheiro substitui qualquer bem.</p>
+<p><span class="tcartao">Tudo tem preço</span> Nenhum item é «inestimável»: o dinheiro substitui qualquer item.</p>
 </div>
 <div class="cartao mostarda quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p><span class="emoji">✉️</span></p>
@@ -1094,7 +1095,7 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 <div class="cartao verde quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p><span class="emoji">🤝</span></p>
-<p><span class="tcartao">Honestidade</span> Cada um licita o que pensa que os bens valem.</p>
+<p><span class="tcartao">Honestidade</span> Cada um licita o que pensa que os itens valem.</p>
 </div>
 </div>
 </div>
@@ -1110,7 +1111,7 @@ document.addEventListener('fullscreenchange', () => {
 <p><span class="tcartao">✔ É proporcional</span> Cada jogador recebe, <strong>na sua avaliação</strong>, pelo menos a sua parte justa (mais <span class="math inline">\(E/N\)</span>).</p>
 </div>
 <div class="cartao verde fragment">
-<p><span class="tcartao">✔ Os bens ficam com quem mais os valoriza</span></p>
+<p><span class="tcartao">✔ Os itens ficam com quem mais os valoriza</span></p>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cartao coral fragment">
@@ -1129,7 +1130,7 @@ document.addEventListener('fullscreenchange', () => {
 <span id="cb1-4"><a href=""></a>N <span class="op">=</span> <span class="bu">len</span>(jogadores)</span>
 <span id="cb1-5"><a href=""></a><span class="co"># Passo 2: parte justa de cada jogador</span></span>
 <span id="cb1-6"><a href=""></a>parte_justa <span class="op">=</span> [(casa[i] <span class="op">+</span> iate[i]) <span class="op">/</span> N <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N)]</span>
-<span id="cb1-7"><a href=""></a><span class="co"># Passo 3: cada bem vai para quem licitou mais</span></span>
+<span id="cb1-7"><a href=""></a><span class="co"># Passo 3: cada item vai para quem licitou mais</span></span>
 <span id="cb1-8"><a href=""></a>dono_casa <span class="op">=</span> casa.index(<span class="bu">max</span>(casa))</span>
 <span id="cb1-9"><a href=""></a>dono_iate <span class="op">=</span> iate.index(<span class="bu">max</span>(iate))</span>
 <span id="cb1-10"><a href=""></a><span class="co"># Passo 4: alocação provisória (+ paga, − recebe)</span></span>
@@ -1141,7 +1142,7 @@ document.addEventListener('fullscreenchange', () => {
 <span id="cb1-16"><a href=""></a>excedente <span class="op">=</span> <span class="bu">sum</span>(acerto)</span>
 <span id="cb1-17"><a href=""></a>final <span class="op">=</span> [acerto[i] <span class="op">-</span> excedente <span class="op">/</span> N <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N)]</span>
 <span id="cb1-18"><a href=""></a><span class="bu">print</span>(final)                    <span class="co"># [70.0, 40.0, -110.0]</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="https://karlosgomes.github.io/apps-matematica/python/#codigo=am9nYWRvcmVzID0gWyJBZm9uc28iLCAiQmVhdHJpeiIsICJDYXJsb3MiXQpjYXNhID0gWzEwMCwgMTgwLCAxNTBdICAgICAgICAgICMgbGljaXRhw6fDtWVzIHBlbGEgY2FzYQppYXRlID0gWzIwMCwgMTUwLCA5MF0gICAgICAgICAgICMgbGljaXRhw6fDtWVzIHBlbG8gaWF0ZQpOID0gbGVuKGpvZ2Fkb3JlcykKIyBQYXNzbyAyOiBwYXJ0ZSBqdXN0YSBkZSBjYWRhIGpvZ2Fkb3IKcGFydGVfanVzdGEgPSBbKGNhc2FbaV0gKyBpYXRlW2ldKSAvIE4gZm9yIGkgaW4gcmFuZ2UoTildCiMgUGFzc28gMzogY2FkYSBiZW0gdmFpIHBhcmEgcXVlbSBsaWNpdG91IG1haXMKZG9ub19jYXNhID0gY2FzYS5pbmRleChtYXgoY2FzYSkpCmRvbm9faWF0ZSA9IGlhdGUuaW5kZXgobWF4KGlhdGUpKQojIFBhc3NvIDQ6IGFsb2Nhw6fDo28gcHJvdmlzw7NyaWEgKCsgcGFnYSwg4oiSIHJlY2ViZSkKdmFsb3IgPSBbMF0gKiBOCnZhbG9yW2Rvbm9fY2FzYV0gPSB2YWxvcltkb25vX2Nhc2FdICsgY2FzYVtkb25vX2Nhc2FdCnZhbG9yW2Rvbm9faWF0ZV0gPSB2YWxvcltkb25vX2lhdGVdICsgaWF0ZVtkb25vX2lhdGVdCmFjZXJ0byA9IFt2YWxvcltpXSAtIHBhcnRlX2p1c3RhW2ldIGZvciBpIGluIHJhbmdlKE4pXQojIFBhc3NvIDU6IGV4Y2VkZW50ZSBkaXZpZGlkbyBlbSBwYXJ0ZXMgaWd1YWlzCmV4Y2VkZW50ZSA9IHN1bShhY2VydG8pCmZpbmFsID0gW2FjZXJ0b1tpXSAtIGV4Y2VkZW50ZSAvIE4gZm9yIGkgaW4gcmFuZ2UoTildCnByaW50KGZpbmFsKSAgICAgICAgICAgICAgICAgICAgIyBbNzAuMCwgNDAuMCwgLTExMC4wXQo%3D&amp;nome=licitacoes_secretas.py" class="app-python" target="_blank">▶ Abrir e correr na app Python</a></p>
+<p><a href="https://karlosgomes.github.io/apps-matematica/python/#codigo=am9nYWRvcmVzID0gWyJBZm9uc28iLCAiQmVhdHJpeiIsICJDYXJsb3MiXQpjYXNhID0gWzEwMCwgMTgwLCAxNTBdICAgICAgICAgICMgbGljaXRhw6fDtWVzIHBlbGEgY2FzYQppYXRlID0gWzIwMCwgMTUwLCA5MF0gICAgICAgICAgICMgbGljaXRhw6fDtWVzIHBlbG8gaWF0ZQpOID0gbGVuKGpvZ2Fkb3JlcykKIyBQYXNzbyAyOiBwYXJ0ZSBqdXN0YSBkZSBjYWRhIGpvZ2Fkb3IKcGFydGVfanVzdGEgPSBbKGNhc2FbaV0gKyBpYXRlW2ldKSAvIE4gZm9yIGkgaW4gcmFuZ2UoTildCiMgUGFzc28gMzogY2FkYSBpdGVtIHZhaSBwYXJhIHF1ZW0gbGljaXRvdSBtYWlzCmRvbm9fY2FzYSA9IGNhc2EuaW5kZXgobWF4KGNhc2EpKQpkb25vX2lhdGUgPSBpYXRlLmluZGV4KG1heChpYXRlKSkKIyBQYXNzbyA0OiBhbG9jYcOnw6NvIHByb3Zpc8OzcmlhICgrIHBhZ2EsIOKIkiByZWNlYmUpCnZhbG9yID0gWzBdICogTgp2YWxvcltkb25vX2Nhc2FdID0gdmFsb3JbZG9ub19jYXNhXSArIGNhc2FbZG9ub19jYXNhXQp2YWxvcltkb25vX2lhdGVdID0gdmFsb3JbZG9ub19pYXRlXSArIGlhdGVbZG9ub19pYXRlXQphY2VydG8gPSBbdmFsb3JbaV0gLSBwYXJ0ZV9qdXN0YVtpXSBmb3IgaSBpbiByYW5nZShOKV0KIyBQYXNzbyA1OiBleGNlZGVudGUgZGl2aWRpZG8gZW0gcGFydGVzIGlndWFpcwpleGNlZGVudGUgPSBzdW0oYWNlcnRvKQpmaW5hbCA9IFthY2VydG9baV0gLSBleGNlZGVudGUgLyBOIGZvciBpIGluIHJhbmdlKE4pXQpwcmludChmaW5hbCkgICAgICAgICAgICAgICAgICAgICMgWzcwLjAsIDQwLjAsIC0xMTAuMF0K&amp;nome=licitacoes_secretas.py" class="app-python" target="_blank">▶ Abrir e correr na app Python</a></p>
 <aside class="notes">
 <p>Em caso de empate, <code>max</code> + <code>index</code> escolhe o primeiro jogador da lista: na prática o empate decide-se por sorteio. Pode-se pedir aos alunos que abram o programa na app Python (link no diapositivo), o corram e alterem as licitações.</p>
 <style type="text/css">
@@ -1179,7 +1180,7 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a>jog <span class="op">=</span> [<span class="st">"Afonso"</span><span class="op">,</span> <span class="st">"Beatriz"</span><span class="op">,</span> <span class="st">"Carlos"</span>]</span>
-<span id="cb3-2"><a href=""></a>bens <span class="op">=</span> [[<span class="st">"casa"</span><span class="op">,</span> <span class="st">"🏠"</span>]<span class="op">,</span> [<span class="st">"iate"</span><span class="op">,</span> <span class="st">"⛵"</span>]]</span>
+<span id="cb3-2"><a href=""></a>itens <span class="op">=</span> [[<span class="st">"casa"</span><span class="op">,</span> <span class="st">"🏠"</span>]<span class="op">,</span> [<span class="st">"iate"</span><span class="op">,</span> <span class="st">"⛵"</span>]]</span>
 <span id="cb3-3"><a href=""></a>fmt <span class="op">=</span> x <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(x)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"pt-PT"</span><span class="op">,</span> {<span class="dt">maximumFractionDigits</span><span class="op">:</span> <span class="dv">2</span>})</span>
 <span id="cb3-4"><a href=""></a>acerto <span class="op">=</span> x <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(x) <span class="op">&lt;</span> <span class="fl">1e-9</span> <span class="op">?</span> <span class="st">"0"</span> <span class="op">:</span></span>
 <span id="cb3-5"><a href=""></a>  (x <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;span class="neg"&gt;paga </span><span class="sc">${</span><span class="fu">fmt</span>(x)<span class="sc">}</span><span class="vs">&lt;/span&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;span class="pos"&gt;recebe </span><span class="sc">${</span><span class="fu">fmt</span>(x)<span class="sc">}</span><span class="vs">&lt;/span&gt;`</span>)</span>
@@ -1187,13 +1188,13 @@ document.addEventListener('fullscreenchange', () => {
 <span id="cb3-7"><a href=""></a>  <span class="kw">const</span> N <span class="op">=</span> jog<span class="op">.</span><span class="at">length</span></span>
 <span id="cb3-8"><a href=""></a>  <span class="kw">const</span> pj <span class="op">=</span> jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> (L[p]<span class="op">.</span><span class="at">casa</span> <span class="op">+</span> L[p]<span class="op">.</span><span class="at">iate</span>) <span class="op">/</span> N)</span>
 <span id="cb3-9"><a href=""></a>  <span class="kw">const</span> dono <span class="op">=</span> {}<span class="op">,</span> empates <span class="op">=</span> []</span>
-<span id="cb3-10"><a href=""></a>  <span class="cf">for</span> (<span class="kw">const</span> [b] <span class="kw">of</span> bens) {</span>
+<span id="cb3-10"><a href=""></a>  <span class="cf">for</span> (<span class="kw">const</span> [b] <span class="kw">of</span> itens) {</span>
 <span id="cb3-11"><a href=""></a>    <span class="kw">const</span> m <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> L[p][b]))</span>
 <span id="cb3-12"><a href=""></a>    <span class="kw">const</span> ws <span class="op">=</span> jog<span class="op">.</span><span class="fu">filter</span>(p <span class="kw">=&gt;</span> L[p][b] <span class="op">===</span> m)</span>
 <span id="cb3-13"><a href=""></a>    dono[b] <span class="op">=</span> ws[<span class="dv">0</span>]</span>
 <span id="cb3-14"><a href=""></a>    <span class="cf">if</span> (ws<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">1</span>) empates<span class="op">.</span><span class="fu">push</span>(b)</span>
 <span id="cb3-15"><a href=""></a>  }</span>
-<span id="cb3-16"><a href=""></a>  <span class="kw">const</span> val <span class="op">=</span> jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> bens<span class="op">.</span><span class="fu">filter</span>(([b]) <span class="kw">=&gt;</span> dono[b] <span class="op">===</span> p)<span class="op">.</span><span class="fu">reduce</span>((s<span class="op">,</span> [b]) <span class="kw">=&gt;</span> s <span class="op">+</span> L[p][b]<span class="op">,</span> <span class="dv">0</span>))</span>
+<span id="cb3-16"><a href=""></a>  <span class="kw">const</span> val <span class="op">=</span> jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> itens<span class="op">.</span><span class="fu">filter</span>(([b]) <span class="kw">=&gt;</span> dono[b] <span class="op">===</span> p)<span class="op">.</span><span class="fu">reduce</span>((s<span class="op">,</span> [b]) <span class="kw">=&gt;</span> s <span class="op">+</span> L[p][b]<span class="op">,</span> <span class="dv">0</span>))</span>
 <span id="cb3-17"><a href=""></a>  <span class="kw">const</span> ini <span class="op">=</span> jog<span class="op">.</span><span class="fu">map</span>((p<span class="op">,</span> i) <span class="kw">=&gt;</span> val[i] <span class="op">-</span> pj[i])</span>
 <span id="cb3-18"><a href=""></a>  <span class="kw">const</span> <span class="cn">E</span> <span class="op">=</span> ini<span class="op">.</span><span class="fu">reduce</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">+</span> b<span class="op">,</span> <span class="dv">0</span>)</span>
 <span id="cb3-19"><a href=""></a>  <span class="kw">const</span> fin <span class="op">=</span> ini<span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a <span class="op">-</span> <span class="cn">E</span> <span class="op">/</span> N)</span>
@@ -1202,7 +1203,7 @@ document.addEventListener('fullscreenchange', () => {
 <span id="cb3-22"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;div class="ojs-tabela"&gt;&lt;table&gt;</span></span>
 <span id="cb3-23"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;&lt;/th&gt;</span><span class="sc">${</span>jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;th&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;/th&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
 <span id="cb3-24"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;Parte justa&lt;/td&gt;</span><span class="sc">${</span>R<span class="op">.</span><span class="at">pj</span><span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;</span><span class="sc">${</span><span class="fu">fmt</span>(x)<span class="sc">}</span><span class="vs">&lt;/td&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
-<span id="cb3-25"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;Bens&lt;/td&gt;</span><span class="sc">${</span>jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;</span><span class="sc">${</span>bens<span class="op">.</span><span class="fu">filter</span>(([b]) <span class="kw">=&gt;</span> R<span class="op">.</span><span class="at">dono</span>[b] <span class="op">===</span> p)<span class="op">.</span><span class="fu">map</span>(([b<span class="op">,</span> e]) <span class="kw">=&gt;</span> e)<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>) <span class="op">||</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
+<span id="cb3-25"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;Itens&lt;/td&gt;</span><span class="sc">${</span>jog<span class="op">.</span><span class="fu">map</span>(p <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;</span><span class="sc">${</span>itens<span class="op">.</span><span class="fu">filter</span>(([b]) <span class="kw">=&gt;</span> R<span class="op">.</span><span class="at">dono</span>[b] <span class="op">===</span> p)<span class="op">.</span><span class="fu">map</span>(([b<span class="op">,</span> e]) <span class="kw">=&gt;</span> e)<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>) <span class="op">||</span> <span class="st">"—"</span><span class="sc">}</span><span class="vs">&lt;/td&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
 <span id="cb3-26"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;Alocação provisória&lt;/td&gt;</span><span class="sc">${</span>R<span class="op">.</span><span class="at">ini</span><span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;</span><span class="sc">${</span><span class="fu">acerto</span>(x)<span class="sc">}</span><span class="vs">&lt;/td&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
 <span id="cb3-27"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Excedente&lt;/b&gt;&lt;/td&gt;&lt;td colspan="3"&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">fmt</span>(R<span class="op">.</span><span class="at">E</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt; → </span><span class="sc">${</span><span class="fu">fmt</span>(R<span class="op">.</span><span class="at">E</span> <span class="op">/</span> <span class="dv">3</span>)<span class="sc">}</span><span class="vs"> para cada&lt;/td&gt;&lt;/tr&gt;</span></span>
 <span id="cb3-28"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Alocação final&lt;/b&gt;&lt;/td&gt;</span><span class="sc">${</span>R<span class="op">.</span><span class="at">fin</span><span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">acerto</span>(x)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;`</span>)<span class="sc">}</span><span class="vs">&lt;/tr&gt;</span></span>
@@ -1265,7 +1266,7 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 <div class="cartao coral quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="emoji">⚖️</span></p>
-<p>Cada bem para quem <strong>licita mais</strong>; acerto com a parte justa</p>
+<p>Cada item para quem <strong>licita mais</strong>; acerto com a parte justa</p>
 </div>
 <div class="cartao mostarda quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="emoji">🎁</span></p>
@@ -3496,14 +3497,14 @@ document.addEventListener('fullscreenchange', () => {
 </table>
 </div>
 </div><div class="column texto-passo" style="width:42%;">
-<p>Cada um distribui, <strong>em segredo</strong>, <strong>100 pontos</strong> pelos bens, conforme a importância que lhes dá.</p>
+<p>Cada um distribui, <strong>em segredo</strong>, <strong>100 pontos</strong> pelos itens, conforme a importância que lhes dá.</p>
 <div class="destaque fragment">
 <p>Os pontos medem <strong>preferências</strong>: a Madalena dá metade dos seus pontos ao gato!</p>
 </div>
 </div></div>
 </section>
-<section id="º-passo-cada-bem-para-quem-mais-o-valoriza" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">2.º passo: cada bem para quem mais o valoriza</h2>
+<section id="º-passo-cada-item-para-quem-mais-o-valoriza" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">2.º passo: cada item para quem mais o valoriza</h2>
 <div class="columns">
 <div class="column" style="width:58%;">
 <div class="tabela-metodo aw" data-id="tabmetodo">
@@ -3956,34 +3957,34 @@ document.addEventListener('fullscreenchange', () => {
 </section>
 <section id="método-do-ajuste-na-partilha-adjusted-winner" class="slide level2">
 <h2>Método do Ajuste na Partilha (<em>Adjusted Winner</em>)</h2>
-<p><span class="pequeno">Steven Brams e Alan Taylor (1996). <strong>Dois</strong> jogadores e vários bens.</span></p>
+<p><span class="pequeno">Steven Brams e Alan Taylor (1996). <strong>Dois</strong> jogadores e vários itens.</span></p>
 <div class="passo fragment">
-<p><span class="num">1</span> <strong>Pontos.</strong> Cada jogador distribui, em segredo, <strong>100 pontos</strong> pelos bens.</p>
+<p><span class="num">1</span> <strong>Pontos.</strong> Cada jogador distribui, em segredo, <strong>100 pontos</strong> pelos itens.</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">2</span> <strong>1.ª fase.</strong> Cada bem vai para quem lhe deu <strong>mais pontos</strong>. Bens com pontos iguais vão para quem tem, nesse momento, <strong>menos pontos</strong>.</p>
+<p><span class="num">2</span> <strong>1.ª fase.</strong> Cada item vai para quem lhe deu <strong>mais pontos</strong>. Itens com pontos iguais vão para quem tem, nesse momento, <strong>menos pontos</strong>.</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">3</span> Se os totais forem <strong>iguais</strong>, a partilha termina. Senão, quem tem <strong>mais</strong> pontos é o <strong>vencedor inicial</strong> e vai ceder bens.</p>
+<p><span class="num">3</span> Se os totais forem <strong>iguais</strong>, a partilha termina. Senão, quem tem <strong>mais</strong> pontos é o <strong>vencedor inicial</strong> e vai ceder itens.</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">4</span> <strong>2.ª fase (ajuste).</strong> Ordenam-se os bens do vencedor inicial pela razão <span class="math inline">\(\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}\)</span>, da menor para a maior, e transferem-se <strong>por essa ordem</strong>…</p>
+<p><span class="num">4</span> <strong>2.ª fase (ajuste).</strong> Ordenam-se os itens do vencedor inicial pela razão <span class="math inline">\(\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}\)</span>, da menor para a maior, e transferem-se <strong>por essa ordem</strong>…</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">5</span> …até que um bem, transferido por inteiro, inverta a situação. Esse bem é <strong>dividido</strong> de modo a que ambos fiquem com o mesmo número de pontos.</p>
+<p><span class="num">5</span> …até que um item, transferido por inteiro, inverta a situação. Esse item é <strong>dividido</strong> de modo a que ambos fiquem com o mesmo número de pontos.</p>
 </div>
 </section>
 <section id="a-equação-do-ajuste" class="slide level2">
 <h2>A equação do ajuste</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>Quando se chega ao bem que vai ser dividido:</p>
+<p>Quando se chega ao item que vai ser dividido:</p>
 <p><span class="math display">\[V - v\,x = P + p\,x \iff x = \frac{V - P}{v + p}\]</span></p>
 <div class="pequeno">
 <ul>
 <li><span class="math inline">\(V\)</span>, <span class="math inline">\(P\)</span>: pontos do vencedor inicial e do outro jogador, <strong>nesse momento</strong>;</li>
-<li><span class="math inline">\(v\)</span>, <span class="math inline">\(p\)</span>: pontos que cada um deu ao bem a dividir;</li>
-<li><span class="math inline">\(x\)</span>: fração do bem que <strong>passa</strong> para o outro jogador.</li>
+<li><span class="math inline">\(v\)</span>, <span class="math inline">\(p\)</span>: pontos que cada um deu ao item a dividir;</li>
+<li><span class="math inline">\(x\)</span>: fração do item que <strong>passa</strong> para o outro jogador.</li>
 </ul>
 </div>
 </div><div class="column" style="width:45%;">
@@ -4005,14 +4006,14 @@ document.addEventListener('fullscreenchange', () => {
 <p><span class="tcartao">✔ Livre de inveja</span> Cada um recebe pelo menos 50 pontos; a parte do outro vale, para si, no máximo 50.</p>
 </div>
 <div class="cartao verde fragment">
-<p><span class="tcartao">✔ Eficiente</span> Não há outra partilha que melhore um sem piorar o outro. <strong>No máximo um bem</strong> é dividido.</p>
+<p><span class="tcartao">✔ Eficiente</span> Não há outra partilha que melhore um sem piorar o outro. <strong>No máximo um item</strong> é dividido.</p>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cartao coral fragment">
 <p><span class="tcartao">✘ Só 2 jogadores</span> Com 3 ou mais, estas propriedades deixam de estar garantidas.</p>
 </div>
 <div class="cartao coral fragment">
-<p><span class="tcartao">✘ Bens divisíveis</span> Pode ser preciso dividir um bem, e não se sabe à partida qual.</p>
+<p><span class="tcartao">✘ Itens divisíveis</span> Pode ser preciso dividir um item, e não se sabe à partida qual.</p>
 </div>
 <div class="cartao coral fragment">
 <p><span class="tcartao">✘ Honestidade</span> Quem conhece os pontos do outro pode tirar partido disso (<strong>Problema 5</strong>).</p>
@@ -4123,26 +4124,26 @@ document.addEventListener('fullscreenchange', () => {
 </section>
 <section id="o-algoritmo-em-python-1" class="slide level2">
 <h2>O algoritmo em Python</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-code-line-numbers="|1-3|4-7|8-10|11-19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>bens <span class="op">=</span> [<span class="st">"iate"</span>, <span class="st">"gato"</span>, <span class="st">"apartamento"</span>, <span class="st">"quadro"</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-code-line-numbers="|1-3|4-7|8-10|11-19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>itens <span class="op">=</span> [<span class="st">"iate"</span>, <span class="st">"gato"</span>, <span class="st">"apartamento"</span>, <span class="st">"quadro"</span>]</span>
 <span id="cb4-2"><a href=""></a>A <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">30</span>, <span class="dv">10</span>]                     <span class="co"># pontos da Madalena</span></span>
 <span id="cb4-3"><a href=""></a>B <span class="op">=</span> [<span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">30</span>]                     <span class="co"># pontos do Gonçalo</span></span>
-<span id="cb4-4"><a href=""></a><span class="co"># 1.ª fase: cada bem para quem dá mais pontos (sem empates)</span></span>
+<span id="cb4-4"><a href=""></a><span class="co"># 1.ª fase: cada item para quem dá mais pontos (sem empates)</span></span>
 <span id="cb4-5"><a href=""></a>fica_A <span class="op">=</span> [A[i] <span class="op">&gt;</span> B[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span>
 <span id="cb4-6"><a href=""></a>tA <span class="op">=</span> <span class="bu">sum</span>(A[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> fica_A[i])</span>
 <span id="cb4-7"><a href=""></a>tB <span class="op">=</span> <span class="bu">sum</span>(B[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> <span class="kw">not</span> fica_A[i])</span>
-<span id="cb4-8"><a href=""></a><span class="co"># 2.ª fase: bens da Madalena (tA &gt; tB) por ordem crescente da razão A/B</span></span>
+<span id="cb4-8"><a href=""></a><span class="co"># 2.ª fase: itens da Madalena (tA &gt; tB) por ordem crescente da razão A/B</span></span>
 <span id="cb4-9"><a href=""></a>dela <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> fica_A[i]]</span>
 <span id="cb4-10"><a href=""></a>dela.sort(key<span class="op">=</span><span class="kw">lambda</span> i: A[i] <span class="op">/</span> B[i])</span>
 <span id="cb4-11"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> dela:</span>
-<span id="cb4-12"><a href=""></a>    <span class="cf">if</span> tA <span class="op">-</span> A[i] <span class="op">&gt;=</span> tB <span class="op">+</span> B[i]:           <span class="co"># transferir o bem todo ainda não inverte</span></span>
+<span id="cb4-12"><a href=""></a>    <span class="cf">if</span> tA <span class="op">-</span> A[i] <span class="op">&gt;=</span> tB <span class="op">+</span> B[i]:           <span class="co"># transferir o item todo ainda não inverte</span></span>
 <span id="cb4-13"><a href=""></a>        tA, tB <span class="op">=</span> tA <span class="op">-</span> A[i], tB <span class="op">+</span> B[i]</span>
-<span id="cb4-14"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Transfere"</span>, bens[i])</span>
-<span id="cb4-15"><a href=""></a>    <span class="cf">else</span>:                                <span class="co"># divide-se este bem</span></span>
+<span id="cb4-14"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Transfere"</span>, itens[i])</span>
+<span id="cb4-15"><a href=""></a>    <span class="cf">else</span>:                                <span class="co"># divide-se este item</span></span>
 <span id="cb4-16"><a href=""></a>        x <span class="op">=</span> (tA <span class="op">-</span> tB) <span class="op">/</span> (A[i] <span class="op">+</span> B[i])</span>
-<span id="cb4-17"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Passa"</span>, x, <span class="st">"do(a)"</span>, bens[i])          <span class="co"># 0.4 do apartamento</span></span>
+<span id="cb4-17"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Passa"</span>, x, <span class="st">"do(a)"</span>, itens[i])          <span class="co"># 0.4 do apartamento</span></span>
 <span id="cb4-18"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Pontos finais:"</span>, tA <span class="op">-</span> A[i] <span class="op">*</span> x, tB <span class="op">+</span> B[i] <span class="op">*</span> x)   <span class="co"># 68.0 68.0</span></span>
 <span id="cb4-19"><a href=""></a>        <span class="cf">break</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="https://karlosgomes.github.io/apps-matematica/python/#codigo=YmVucyA9IFsiaWF0ZSIsICJnYXRvIiwgImFwYXJ0YW1lbnRvIiwgInF1YWRybyJdCkEgPSBbMTAsIDUwLCAzMCwgMTBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZGEgTWFkYWxlbmEKQiA9IFszMCwgMjAsIDIwLCAzMF0gICAgICAgICAgICAgICAgICAgICAjIHBvbnRvcyBkbyBHb27Dp2FsbwojIDEuwqogZmFzZTogY2FkYSBiZW0gcGFyYSBxdWVtIGTDoSBtYWlzIHBvbnRvcyAoc2VtIGVtcGF0ZXMpCmZpY2FfQSA9IFtBW2ldID4gQltpXSBmb3IgaSBpbiByYW5nZSg0KV0KdEEgPSBzdW0oQVtpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBmaWNhX0FbaV0pCnRCID0gc3VtKEJbaV0gZm9yIGkgaW4gcmFuZ2UoNCkgaWYgbm90IGZpY2FfQVtpXSkKIyAyLsKqIGZhc2U6IGJlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBiZW0gdG9kbyBhaW5kYSBuw6NvIGludmVydGUKICAgICAgICB0QSwgdEIgPSB0QSAtIEFbaV0sIHRCICsgQltpXQogICAgICAgIHByaW50KCJUcmFuc2ZlcmUiLCBiZW5zW2ldKQogICAgZWxzZTogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZGl2aWRlLXNlIGVzdGUgYmVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBiZW5zW2ldKSAgICAgICAgICAjIDAuNCBkbyBhcGFydGFtZW50bwogICAgICAgIHByaW50KCJQb250b3MgZmluYWlzOiIsIHRBIC0gQVtpXSAqIHgsIHRCICsgQltpXSAqIHgpICAgIyA2OC4wIDY4LjAKICAgICAgICBicmVhawo%3D&amp;nome=ajuste_na_partilha.py" class="app-python" target="_blank">▶ Abrir e correr na app Python</a></p>
+<p><a href="https://karlosgomes.github.io/apps-matematica/python/#codigo=aXRlbnMgPSBbImlhdGUiLCAiZ2F0byIsICJhcGFydGFtZW50byIsICJxdWFkcm8iXQpBID0gWzEwLCA1MCwgMzAsIDEwXSAgICAgICAgICAgICAgICAgICAgICMgcG9udG9zIGRhIE1hZGFsZW5hCkIgPSBbMzAsIDIwLCAyMCwgMzBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZG8gR29uw6dhbG8KIyAxLsKqIGZhc2U6IGNhZGEgaXRlbSBwYXJhIHF1ZW0gZMOhIG1haXMgcG9udG9zIChzZW0gZW1wYXRlcykKZmljYV9BID0gW0FbaV0gPiBCW2ldIGZvciBpIGluIHJhbmdlKDQpXQp0QSA9IHN1bShBW2ldIGZvciBpIGluIHJhbmdlKDQpIGlmIGZpY2FfQVtpXSkKdEIgPSBzdW0oQltpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBub3QgZmljYV9BW2ldKQojIDIuwqogZmFzZTogaXRlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBpdGVtIHRvZG8gYWluZGEgbsOjbyBpbnZlcnRlCiAgICAgICAgdEEsIHRCID0gdEEgLSBBW2ldLCB0QiArIEJbaV0KICAgICAgICBwcmludCgiVHJhbnNmZXJlIiwgaXRlbnNbaV0pCiAgICBlbHNlOiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBkaXZpZGUtc2UgZXN0ZSBpdGVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBpdGVuc1tpXSkgICAgICAgICAgIyAwLjQgZG8gYXBhcnRhbWVudG8KICAgICAgICBwcmludCgiUG9udG9zIGZpbmFpczoiLCB0QSAtIEFbaV0gKiB4LCB0QiArIEJbaV0gKiB4KSAgICMgNjguMCA2OC4wCiAgICAgICAgYnJlYWsK&amp;nome=ajuste_na_partilha.py" class="app-python" target="_blank">▶ Abrir e correr na app Python</a></p>
 <aside class="notes">
 <p>Versão simplificada: supõe que a Madalena é a vencedora inicial e que não há empates. Pode pedir-se aos alunos que generalizem (trocar os papéis quando tB &gt; tA; tratar empates).</p>
 <style type="text/css">
@@ -4159,7 +4160,7 @@ document.addEventListener('fullscreenchange', () => {
 </section>
 <section id="experimenta-1" class="slide level2">
 <h2>Experimenta!</h2>
-<p>Muda os pontos (o 4.º bem recebe o que falta para 100). <a href="https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=aw&amp;ex=0" class="app-python" target="_blank">↗ Abrir na app Divisão Justa</a></p>
+<p>Muda os pontos (o 4.º item recebe o que falta para 100). <a href="https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=aw&amp;ex=0" class="app-python" target="_blank">↗ Abrir na app Divisão Justa</a></p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
@@ -4229,7 +4230,7 @@ document.addEventListener('fullscreenchange', () => {
 <span id="cb6-37"><a href=""></a>}</span>
 <span id="cb6-38"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;div class="ojs-tabela"&gt;</span></span>
 <span id="cb6-39"><a href=""></a><span class="sc">${</span>PA[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> PB[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p class="neg"&gt;⚠ Os pontos de cada jogador não podem passar de 100!&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table&gt;</span></span>
-<span id="cb6-40"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;Bem&lt;/th&gt;&lt;th&gt;Madalena&lt;/th&gt;&lt;th&gt;Gonçalo&lt;/th&gt;&lt;th&gt;Fica com…&lt;/th&gt;&lt;/tr&gt;</span></span>
+<span id="cb6-40"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;Item&lt;/th&gt;&lt;th&gt;Madalena&lt;/th&gt;&lt;th&gt;Gonçalo&lt;/th&gt;&lt;th&gt;Fica com…&lt;/th&gt;&lt;/tr&gt;</span></span>
 <span id="cb6-41"><a href=""></a><span class="sc">${</span>emo<span class="op">.</span><span class="fu">map</span>((e<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PA[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PB[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span></span>
 <span id="cb6-42"><a href=""></a>  W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">1</span> <span class="op">?</span> <span class="st">"Madalena"</span> <span class="op">:</span> W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"Gonçalo"</span> <span class="op">:</span> <span class="vs">`M </span><span class="sc">${</span><span class="fu">pc</span>(W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs"> · G </span><span class="sc">${</span><span class="fu">pc</span>(<span class="dv">1</span> <span class="op">-</span> W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs">`</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
 <span id="cb6-43"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pontos&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vA</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vB</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</span></span>
@@ -4294,20 +4295,20 @@ document.addEventListener('fullscreenchange', () => {
 <div class="quarto-layout-row">
 <div class="cartao quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="emoji">💯</span></p>
-<p>Cada jogador distribui <strong>100 pontos</strong> pelos bens</p>
+<p>Cada jogador distribui <strong>100 pontos</strong> pelos itens</p>
 </div>
 <div class="cartao coral quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="emoji">🏆</span></p>
-<p>1.ª fase: cada bem para quem lhe dá <strong>mais pontos</strong></p>
+<p>1.ª fase: cada item para quem lhe dá <strong>mais pontos</strong></p>
 </div>
 <div class="cartao mostarda quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="emoji">⚖️</span></p>
-<p>Ajuste por ordem <strong>crescente da razão</strong>; no máximo um bem é dividido</p>
+<p>Ajuste por ordem <strong>crescente da razão</strong>; no máximo um item é dividido</p>
 </div>
 </div>
 </div>
 <div class="destaque teal fragment">
-<p>Para <strong>dois</strong> jogadores, a partilha é <strong>equitativa</strong>, <strong>livre de inveja</strong> e <strong>eficiente</strong>, mas pode obrigar a dividir um bem.</p>
+<p>Para <strong>dois</strong> jogadores, a partilha é <strong>equitativa</strong>, <strong>livre de inveja</strong> e <strong>eficiente</strong>, mas pode obrigar a dividir um item.</p>
 </div>
 </section></section>
 <section>
@@ -5109,7 +5110,7 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column texto-passo compacto" style="width:40%;">
 <p>Leonido: 📣 🎨 🛠️ → <span class="math inline">\(74\)</span>; Marco: as outras quatro → <span class="math inline">\(38\)</span>.</p>
 <div class="fragment">
-<p>Razões dos bens do Leonido, por ordem crescente: 🎨 <span class="math inline">\(1{,}125\)</span> &lt; 🛠️ <span class="math inline">\(\approx 1{,}143\)</span> &lt; 📣 <span class="math inline">\(1{,}25\)</span>.</p>
+<p>Razões dos itens do Leonido, por ordem crescente: 🎨 <span class="math inline">\(1{,}125\)</span> &lt; 🛠️ <span class="math inline">\(\approx 1{,}143\)</span> &lt; 📣 <span class="math inline">\(1{,}25\)</span>.</p>
 </div>
 </div></div>
 </section>
@@ -6445,9 +6446,9 @@ document.addEventListener('fullscreenchange', () => {
 </section>
 <section id="método-dos-marcadores" class="slide level2">
 <h2>Método dos marcadores</h2>
-<p><span class="pequeno">Proposto por William F. Lucas (1975). <span class="math inline">\(N\)</span> jogadores e <strong>muitos</strong> bens pequenos, dispostos <strong>em fila</strong>.</span></p>
+<p><span class="pequeno">Proposto por William F. Lucas (1975). <span class="math inline">\(N\)</span> jogadores e <strong>muitos</strong> itens pequenos, dispostos <strong>em fila</strong>.</span></p>
 <div class="passo fragment">
-<p><span class="num">0</span> <strong>Preparação.</strong> Os bens são colocados ao acaso numa fila, cuja ordem não se altera.</p>
+<p><span class="num">0</span> <strong>Preparação.</strong> Os itens são colocados ao acaso numa fila, cuja ordem não se altera.</p>
 </div>
 <div class="passo fragment">
 <p><span class="num">1</span> <strong>Licitação.</strong> Cada jogador coloca, em segredo, <span class="math inline">\(N-1\)</span> <strong>marcas</strong>, dividindo a fila em <span class="math inline">\(N\)</span> segmentos que considera justos.</p>
@@ -6459,7 +6460,7 @@ document.addEventListener('fullscreenchange', () => {
 <p><span class="num">3</span> O <strong>último</strong> jogador recebe o seu último segmento (da sua última marca até ao fim).</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">4</span> <strong>Excedente.</strong> Os bens que sobram são distribuídos por <strong>sorteio</strong> (cada um escolhe à vez) ou aplicando de novo o método.</p>
+<p><span class="num">4</span> <strong>Excedente.</strong> Os itens que sobram são distribuídos por <strong>sorteio</strong> (cada um escolhe à vez) ou aplicando de novo o método.</p>
 </div>
 </section>
 <section id="porque-é-que-cada-um-recebe-a-sua-parte-justa" class="slide level2">
@@ -6490,7 +6491,7 @@ document.addEventListener('fullscreenchange', () => {
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cartao">
-<p><span class="tcartao">📦 Muitos bens</span> Muito mais bens do que jogadores, de valor <strong>pequeno</strong> e <strong>semelhante</strong> (19 bombons e um telemóvel não serve!).</p>
+<p><span class="tcartao">📦 Muitos itens</span> Muito mais itens do que jogadores, de valor <strong>pequeno</strong> e <strong>semelhante</strong> (19 bombons e um telemóvel não serve!).</p>
 </div>
 <div class="cartao mostarda fragment">
 <p><span class="tcartao">✉️ Segredo e honestidade</span> As marcas são colocadas de forma independente e honesta.</p>
@@ -7674,7 +7675,7 @@ document.addEventListener('fullscreenchange', () => {
 <td style="text-align: center;">2 ou mais</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Bens</strong></td>
+<td style="text-align: left;"><strong>Itens</strong></td>
 <td style="text-align: center;">indivisíveis</td>
 <td style="text-align: center;">pelo menos um divisível</td>
 <td style="text-align: center;">muitos, pequenos e semelhantes</td>
@@ -7963,7 +7964,7 @@ document.addEventListener('fullscreenchange', () => {
     })();
     </script>
     <script type="ojs-module-contents">
-    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBMID0gSW5wdXRzLmZvcm0oe1xuICBBZm9uc286ICBJbnB1dHMuZm9ybSh7Y2FzYTogSW5wdXRzLnJhbmdlKFswLCAzMDBdLCB7dmFsdWU6IDEwMCwgc3RlcDogNSwgbGFiZWw6IFwiQWZvbnNvIPCfj6BcIn0pLFxuICAgICAgICAgICAgICAgICAgICAgICAgaWF0ZTogSW5wdXRzLnJhbmdlKFswLCAzMDBdLCB7dmFsdWU6IDIwMCwgc3RlcDogNSwgbGFiZWw6IFwiQWZvbnNvIOKbtVwifSl9KSxcbiAgQmVhdHJpejogSW5wdXRzLmZvcm0oe2Nhc2E6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiAxODAsIHN0ZXA6IDUsIGxhYmVsOiBcIkJlYXRyaXog8J+PoFwifSksXG4gICAgICAgICAgICAgICAgICAgICAgICBpYXRlOiBJbnB1dHMucmFuZ2UoWzAsIDMwMF0sIHt2YWx1ZTogMTUwLCBzdGVwOiA1LCBsYWJlbDogXCJCZWF0cml6IOKbtVwifSl9KSxcbiAgQ2FybG9zOiAgSW5wdXRzLmZvcm0oe2Nhc2E6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiAxNTAsIHN0ZXA6IDUsIGxhYmVsOiBcIkNhcmxvcyDwn4+gXCJ9KSxcbiAgICAgICAgICAgICAgICAgICAgICAgIGlhdGU6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiA5MCwgc3RlcDogNSwgbGFiZWw6IFwiQ2FybG9zIOKbtVwifSl9KVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImpvZyA9IFtcIkFmb25zb1wiLCBcIkJlYXRyaXpcIiwgXCJDYXJsb3NcIl1cbmJlbnMgPSBbW1wiY2FzYVwiLCBcIvCfj6BcIl0sIFtcImlhdGVcIiwgXCLim7VcIl1dXG5mbXQgPSB4ID0+IE1hdGguYWJzKHgpLnRvTG9jYWxlU3RyaW5nKFwicHQtUFRcIiwge21heGltdW1GcmFjdGlvbkRpZ2l0czogMn0pXG5hY2VydG8gPSB4ID0+IE1hdGguYWJzKHgpIDwgMWUtOSA/IFwiMFwiIDpcbiAgKHggPiAwID8gaHRtbGA8c3BhbiBjbGFzcz1cIm5lZ1wiPnBhZ2EgJHtmbXQoeCl9PC9zcGFuPmAgOiBodG1sYDxzcGFuIGNsYXNzPVwicG9zXCI+cmVjZWJlICR7Zm10KHgpfTwvc3Bhbj5gKVxuUiA9IHtcbiAgY29uc3QgTiA9IGpvZy5sZW5ndGhcbiAgY29uc3QgcGogPSBqb2cubWFwKHAgPT4gKExbcF0uY2FzYSArIExbcF0uaWF0ZSkgLyBOKVxuICBjb25zdCBkb25vID0ge30sIGVtcGF0ZXMgPSBbXVxuICBmb3IgKGNvbnN0IFtiXSBvZiBiZW5zKSB7XG4gICAgY29uc3QgbSA9IE1hdGgubWF4KC4uLmpvZy5tYXAocCA9PiBMW3BdW2JdKSlcbiAgICBjb25zdCB3cyA9IGpvZy5maWx0ZXIocCA9PiBMW3BdW2JdID09PSBtKVxuICAgIGRvbm9bYl0gPSB3c1swXVxuICAgIGlmICh3cy5sZW5ndGggPiAxKSBlbXBhdGVzLnB1c2goYilcbiAgfVxuICBjb25zdCB2YWwgPSBqb2cubWFwKHAgPT4gYmVucy5maWx0ZXIoKFtiXSkgPT4gZG9ub1tiXSA9PT0gcCkucmVkdWNlKChzLCBbYl0pID0+IHMgKyBMW3BdW2JdLCAwKSlcbiAgY29uc3QgaW5pID0gam9nLm1hcCgocCwgaSkgPT4gdmFsW2ldIC0gcGpbaV0pXG4gIGNvbnN0IEUgPSBpbmkucmVkdWNlKChhLCBiKSA9PiBhICsgYiwgMClcbiAgY29uc3QgZmluID0gaW5pLm1hcChhID0+IGEgLSBFIC8gTilcbiAgcmV0dXJuIHtwaiwgZG9ubywgZW1wYXRlcywgdmFsLCBpbmksIEUsIGZpbn1cbn1cbmh0bWxgPGRpdiBjbGFzcz1cIm9qcy10YWJlbGFcIj48dGFibGU+XG48dHI+PHRoPjwvdGg+JHtqb2cubWFwKHAgPT4gaHRtbGA8dGg+JHtwfTwvdGg+YCl9PC90cj5cbjx0cj48dGQ+UGFydGUganVzdGE8L3RkPiR7Ui5wai5tYXAoeCA9PiBodG1sYDx0ZD4ke2ZtdCh4KX08L3RkPmApfTwvdHI+XG48dHI+PHRkPkJlbnM8L3RkPiR7am9nLm1hcChwID0+IGh0bWxgPHRkPiR7YmVucy5maWx0ZXIoKFtiXSkgPT4gUi5kb25vW2JdID09PSBwKS5tYXAoKFtiLCBlXSkgPT4gZSkuam9pbihcIiBcIikgfHwgXCLigJRcIn08L3RkPmApfTwvdHI+XG48dHI+PHRkPkFsb2Nhw6fDo28gcHJvdmlzw7NyaWE8L3RkPiR7Ui5pbmkubWFwKHggPT4gaHRtbGA8dGQ+JHthY2VydG8oeCl9PC90ZD5gKX08L3RyPlxuPHRyPjx0ZD48Yj5FeGNlZGVudGU8L2I+PC90ZD48dGQgY29sc3Bhbj1cIjNcIj48Yj4ke2ZtdChSLkUpfTwvYj4g4oaSICR7Zm10KFIuRSAvIDMpfSBwYXJhIGNhZGE8L3RkPjwvdHI+XG48dHI+PHRkPjxiPkFsb2Nhw6fDo28gZmluYWw8L2I+PC90ZD4ke1IuZmluLm1hcCh4ID0+IGh0bWxgPHRkPjxiPiR7YWNlcnRvKHgpfTwvYj48L3RkPmApfTwvdHI+XG48dHI+PHRkPlZhbG9yIHBhcmEgbyBwcsOzcHJpbzwvdGQ+JHtSLnBqLm1hcCh4ID0+IGh0bWxgPHRkPiR7Zm10KHggKyBSLkUgLyAzKX08L3RkPmApfTwvdHI+XG48L3RhYmxlPlxuJHtSLmVtcGF0ZXMubGVuZ3RoID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBFbXBhdGUgKCR7Ui5lbXBhdGVzLmpvaW4oXCIsIFwiKX0pOiBzZXJpYSBkZWNpZGlkbyBwb3Igc29ydGVpbzsgYXF1aSBmaWNvdSBjb20gbyBwcmltZWlyby48L3A+YCA6IFwiXCJ9XG48L2Rpdj5gXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgTSA9IElucHV0cy5mb3JtKFtcbiAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7dmFsdWU6IDEwLCBzdGVwOiAxLCBsYWJlbDogXCJNYWRhbGVuYSDim7VcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogNTAsIHN0ZXA6IDEsIGxhYmVsOiBcIk1hZGFsZW5hIPCfkIhcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMzAsIHN0ZXA6IDEsIGxhYmVsOiBcIk1hZGFsZW5hIPCfj6JcIn0pXG5dKVxudmlld29mIEcgPSBJbnB1dHMuZm9ybShbXG4gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge3ZhbHVlOiAzMCwgc3RlcDogMSwgbGFiZWw6IFwiR29uw6dhbG8g4pu1XCJ9KSxcbiAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7dmFsdWU6IDIwLCBzdGVwOiAxLCBsYWJlbDogXCJHb27Dp2FsbyDwn5CIXCJ9KSxcbiAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7dmFsdWU6IDIwLCBzdGVwOiAxLCBsYWJlbDogXCJHb27Dp2FsbyDwn4+iXCJ9KVxuXSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImVtbyA9IFtcIuKbtVwiLCBcIvCfkIhcIiwgXCLwn4+iXCIsIFwi8J+WvO+4j1wiXVxuUEEgPSBbLi4uTSwgMTAwIC0gTVswXSAtIE1bMV0gLSBNWzJdXVxuUEIgPSBbLi4uRywgMTAwIC0gR1swXSAtIEdbMV0gLSBHWzJdXVxuZjEgPSB4ID0+IChNYXRoLnJvdW5kKHggKiAxMDApIC8gMTAwKS50b0xvY2FsZVN0cmluZyhcInB0LVBUXCIpXG5wYyA9IHggPT4gTWF0aC5yb3VuZCh4ICogMTAwMCkgLyAxMCArIFwiICVcIlxuVyA9IHtcbiAgY29uc3QgbiA9IDQsIHMgPSBBcnJheShuKS5maWxsKG51bGwpLCBsb2cgPSBbXVxuICBsZXQgdEEgPSAwLCB0QiA9IDBcbiAgY29uc3QgZW1wID0gW11cbiAgZm9yIChsZXQgaSA9IDA7IGkgPCBuOyBpKyspIHtcbiAgICBpZiAoUEFbaV0gPiBQQltpXSkgeyBzW2ldID0gMTsgdEEgKz0gUEFbaV0gfVxuICAgIGVsc2UgaWYgKFBCW2ldID4gUEFbaV0pIHsgc1tpXSA9IDA7IHRCICs9IFBCW2ldIH1cbiAgICBlbHNlIGVtcC5wdXNoKGkpXG4gIH1cbiAgZm9yIChjb25zdCBpIG9mIGVtcCkgeyBpZiAodEEgPD0gdEIpIHsgc1tpXSA9IDE7IHRBICs9IFBBW2ldIH0gZWxzZSB7IHNbaV0gPSAwOyB0QiArPSBQQltpXSB9IH1cbiAgbG9nLnB1c2goYDEuwqogZmFzZTogTWFkYWxlbmEgJHt0QX0sIEdvbsOnYWxvICR7dEJ9YCArIChlbXAubGVuZ3RoID8gYCAoZW1wYXRlOiAke2VtcC5tYXAoaSA9PiBlbW9baV0pLmpvaW4oXCIgXCIpfSlgIDogXCJcIikpXG4gIGlmICh0QSAhPT0gdEIpIHtcbiAgICBjb25zdCBnQSA9IHRBID4gdEIsIEd2ID0gZ0EgPyBQQSA6IFBCLCBSdiA9IGdBID8gUEIgOiBQQVxuICAgIGxldCB0RyA9IGdBID8gdEEgOiB0QiwgdFIgPSBnQSA/IHRCIDogdEFcbiAgICBjb25zdCBvd24gPSBbLi4uQXJyYXkobikua2V5cygpXS5maWx0ZXIoaSA9PiAoc1tpXSA9PT0gMSkgPT09IGdBKVxuICAgICAgLnNvcnQoKGksIGopID0+IChSdltpXSA/IEd2W2ldIC8gUnZbaV0gOiBJbmZpbml0eSkgLSAoUnZbal0gPyBHdltqXSAvIFJ2W2pdIDogSW5maW5pdHkpKVxuICAgIGZvciAoY29uc3QgaSBvZiBvd24pIHtcbiAgICAgIGlmICh0RyAtIEd2W2ldID49IHRSICsgUnZbaV0pIHtcbiAgICAgICAgdEcgLT0gR3ZbaV07IHRSICs9IFJ2W2ldOyBzW2ldID0gZ0EgPyAwIDogMVxuICAgICAgICBsb2cucHVzaChgdHJhbnNmZXJlICR7ZW1vW2ldfSBpbnRlaXJvYClcbiAgICAgICAgaWYgKHRHID09PSB0UikgYnJlYWtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGNvbnN0IHggPSAodEcgLSB0UikgLyAoR3ZbaV0gKyBSdltpXSlcbiAgICAgICAgdEcgLT0gR3ZbaV0gKiB4OyB0UiArPSBSdltpXSAqIHg7IHNbaV0gPSBnQSA/IDEgLSB4IDogeFxuICAgICAgICBsb2cucHVzaChgZGl2aWRlICR7ZW1vW2ldfTogcGFzc2EgJHtwYyh4KX0gcGFyYSAke2dBID8gXCJvIEdvbsOnYWxvXCIgOiBcImEgTWFkYWxlbmFcIn1gKVxuICAgICAgICBicmVha1xuICAgICAgfVxuICAgIH1cbiAgfVxuICBjb25zdCB2QSA9IFBBLnJlZHVjZSgodCwgYSwgaSkgPT4gdCArIGEgKiBzW2ldLCAwKSwgdkIgPSBQQi5yZWR1Y2UoKHQsIGIsIGkpID0+IHQgKyBiICogKDEgLSBzW2ldKSwgMClcbiAgcmV0dXJuIHtzLCBsb2csIHZBLCB2Qn1cbn1cbmh0bWxgPGRpdiBjbGFzcz1cIm9qcy10YWJlbGFcIj5cbiR7UEFbM10gPCAwIHx8IFBCWzNdIDwgMCA/IGh0bWxgPHAgY2xhc3M9XCJuZWdcIj7imqAgT3MgcG9udG9zIGRlIGNhZGEgam9nYWRvciBuw6NvIHBvZGVtIHBhc3NhciBkZSAxMDAhPC9wPmAgOiBodG1sYDx0YWJsZT5cbjx0cj48dGg+QmVtPC90aD48dGg+TWFkYWxlbmE8L3RoPjx0aD5Hb27Dp2FsbzwvdGg+PHRoPkZpY2EgY29t4oCmPC90aD48L3RyPlxuJHtlbW8ubWFwKChlLCBpKSA9PiBodG1sYDx0cj48dGQ+JHtlfTwvdGQ+PHRkPiR7UEFbaV19PC90ZD48dGQ+JHtQQltpXX08L3RkPjx0ZD4ke1xuICBXLnNbaV0gPT09IDEgPyBcIk1hZGFsZW5hXCIgOiBXLnNbaV0gPT09IDAgPyBcIkdvbsOnYWxvXCIgOiBgTSAke3BjKFcuc1tpXSl9IMK3IEcgJHtwYygxIC0gVy5zW2ldKX1gfTwvdGQ+PC90cj5gKX1cbjx0cj48dGQ+PGI+UG9udG9zPC9iPjwvdGQ+PHRkPjxiPiR7ZjEoVy52QSl9PC9iPjwvdGQ+PHRkPjxiPiR7ZjEoVy52Qil9PC9iPjwvdGQ+PHRkPjwvdGQ+PC90cj5cbjwvdGFibGU+XG48cD4ke1cubG9nLmpvaW4oXCIg4oaSIFwiKX08L3A+YH1cbjwvZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBNSyA9IElucHV0cy5mb3JtKHtcbiAgVGVvZG9ybzogSW5wdXRzLmZvcm0oW0lucHV0cy5yYW5nZShbMSwgOF0sIHt2YWx1ZTogMywgc3RlcDogMSwgbGFiZWw6IFwiVGVvZG9ybyAxLsKqXCJ9KSwgSW5wdXRzLnJhbmdlKFsxLCA4XSwge3ZhbHVlOiA2LCBzdGVwOiAxLCBsYWJlbDogXCJUZW9kb3JvIDIuwqpcIn0pXSksXG4gIFZhbmVzc2E6IElucHV0cy5mb3JtKFtJbnB1dHMucmFuZ2UoWzEsIDhdLCB7dmFsdWU6IDQsIHN0ZXA6IDEsIGxhYmVsOiBcIlZhbmVzc2EgMS7CqlwifSksIElucHV0cy5yYW5nZShbMSwgOF0sIHt2YWx1ZTogNSwgc3RlcDogMSwgbGFiZWw6IFwiVmFuZXNzYSAyLsKqXCJ9KV0pLFxuICBSdWR5OiAgICBJbnB1dHMuZm9ybShbSW5wdXRzLnJhbmdlKFsxLCA4XSwge3ZhbHVlOiAyLCBzdGVwOiAxLCBsYWJlbDogXCJSdWR5IDEuwqpcIn0pLCBJbnB1dHMucmFuZ2UoWzEsIDhdLCB7dmFsdWU6IDUsIHN0ZXA6IDEsIGxhYmVsOiBcIlJ1ZHkgMi7CqlwifSldKVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRvY2VzID0gW1wi8J+Nq1wiLCBcIvCfjatcIiwgXCLwn42rXCIsIFwi8J+NrFwiLCBcIvCfjaxcIiwgXCLwn42sXCIsIFwi8J+NrVwiLCBcIvCfja1cIiwgXCLwn42tXCJdXG5jb3IgPSAoe1Rlb2Rvcm86IFwicDFcIiwgVmFuZXNzYTogXCJwMlwiLCBSdWR5OiBcInAzXCJ9KVxudmFsb3JlcyA9ICh7VGVvZG9ybzoge1wi8J+Nq1wiOiAxLCBcIvCfjaxcIjogMSwgXCLwn42tXCI6IDF9LCBWYW5lc3NhOiB7XCLwn42rXCI6IDAsIFwi8J+NrFwiOiAyLCBcIvCfja1cIjogMH0sIFJ1ZHk6IHtcIvCfjatcIjogMS41LCBcIvCfjaxcIjogMC43NSwgXCLwn42tXCI6IDAuNzV9fSlcblAgPSB7XG4gIGNvbnN0IGpvZyA9IE9iamVjdC5rZXlzKE1LKSwgTiA9IDMsIG4gPSA5XG4gIGNvbnN0IG9rID0gam9nLmV2ZXJ5KHAgPT4gTUtbcF1bMF0gPCBNS1twXVsxXSlcbiAgaWYgKCFvaykgcmV0dXJuIHtva31cbiAgY29uc3QgZG9ubyA9IEFycmF5KG4gKyAxKS5maWxsKG51bGwpLCBzZWcgPSB7fSwgZW1wID0gW11cbiAgbGV0IGF0aXZvcyA9IFsuLi5qb2ddXG4gIGZvciAobGV0IGogPSAwOyBqIDwgTiAtIDE7IGorKykge1xuICAgIGNvbnN0IG0gPSBNYXRoLm1pbiguLi5hdGl2b3MubWFwKHAgPT4gTUtbcF1bal0pKVxuICAgIGNvbnN0IHdzID0gYXRpdm9zLmZpbHRlcihwID0+IE1LW3BdW2pdID09PSBtKVxuICAgIGlmICh3cy5sZW5ndGggPiAxKSBlbXAucHVzaCh3cy5qb2luKFwiIGUgXCIpKVxuICAgIGNvbnN0IHYgPSB3c1swXSwgYSA9IGogPT09IDAgPyAxIDogTUtbdl1baiAtIDFdICsgMSwgYiA9IE1LW3ZdW2pdXG4gICAgc2VnW3ZdID0gW2EsIGJdOyBhdGl2b3MgPSBhdGl2b3MuZmlsdGVyKHAgPT4gcCAhPT0gdilcbiAgfVxuICBjb25zdCB1ID0gYXRpdm9zWzBdOyBzZWdbdV0gPSBbTUtbdV1bTiAtIDJdICsgMSwgbl1cbiAgZm9yIChjb25zdCBwIG9mIGpvZykgZm9yIChsZXQgayA9IHNlZ1twXVswXTsgayA8PSBzZWdbcF1bMV07IGsrKykgZG9ub1trXSA9IHBcbiAgcmV0dXJuIHtvaywgZG9ubywgc2VnLCBlbXB9XG59XG5mbXRFID0geCA9PiB4LnRvTG9jYWxlU3RyaW5nKFwicHQtUFRcIiwge21pbmltdW1GcmFjdGlvbkRpZ2l0czogMiwgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiAyfSkgKyBcIiDigqxcIlxuaHRtbGAkeyFQLm9rID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBBIDEuwqogbWFyY2EgZGUgY2FkYSBqb2dhZG9yIHRlbSBkZSBmaWNhciBhbnRlcyBkYSAyLsKqLjwvcD5gIDogaHRtbGBcbjxkaXYgY2xhc3M9XCJsaW5oYSBjb21wYWN0YVwiPiR7ZG9jZXMuZmxhdE1hcCgoZCwgaSkgPT4ge1xuICBjb25zdCBrID0gaSArIDFcbiAgY29uc3QgaXQgPSBodG1sYDxkaXYgY2xhc3M9XCJpdCAke1AuZG9ub1trXSA/IGNvcltQLmRvbm9ba11dIDogXCJzb2JyYVwifVwiPjxzcGFuIGNsYXNzPVwiZVwiPiR7ZH08L3NwYW4+PHNwYW4gY2xhc3M9XCJuXCI+JHtrfTwvc3Bhbj48L2Rpdj5gXG4gIGlmIChrID09PSA5KSByZXR1cm4gW2l0XVxuICBjb25zdCBtcyA9IE9iamVjdC5rZXlzKE1LKS5mbGF0TWFwKHAgPT4gTUtbcF0ubWFwKChtLCBqKSA9PiBtID09PSBrID8gaHRtbGA8c3BhbiBjbGFzcz1cIm1rICR7Y29yW3BdfVwiPiR7cFswXX08c3ViPiR7aiArIDF9PC9zdWI+PC9zcGFuPmAgOiBudWxsKSkuZmlsdGVyKHggPT4geClcbiAgY29uc3QgZ2FwID0gbXMubGVuZ3RoID8gaHRtbGA8ZGl2IGNsYXNzPVwiZ2FwXCI+PGRpdiBjbGFzcz1cImJhcnJhc1wiPiR7bXN9PC9kaXY+PGRpdiBjbGFzcz1cImJhcnJhXCI+PC9kaXY+PC9kaXY+YCA6IGh0bWxgPGRpdiBjbGFzcz1cImdhcFwiPjwvZGl2PmBcbiAgcmV0dXJuIFtpdCwgZ2FwXVxufSl9PC9kaXY+XG48ZGl2IGNsYXNzPVwib2pzLXRhYmVsYVwiPjx0YWJsZT48dHI+PHRoPjwvdGg+PHRoPlNlZ21lbnRvPC90aD48dGg+VmFsZSAocGFyYSBzaSk8L3RoPjx0aD5QYXJ0ZSBqdXN0YTwvdGg+PC90cj5cbiR7T2JqZWN0LmtleXMoTUspLm1hcChwID0+IHtcbiAgY29uc3QgW2EsIGJdID0gUC5zZWdbcF1cbiAgbGV0IHYgPSAwOyBmb3IgKGxldCBrID0gYTsgayA8PSBiOyBrKyspIHYgKz0gdmFsb3Jlc1twXVtkb2Nlc1trIC0gMV1dXG4gIGNvbnN0IHBqID0ge1Rlb2Rvcm86IDMsIFZhbmVzc2E6IDIsIFJ1ZHk6IDN9W3BdXG4gIHJldHVybiBodG1sYDx0cj48dGQ+PHNwYW4gY2xhc3M9XCJxICR7Y29yW3BdfVwiIHN0eWxlPVwiZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6LjhlbTtoZWlnaHQ6LjhlbTtib3JkZXItcmFkaXVzOjNweFwiPjwvc3Bhbj4gJHtwfTwvdGQ+PHRkPiR7YSA9PT0gYiA/IGEgOiBhICsgXCLigJNcIiArIGJ9PC90ZD48dGQgY2xhc3M9XCIke3YgPj0gcGogPyBcInBvc1wiIDogXCJuZWdcIn1cIj4ke2ZtdEUodil9PC90ZD48dGQ+JHtmbXRFKHBqKX08L3RkPjwvdHI+YFxufSl9PC90YWJsZT5cbiR7UC5lbXAubGVuZ3RoID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBFbXBhdGUgKCR7UC5lbXAuam9pbihcIjsgXCIpfSk6IHNlcmlhIGRlY2lkaWRvIHBvciBzb3J0ZWlvLjwvcD5gIDogXCJcIn08L2Rpdj5gfWBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnTCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdNJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ0cnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnTUsnKSJ9XX0=
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBMID0gSW5wdXRzLmZvcm0oe1xuICBBZm9uc286ICBJbnB1dHMuZm9ybSh7Y2FzYTogSW5wdXRzLnJhbmdlKFswLCAzMDBdLCB7dmFsdWU6IDEwMCwgc3RlcDogNSwgbGFiZWw6IFwiQWZvbnNvIPCfj6BcIn0pLFxuICAgICAgICAgICAgICAgICAgICAgICAgaWF0ZTogSW5wdXRzLnJhbmdlKFswLCAzMDBdLCB7dmFsdWU6IDIwMCwgc3RlcDogNSwgbGFiZWw6IFwiQWZvbnNvIOKbtVwifSl9KSxcbiAgQmVhdHJpejogSW5wdXRzLmZvcm0oe2Nhc2E6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiAxODAsIHN0ZXA6IDUsIGxhYmVsOiBcIkJlYXRyaXog8J+PoFwifSksXG4gICAgICAgICAgICAgICAgICAgICAgICBpYXRlOiBJbnB1dHMucmFuZ2UoWzAsIDMwMF0sIHt2YWx1ZTogMTUwLCBzdGVwOiA1LCBsYWJlbDogXCJCZWF0cml6IOKbtVwifSl9KSxcbiAgQ2FybG9zOiAgSW5wdXRzLmZvcm0oe2Nhc2E6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiAxNTAsIHN0ZXA6IDUsIGxhYmVsOiBcIkNhcmxvcyDwn4+gXCJ9KSxcbiAgICAgICAgICAgICAgICAgICAgICAgIGlhdGU6IElucHV0cy5yYW5nZShbMCwgMzAwXSwge3ZhbHVlOiA5MCwgc3RlcDogNSwgbGFiZWw6IFwiQ2FybG9zIOKbtVwifSl9KVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImpvZyA9IFtcIkFmb25zb1wiLCBcIkJlYXRyaXpcIiwgXCJDYXJsb3NcIl1cbml0ZW5zID0gW1tcImNhc2FcIiwgXCLwn4+gXCJdLCBbXCJpYXRlXCIsIFwi4pu1XCJdXVxuZm10ID0geCA9PiBNYXRoLmFicyh4KS50b0xvY2FsZVN0cmluZyhcInB0LVBUXCIsIHttYXhpbXVtRnJhY3Rpb25EaWdpdHM6IDJ9KVxuYWNlcnRvID0geCA9PiBNYXRoLmFicyh4KSA8IDFlLTkgPyBcIjBcIiA6XG4gICh4ID4gMCA/IGh0bWxgPHNwYW4gY2xhc3M9XCJuZWdcIj5wYWdhICR7Zm10KHgpfTwvc3Bhbj5gIDogaHRtbGA8c3BhbiBjbGFzcz1cInBvc1wiPnJlY2ViZSAke2ZtdCh4KX08L3NwYW4+YClcblIgPSB7XG4gIGNvbnN0IE4gPSBqb2cubGVuZ3RoXG4gIGNvbnN0IHBqID0gam9nLm1hcChwID0+IChMW3BdLmNhc2EgKyBMW3BdLmlhdGUpIC8gTilcbiAgY29uc3QgZG9ubyA9IHt9LCBlbXBhdGVzID0gW11cbiAgZm9yIChjb25zdCBbYl0gb2YgaXRlbnMpIHtcbiAgICBjb25zdCBtID0gTWF0aC5tYXgoLi4uam9nLm1hcChwID0+IExbcF1bYl0pKVxuICAgIGNvbnN0IHdzID0gam9nLmZpbHRlcihwID0+IExbcF1bYl0gPT09IG0pXG4gICAgZG9ub1tiXSA9IHdzWzBdXG4gICAgaWYgKHdzLmxlbmd0aCA+IDEpIGVtcGF0ZXMucHVzaChiKVxuICB9XG4gIGNvbnN0IHZhbCA9IGpvZy5tYXAocCA9PiBpdGVucy5maWx0ZXIoKFtiXSkgPT4gZG9ub1tiXSA9PT0gcCkucmVkdWNlKChzLCBbYl0pID0+IHMgKyBMW3BdW2JdLCAwKSlcbiAgY29uc3QgaW5pID0gam9nLm1hcCgocCwgaSkgPT4gdmFsW2ldIC0gcGpbaV0pXG4gIGNvbnN0IEUgPSBpbmkucmVkdWNlKChhLCBiKSA9PiBhICsgYiwgMClcbiAgY29uc3QgZmluID0gaW5pLm1hcChhID0+IGEgLSBFIC8gTilcbiAgcmV0dXJuIHtwaiwgZG9ubywgZW1wYXRlcywgdmFsLCBpbmksIEUsIGZpbn1cbn1cbmh0bWxgPGRpdiBjbGFzcz1cIm9qcy10YWJlbGFcIj48dGFibGU+XG48dHI+PHRoPjwvdGg+JHtqb2cubWFwKHAgPT4gaHRtbGA8dGg+JHtwfTwvdGg+YCl9PC90cj5cbjx0cj48dGQ+UGFydGUganVzdGE8L3RkPiR7Ui5wai5tYXAoeCA9PiBodG1sYDx0ZD4ke2ZtdCh4KX08L3RkPmApfTwvdHI+XG48dHI+PHRkPkl0ZW5zPC90ZD4ke2pvZy5tYXAocCA9PiBodG1sYDx0ZD4ke2l0ZW5zLmZpbHRlcigoW2JdKSA9PiBSLmRvbm9bYl0gPT09IHApLm1hcCgoW2IsIGVdKSA9PiBlKS5qb2luKFwiIFwiKSB8fCBcIuKAlFwifTwvdGQ+YCl9PC90cj5cbjx0cj48dGQ+QWxvY2HDp8OjbyBwcm92aXPDs3JpYTwvdGQ+JHtSLmluaS5tYXAoeCA9PiBodG1sYDx0ZD4ke2FjZXJ0byh4KX08L3RkPmApfTwvdHI+XG48dHI+PHRkPjxiPkV4Y2VkZW50ZTwvYj48L3RkPjx0ZCBjb2xzcGFuPVwiM1wiPjxiPiR7Zm10KFIuRSl9PC9iPiDihpIgJHtmbXQoUi5FIC8gMyl9IHBhcmEgY2FkYTwvdGQ+PC90cj5cbjx0cj48dGQ+PGI+QWxvY2HDp8OjbyBmaW5hbDwvYj48L3RkPiR7Ui5maW4ubWFwKHggPT4gaHRtbGA8dGQ+PGI+JHthY2VydG8oeCl9PC9iPjwvdGQ+YCl9PC90cj5cbjx0cj48dGQ+VmFsb3IgcGFyYSBvIHByw7NwcmlvPC90ZD4ke1IucGoubWFwKHggPT4gaHRtbGA8dGQ+JHtmbXQoeCArIFIuRSAvIDMpfTwvdGQ+YCl9PC90cj5cbjwvdGFibGU+XG4ke1IuZW1wYXRlcy5sZW5ndGggPyBodG1sYDxwIGNsYXNzPVwibmVnXCI+4pqgIEVtcGF0ZSAoJHtSLmVtcGF0ZXMuam9pbihcIiwgXCIpfSk6IHNlcmlhIGRlY2lkaWRvIHBvciBzb3J0ZWlvOyBhcXVpIGZpY291IGNvbSBvIHByaW1laXJvLjwvcD5gIDogXCJcIn1cbjwvZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBNID0gSW5wdXRzLmZvcm0oW1xuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMTAsIHN0ZXA6IDEsIGxhYmVsOiBcIk1hZGFsZW5hIOKbtVwifSksXG4gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge3ZhbHVlOiA1MCwgc3RlcDogMSwgbGFiZWw6IFwiTWFkYWxlbmEg8J+QiFwifSksXG4gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge3ZhbHVlOiAzMCwgc3RlcDogMSwgbGFiZWw6IFwiTWFkYWxlbmEg8J+PolwifSlcbl0pXG52aWV3b2YgRyA9IElucHV0cy5mb3JtKFtcbiAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7dmFsdWU6IDMwLCBzdGVwOiAxLCBsYWJlbDogXCJHb27Dp2FsbyDim7VcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMjAsIHN0ZXA6IDEsIGxhYmVsOiBcIkdvbsOnYWxvIPCfkIhcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMjAsIHN0ZXA6IDEsIGxhYmVsOiBcIkdvbsOnYWxvIPCfj6JcIn0pXG5dKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZW1vID0gW1wi4pu1XCIsIFwi8J+QiFwiLCBcIvCfj6JcIiwgXCLwn5a877iPXCJdXG5QQSA9IFsuLi5NLCAxMDAgLSBNWzBdIC0gTVsxXSAtIE1bMl1dXG5QQiA9IFsuLi5HLCAxMDAgLSBHWzBdIC0gR1sxXSAtIEdbMl1dXG5mMSA9IHggPT4gKE1hdGgucm91bmQoeCAqIDEwMCkgLyAxMDApLnRvTG9jYWxlU3RyaW5nKFwicHQtUFRcIilcbnBjID0geCA9PiBNYXRoLnJvdW5kKHggKiAxMDAwKSAvIDEwICsgXCIgJVwiXG5XID0ge1xuICBjb25zdCBuID0gNCwgcyA9IEFycmF5KG4pLmZpbGwobnVsbCksIGxvZyA9IFtdXG4gIGxldCB0QSA9IDAsIHRCID0gMFxuICBjb25zdCBlbXAgPSBbXVxuICBmb3IgKGxldCBpID0gMDsgaSA8IG47IGkrKykge1xuICAgIGlmIChQQVtpXSA+IFBCW2ldKSB7IHNbaV0gPSAxOyB0QSArPSBQQVtpXSB9XG4gICAgZWxzZSBpZiAoUEJbaV0gPiBQQVtpXSkgeyBzW2ldID0gMDsgdEIgKz0gUEJbaV0gfVxuICAgIGVsc2UgZW1wLnB1c2goaSlcbiAgfVxuICBmb3IgKGNvbnN0IGkgb2YgZW1wKSB7IGlmICh0QSA8PSB0QikgeyBzW2ldID0gMTsgdEEgKz0gUEFbaV0gfSBlbHNlIHsgc1tpXSA9IDA7IHRCICs9IFBCW2ldIH0gfVxuICBsb2cucHVzaChgMS7CqiBmYXNlOiBNYWRhbGVuYSAke3RBfSwgR29uw6dhbG8gJHt0Qn1gICsgKGVtcC5sZW5ndGggPyBgIChlbXBhdGU6ICR7ZW1wLm1hcChpID0+IGVtb1tpXSkuam9pbihcIiBcIil9KWAgOiBcIlwiKSlcbiAgaWYgKHRBICE9PSB0Qikge1xuICAgIGNvbnN0IGdBID0gdEEgPiB0QiwgR3YgPSBnQSA/IFBBIDogUEIsIFJ2ID0gZ0EgPyBQQiA6IFBBXG4gICAgbGV0IHRHID0gZ0EgPyB0QSA6IHRCLCB0UiA9IGdBID8gdEIgOiB0QVxuICAgIGNvbnN0IG93biA9IFsuLi5BcnJheShuKS5rZXlzKCldLmZpbHRlcihpID0+IChzW2ldID09PSAxKSA9PT0gZ0EpXG4gICAgICAuc29ydCgoaSwgaikgPT4gKFJ2W2ldID8gR3ZbaV0gLyBSdltpXSA6IEluZmluaXR5KSAtIChSdltqXSA/IEd2W2pdIC8gUnZbal0gOiBJbmZpbml0eSkpXG4gICAgZm9yIChjb25zdCBpIG9mIG93bikge1xuICAgICAgaWYgKHRHIC0gR3ZbaV0gPj0gdFIgKyBSdltpXSkge1xuICAgICAgICB0RyAtPSBHdltpXTsgdFIgKz0gUnZbaV07IHNbaV0gPSBnQSA/IDAgOiAxXG4gICAgICAgIGxvZy5wdXNoKGB0cmFuc2ZlcmUgJHtlbW9baV19IGludGVpcm9gKVxuICAgICAgICBpZiAodEcgPT09IHRSKSBicmVha1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgY29uc3QgeCA9ICh0RyAtIHRSKSAvIChHdltpXSArIFJ2W2ldKVxuICAgICAgICB0RyAtPSBHdltpXSAqIHg7IHRSICs9IFJ2W2ldICogeDsgc1tpXSA9IGdBID8gMSAtIHggOiB4XG4gICAgICAgIGxvZy5wdXNoKGBkaXZpZGUgJHtlbW9baV19OiBwYXNzYSAke3BjKHgpfSBwYXJhICR7Z0EgPyBcIm8gR29uw6dhbG9cIiA6IFwiYSBNYWRhbGVuYVwifWApXG4gICAgICAgIGJyZWFrXG4gICAgICB9XG4gICAgfVxuICB9XG4gIGNvbnN0IHZBID0gUEEucmVkdWNlKCh0LCBhLCBpKSA9PiB0ICsgYSAqIHNbaV0sIDApLCB2QiA9IFBCLnJlZHVjZSgodCwgYiwgaSkgPT4gdCArIGIgKiAoMSAtIHNbaV0pLCAwKVxuICByZXR1cm4ge3MsIGxvZywgdkEsIHZCfVxufVxuaHRtbGA8ZGl2IGNsYXNzPVwib2pzLXRhYmVsYVwiPlxuJHtQQVszXSA8IDAgfHwgUEJbM10gPCAwID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBPcyBwb250b3MgZGUgY2FkYSBqb2dhZG9yIG7Do28gcG9kZW0gcGFzc2FyIGRlIDEwMCE8L3A+YCA6IGh0bWxgPHRhYmxlPlxuPHRyPjx0aD5JdGVtPC90aD48dGg+TWFkYWxlbmE8L3RoPjx0aD5Hb27Dp2FsbzwvdGg+PHRoPkZpY2EgY29t4oCmPC90aD48L3RyPlxuJHtlbW8ubWFwKChlLCBpKSA9PiBodG1sYDx0cj48dGQ+JHtlfTwvdGQ+PHRkPiR7UEFbaV19PC90ZD48dGQ+JHtQQltpXX08L3RkPjx0ZD4ke1xuICBXLnNbaV0gPT09IDEgPyBcIk1hZGFsZW5hXCIgOiBXLnNbaV0gPT09IDAgPyBcIkdvbsOnYWxvXCIgOiBgTSAke3BjKFcuc1tpXSl9IMK3IEcgJHtwYygxIC0gVy5zW2ldKX1gfTwvdGQ+PC90cj5gKX1cbjx0cj48dGQ+PGI+UG9udG9zPC9iPjwvdGQ+PHRkPjxiPiR7ZjEoVy52QSl9PC9iPjwvdGQ+PHRkPjxiPiR7ZjEoVy52Qil9PC9iPjwvdGQ+PHRkPjwvdGQ+PC90cj5cbjwvdGFibGU+XG48cD4ke1cubG9nLmpvaW4oXCIg4oaSIFwiKX08L3A+YH1cbjwvZGl2PmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBNSyA9IElucHV0cy5mb3JtKHtcbiAgVGVvZG9ybzogSW5wdXRzLmZvcm0oW0lucHV0cy5yYW5nZShbMSwgOF0sIHt2YWx1ZTogMywgc3RlcDogMSwgbGFiZWw6IFwiVGVvZG9ybyAxLsKqXCJ9KSwgSW5wdXRzLnJhbmdlKFsxLCA4XSwge3ZhbHVlOiA2LCBzdGVwOiAxLCBsYWJlbDogXCJUZW9kb3JvIDIuwqpcIn0pXSksXG4gIFZhbmVzc2E6IElucHV0cy5mb3JtKFtJbnB1dHMucmFuZ2UoWzEsIDhdLCB7dmFsdWU6IDQsIHN0ZXA6IDEsIGxhYmVsOiBcIlZhbmVzc2EgMS7CqlwifSksIElucHV0cy5yYW5nZShbMSwgOF0sIHt2YWx1ZTogNSwgc3RlcDogMSwgbGFiZWw6IFwiVmFuZXNzYSAyLsKqXCJ9KV0pLFxuICBSdWR5OiAgICBJbnB1dHMuZm9ybShbSW5wdXRzLnJhbmdlKFsxLCA4XSwge3ZhbHVlOiAyLCBzdGVwOiAxLCBsYWJlbDogXCJSdWR5IDEuwqpcIn0pLCBJbnB1dHMucmFuZ2UoWzEsIDhdLCB7dmFsdWU6IDUsIHN0ZXA6IDEsIGxhYmVsOiBcIlJ1ZHkgMi7CqlwifSldKVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRvY2VzID0gW1wi8J+Nq1wiLCBcIvCfjatcIiwgXCLwn42rXCIsIFwi8J+NrFwiLCBcIvCfjaxcIiwgXCLwn42sXCIsIFwi8J+NrVwiLCBcIvCfja1cIiwgXCLwn42tXCJdXG5jb3IgPSAoe1Rlb2Rvcm86IFwicDFcIiwgVmFuZXNzYTogXCJwMlwiLCBSdWR5OiBcInAzXCJ9KVxudmFsb3JlcyA9ICh7VGVvZG9ybzoge1wi8J+Nq1wiOiAxLCBcIvCfjaxcIjogMSwgXCLwn42tXCI6IDF9LCBWYW5lc3NhOiB7XCLwn42rXCI6IDAsIFwi8J+NrFwiOiAyLCBcIvCfja1cIjogMH0sIFJ1ZHk6IHtcIvCfjatcIjogMS41LCBcIvCfjaxcIjogMC43NSwgXCLwn42tXCI6IDAuNzV9fSlcblAgPSB7XG4gIGNvbnN0IGpvZyA9IE9iamVjdC5rZXlzKE1LKSwgTiA9IDMsIG4gPSA5XG4gIGNvbnN0IG9rID0gam9nLmV2ZXJ5KHAgPT4gTUtbcF1bMF0gPCBNS1twXVsxXSlcbiAgaWYgKCFvaykgcmV0dXJuIHtva31cbiAgY29uc3QgZG9ubyA9IEFycmF5KG4gKyAxKS5maWxsKG51bGwpLCBzZWcgPSB7fSwgZW1wID0gW11cbiAgbGV0IGF0aXZvcyA9IFsuLi5qb2ddXG4gIGZvciAobGV0IGogPSAwOyBqIDwgTiAtIDE7IGorKykge1xuICAgIGNvbnN0IG0gPSBNYXRoLm1pbiguLi5hdGl2b3MubWFwKHAgPT4gTUtbcF1bal0pKVxuICAgIGNvbnN0IHdzID0gYXRpdm9zLmZpbHRlcihwID0+IE1LW3BdW2pdID09PSBtKVxuICAgIGlmICh3cy5sZW5ndGggPiAxKSBlbXAucHVzaCh3cy5qb2luKFwiIGUgXCIpKVxuICAgIGNvbnN0IHYgPSB3c1swXSwgYSA9IGogPT09IDAgPyAxIDogTUtbdl1baiAtIDFdICsgMSwgYiA9IE1LW3ZdW2pdXG4gICAgc2VnW3ZdID0gW2EsIGJdOyBhdGl2b3MgPSBhdGl2b3MuZmlsdGVyKHAgPT4gcCAhPT0gdilcbiAgfVxuICBjb25zdCB1ID0gYXRpdm9zWzBdOyBzZWdbdV0gPSBbTUtbdV1bTiAtIDJdICsgMSwgbl1cbiAgZm9yIChjb25zdCBwIG9mIGpvZykgZm9yIChsZXQgayA9IHNlZ1twXVswXTsgayA8PSBzZWdbcF1bMV07IGsrKykgZG9ub1trXSA9IHBcbiAgcmV0dXJuIHtvaywgZG9ubywgc2VnLCBlbXB9XG59XG5mbXRFID0geCA9PiB4LnRvTG9jYWxlU3RyaW5nKFwicHQtUFRcIiwge21pbmltdW1GcmFjdGlvbkRpZ2l0czogMiwgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiAyfSkgKyBcIiDigqxcIlxuaHRtbGAkeyFQLm9rID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBBIDEuwqogbWFyY2EgZGUgY2FkYSBqb2dhZG9yIHRlbSBkZSBmaWNhciBhbnRlcyBkYSAyLsKqLjwvcD5gIDogaHRtbGBcbjxkaXYgY2xhc3M9XCJsaW5oYSBjb21wYWN0YVwiPiR7ZG9jZXMuZmxhdE1hcCgoZCwgaSkgPT4ge1xuICBjb25zdCBrID0gaSArIDFcbiAgY29uc3QgaXQgPSBodG1sYDxkaXYgY2xhc3M9XCJpdCAke1AuZG9ub1trXSA/IGNvcltQLmRvbm9ba11dIDogXCJzb2JyYVwifVwiPjxzcGFuIGNsYXNzPVwiZVwiPiR7ZH08L3NwYW4+PHNwYW4gY2xhc3M9XCJuXCI+JHtrfTwvc3Bhbj48L2Rpdj5gXG4gIGlmIChrID09PSA5KSByZXR1cm4gW2l0XVxuICBjb25zdCBtcyA9IE9iamVjdC5rZXlzKE1LKS5mbGF0TWFwKHAgPT4gTUtbcF0ubWFwKChtLCBqKSA9PiBtID09PSBrID8gaHRtbGA8c3BhbiBjbGFzcz1cIm1rICR7Y29yW3BdfVwiPiR7cFswXX08c3ViPiR7aiArIDF9PC9zdWI+PC9zcGFuPmAgOiBudWxsKSkuZmlsdGVyKHggPT4geClcbiAgY29uc3QgZ2FwID0gbXMubGVuZ3RoID8gaHRtbGA8ZGl2IGNsYXNzPVwiZ2FwXCI+PGRpdiBjbGFzcz1cImJhcnJhc1wiPiR7bXN9PC9kaXY+PGRpdiBjbGFzcz1cImJhcnJhXCI+PC9kaXY+PC9kaXY+YCA6IGh0bWxgPGRpdiBjbGFzcz1cImdhcFwiPjwvZGl2PmBcbiAgcmV0dXJuIFtpdCwgZ2FwXVxufSl9PC9kaXY+XG48ZGl2IGNsYXNzPVwib2pzLXRhYmVsYVwiPjx0YWJsZT48dHI+PHRoPjwvdGg+PHRoPlNlZ21lbnRvPC90aD48dGg+VmFsZSAocGFyYSBzaSk8L3RoPjx0aD5QYXJ0ZSBqdXN0YTwvdGg+PC90cj5cbiR7T2JqZWN0LmtleXMoTUspLm1hcChwID0+IHtcbiAgY29uc3QgW2EsIGJdID0gUC5zZWdbcF1cbiAgbGV0IHYgPSAwOyBmb3IgKGxldCBrID0gYTsgayA8PSBiOyBrKyspIHYgKz0gdmFsb3Jlc1twXVtkb2Nlc1trIC0gMV1dXG4gIGNvbnN0IHBqID0ge1Rlb2Rvcm86IDMsIFZhbmVzc2E6IDIsIFJ1ZHk6IDN9W3BdXG4gIHJldHVybiBodG1sYDx0cj48dGQ+PHNwYW4gY2xhc3M9XCJxICR7Y29yW3BdfVwiIHN0eWxlPVwiZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6LjhlbTtoZWlnaHQ6LjhlbTtib3JkZXItcmFkaXVzOjNweFwiPjwvc3Bhbj4gJHtwfTwvdGQ+PHRkPiR7YSA9PT0gYiA/IGEgOiBhICsgXCLigJNcIiArIGJ9PC90ZD48dGQgY2xhc3M9XCIke3YgPj0gcGogPyBcInBvc1wiIDogXCJuZWdcIn1cIj4ke2ZtdEUodil9PC90ZD48dGQ+JHtmbXRFKHBqKX08L3RkPjwvdHI+YFxufSl9PC90YWJsZT5cbiR7UC5lbXAubGVuZ3RoID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBFbXBhdGUgKCR7UC5lbXAuam9pbihcIjsgXCIpfSk6IHNlcmlhIGRlY2lkaWRvIHBvciBzb3J0ZWlvLjwvcD5gIDogXCJcIn08L2Rpdj5gfWBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnTCcpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdNJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ0cnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnTUsnKSJ9XX0=
     </script>
     <script type="module">
     if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

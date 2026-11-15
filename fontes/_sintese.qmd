@@ -4,7 +4,7 @@
 | | Licitações secretas | Ajuste na Partilha | Marcadores |
 |:--|:--:|:--:|:--:|
 | **Jogadores** | 2 ou mais | só 2 | 2 ou mais |
-| **Bens** | indivisíveis | pelo menos um divisível | muitos, pequenos e semelhantes |
+| **Itens** | indivisíveis | pelo menos um divisível | muitos, pequenos e semelhantes |
 | **Avaliação** | em dinheiro | 100 pontos | marcas numa fila |
 | **Precisa de dinheiro?** | sim | não | não |
 | **Parte justa garantida?** | sim | sim | sim (com marcas exatas) |
