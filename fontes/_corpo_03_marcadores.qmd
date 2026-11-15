@@ -286,7 +286,7 @@ primeiro jogador da lista; na prática o empate decide-se por sorteio (Problema 
 
 ## Experimenta!
 
-Escolhe onde fica cada marca (número do doce imediatamente à esquerda da marca).
+Escolhe onde fica cada marca (número do doce imediatamente à esquerda da marca). [↗ Abrir na app Divisão Justa](https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=mk&ex=0){.app-python target="_blank"}
 
 ::: {.columns}
 ::: {.column width="34%"}
