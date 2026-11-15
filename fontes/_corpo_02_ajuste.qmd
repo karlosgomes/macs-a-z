@@ -401,11 +401,11 @@ Para **dois** jogadores, a partilha é **equitativa**, **livre de inveja** e **e
 ::: {.indice-problemas}
 [1.2 · Ajuste na Partilha]{.rotulo-cap}
 
-1. [Os animais da avó](#/aw-p1)
-2. [Um empate](#/aw-p2)
-3. [Dividir o trabalho](#/aw-p3)
-4. [Será preciso partilhar?](#/aw-p4)
-5. [Vale a pena mentir?](#/aw-p5)
+1. [Os animais da avó](#aw-p1)
+2. [Um empate](#aw-p2)
+3. [Dividir o trabalho](#aw-p3)
+4. [Será preciso partilhar?](#aw-p4)
+5. [Vale a pena mentir?](#aw-p5)
 :::
 
 ## Problema 1 · Os animais da avó [básico]{.etiqueta} {#aw-p1 auto-animate=true}

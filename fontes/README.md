@@ -12,7 +12,7 @@ capa → índice → Capítulo 1 · Divisão Justa
 
 - **Navegação:** **→** passa de secção em secção e **↓** desce dentro de cada secção (`navigation-mode: vertical`). Cada diapositivo tem um link de regresso: «↩ índice» nos resumos e nas aberturas, «↩ problemas» nos problemas.
 - **Formato:** 1600×900.
-- **Links diretos:** `#/indice`, `#/lic`, `#/lic-problemas`, `#/lic-p3`, `#/aw`, `#/aw-p1`, `#/mk-problemas`, `#/sintese`, …
+- **Links diretos:** `#/indice`, `#/lic`, `#/lic-problemas`, `#/lic-p3`, … (no endereço). Nos `.qmd`, os links internos escrevem-se `[Resumo](#lic)`, sem a barra: o Quarto acrescenta-a (com `#/lic` ficava `#//lic` e ia parar à capa)
 - **Multiplex:** não é usado. As apresentações são para projetar.
 
 ## Ficheiros

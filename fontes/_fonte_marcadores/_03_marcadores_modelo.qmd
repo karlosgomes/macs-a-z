@@ -317,11 +317,11 @@ ${P.emp.length ? html`<p class="neg">⚠ Empate (${P.emp.join("; ")}): seria dec
 ::: {.indice-problemas}
 [1.3 · Marcadores]{.rotulo-cap}
 
-1. [Ler as marcas](#/mk-p1)
-2. [Marcas empatadas](#/mk-p2)
-3. [Colocar as marcas](#/mk-p3)
-4. [Há inveja?](#/mk-p4)
-5. [Quando não há cortes exatos](#/mk-p5)
+1. [Ler as marcas](#mk-p1)
+2. [Marcas empatadas](#mk-p2)
+3. [Colocar as marcas](#mk-p3)
+4. [Há inveja?](#mk-p4)
+5. [Quando não há cortes exatos](#mk-p5)
 :::
 
 ## Problema 1 · Ler as marcas [básico]{.etiqueta} {#mk-p1 auto-animate=true}

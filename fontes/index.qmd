@@ -24,11 +24,11 @@ pagetitle: "MACS A...Z — Matemática Aplicada às Ciências Sociais"
 [Capítulo 1 · Divisão Justa]{.nome-topico}
 [Modelos matemáticos na partilha · caso discreto]{.sub-topico}
 
-1. **Licitações secretas** · [Resumo](#/lic) · [Problemas](#/lic-problemas)
-2. **Ajuste na Partilha** *(Adjusted Winner)* · [Resumo](#/aw) · [Problemas](#/aw-problemas)
-3. **Marcadores** · [Resumo](#/mk) · [Problemas](#/mk-problemas)
+1. **Licitações secretas** · [Resumo](#lic) · [Problemas](#lic-problemas)
+2. **Ajuste na Partilha** *(Adjusted Winner)* · [Resumo](#aw) · [Problemas](#aw-problemas)
+3. **Marcadores** · [Resumo](#mk) · [Problemas](#mk-problemas)
 
-[Síntese: os três métodos](#/sintese) · *Caso contínuo: em preparação*
+[Síntese: os três métodos](#sintese) · *Caso contínuo: em preparação*
 :::
 :::
 

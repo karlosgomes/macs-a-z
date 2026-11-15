@@ -442,11 +442,11 @@ Todos recebem **pelo menos** a sua parte justa, mas o método **não garante aus
 ::: {.indice-problemas}
 [1.1 · Licitações secretas]{.rotulo-cap}
 
-1. [O prémio do jornal da escola](#/lic-p1)
-2. [O prémio da agência de viagens](#/lic-p2)
-3. [A herança do senhor Francisco](#/lic-p3)
-4. [A licitação desconhecida](#/lic-p4)
-5. [Partes diferentes](#/lic-p5)
+1. [O prémio do jornal da escola](#lic-p1)
+2. [O prémio da agência de viagens](#lic-p2)
+3. [A herança do senhor Francisco](#lic-p3)
+4. [A licitação desconhecida](#lic-p4)
+5. [Partes diferentes](#lic-p5)
 :::
 
 ## Problema 1 · O prémio do jornal da escola [exame]{.etiqueta} {#lic-p1 auto-animate=true}
