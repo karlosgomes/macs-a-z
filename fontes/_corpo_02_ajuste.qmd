@@ -298,7 +298,7 @@ generalizem (trocar os papéis quando tB > tA; tratar empates).
 
 ## Experimenta!
 
-Muda os pontos (o 4.º bem recebe o que falta para 100).
+Muda os pontos (o 4.º bem recebe o que falta para 100). [↗ Abrir na app Divisão Justa](https://karlosgomes.github.io/apps-matematica/divisao-justa/#m=aw&ex=0){.app-python target="_blank"}
 
 ::: {.columns}
 ::: {.column width="40%"}
