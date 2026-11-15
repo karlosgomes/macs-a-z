@@ -1,0 +1,11 @@
+# versões do professor: têm o segredo do multiplex (nunca publicar)
+*-speaker.html
+# resultados locais do Quarto (quarto preview / render) dentro das fontes
+fontes/**/0*.html
+fontes/**/0*_files/
+fontes/**/_site/
+fontes/**/.quarto/
+# capturas de ecrã e perfis do Chrome usados para rever os diapositivos
+fontes/**/_ferramentas/capturas/
+fontes/**/_ferramentas/.perfil*/
+__pycache__/

@@ -1,0 +1,384 @@
+<!-- Problemas que estavam na apresentação antes de serem substituídos pelos itens de exame (2026-11-15).
+Para voltar a usar um deles, copiar o bloco para _01_licitacoes_secretas_modelo.qmd; as tabelas {{T:p1:…}} … {{T:p5b:…}}
+continuam definidas em tabela.py. -->
+
+# Problemas {background-color="#d1495b" .secao}
+
+## Problema 1 · Quatro irmãos [herança]{.etiqueta}
+
+O António, o Bernardo, a Carla e a Daniela herdaram uma casa, um campo e um terreno. As licitações (em euros) foram:
+
+|          | António | Bernardo | Carla | Daniela |
+|:---------|:-------:|:--------:|:-----:|:-------:|
+| Casa     | 8600    | 3500     | 2300  | 4800    |
+| Campo    | 5500    | 4200     | 4400  | 2700    |
+| Terreno  | 3600    | 5100     | 3400  | 2300    |
+
+::: {.incremental .pequeno}
+a) Determina o valor da parte justa de cada irmão.
+b) Indica a alocação provisória: quem fica com cada bem e quanto paga ou recebe cada um.
+c) Calcula o excedente e a alocação final.
+d) A Daniela tem razões para invejar algum dos irmãos?
+:::
+
+[Adaptado do mini-teste «Partilha equilibrada»]{.fonte}
+
+## Problema 1 · a) Parte justa {auto-animate=true}
+
+::: {.columns}
+::: {.column width="64%"}
+{{T:p1:2}}
+:::
+::: {.column width="36%" .texto-passo .compacto}
+Cada irmão soma as suas licitações e divide por 4:
+
+- António: $17\,700 : 4 = 4425$
+- Bernardo: $12\,800 : 4 = 3200$
+- Carla: $10\,100 : 4 = 2525$
+- Daniela: $9800 : 4 = 2450$
+:::
+:::
+
+## Problema 1 · b) Alocação provisória {auto-animate=true}
+
+::: {.columns}
+::: {.column width="64%"}
+{{T:p1:3,4}}
+:::
+::: {.column width="36%" .texto-passo .compacto}
+🏠 e 🌾 → **António**; 🏞️ → **Bernardo**.
+
+- António: $14\,100 - 4425$ → [paga 9675]{.neg}
+- Bernardo: $5100 - 3200$ → [paga 1900]{.neg}
+- Carla e Daniela não recebem bens → [recebem 2525 e 2450]{.pos}
+:::
+:::
+
+## Problema 1 · c) Excedente e alocação final {auto-animate=true}
+
+::: {.columns}
+::: {.column width="64%"}
+{{T:p1:5,6}}
+:::
+::: {.column width="36%" .texto-passo .compacto}
+Entram $9675 + 1900 = 11\,575$; saem $2525 + 2450 = 4975$.
+
+Excedente: $6600$ → $6600 : 4 = 1650$ para cada.
+
+::: {.fragment}
+- António: $9675 - 1650$ → [paga 8025]{.neg}
+- Bernardo: $1900 - 1650$ → [paga 250]{.neg}
+- Carla: $2525 + 1650$ → [recebe 4175]{.pos}
+- Daniela: $2450 + 1650$ → [recebe 4100]{.pos}
+:::
+:::
+:::
+
+## Problema 1 · d) A Daniela tem inveja? {auto-animate=true}
+
+::: {.columns}
+::: {.column width="64%"}
+{{T:p1:7,8}}
+:::
+::: {.column width="36%" .texto-passo .compacto}
+Última linha: quanto vale cada parte **para a Daniela** (com as licitações dela).
+
+- Parte do António: $4800 + 2700 - 8025 = -525$
+- Parte do Bernardo: $2300 - 250 = 2050$
+- Parte da Carla: $4175$
+
+::: {.destaque .coral .fragment}
+$4175 > 4100$: a Daniela **inveja a Carla**. O método é proporcional, mas **não é livre de inveja**.
+:::
+:::
+:::
+
+## Problema 2 · A licitação que falta [problema inverso]{.etiqueta}
+
+A Alice e o Beto dividiram quatro bens pelo método das licitações secretas.
+
+::: {.columns}
+::: {.column width="45%"}
+| Bem | Alice | Beto |
+|:---:|:-----:|:----:|
+| 1   | 1500  | 1600 |
+| 2   | 700   | [$x$]{.max} |
+| 3   | 300   | 200  |
+| 4   | 500   | 200  |
+:::
+
+::: {.column width="55%"}
+No final, a **Alice ficou com os bens 3 e 4** e **recebeu 850 €**.
+
+[Qual foi a licitação $x$ do Beto pelo bem 2?]{.pergunta .fragment}
+:::
+:::
+
+[Adaptado da ficha «Partilha equilibrada – caso discreto»]{.fonte}
+
+## Problema 2 · Parte justa e bens {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+{{T:p2:2,3}}
+:::
+::: {.column width="45%" .texto-passo}
+A Alice ficou com os bens 3 e 4, logo o Beto ficou com o 1 e o 2: $x \geq 700$.
+
+- Alice: $3000 : 2 = 1500$
+- Beto: $(2000 + x) : 2 = 1000 + \dfrac{x}{2}$
+:::
+:::
+
+## Problema 2 · Alocação provisória e excedente {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+{{T:p2:4,5}}
+:::
+::: {.column width="45%" .texto-passo}
+- Alice: $800 - 1500$ → [recebe 700]{.pos}
+- Beto: $(1600 + x) - \left(1000 + \dfrac{x}{2}\right)$ → [paga $600 + \dfrac{x}{2}$]{.neg}
+
+::: {.fragment}
+Excedente: $600 + \dfrac{x}{2} - 700 = \dfrac{x}{2} - 100$, ou seja, $\dfrac{x}{4} - 50$ para cada.
+:::
+:::
+:::
+
+## Problema 2 · A equação {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+{{T:p2:6,7}}
+:::
+::: {.column width="45%" .texto-passo}
+A Alice recebe no total:
+
+$$700 + \frac{x}{4} - 50 = 850$$
+$$650 + \frac{x}{4} = 850 \iff x = 800$$
+
+::: {.destaque .teal .fragment}
+O Beto licitou **800 €** pelo bem 2 (e $800 \geq 700$ ✔).
+:::
+:::
+:::
+
+## Problema 3 · Tarefas em vez de bens [leilão inverso]{.etiqueta}
+
+O Henrique, a Inês e o João vão deixar o apartamento que alugaram. Para recuperarem a caução têm de fazer quatro tarefas. Cada um licitou **quanto quer receber** para fazer cada tarefa (em euros):
+
+| Tarefa | Henrique | Inês | João |
+|:-------|:-------:|:----:|:----:|
+| 🚿 Limpar as casas de banho | 65  | 70 | 55 |
+| 🎨 Reparar e pintar uma parede | 100 | 85 | 95 |
+| 🧽 Esfregar os rodapés  | 60  | 50 | 45 |
+| 🪟 Lavar as janelas     | 75  | 80 | 90 |
+
+::: {.incremental .pequeno}
+a) Cada tarefa fica com quem pede **menos**. Quem faz cada tarefa?
+b) Adapta o método e indica quanto paga ou recebe cada um.
+:::
+
+[Adaptado de *Fair Division* (exercícios), cap. 8]{.fonte}
+
+## Problema 3 · Quem faz cada tarefa? {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p3:2,3}}
+:::
+::: {.column width="42%" .texto-passo}
+Cada tarefa fica com quem pede **menos** (destacado).
+
+**Parte justa de trabalho** = total : 3
+
+- Henrique: $300 : 3 = 100$
+- Inês e João: $285 : 3 = 95$
+:::
+:::
+
+## Problema 3 · Alocação provisória {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p3:4}}
+:::
+::: {.column width="42%" .texto-passo}
+- Henrique: faz $75$, **menos** $25$ do que a sua parte → [paga 25]{.neg}
+- Inês: faz $85$, **menos** $10$ → [paga 10]{.neg}
+- João: faz $55 + 45 = 100$, **mais** $5$ → [recebe 5]{.pos}
+
+::: {.destaque .fragment}
+Com tarefas, o raciocínio inverte-se: quem trabalha **menos** do que a sua parte justa **paga**.
+:::
+:::
+:::
+
+## Problema 3 · Excedente e alocação final {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p3:5,6}}
+:::
+::: {.column width="42%" .texto-passo}
+Excedente: $25 + 10 - 5 = 30$ → $10$ para cada.
+
+- Henrique: $25 - 10$ → [paga 15]{.neg}
+- Inês: $10 - 10 = 0$
+- João: $5 + 10$ → [recebe 15]{.pos}
+
+::: {.fragment}
+Confirma: o Henrique paga 15 e o João recebe 15 ✔
+:::
+:::
+:::
+
+## Problema 4 · E se houver um empate? [empate]{.etiqueta}
+
+A Rita, a Sara e o Tiago herdaram uma casa, um carro e um piano (licitações em milhares de euros):
+
+|        | Rita | Sara | Tiago |
+|:-------|:----:|:----:|:-----:|
+| Casa   | [150]{.max} | [150]{.max} | 135 |
+| Carro  | 15   | 12   | 23    |
+| Piano  | 3    | 9    | 4     |
+
+::: {.incremental .pequeno}
+a) Que dificuldade surge na atribuição da casa?
+b) Decide-se por sorteio. Determina a alocação final se a casa sair à **Rita** e se sair à **Sara**.
+c) Compara, nos dois casos, o valor que cada um atribui ao que recebe. O que concluis?
+:::
+
+## Problema 4 · a) O empate {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p4R:2}}
+:::
+::: {.column width="42%" .texto-passo}
+Partes justas: $168 : 3 = 56$; $171 : 3 = 57$; $162 : 3 = 54$.
+
+A Rita e a Sara licitaram **o mesmo** pela casa (150): **empate**! Decide-se por sorteio.
+
+::: {.destaque .teal .fragment}
+O excedente não depende do sorteio:
+$(150 + 23 + 9) - (56 + 57 + 54) = 15$ → **5 para cada**.
+:::
+:::
+:::
+
+## Problema 4 · b) A casa sai à Rita {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p4R:3-6}}
+:::
+::: {.column width="42%" .texto-passo}
+- Rita: 🏠 $150 - 56$ → paga 94; com o excedente, [paga 89]{.neg}
+- Sara: 🎹 $9 - 57$ → recebe 48; [recebe 53]{.pos}
+- Tiago: 🚗 $23 - 54$ → recebe 31; [recebe 36]{.pos}
+:::
+:::
+
+## Problema 4 · b) A casa sai à Sara {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p4S:3-6}}
+:::
+::: {.column width="42%" .texto-passo}
+- Rita: sem bens → recebe 56; [recebe 61]{.pos}
+- Sara: 🏠🎹 $159 - 57$ → paga 102; [paga 97]{.neg}
+- Tiago: 🚗 $23 - 54$ → recebe 31; [recebe 36]{.pos}
+:::
+:::
+
+## Problema 4 · c) Conclusão {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p4S:7}}
+:::
+::: {.column width="42%" .texto-passo}
+Nos **dois** casos, cada um fica com o mesmo valor: **61, 62 e 59** (parte justa + 5).
+
+O sorteio muda quem fica com a casa e o dinheiro que circula, **não** o valor que cada um recebe.
+
+::: {.destaque .coral .fragment}
+Mas, se a casa sair à Sara, o Tiago **inveja** a Rita: os 61 mil € dela valem mais do que os seus 59.
+:::
+:::
+:::
+
+## Problema 5 · Espreitar as licitações [estratégia]{.etiqueta}
+
+A Catarina, a Sofia e a Joana herdaram a casa da família e uma agência de viagens. As licitações **honestas** (em euros) são:
+
+|            | Catarina  | Sofia   | Joana   |
+|:-----------|:---------:|:-------:|:-------:|
+| 🏠 Casa    | 1 000 000 | 700 000 | 650 000 |
+| ✈️ Agência | 200 000   | 350 000 | 250 000 |
+
+::: {.incremental .pequeno}
+a) Determina a alocação final com estas licitações.
+b) A Catarina espreitou os envelopes das irmãs e licitou **710 000 €** pela casa e **340 000 €** pela agência. Determina a nova alocação final.
+c) Usando os valores **verdadeiros**, quanto ganhou a Catarina com a batota? E quanto perdeu cada irmã?
+d) Que condição do método foi violada?
+:::
+
+[Adaptado de *Sealed Bids – activity*]{.fonte}
+
+## Problema 5 · a) Licitações honestas {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p5h:2-6}}
+:::
+::: {.column width="42%" .texto-passo}
+- Partes justas: $400$, $350$ e $300$
+- Excedente: $300$ → $100$ para cada
+
+::: {.fragment}
+**Alocação final:** a Catarina fica com a casa e [paga 500 000 €]{.neg}; a Sofia fica com a agência e [recebe 100 000 €]{.pos}; a Joana [recebe 400 000 €]{.pos}.
+:::
+:::
+:::
+
+## Problema 5 · b) A Catarina espreitou {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p5b:2-6}}
+:::
+::: {.column width="42%" .texto-passo}
+A Catarina licita só **um pouco acima** da Sofia na casa (710) e **um pouco abaixo** na agência (340).
+
+- A sua parte justa desce para $350$
+- O excedente desce para $60$ → $20$ para cada
+
+::: {.fragment}
+Agora a Catarina só [paga 340 000 €]{.neg}!
+:::
+:::
+:::
+
+## Problema 5 · c) e d) Quem ganhou com a batota? {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{T:p5b:8}}
+:::
+::: {.column width="42%" .texto-passo}
+Com os valores **verdadeiros**:
+
+- Catarina: $1000 - 340 = 660$ (era 500) → [ganha 160 000 €]{.pos}
+- Sofia: $350 + 20 = 370$ (era 450) → [perde 80 000 €]{.neg}
+- Joana: $320$ (era 400) → [perde 80 000 €]{.neg}
+
+::: {.destaque .coral .fragment}
+d) Foi violado o **segredo** das licitações. E é arriscado: se a Sofia tivesse licitado mais de 710 000 € pela casa, a Catarina perdia a casa que valoriza em 1 000 000 €!
+:::
+:::
+:::
+
