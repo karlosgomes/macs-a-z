@@ -1,22 +1,22 @@
 # MACS A...Z
 
-Livro de apresentações de MACS (10.º ano, currículo português), feito como o Matemática A...Z: uma só apresentação Reveal.js com capa, índice e capítulos. Texto sempre em português europeu.
+Livro de apresentações de MACS (10.º ano, currículo português), feito como o Matemática A...Z: uma só apresentação Reveal.js que abre com o índice e se divide em capítulos. Texto sempre em português europeu.
 
 ## Estrutura
 - `index.html` + `libs/`: **gerados, não editar aqui**. Saem de `fontes/` com `fontes/_ferramentas/publicar_site.sh`.
 - `fontes/`: fontes Quarto e Python. Tudo está explicado em `fontes/README.md`:
-  - capa, índice e capítulos (`index.qmd`);
+  - índice (1.º diapositivo) e capítulos (`index.qmd`);
   - geradores das tabelas de síntese (`_fonte_*`);
   - tema (`estilo.scss`);
   - barra do weblog (`_ferramentas/site/`).
 - `img/logo.png`: logótipo.
 
 ## Organização (2026-11-15)
-- **Navegação:** capa → índice → Capítulo 1 «Divisão Justa» → para cada método (1.1 Licitações secretas, 1.2 Ajuste na Partilha, 1.3 Marcadores), um **Resumo** (abertura e ↓ diapositivos) e os **Problemas** (lista e ↓ problemas) → Síntese.
+- **Navegação:** índice (1.º diapositivo) → Capítulo 1 «Divisão Justa» → para cada método (1.1 Licitações secretas, 1.2 Ajuste na Partilha, 1.3 Marcadores), um **Resumo** (abertura e ↓ diapositivos) e os **Problemas** (lista e ↓ problemas) → Síntese.
   - → passa de secção em secção e ↓ desce dentro de cada secção (`navigation-mode: vertical`).
   - Links de regresso «↩ índice» e «↩ problemas», postos por JavaScript em `navegacao.html`.
 - **Ids:** `#/indice`, `#/lic`, `#/lic-problemas`, `#/lic-p1`…, `#/aw…`, `#/mk…`, `#/sintese`.
-- **Formato:** 1600×900. A faixa escura da capa fica fora do `.reveal` (classe `na-capa`), como no Matemática A...Z.
+- **Formato:** 1600×900. A faixa escura do título fica fora do `.reveal` e só aparece no índice (classe `na-capa`), como no Matemática A...Z. Sem rodapé nem número do diapositivo; botões do canto inferior esquerdo e ícones da barra iguais aos do Matemática A...Z.
 - **Multiplex:** não é usado, por decisão do utilizador. As apresentações são para projetar.
 - **Tabela de síntese sempre à esquerda**, com as linhas do passo em curso destacadas, e cálculos à direita, em todos os métodos.
 - **Ajuste na Partilha:** $x$ é a fração que **passa** para o outro jogador.

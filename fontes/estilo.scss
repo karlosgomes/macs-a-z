@@ -54,10 +54,6 @@ $palatino: "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "U
   border-bottom: 5px solid $azul; padding-bottom: 18px; margin: 0;
 }
 
-// ---------- rodapé e número do diapositivo ----------
-.reveal .footer { font-size: .45em !important; color: $cinza; bottom: 14px !important; }
-.reveal .slide-number { top: auto !important; bottom: 12px !important; right: 90px !important;
-  background: transparent !important; color: $cinza !important; font-size: 14px; }
 
 // ---------- tabelas ----------
 .reveal table { font-size: .8em; border-collapse: collapse; margin: .4em auto; }
@@ -176,24 +172,27 @@ $p1: $azul; $p2: $vermelho; $p3: $laranja; $p4: $violeta;
 .reveal .tabela-metodo .q { display: inline-block; width: .8em; height: .8em; border-radius: 3px; vertical-align: middle; }
 
 
-// ---------- livro: capa, índice, diapositivos de nível 1 com conteúdo, links de regresso ----------
-.reveal .slides section.capa > h1 { display: none; }
-.reveal .slides section.capa { padding-top: 190px; text-align: center; }
-.reveal .capa .subtitulo2 { display: block; font-family: $palatino; font-size: 1.7em; color: $cinza; letter-spacing: .03em; margin-bottom: 1.2em; }
-.reveal .capa table.ajuda { margin: 0 auto 1em; font-size: .62em; color: #475569; }
-.reveal .capa table.ajuda td { border: none; padding: 6px 14px; text-align: left; }
-.reveal .capa table.ajuda td:nth-child(odd) { text-align: right; white-space: nowrap; }
-.reveal .capa table.ajuda td:nth-child(3) { padding-left: 60px; }
+// ---------- livro: o 1.º diapositivo é o índice (com a faixa do weblog), como no Matemática A...Z ----------
+// medidas em px iguais às do Matemática A...Z (lá o texto base é 30px)
+.reveal .slides section#indice { font-family: $palatino; text-align: center; }
+.reveal .slides section#indice > h1 { font-family: $palatino; color: #222; font-weight: 600; font-size: 46px; margin: 0; text-align: center; }
+.reveal #indice .indice { text-align: left; margin: 30px auto 0; width: 1100px; font-size: 34.5px; line-height: 1.7; }
+.reveal #indice .indice .topico { border-left: 5px solid #1d4ed8; padding: 4px 0 4px 24px; margin-bottom: 28px; }
+.reveal #indice .indice .nome-topico { margin: 0; font-size: 1.25em; font-weight: 600; color: #111; }
+.reveal #indice .indice .links-topico { margin: 0 0 4px; }
+.reveal #indice .indice .metodo { color: #111; }
+.reveal #indice .indice .en { font-style: italic; color: $cinza; font-size: .8em; }
+.reveal #indice .indice a { color: $link-color; }
+.reveal #indice table.ajuda { margin: 30px auto 0; font-size: 18.6px; color: #475569; border-collapse: collapse; }
+.reveal #indice table.ajuda td { border: none; padding: 6px 14px; text-align: left; }
+.reveal #indice table.ajuda td:nth-child(odd) { text-align: right; white-space: nowrap; color: #1d4ed8; }
+.reveal #indice table.ajuda td:nth-child(3) { padding-left: 60px; }
+.reveal #indice .pequeno { font-size: 15px; color: $cinza; margin-top: 18px; }
 .reveal kbd { font-family: inherit; font-size: .9em; padding: 1px 8px; border: 1px solid #94a3b8; border-bottom-width: 3px;
   border-radius: 5px; background: #f8fafc; color: #1e293b; }
-// diapositivos de nível 1 com conteúdo (índice, listas de problemas, síntese): título como os outros
-.reveal .slides section.level1:not(.capitulo):not(.capa) > h1 {
+// diapositivos de nível 1 com conteúdo (listas de problemas, síntese): título como os outros
+.reveal .slides section.level1:not(.capitulo):not(#indice) > h1 {
   font-family: $font-family-sans-serif; color: $azul; font-size: 1.3em; text-align: left; font-weight: 600; margin-bottom: .5em; }
-.reveal .indice { text-align: left; margin: 20px auto 0; width: 1150px; font-size: 1.05em; line-height: 1.7; }
-.reveal .indice .topico { border-left: 5px solid $azul; padding: 4px 0 4px 24px; }
-.reveal .indice .nome-topico { display: block; font-size: 1.25em; font-weight: 600; color: #111; }
-.reveal .indice .sub-topico { display: block; color: $cinza; font-size: .8em; margin-bottom: .4em; }
-.reveal .indice ol { margin-left: 1.2em; }
 .reveal .indice-problemas { width: 1150px; margin: 10px auto 0; font-size: 1.05em; line-height: 1.8; border-left: 5px solid $azul; padding-left: 24px; }
 .reveal .indice-problemas .rotulo-cap { display: block; color: $cinza; font-size: .8em; letter-spacing: .06em; text-transform: uppercase; }
 .reveal .indice a, .reveal .indice-problemas a { color: $link-color; }

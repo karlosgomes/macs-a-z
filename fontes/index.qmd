@@ -2,35 +2,25 @@
 pagetitle: "MACS A...Z — Matemática Aplicada às Ciências Sociais"
 ---
 
-# MACS A...Z {#capa .capa}
-
-[Matemática Aplicada às Ciências Sociais · 10.º ano]{.subtitulo2}
+# Índice {#indice .capa}
 
 ```{=html}
+<div class="indice">
+  <div class="topico">
+    <p class="nome-topico">Divisão Justa</p>
+    <p class="links-topico"><span class="metodo">Licitações secretas</span> · <a href="#/lic">Resumo</a> · <a href="#/lic-problemas">Problemas</a></p>
+    <p class="links-topico"><span class="metodo">Ajuste na Partilha</span> <span class="en">(Adjusted Winner)</span> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></p>
+    <p class="links-topico"><span class="metodo">Marcadores</span> · <a href="#/mk">Resumo</a> · <a href="#/mk-problemas">Problemas</a></p>
+    <p class="links-topico"><a href="#/sintese">Síntese: os três métodos</a> · <a href="#/inveja">Proporcional ou livre de inveja?</a></p>
+  </div>
+</div>
 <table class="ajuda">
   <tr><td><kbd>→</kbd></td><td>capítulo ou secção seguinte</td><td><kbd>↓</kbd></td><td>descer: resumo e problemas</td></tr>
   <tr><td><kbd>F</kbd></td><td>ecrã inteiro</td><td><kbd>Esc</kbd></td><td>ver todos os diapositivos</td></tr>
-  <tr><td><kbd>C</kbd></td><td>escrever por cima</td><td><kbd>B</kbd></td><td>quadro branco</td></tr>
-  <tr><td><kbd>M</kbd></td><td>menu</td><td><kbd>Del</kbd></td><td>apagar desenhos</td></tr>
+  <tr><td><kbd>C</kbd> <span class="fa-solid fa-pen"></span></td><td>caneta sobre o diapositivo</td><td><kbd>B</kbd> <span class="fa-solid fa-chalkboard"></span></td><td>quadro branco</td></tr>
 </table>
+<p class="pequeno">Os botões no canto inferior esquerdo fazem o mesmo. <kbd>Del</kbd> apaga os desenhos do diapositivo.</p>
 ```
-
-[Os botões no canto inferior esquerdo fazem o mesmo. Os diapositivos «Experimenta!» têm controlos para mexer.]{.pequeno .centro}
-
-# Índice {#indice}
-
-::: {.indice}
-::: {.topico}
-[Capítulo 1 · Divisão Justa]{.nome-topico}
-[Modelos matemáticos na partilha · caso discreto]{.sub-topico}
-
-1. **Licitações secretas** · [Resumo](#lic) · [Problemas](#lic-problemas)
-2. **Ajuste na Partilha** *(Adjusted Winner)* · [Resumo](#aw) · [Problemas](#aw-problemas)
-3. **Marcadores** · [Resumo](#mk) · [Problemas](#mk-problemas)
-
-[Síntese: os três métodos](#sintese) · [Proporcional ou livre de inveja?](#inveja) · *Caso contínuo: em preparação*
-:::
-:::
 
 # Divisão Justa {#dj .capitulo data-rotulo="Capítulo 1"}
 

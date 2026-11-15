@@ -1,6 +1,6 @@
 # MACS A...Z
 
-Apresentações para as aulas de Matemática Aplicada às Ciências Sociais (MACS, 10.º ano), organizadas como um livro: capa, índice e capítulos.
+Apresentações para as aulas de Matemática Aplicada às Ciências Sociais (MACS, 10.º ano), organizadas como um livro: abre com o índice, dividido em capítulos.
 Em cada método há um **Resumo** (exemplo introdutório e teoria, com a tabela de cálculos sempre visível) e **Problemas** (muitos de Exame Nacional).
 
 Página: https://karlosgomes.github.io/macs-a-z/

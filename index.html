@@ -97,7 +97,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="libs/revealjs/dist/theme/quarto-c2e20ca0e79809f9877210401f1725df.css">
+  <link rel="stylesheet" href="libs/revealjs/dist/theme/quarto-e44ad6fbd7d7887fba61c3b6edcca93c.css">
   <link href="libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,6 +193,8 @@
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="https://karlosgomes.github.io/weblog/site_libs/bootstrap/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@4.6.0/customcontrols/style.css">
   <style>
   /* barra do weblog (cores e fonte de https://karlosgomes.github.io/weblog/), como no Matemática A...Z */
   :root { --barra: 62px; }
@@ -245,8 +247,11 @@
 		<li><a class="ativo" aria-current="page" href="https://karlosgomes.github.io/macs-a-z/">MACS A...Z</a></li>
 	</ul>
 	<ul class="icones">
-		<li><a href="https://karlosgomes.github.io/macs-a-z/" aria-label="Índice do MACS A...Z" title="Índice do MACS A...Z"><i class="bi bi-grid-3x3-gap"></i></a></li>
+		<li><a href="mailto:carlosgomesxx1@gmail.com" aria-label="email"><i class="bi bi-envelope-at"></i></a></li>
 		<li><a href="https://github.com/karlosgomes/" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+		<li><a href="https://www.reddit.com/user/carlosgomesxx/" aria-label="reddit"><i class="bi bi-reddit"></i></a></li>
+		<li><a href="https://www.linkedin.com/in/carlos-gomes-31135715a/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+		<li><a href="https://x.com/carlosgomesxx1" aria-label="twitter"><i class="bi bi-twitter-x"></i></a></li>
 	</ul>
 </nav>
 <!-- faixa da capa: fora do .reveal para não ser escalada (como no Matemática A...Z) -->
@@ -261,9 +266,18 @@ document.addEventListener('fullscreenchange', () => {
     <div class="slides">
 
 
-<section id="capa" class="title-slide slide level1 capa center">
-<h1>MACS A…Z</h1>
-<p><span class="subtitulo2">Matemática Aplicada às Ciências Sociais · 10.º ano</span></p>
+<section id="indice" class="title-slide slide level1 capa center">
+<h1>Índice</h1>
+<div class="indice">
+  <div class="topico">
+    <p class="nome-topico">Divisão Justa</p>
+    <p class="links-topico"><span class="metodo">Licitações secretas</span> · <a href="#/lic">Resumo</a> · <a href="#/lic-problemas">Problemas</a></p>
+    <p class="links-topico"><span class="metodo">Ajuste na Partilha</span> <span class="en">(Adjusted Winner)</span> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></p>
+    <p class="links-topico"><span class="metodo">Marcadores</span> · <a href="#/mk">Resumo</a> · <a href="#/mk-problemas">Problemas</a></p>
+    <p class="links-topico"><a href="#/sintese">Síntese: os três métodos</a> · <a href="#/inveja">Proporcional ou livre de inveja?</a></p>
+  </div>
+</div>
+
 <table class="ajuda caption-top">
 <tbody>
 <tr class="odd">
@@ -279,35 +293,15 @@ document.addEventListener('fullscreenchange', () => {
 <td>ver todos os diapositivos</td>
 </tr>
 <tr class="odd">
-<td><kbd>C</kbd></td>
-<td>escrever por cima</td>
-<td><kbd>B</kbd></td>
+<td><kbd>C</kbd> <span class="fa-solid fa-pen"></span></td>
+<td>caneta sobre o diapositivo</td>
+<td><kbd>B</kbd> <span class="fa-solid fa-chalkboard"></span></td>
 <td>quadro branco</td>
-</tr>
-<tr class="even">
-<td><kbd>M</kbd></td>
-<td>menu</td>
-<td><kbd>Del</kbd></td>
-<td>apagar desenhos</td>
 </tr>
 </tbody>
 </table>
-<p><span class="pequeno centro">Os botões no canto inferior esquerdo fazem o mesmo. Os diapositivos «Experimenta!» têm controlos para mexer.</span></p>
-</section>
 
-<section id="indice" class="title-slide slide level1 center">
-<h1>Índice</h1>
-<div class="indice">
-<div class="topico">
-<p><span class="nome-topico">Capítulo 1 · Divisão Justa</span> <span class="sub-topico">Modelos matemáticos na partilha · caso discreto</span></p>
-<ol type="1">
-<li><strong>Licitações secretas</strong> · <a href="#/lic">Resumo</a> · <a href="#/lic-problemas">Problemas</a></li>
-<li><strong>Ajuste na Partilha</strong> <em>(Adjusted Winner)</em> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></li>
-<li><strong>Marcadores</strong> · <a href="#/mk">Resumo</a> · <a href="#/mk-problemas">Problemas</a></li>
-</ol>
-<p><a href="#/sintese">Síntese: os três métodos</a> · <a href="#/inveja">Proporcional ou livre de inveja?</a> · <em>Caso contínuo: em preparação</em></p>
-</div>
-</div>
+<p class="pequeno">Os botões no canto inferior esquerdo fazem o mesmo. <kbd>Del</kbd> apaga os desenhos do diapositivo.</p>
 </section>
 
 <section id="dj" class="title-slide slide level1 capitulo center" data-rotulo="Capítulo 1">
@@ -7785,7 +7779,7 @@ document.addEventListener('fullscreenchange', () => {
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>MACS 10.º ano · Divisão Justa</p>
+
 </div>
 </div></div>
 
@@ -7818,8 +7812,8 @@ document.addEventListener('fullscreenchange', () => {
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
-'chalkboard': {"buttons":true,"theme":"whiteboard","boardmarkerWidth":4,"chalkWidth":5},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'chalkboard': {"buttons":false,"theme":"whiteboard","boardmarkerWidth":4,"chalkWidth":5},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -7840,7 +7834,7 @@ document.addEventListener('fullscreenchange', () => {
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -8001,14 +7995,14 @@ document.addEventListener('fullscreenchange', () => {
     </script>
     <script>
     // Links de regresso (como no Matemática A...Z): resumos e aberturas → índice; problemas → lista de problemas.
-    // E a faixa escura do título só aparece na capa.
+    // O 1.º diapositivo é o índice: a faixa escura com o título só aparece nele, e o conteúdo começa abaixo dela.
+    // Botões no canto inferior esquerdo iguais aos do Matemática A...Z (plugin customcontrols, aqui feitos à mão).
     (function () {
       function preparar() {
-        const fora = new Set(["capa", "indice"]);
         document.querySelectorAll(".reveal .slides > section").forEach(col => {
           const filhos = col.classList.contains("stack") ? [...col.querySelectorAll(":scope > section")] : [col];
           const cabeca = filhos[0];
-          if (!cabeca || fora.has(cabeca.id)) return;
+          if (!cabeca || cabeca.id === "indice") return;
           const lista = cabeca.id.endsWith("-problemas");
           filhos.forEach((s, k) => {
             const a = document.createElement("a");
@@ -8020,11 +8014,38 @@ document.addEventListener('fullscreenchange', () => {
         });
       }
       function capa() {
-        const s = Reveal.getCurrentSlide();
-        document.documentElement.classList.toggle("na-capa", !!s && s.id === "capa");
+        const naCapa = Reveal.getIndices().h === 0 && !Reveal.isOverview();
+        document.documentElement.classList.toggle("na-capa", naCapa);
+        const s = Reveal.getSlide(0);
+        if (!s) return;
+        s.style.paddingTop = "0px";
+        const folga = document.querySelector(".faixa-capa").getBoundingClientRect().bottom - s.getBoundingClientRect().top;
+        s.style.paddingTop = Math.max(0, folga / Reveal.getScale() + 40) + "px";
       }
-      Reveal.on("ready", () => { preparar(); capa(); });
-      Reveal.on("slidechanged", capa);
+      function botoes() {
+        const lista = [
+          ["fa-list", "Índice", () => Reveal.slide(0, 0)],
+          ["fa-table-cells", "Todos os diapositivos (Esc)", () => Reveal.toggleOverview()],
+          ["fa-pen", "Caneta sobre o diapositivo (C)", () => RevealChalkboard.toggleNotesCanvas()],
+          ["fa-chalkboard", "Quadro (B)", () => RevealChalkboard.toggleChalkboard()],
+          ["fa-eraser", "Apagar desenhos (Del)", () => RevealChalkboard.clear()],
+          ["fa-expand", "Ecrã inteiro (F)", () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()],
+        ];
+        const div = document.createElement("div");
+        div.id = "customcontrols";
+        const ul = document.createElement("ul");
+        lista.forEach(([ic, titulo, acao]) => {
+          const li = document.createElement("li"), b = document.createElement("button");
+          b.title = titulo; b.innerHTML = '<i class="fa-solid ' + ic + '"></i>';
+          b.addEventListener("click", () => { acao(); b.blur(); });
+          li.appendChild(b); ul.appendChild(li);
+        });
+        div.appendChild(ul);
+        document.querySelector(".reveal").appendChild(div);
+      }
+      Reveal.on("ready", () => { preparar(); botoes(); capa(); });
+      ["slidechanged", "resize", "overviewshown", "overviewhidden"].forEach(e => Reveal.on(e, capa));
+      document.addEventListener("fullscreenchange", () => setTimeout(capa, 50));
     })();
     </script>
     <script type="ojs-module-contents">

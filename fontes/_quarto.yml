@@ -17,15 +17,13 @@ format:
     navigation-mode: vertical
     transition: slide
     background-transition: fade
-    slide-number: c/t
-    show-slide-number: all
+    slide-number: false
     progress: true
     controls: true
     controls-layout: bottom-right
-    menu:
-      side: left
-      width: normal
+    menu: false
     chalkboard:
+      buttons: false          # botões próprios no canto inferior esquerdo (como no Matemática A...Z)
       theme: whiteboard
       boardmarker-width: 4
       chalk-width: 5
@@ -33,7 +31,6 @@ format:
     code-line-numbers: true
     highlight-style: github
     html-math-method: mathjax
-    footer: "MACS 10.º ano · Divisão Justa"
     include-in-header: _ferramentas/site/cabecalho.html
     include-before-body: _ferramentas/site/barra.html
     include-after-body: _ferramentas/site/navegacao.html

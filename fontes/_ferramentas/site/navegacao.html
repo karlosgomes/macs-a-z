@@ -1,13 +1,13 @@
 <script>
 // Links de regresso (como no Matemática A...Z): resumos e aberturas → índice; problemas → lista de problemas.
-// E a faixa escura do título só aparece na capa.
+// O 1.º diapositivo é o índice: a faixa escura com o título só aparece nele, e o conteúdo começa abaixo dela.
+// Botões no canto inferior esquerdo iguais aos do Matemática A...Z (plugin customcontrols, aqui feitos à mão).
 (function () {
   function preparar() {
-    const fora = new Set(["capa", "indice"]);
     document.querySelectorAll(".reveal .slides > section").forEach(col => {
       const filhos = col.classList.contains("stack") ? [...col.querySelectorAll(":scope > section")] : [col];
       const cabeca = filhos[0];
-      if (!cabeca || fora.has(cabeca.id)) return;
+      if (!cabeca || cabeca.id === "indice") return;
       const lista = cabeca.id.endsWith("-problemas");
       filhos.forEach((s, k) => {
         const a = document.createElement("a");
@@ -19,10 +19,37 @@
     });
   }
   function capa() {
-    const s = Reveal.getCurrentSlide();
-    document.documentElement.classList.toggle("na-capa", !!s && s.id === "capa");
+    const naCapa = Reveal.getIndices().h === 0 && !Reveal.isOverview();
+    document.documentElement.classList.toggle("na-capa", naCapa);
+    const s = Reveal.getSlide(0);
+    if (!s) return;
+    s.style.paddingTop = "0px";
+    const folga = document.querySelector(".faixa-capa").getBoundingClientRect().bottom - s.getBoundingClientRect().top;
+    s.style.paddingTop = Math.max(0, folga / Reveal.getScale() + 40) + "px";
   }
-  Reveal.on("ready", () => { preparar(); capa(); });
-  Reveal.on("slidechanged", capa);
+  function botoes() {
+    const lista = [
+      ["fa-list", "Índice", () => Reveal.slide(0, 0)],
+      ["fa-table-cells", "Todos os diapositivos (Esc)", () => Reveal.toggleOverview()],
+      ["fa-pen", "Caneta sobre o diapositivo (C)", () => RevealChalkboard.toggleNotesCanvas()],
+      ["fa-chalkboard", "Quadro (B)", () => RevealChalkboard.toggleChalkboard()],
+      ["fa-eraser", "Apagar desenhos (Del)", () => RevealChalkboard.clear()],
+      ["fa-expand", "Ecrã inteiro (F)", () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()],
+    ];
+    const div = document.createElement("div");
+    div.id = "customcontrols";
+    const ul = document.createElement("ul");
+    lista.forEach(([ic, titulo, acao]) => {
+      const li = document.createElement("li"), b = document.createElement("button");
+      b.title = titulo; b.innerHTML = '<i class="fa-solid ' + ic + '"></i>';
+      b.addEventListener("click", () => { acao(); b.blur(); });
+      li.appendChild(b); ul.appendChild(li);
+    });
+    div.appendChild(ul);
+    document.querySelector(".reveal").appendChild(div);
+  }
+  Reveal.on("ready", () => { preparar(); botoes(); capa(); });
+  ["slidechanged", "resize", "overviewshown", "overviewhidden"].forEach(e => Reveal.on(e, capa));
+  document.addEventListener("fullscreenchange", () => setTimeout(capa, 50));
 })();
 </script>
