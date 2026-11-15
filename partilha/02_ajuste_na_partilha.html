@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="pt"><head>
+<script src="libs/clipboard/clipboard.min.js"></script>
+<script src="libs/quarto-html/tabby.min.js"></script>
+<script src="libs/quarto-html/popper.min.js"></script>
+<script src="libs/quarto-html/tippy.umd.min.js"></script>
+<link href="libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="MACS · 10.º ano">
+  <title>Método do Ajuste na Partilha (Adjusted Winner)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="libs/revealjs/dist/theme/quarto-6dd09dc97106117f45ecf7fdf005e32e.css">
+  <link href="libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="https://karlosgomes.github.io/weblog/site_libs/bootstrap/bootstrap-icons.css">
+  <style>
+  /* barra do weblog (cores e fonte de https://karlosgomes.github.io/weblog/), como no Matemática A...Z */
+  :root { --barra: 62px; }
+  .barra-weblog { position: fixed; top: 0; left: 0; right: 0; height: var(--barra); z-index: 100; box-sizing: border-box;
+  	display: flex; align-items: center; gap: 8px; padding: 0 1.5em; background: #170C3A; font: 17px/1.5 "Jost", system-ui, sans-serif; }
+  .barra-weblog ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+  .barra-weblog .icones { margin-left: auto; }
+  .barra-weblog a { display: block; padding: 8px; color: #fff; text-decoration: none; white-space: nowrap; }
+  .barra-weblog a:hover { color: rgba(251, 158, 7, 0.8); }
+  .barra-weblog a.ativo { color: #FB9E07; }
+  .barra-weblog .icones a { font-size: 1.2em; }
+  .barra-weblog .marca { padding: 0 4px 0 0; }
+  .barra-weblog .marca img { height: 24px; display: block; }
+  .barra-weblog .menu-botao { display: none; margin-left: auto; background: none; border: none; color: #fff; font-size: 1.8em; cursor: pointer; }
+  @media (max-width: 991px) {
+  	.barra-weblog .menu-botao { display: block; }
+  	.barra-weblog ul { display: none; }
+  	.barra-weblog.aberto { flex-wrap: wrap; height: auto; padding-bottom: 10px; }
+  	.barra-weblog.aberto ul { display: block; flex-basis: 100%; }
+  	.barra-weblog.aberto .icones { display: flex; margin-left: 0; }
+  }
+  .reveal { top: var(--barra); height: calc(100% - var(--barra)) !important; }
+  .ecra-inteiro .barra-weblog { display: none; }
+  .ecra-inteiro .reveal { top: 0; height: 100% !important; }
+  /* no site, o logótipo já está na barra: tira-se o dos diapositivos */
+  .reveal .slides::before { display: none !important; }
+  .reveal .slides section:not(.stack) > h2:first-of-type { margin-left: 0 !important; }
+  </style>
+  <!-- GoatCounter: contagem de visitas, sem cookies (não conta em localhost) -->
+  <script data-goatcounter="https://karlosgomes.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+  <script type="module" src="libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+<!-- menu igual ao do weblog (escondido em ecrã inteiro) — versão publicada em MACS A...Z -->
+<nav class="barra-weblog" id="barra-weblog">
+	<a class="marca" href="https://karlosgomes.github.io/weblog/index.html"><img src="https://karlosgomes.github.io/weblog/Homem_Guitarra_CG.png" alt="Weblog de Carlos Gomes"></a>
+	<button class="menu-botao" aria-label="Menu" onclick="this.parentNode.classList.toggle('aberto')"><i class="bi bi-list"></i></button>
+	<ul class="links">
+		<li><a href="https://karlosgomes.github.io/weblog/index.html">Início</a></li>
+		<li><a href="https://karlosgomes.github.io/weblog/artigos.html">Artigos</a></li>
+		<li><a href="https://karlosgomes.github.io/weblog/reflexoes.html">Reflexões/Problemas</a></li>
+		<li><a href="https://karlosgomes.github.io/weblog/software.html">Software</a></li>
+		<li><a href="https://karlosgomes.github.io/apps-matematica/">Apps de Matemática</a></li>
+		<li><a href="https://karlosgomes.github.io/matematica-a-z/">Matemática A...Z</a></li>
+		<li><a class="ativo" aria-current="page" href="https://karlosgomes.github.io/macs-a-z/">MACS A...Z</a></li>
+	</ul>
+	<ul class="icones">
+		<li><a href="https://karlosgomes.github.io/macs-a-z/" aria-label="Índice do MACS A...Z" title="Índice do MACS A...Z"><i class="bi bi-grid-3x3-gap"></i></a></li>
+		<li><a href="https://github.com/karlosgomes/" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+	</ul>
+</nav>
+<script>
+document.addEventListener('fullscreenchange', () => {
+	document.documentElement.classList.toggle('ecra-inteiro', !!document.fullscreenElement);
+	window.dispatchEvent(new Event('resize'));
+});
+</script>
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Método do Ajuste na Partilha</h1>
+  <p class="subtitle">(Adjusted Winner) · Partilha no caso discreto · 2</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+MACS · 10.º ano 
+</div>
+        <p class="quarto-title-affiliation">
+            Escola Secundária de Amarante
+          </p>
+    </div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>Um divórcio sem dinheiro</h2>
+<p>A <strong>Madalena</strong> e o <strong>Gonçalo</strong> vão divorciar-se e têm de dividir quatro bens. Nenhum deles tem dinheiro para «comprar» a parte do outro.</p>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="cartao fragment quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<p><span class="emoji">⛵</span></p>
+<p><span class="tcartao">Iate</span></p>
+</div>
+<div class="cartao coral fragment quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<p><span class="emoji">🐈</span></p>
+<p><span class="tcartao">Gato</span></p>
+</div>
+<div class="cartao mostarda fragment quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<p><span class="emoji">🏢</span></p>
+<p><span class="tcartao">Apartamento</span> em Sintra</p>
+</div>
+<div class="cartao verde fragment quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<p><span class="emoji">🖼️</span></p>
+<p><span class="tcartao">Quadro</span> de Eurico Gonçalves</p>
+</div>
+</div>
+</div>
+<p><span class="pergunta fragment">Sem dinheiro, as licitações secretas não servem. Como fazer?</span></p>
+<aside class="notes">
+<p>Exemplo adaptado do trabalho «Aplicação dos métodos de partilha» (alunos de MACS). Discutir: um gato não se divide, mas um apartamento pode ser usado parte do ano por cada um (ou vendido e o dinheiro repartido).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">100 pontos para distribuir</h2>
+<p>Cada um distribui, <strong>em segredo</strong>, <strong>100 pontos</strong> pelos bens, conforme a importância que lhes dá.</p>
+<div data-id="tabela">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Bem</th>
+<th style="text-align: center;">Madalena</th>
+<th style="text-align: center;">Gonçalo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">⛵ Iate</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🐈 Gato</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🏢 Apartamento</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🖼️ Quadro</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: center;"><strong>100</strong></td>
+<td style="text-align: center;"><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="destaque fragment">
+<p>Os pontos medem <strong>preferências</strong>: a Madalena dá metade da sua «riqueza» ao gato!</p>
+</div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">1.ª fase: cada bem para quem mais o valoriza</h2>
+<div data-id="tabela">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Bem</th>
+<th style="text-align: center;">Madalena</th>
+<th style="text-align: center;">Gonçalo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">⛵ Iate</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"><span class="max">30</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🐈 Gato</td>
+<td style="text-align: center;"><span class="max">50</span></td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🏢 Apartamento</td>
+<td style="text-align: center;"><span class="max">30</span></td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🖼️ Quadro</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"><span class="max">30</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Pontos obtidos</strong></td>
+<td style="text-align: center;"><strong>80</strong></td>
+<td style="text-align: center;"><strong>60</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="fragment">
+<p>A Madalena fica com <strong>mais pontos</strong> (<span class="math inline">\(80 &gt; 60\)</span>). A partilha <strong>não é equilibrada</strong>!</p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="destaque coral fragment">
+<p>É preciso <strong>ajustar</strong>: a Madalena tem de passar bens (ou parte de um bem) para o Gonçalo.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">2.ª fase: o ajuste</h2>
+<p>Que bem deve a Madalena transferir <strong>primeiro</strong>? Calcula-se, para os bens dela, a <strong>razão</strong></p>
+<p><span class="math display">\[\frac{\text{pontos de quem tem o bem}}{\text{pontos do outro}}\]</span></p>
+<div data-id="tabela">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Bem da Madalena</th>
+<th style="text-align: center;">Madalena</th>
+<th style="text-align: center;">Gonçalo</th>
+<th style="text-align: center;">Razão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">🏢 Apartamento</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;"><span class="max"><span class="math inline">\(30/20 = 1{,}5\)</span></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🐈 Gato</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;"><span class="math inline">\(50/20 = 2{,}5\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="destaque teal fragment">
+<p>Transfere-se primeiro o bem com a <strong>menor razão</strong> (o mais próximo de 1): é o que <strong>custa menos</strong> à Madalena por cada ponto que o Gonçalo ganha.</p>
+</div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Transferir o apartamento todo?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p>Se o apartamento passar <strong>todo</strong> para o Gonçalo:</p>
+<ul>
+<li>Madalena: <span class="math inline">\(80 - 30 = 50\)</span></li>
+<li>Gonçalo: <span class="math inline">\(60 + 20 = 80\)</span></li>
+</ul>
+<p>Agora é o Gonçalo que fica com mais! 😬</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p>Então o apartamento é <strong>dividido</strong>. Seja <span class="math inline">\(x\)</span> a fração que <strong>fica com a Madalena</strong>:</p>
+<p><span class="math display">\[\underbrace{50 + 30x}_{\text{Madalena}} = \underbrace{60 + 20(1-x)}_{\text{Gonçalo}}\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[50x = 30 \iff x = \frac{3}{5}\]</span></p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">O resultado</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cartao coral quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><span class="tcartao">Madalena</span></p>
+<p>🐈 gato e <span class="math inline">\(\frac{3}{5}\)</span> do 🏢 apartamento</p>
+<p><span class="math inline">\(50 + 30 \times \frac{3}{5} = \mathbf{68}\)</span> pontos</p>
+</div>
+<div class="cartao quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><span class="tcartao">Gonçalo</span></p>
+<p>⛵ iate, 🖼️ quadro e <span class="math inline">\(\frac{2}{5}\)</span> do 🏢 apartamento</p>
+<p><span class="math inline">\(30 + 30 + 20 \times \frac{2}{5} = \mathbf{68}\)</span> pontos</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Equitativa</strong>: os dois ficam com o <strong>mesmo</strong> número de pontos (68).</li>
+<li><strong>Livre de inveja</strong>: para a Madalena, a parte do Gonçalo vale só <span class="math inline">\(10 + 10 + 30\times\frac{2}{5} = 32\)</span> pontos (e para o Gonçalo a parte dela também vale 32).</li>
+</ul>
+</div>
+<div class="destaque fragment">
+<p>Na prática: a Madalena usa o apartamento <span class="math inline">\(\frac{3}{5}\)</span> do ano (cerca de 7 meses), ou vende-se e o dinheiro é repartido na proporção <span class="math inline">\(3:2\)</span>.</p>
+</div>
+</section>
+<section>
+<section class="title-slide slide level1 capitulo center" data-rotulo="Ajuste na Partilha">
+<h1>O método</h1>
+
+</section>
+<section class="slide level2">
+<h2>Método do Ajuste na Partilha (<em>Adjusted Winner</em>)</h2>
+<p><span class="pequeno">Steven Brams e Alan Taylor (1996). <strong>Dois</strong> jogadores e vários bens.</span></p>
+<div class="passo fragment">
+<p><span class="num">1</span> <strong>Pontos.</strong> Cada jogador distribui, em segredo, <strong>100 pontos</strong> pelos bens.</p>
+</div>
+<div class="passo fragment">
+<p><span class="num">2</span> <strong>1.ª fase.</strong> Cada bem vai para quem lhe deu <strong>mais pontos</strong>. Bens com pontos iguais vão para quem tem, nesse momento, <strong>menos pontos</strong>.</p>
+</div>
+<div class="passo fragment">
+<p><span class="num">3</span> Se os totais forem <strong>iguais</strong>, a partilha termina. Senão, quem tem <strong>mais</strong> pontos é o <strong>vencedor inicial</strong> e vai ceder bens.</p>
+</div>
+<div class="passo fragment">
+<p><span class="num">4</span> <strong>2.ª fase (ajuste).</strong> Ordenam-se os bens do vencedor inicial pela razão <span class="math inline">\(\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}\)</span>, da menor para a maior, e transferem-se <strong>por essa ordem</strong>…</p>
+</div>
+<div class="passo fragment">
+<p><span class="num">5</span> …até que um bem, transferido por inteiro, inverta a situação. Esse bem é <strong>dividido</strong> de modo a que ambos fiquem com o mesmo número de pontos.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>A equação do ajuste</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Quando se chega ao bem que vai ser dividido:</p>
+<p><span class="math display">\[V - v\,x = P + p\,x \iff x = \frac{V - P}{v + p}\]</span></p>
+<div class="pequeno">
+<ul>
+<li><span class="math inline">\(V\)</span>, <span class="math inline">\(P\)</span>: pontos do vencedor inicial e do outro jogador, <strong>nesse momento</strong>;</li>
+<li><span class="math inline">\(v\)</span>, <span class="math inline">\(p\)</span>: pontos que cada um deu ao bem a dividir;</li>
+<li><span class="math inline">\(x\)</span>: fração do bem que <strong>passa</strong> para o outro jogador.</li>
+</ul>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<p><strong>No divórcio:</strong> <span class="math inline">\(V = 80\)</span>, <span class="math inline">\(P = 60\)</span>, <span class="math inline">\(v = 30\)</span>, <span class="math inline">\(p = 20\)</span></p>
+<p><span class="math display">\[80 - 30x = 60 + 20x\]</span> <span class="math display">\[x = \frac{80-60}{30+20} = \frac{2}{5}\]</span></p>
+<p>Passam <span class="math inline">\(\frac{2}{5}\)</span> do apartamento para o Gonçalo (a Madalena fica com <span class="math inline">\(\frac{3}{5}\)</span> ✔).</p>
+</div>
+</div></div>
+<aside class="notes">
+<p>As duas formas de escrever a equação são equivalentes: com x = fração que fica com quem tinha o bem (50 + 30x = 60 + 20(1 − x)) ou com x = fração transferida (80 − 30x = 60 + 20x).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Propriedades e limitações</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cartao verde">
+<p><span class="tcartao">✔ Equitativo</span> Os dois ficam com o mesmo número de pontos.</p>
+</div>
+<div class="cartao verde fragment">
+<p><span class="tcartao">✔ Livre de inveja</span> Cada um recebe pelo menos 50 pontos; a parte do outro vale, para si, no máximo 50.</p>
+</div>
+<div class="cartao verde fragment">
+<p><span class="tcartao">✔ Eficiente</span> Não há outra partilha que melhore um sem piorar o outro. <strong>No máximo um bem</strong> é dividido.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cartao coral fragment">
+<p><span class="tcartao">✘ Só 2 jogadores</span> Com 3 ou mais, estas propriedades deixam de estar garantidas.</p>
+</div>
+<div class="cartao coral fragment">
+<p><span class="tcartao">✘ Bens divisíveis</span> Pode ser preciso dividir um bem, e não se sabe à partida qual.</p>
+</div>
+<div class="cartao coral fragment">
+<p><span class="tcartao">✘ Honestidade</span> Quem conhece os pontos do outro pode tirar partido disso (<strong>Problema 5</strong>).</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Na vida real: Camp David (1978)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Brams e Taylor aplicaram o método, <strong>à posteriori</strong>, às negociações de paz entre <strong>Israel</strong> e o <strong>Egito</strong> (pontos estimados):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Questão</th>
+<th style="text-align: center;">Israel</th>
+<th style="text-align: center;">Egito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Península do Sinai</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;"><span class="max">55</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Reconhecimento diplomático</td>
+<td style="text-align: center;"><span class="max">10</span></td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cisjordânia e Gaza</td>
+<td style="text-align: center;"><span class="max">20</span></td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ligação dos acordos</td>
+<td style="text-align: center;"><span class="max">10</span></td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Direitos dos palestinianos</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="max">20</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jerusalém</td>
+<td style="text-align: center;"><span class="max">20</span></td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<p>1.ª fase: Israel <span class="math inline">\(60\)</span>, Egito <span class="math inline">\(75\)</span>.</p>
+<p>Razões do Egito: Sinai <span class="math inline">\(\frac{55}{35} \approx 1{,}57\)</span>; Direitos <span class="math inline">\(\frac{20}{5} = 4\)</span>.</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[75 - 55x = 60 + 35x \iff x = \frac{1}{6}\]</span></p>
+</div>
+<div class="destaque teal fragment">
+<p>O Egito fica com <span class="math inline">\(\frac{5}{6}\)</span> do Sinai; cada um obtém <span class="math inline">\(\approx 65{,}8\)</span> pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>O algoritmo em Python</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-code-line-numbers="|1-3|4-7|8-10|11-19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>bens <span class="op">=</span> [<span class="st">"iate"</span>, <span class="st">"gato"</span>, <span class="st">"apartamento"</span>, <span class="st">"quadro"</span>]</span>
+<span id="cb1-2"><a href=""></a>A <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">30</span>, <span class="dv">10</span>]                     <span class="co"># pontos da Madalena</span></span>
+<span id="cb1-3"><a href=""></a>B <span class="op">=</span> [<span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">30</span>]                     <span class="co"># pontos do Gonçalo</span></span>
+<span id="cb1-4"><a href=""></a><span class="co"># 1.ª fase: cada bem para quem dá mais pontos (sem empates)</span></span>
+<span id="cb1-5"><a href=""></a>fica_A <span class="op">=</span> [A[i] <span class="op">&gt;</span> B[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span>
+<span id="cb1-6"><a href=""></a>tA <span class="op">=</span> <span class="bu">sum</span>(A[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> fica_A[i])</span>
+<span id="cb1-7"><a href=""></a>tB <span class="op">=</span> <span class="bu">sum</span>(B[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> <span class="kw">not</span> fica_A[i])</span>
+<span id="cb1-8"><a href=""></a><span class="co"># 2.ª fase: bens da Madalena (tA &gt; tB) por ordem crescente da razão A/B</span></span>
+<span id="cb1-9"><a href=""></a>dela <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>) <span class="cf">if</span> fica_A[i]]</span>
+<span id="cb1-10"><a href=""></a>dela.sort(key<span class="op">=</span><span class="kw">lambda</span> i: A[i] <span class="op">/</span> B[i])</span>
+<span id="cb1-11"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> dela:</span>
+<span id="cb1-12"><a href=""></a>    <span class="cf">if</span> tA <span class="op">-</span> A[i] <span class="op">&gt;=</span> tB <span class="op">+</span> B[i]:           <span class="co"># transferir o bem todo ainda não inverte</span></span>
+<span id="cb1-13"><a href=""></a>        tA, tB <span class="op">=</span> tA <span class="op">-</span> A[i], tB <span class="op">+</span> B[i]</span>
+<span id="cb1-14"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Transfere"</span>, bens[i])</span>
+<span id="cb1-15"><a href=""></a>    <span class="cf">else</span>:                                <span class="co"># divide-se este bem</span></span>
+<span id="cb1-16"><a href=""></a>        x <span class="op">=</span> (tA <span class="op">-</span> tB) <span class="op">/</span> (A[i] <span class="op">+</span> B[i])</span>
+<span id="cb1-17"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Passa"</span>, x, <span class="st">"do(a)"</span>, bens[i])          <span class="co"># 0.4 do apartamento</span></span>
+<span id="cb1-18"><a href=""></a>        <span class="bu">print</span>(<span class="st">"Pontos finais:"</span>, tA <span class="op">-</span> A[i] <span class="op">*</span> x, tB <span class="op">+</span> B[i] <span class="op">*</span> x)   <span class="co"># 68.0 68.0</span></span>
+<span id="cb1-19"><a href=""></a>        <span class="cf">break</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="https://karlosgomes.github.io/apps-matematica/python/#codigo=YmVucyA9IFsiaWF0ZSIsICJnYXRvIiwgImFwYXJ0YW1lbnRvIiwgInF1YWRybyJdCkEgPSBbMTAsIDUwLCAzMCwgMTBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZGEgTWFkYWxlbmEKQiA9IFszMCwgMjAsIDIwLCAzMF0gICAgICAgICAgICAgICAgICAgICAjIHBvbnRvcyBkbyBHb27Dp2FsbwojIDEuwqogZmFzZTogY2FkYSBiZW0gcGFyYSBxdWVtIGTDoSBtYWlzIHBvbnRvcyAoc2VtIGVtcGF0ZXMpCmZpY2FfQSA9IFtBW2ldID4gQltpXSBmb3IgaSBpbiByYW5nZSg0KV0KdEEgPSBzdW0oQVtpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBmaWNhX0FbaV0pCnRCID0gc3VtKEJbaV0gZm9yIGkgaW4gcmFuZ2UoNCkgaWYgbm90IGZpY2FfQVtpXSkKIyAyLsKqIGZhc2U6IGJlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBiZW0gdG9kbyBhaW5kYSBuw6NvIGludmVydGUKICAgICAgICB0QSwgdEIgPSB0QSAtIEFbaV0sIHRCICsgQltpXQogICAgICAgIHByaW50KCJUcmFuc2ZlcmUiLCBiZW5zW2ldKQogICAgZWxzZTogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZGl2aWRlLXNlIGVzdGUgYmVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBiZW5zW2ldKSAgICAgICAgICAjIDAuNCBkbyBhcGFydGFtZW50bwogICAgICAgIHByaW50KCJQb250b3MgZmluYWlzOiIsIHRBIC0gQVtpXSAqIHgsIHRCICsgQltpXSAqIHgpICAgIyA2OC4wIDY4LjAKICAgICAgICBicmVhawo%3D&amp;nome=ajuste_na_partilha.py" class="app-python" target="_blank">▶ Abrir e correr na app Python</a></p>
+<aside class="notes">
+<p>Versão simplificada: supõe que a Madalena é a vencedora inicial e que não há empates. Pode pedir-se aos alunos que generalizem (trocar os papéis quando tB &gt; tA; tratar empates).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Experimenta!</h2>
+<p>Muda os pontos (o 4.º bem recebe o que falta para 100).</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="322" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 321;"><span id="cb2-322"><a href=""></a>viewof M <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
+<span id="cb2-323"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena ⛵"</span>})<span class="op">,</span></span>
+<span id="cb2-324"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🐈"</span>})<span class="op">,</span></span>
+<span id="cb2-325"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🏢"</span>})</span>
+<span id="cb2-326"><a href=""></a>])</span>
+<span id="cb2-327"><a href=""></a>viewof G <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
+<span id="cb2-328"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo ⛵"</span>})<span class="op">,</span></span>
+<span id="cb2-329"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🐈"</span>})<span class="op">,</span></span>
+<span id="cb2-330"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🏢"</span>})</span>
+<span id="cb2-331"><a href=""></a>])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="338" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 337;"><span id="cb3-338"><a href=""></a>emo <span class="op">=</span> [<span class="st">"⛵"</span><span class="op">,</span> <span class="st">"🐈"</span><span class="op">,</span> <span class="st">"🏢"</span><span class="op">,</span> <span class="st">"🖼️"</span>]</span>
+<span id="cb3-339"><a href=""></a>PA <span class="op">=</span> [<span class="op">...</span>M<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> M[<span class="dv">0</span>] <span class="op">-</span> M[<span class="dv">1</span>] <span class="op">-</span> M[<span class="dv">2</span>]]</span>
+<span id="cb3-340"><a href=""></a>PB <span class="op">=</span> [<span class="op">...</span>G<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> G[<span class="dv">0</span>] <span class="op">-</span> G[<span class="dv">1</span>] <span class="op">-</span> G[<span class="dv">2</span>]]</span>
+<span id="cb3-341"><a href=""></a>f1 <span class="op">=</span> x <span class="kw">=&gt;</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">100</span>) <span class="op">/</span> <span class="dv">100</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"pt-PT"</span>)</span>
+<span id="cb3-342"><a href=""></a>pc <span class="op">=</span> x <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">1000</span>) <span class="op">/</span> <span class="dv">10</span> <span class="op">+</span> <span class="st">" %"</span></span>
+<span id="cb3-343"><a href=""></a>W <span class="op">=</span> {</span>
+<span id="cb3-344"><a href=""></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="dv">4</span><span class="op">,</span> s <span class="op">=</span> <span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">fill</span>(<span class="kw">null</span>)<span class="op">,</span> log <span class="op">=</span> []</span>
+<span id="cb3-345"><a href=""></a>  <span class="kw">let</span> tA <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> tB <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-346"><a href=""></a>  <span class="kw">const</span> emp <span class="op">=</span> []</span>
+<span id="cb3-347"><a href=""></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-348"><a href=""></a>    <span class="cf">if</span> (PA[i] <span class="op">&gt;</span> PB[i]) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] }</span>
+<span id="cb3-349"><a href=""></a>    <span class="cf">else</span> <span class="cf">if</span> (PB[i] <span class="op">&gt;</span> PA[i]) { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] }</span>
+<span id="cb3-350"><a href=""></a>    <span class="cf">else</span> emp<span class="op">.</span><span class="fu">push</span>(i)</span>
+<span id="cb3-351"><a href=""></a>  }</span>
+<span id="cb3-352"><a href=""></a>  <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> emp) { <span class="cf">if</span> (tA <span class="op">&lt;=</span> tB) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] } <span class="cf">else</span> { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] } }</span>
+<span id="cb3-353"><a href=""></a>  log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`1.ª fase: Madalena </span><span class="sc">${</span>tA<span class="sc">}</span><span class="vs">, Gonçalo </span><span class="sc">${</span>tB<span class="sc">}</span><span class="vs">`</span> <span class="op">+</span> (emp<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">` (empate: </span><span class="sc">${</span>emp<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> emo[i])<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>)<span class="sc">}</span><span class="vs">)`</span> <span class="op">:</span> <span class="st">""</span>))</span>
+<span id="cb3-354"><a href=""></a>  <span class="cf">if</span> (tA <span class="op">!==</span> tB) {</span>
+<span id="cb3-355"><a href=""></a>    <span class="kw">const</span> gA <span class="op">=</span> tA <span class="op">&gt;</span> tB<span class="op">,</span> Gv <span class="op">=</span> gA <span class="op">?</span> PA <span class="op">:</span> PB<span class="op">,</span> Rv <span class="op">=</span> gA <span class="op">?</span> PB <span class="op">:</span> PA</span>
+<span id="cb3-356"><a href=""></a>    <span class="kw">let</span> tG <span class="op">=</span> gA <span class="op">?</span> tA <span class="op">:</span> tB<span class="op">,</span> tR <span class="op">=</span> gA <span class="op">?</span> tB <span class="op">:</span> tA</span>
+<span id="cb3-357"><a href=""></a>    <span class="kw">const</span> own <span class="op">=</span> [<span class="op">...</span><span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">keys</span>()]<span class="op">.</span><span class="fu">filter</span>(i <span class="kw">=&gt;</span> (s[i] <span class="op">===</span> <span class="dv">1</span>) <span class="op">===</span> gA)</span>
+<span id="cb3-358"><a href=""></a>      <span class="op">.</span><span class="fu">sort</span>((i<span class="op">,</span> j) <span class="kw">=&gt;</span> (Rv[i] <span class="op">?</span> Gv[i] <span class="op">/</span> Rv[i] <span class="op">:</span> <span class="kw">Infinity</span>) <span class="op">-</span> (Rv[j] <span class="op">?</span> Gv[j] <span class="op">/</span> Rv[j] <span class="op">:</span> <span class="kw">Infinity</span>))</span>
+<span id="cb3-359"><a href=""></a>    <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> own) {</span>
+<span id="cb3-360"><a href=""></a>      <span class="cf">if</span> (tG <span class="op">-</span> Gv[i] <span class="op">&gt;=</span> tR <span class="op">+</span> Rv[i]) {</span>
+<span id="cb3-361"><a href=""></a>        tG <span class="op">-=</span> Gv[i]<span class="op">;</span> tR <span class="op">+=</span> Rv[i]<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb3-362"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`transfere </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs"> inteiro`</span>)</span>
+<span id="cb3-363"><a href=""></a>        <span class="cf">if</span> (tG <span class="op">===</span> tR) <span class="cf">break</span></span>
+<span id="cb3-364"><a href=""></a>      } <span class="cf">else</span> {</span>
+<span id="cb3-365"><a href=""></a>        <span class="kw">const</span> x <span class="op">=</span> (tG <span class="op">-</span> tR) <span class="op">/</span> (Gv[i] <span class="op">+</span> Rv[i])</span>
+<span id="cb3-366"><a href=""></a>        tG <span class="op">-=</span> Gv[i] <span class="op">*</span> x<span class="op">;</span> tR <span class="op">+=</span> Rv[i] <span class="op">*</span> x<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">:</span> x</span>
+<span id="cb3-367"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`divide </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs">: passa </span><span class="sc">${</span><span class="fu">pc</span>(x)<span class="sc">}</span><span class="vs"> para </span><span class="sc">${</span>gA <span class="op">?</span> <span class="st">"o Gonçalo"</span> <span class="op">:</span> <span class="st">"a Madalena"</span><span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb3-368"><a href=""></a>        <span class="cf">break</span></span>
+<span id="cb3-369"><a href=""></a>      }</span>
+<span id="cb3-370"><a href=""></a>    }</span>
+<span id="cb3-371"><a href=""></a>  }</span>
+<span id="cb3-372"><a href=""></a>  <span class="kw">const</span> vA <span class="op">=</span> PA<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> a<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> a <span class="op">*</span> s[i]<span class="op">,</span> <span class="dv">0</span>)<span class="op">,</span> vB <span class="op">=</span> PB<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> b<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> b <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> s[i])<span class="op">,</span> <span class="dv">0</span>)</span>
+<span id="cb3-373"><a href=""></a>  <span class="cf">return</span> {s<span class="op">,</span> log<span class="op">,</span> vA<span class="op">,</span> vB}</span>
+<span id="cb3-374"><a href=""></a>}</span>
+<span id="cb3-375"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;div class="ojs-tabela"&gt;</span></span>
+<span id="cb3-376"><a href=""></a><span class="sc">${</span>PA[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> PB[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p class="neg"&gt;⚠ Os pontos de cada jogador não podem passar de 100!&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table&gt;</span></span>
+<span id="cb3-377"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;Bem&lt;/th&gt;&lt;th&gt;Madalena&lt;/th&gt;&lt;th&gt;Gonçalo&lt;/th&gt;&lt;th&gt;Fica com…&lt;/th&gt;&lt;/tr&gt;</span></span>
+<span id="cb3-378"><a href=""></a><span class="sc">${</span>emo<span class="op">.</span><span class="fu">map</span>((e<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PA[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PB[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span></span>
+<span id="cb3-379"><a href=""></a>  W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">1</span> <span class="op">?</span> <span class="st">"Madalena"</span> <span class="op">:</span> W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"Gonçalo"</span> <span class="op">:</span> <span class="vs">`M </span><span class="sc">${</span><span class="fu">pc</span>(W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs"> · G </span><span class="sc">${</span><span class="fu">pc</span>(<span class="dv">1</span> <span class="op">-</span> W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs">`</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb3-380"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pontos&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vA</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vB</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb3-381"><a href=""></a><span class="vs">&lt;/table&gt;</span></span>
+<span id="cb3-382"><a href=""></a><span class="vs">&lt;p&gt;</span><span class="sc">${</span>W<span class="op">.</span><span class="at">log</span><span class="op">.</span><span class="fu">join</span>(<span class="st">" → "</span>)<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="sc">}</span></span>
+<span id="cb3-383"><a href=""></a><span class="vs">&lt;/div&gt;`</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section class="title-slide slide level1 capitulo center" data-rotulo="Ajuste na Partilha">
+<h1>Problemas</h1>
+
+</section>
+<section class="slide level2">
+<h2>Problema 1 · Os animais da avó <span class="etiqueta">básico</span></h2>
+<p>Uma irmã e um irmão herdaram os animais de estimação da avó e usam o método do Ajuste na Partilha:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Animal</th>
+<th style="text-align: center;">Irmã</th>
+<th style="text-align: center;">Irmão</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">🐈 Gato</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🐕 Cão</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🦎 Iguana</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🦜 Papagaio</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+<div class="pequeno">
+<ol type="a">
+<li class="fragment">Faz a atribuição da 1.ª fase. Quem é o vencedor inicial?</li>
+<li class="fragment">Que animal terá de ser «partilhado»? Justifica.</li>
+<li class="fragment">Determina a partilha final e o número de pontos de cada um.</li>
+</ol>
+</div>
+<p><span class="fonte">Adaptado da ficha «Partilha equilibrada – caso discreto»</span></p>
+</section>
+<section class="slide level2">
+<h2>Problema 1 · Resolução</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>a)</strong> Irmã: 🐈 e 🦜 → <span class="math inline">\(40 + 20 = 60\)</span> pontos</p>
+<p>Irmão: 🐕 e 🦎 → <span class="math inline">\(50 + 30 = 80\)</span> pontos</p>
+<p>O <strong>irmão</strong> é o vencedor inicial.</p>
+<div class="fragment">
+<p><strong>b)</strong> Razões dos bens do irmão: 🐕 <span class="math inline">\(\frac{50}{30} \approx 1{,}67\)</span>; 🦎 <span class="math inline">\(\frac{30}{10} = 3\)</span></p>
+<p>Começa-se pelo cão. Todo: irmão <span class="math inline">\(30\)</span>, irmã <span class="math inline">\(90\)</span> → inverte. Logo, <strong>divide-se o cão</strong>.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>c)</strong> <span class="math inline">\(x\)</span> = fração do cão que passa para a irmã: <span class="math display">\[80 - 50x = 60 + 30x \iff x = \frac{20}{80} = \frac{1}{4}\]</span></p>
+</div>
+<div class="destaque teal fragment">
+<p><strong>Irmã:</strong> 🐈, 🦜 e <span class="math inline">\(\frac14\)</span> do 🐕 → <span class="math inline">\(60 + 7{,}5 = 67{,}5\)</span> pontos</p>
+<p><strong>Irmão:</strong> 🦎 e <span class="math inline">\(\frac34\)</span> do 🐕 → <span class="math inline">\(30 + 37{,}5 = 67{,}5\)</span> pontos</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Problema 2 · Um empate <span class="etiqueta">empate</span></h2>
+<p>Num divórcio, o marido e a esposa atribuíram os seguintes pontos:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Bem</th>
+<th style="text-align: center;">Marido</th>
+<th style="text-align: center;">Esposa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">🏠 Casa</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🚗 Automóvel</td>
+<td style="text-align: center;"><span class="max">25</span></td>
+<td style="text-align: center;"><span class="max">25</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🛖 Cabana na serra</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🚤 Barco</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">📺 Televisão</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🔊 Sistema de som</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<div class="pequeno">
+<ol type="a">
+<li class="fragment">Que dificuldade surge na 1.ª fase? Como se resolve?</li>
+<li class="fragment">Determina a partilha final.</li>
+</ol>
+</div>
+<p><span class="fonte">Adaptado da ficha «Partilha equilibrada – caso discreto»</span></p>
+</section>
+<section class="slide level2">
+<h2>Problema 2 · Resolução</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>a)</strong> Sem o automóvel: marido 🏠 🚤 📺 🔊 → <span class="math inline">\(55\)</span>; esposa 🛖 → <span class="math inline">\(40\)</span>.</p>
+<p>O automóvel (empate) vai para quem tem <strong>menos</strong> pontos: a <strong>esposa</strong>, que fica com <span class="math inline">\(40 + 25 = 65\)</span>.</p>
+<div class="fragment">
+<p><strong>b)</strong> A esposa é a vencedora inicial. Razões: 🚗 <span class="math inline">\(\frac{25}{25} = 1\)</span>; 🛖 <span class="math inline">\(\frac{40}{20} = 2\)</span></p>
+<p>Todo o 🚗 para o marido: <span class="math inline">\(80\)</span> contra <span class="math inline">\(40\)</span> → inverte. <strong>Divide-se o automóvel</strong>.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><span class="math display">\[65 - 25x = 55 + 25x \iff x = \frac{1}{5}\]</span></p>
+</div>
+<div class="destaque teal fragment">
+<p><strong>Marido:</strong> 🏠 🚤 📺 🔊 e <span class="math inline">\(\frac15\)</span> do 🚗 → <strong>60</strong> pontos</p>
+<p><strong>Esposa:</strong> 🛖 e <span class="math inline">\(\frac45\)</span> do 🚗 → <strong>60</strong> pontos</p>
+</div>
+<div class="destaque fragment">
+<p>Se o automóvel fosse dado ao marido, o resultado final seria <strong>o mesmo</strong> (experimenta!).</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Problema 3 · Dividir o trabalho <span class="etiqueta">vários passos</span></h2>
+<p>O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 pontos pelas atividades, conforme o <strong>interesse</strong> em ficar com cada uma:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Atividade</th>
+<th style="text-align: center;">Leonido</th>
+<th style="text-align: center;">Marco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Campanha de promoção</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Análise do preço inicial</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Design do produto</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Análise do custo da promoção</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Manufatura do protótipo</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Análise do custo do produto</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Teste de mercado</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p><span class="pergunta fragment">Descreve todos os passos do método e indica a partilha final.</span></p>
+<p><span class="fonte">Adaptado do teste de avaliação de 9/12/2015</span></p>
+</section>
+<section class="slide level2">
+<h2>Problema 3 · Resolução</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>1.ª fase.</strong> Leonido: campanha, design e protótipo → <span class="math inline">\(74\)</span> pontos. Marco: as outras quatro → <span class="math inline">\(38\)</span> pontos.</p>
+<div class="fragment">
+<p><strong>Razões</strong> (bens do Leonido):</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Design</th>
+<th style="text-align: center;">Protótipo</th>
+<th style="text-align: center;">Campanha</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\frac{18}{16} = 1{,}125\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{16}{14} \approx 1{,}143\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{40}{32} = 1{,}25\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p><strong>Design</strong> inteiro para o Marco: Leonido <span class="math inline">\(56\)</span>, Marco <span class="math inline">\(54\)</span>. Ainda não inverte ✔</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Protótipo</strong> inteiro: Leonido <span class="math inline">\(40\)</span>, Marco <span class="math inline">\(68\)</span> → inverte! Divide-se: <span class="math display">\[56 - 16x = 54 + 14x\]</span> <span class="math display">\[30x = 2 \iff x = \frac{1}{15}\]</span></p>
+</div>
+<div class="destaque teal fragment">
+<p><strong>Leonido:</strong> campanha e <span class="math inline">\(\frac{14}{15}\)</span> do protótipo</p>
+<p><strong>Marco:</strong> as restantes atividades, o design e <span class="math inline">\(\frac{1}{15}\)</span> do protótipo</p>
+<p>Cada um: <span class="math inline">\(56 - \frac{16}{15} = \frac{824}{15} \approx 54{,}9\)</span> pontos</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Problema 4 · Será preciso partilhar? <span class="etiqueta">justificar</span></h2>
+<p>O Paulo e a Rosa dividem os bens de uma herança:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Bem</th>
+<th style="text-align: center;">Paulo</th>
+<th style="text-align: center;">Rosa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">🏺 Porcelana chinesa</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🪑 Mesa</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🎹 Piano</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🏖️ Casa de férias</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">🚤 Barco</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌚ Coleção de relógios</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+<div class="pequeno">
+<ol type="a">
+<li class="fragment">O Paulo e a Rosa terão de partilhar algum dos bens? Justifica.</li>
+<li class="fragment">Que percentagem do piano fica com cada um?</li>
+</ol>
+</div>
+<p><span class="fonte">Adaptado do mini-teste «Partilha equilibrada»</span></p>
+</section>
+<section class="slide level2">
+<h2>Problema 4 · Resolução</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>1.ª fase.</strong> Paulo: 🪑 🚤 ⌚ → <span class="math inline">\(45\)</span>; Rosa: 🏺 🎹 🏖️ → <span class="math inline">\(81\)</span>.</p>
+<div class="fragment">
+<p>Razões (bens da Rosa): 🎹 <span class="math inline">\(\frac{23}{20} = 1{,}15\)</span>; 🏺 <span class="math inline">\(\frac{30}{25} = 1{,}2\)</span>; 🏖️ <span class="math inline">\(\frac{28}{10} = 2{,}8\)</span></p>
+</div>
+<div class="fragment">
+<p><strong>a)</strong> Sim. Transferindo o piano <strong>todo</strong>, o Paulo ficaria com <span class="math inline">\(45 + 20 = 65\)</span> e a Rosa com <span class="math inline">\(81 - 23 = 58\)</span>: a situação inverte-se. Logo, o <strong>piano</strong> tem de ser partilhado.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>b)</strong> <span class="math inline">\(x\)</span> = fração do piano que passa para o Paulo: <span class="math display">\[81 - 23x = 45 + 20x\]</span> <span class="math display">\[43x = 36 \iff x = \frac{36}{43} \approx 0{,}837\]</span></p>
+</div>
+<div class="destaque teal fragment">
+<p>Paulo: <strong>≈ 83,7 %</strong> do piano; Rosa: <strong>≈ 16,3 %</strong>.</p>
+<p>Cada um fica com <span class="math inline">\(\frac{2655}{43} \approx 61{,}7\)</span> pontos.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Problema 5 · Vale a pena mentir? <span class="etiqueta">estratégia</span></h2>
+<p>A Ana e o Bruno vão dividir dois quadros. Os pontos <strong>verdadeiros</strong> são:</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Quadro</th>
+<th style="text-align: center;">Ana</th>
+<th style="text-align: center;">Bruno</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">🖼️ Matisse</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🖼️ Picasso</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">75</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<div class="pequeno">
+<ol type="a">
+<li class="fragment">Qual é a partilha se ambos forem honestos?</li>
+<li class="fragment">A Ana sabe os pontos do Bruno e declara <strong>26</strong> para o Matisse e <strong>74</strong> para o Picasso. Qual é a partilha? Quantos pontos <strong>verdadeiros</strong> obtém a Ana?</li>
+<li class="fragment">E se o Bruno também mentir, declarando <strong>74</strong> para o Matisse e <strong>26</strong> para o Picasso?</li>
+</ol>
+</div>
+</div></div>
+<p><span class="fonte">Adaptado de Brams e Taylor, <em>Fair Division</em> (1996)</span></p>
+</section>
+<section class="slide level2">
+<h2>Problema 5 · Resolução</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">a) Honestos</a></li><li><a href="#tabset-1-2">b) A Ana mente</a></li><li><a href="#tabset-1-3">c) Ambos mentem</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>Cada um fica com o quadro de que mais gosta: Ana 🖼️ Matisse (<strong>75</strong>), Bruno 🖼️ Picasso (<strong>75</strong>). Os totais são iguais: <strong>não há ajuste</strong>.</p>
+</div>
+<div id="tabset-1-2">
+<p>1.ª fase: Ana Matisse (<span class="math inline">\(26 &gt; 25\)</span>) → <span class="math inline">\(26\)</span>; Bruno Picasso (<span class="math inline">\(75 &gt; 74\)</span>) → <span class="math inline">\(75\)</span>. O Bruno é o vencedor inicial: <span class="math display">\[75 - 75x = 26 + 74x \iff x = \frac{49}{149} \approx 0{,}33\]</span></p>
+<p>A Ana fica com o Matisse e <strong>≈ 33 %</strong> do Picasso. Em pontos <strong>verdadeiros</strong>: <span class="math display">\[75 + 25 \times \frac{49}{149} \approx 83{,}2 \text{ pontos} \quad (\text{em vez de } 75)\]</span></p>
+<p>O Bruno desce para <span class="math inline">\(\approx 50{,}3\)</span> pontos.</p>
+</div>
+<div id="tabset-1-3">
+<p>Declarações: Ana 26 / 74, Bruno 74 / 26. A Ana fica com o <strong>Picasso</strong> e o Bruno com o <strong>Matisse</strong> (74 pontos declarados cada).</p>
+<div class="destaque coral">
+<p>Em pontos verdadeiros, cada um fica só com <strong>25</strong>! Mentir é arriscado: a estratégia honesta garante sempre <strong>pelo menos 50 pontos</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>Para recordar</h2>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="cartao quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><span class="emoji">💯</span></p>
+<p>Cada jogador distribui <strong>100 pontos</strong> pelos bens</p>
+</div>
+<div class="cartao coral quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><span class="emoji">🏆</span></p>
+<p>1.ª fase: cada bem para quem lhe dá <strong>mais pontos</strong></p>
+</div>
+<div class="cartao mostarda quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><span class="emoji">⚖️</span></p>
+<p>Ajuste por ordem <strong>crescente da razão</strong>; no máximo um bem é dividido</p>
+</div>
+</div>
+</div>
+<div class="destaque teal fragment">
+<p>Para <strong>dois</strong> jogadores, a partilha é <strong>equitativa</strong>, <strong>livre de inveja</strong> e <strong>eficiente</strong>, mas pode obrigar a dividir um bem.</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>MACS 10.º ano · Partilha no caso discreto · Ajuste na Partilha</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="libs/revealjs/plugin/search/search.js"></script>
+  <script src="libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":true,"theme":"whiteboard","boardmarkerWidth":4,"chalkWidth":5},
+'multiplex': {"secret":null,"id":"9b2d1e12ec673bdd12526ce13ba24715e2d927a3bc826734082b35fe2448a6d2","url":"https://multiplex.up.railway.app/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBNID0gSW5wdXRzLmZvcm0oW1xuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMTAsIHN0ZXA6IDEsIGxhYmVsOiBcIk1hZGFsZW5hIOKbtVwifSksXG4gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge3ZhbHVlOiA1MCwgc3RlcDogMSwgbGFiZWw6IFwiTWFkYWxlbmEg8J+QiFwifSksXG4gIElucHV0cy5yYW5nZShbMCwgMTAwXSwge3ZhbHVlOiAzMCwgc3RlcDogMSwgbGFiZWw6IFwiTWFkYWxlbmEg8J+PolwifSlcbl0pXG52aWV3b2YgRyA9IElucHV0cy5mb3JtKFtcbiAgSW5wdXRzLnJhbmdlKFswLCAxMDBdLCB7dmFsdWU6IDMwLCBzdGVwOiAxLCBsYWJlbDogXCJHb27Dp2FsbyDim7VcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMjAsIHN0ZXA6IDEsIGxhYmVsOiBcIkdvbsOnYWxvIPCfkIhcIn0pLFxuICBJbnB1dHMucmFuZ2UoWzAsIDEwMF0sIHt2YWx1ZTogMjAsIHN0ZXA6IDEsIGxhYmVsOiBcIkdvbsOnYWxvIPCfj6JcIn0pXG5dKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZW1vID0gW1wi4pu1XCIsIFwi8J+QiFwiLCBcIvCfj6JcIiwgXCLwn5a877iPXCJdXG5QQSA9IFsuLi5NLCAxMDAgLSBNWzBdIC0gTVsxXSAtIE1bMl1dXG5QQiA9IFsuLi5HLCAxMDAgLSBHWzBdIC0gR1sxXSAtIEdbMl1dXG5mMSA9IHggPT4gKE1hdGgucm91bmQoeCAqIDEwMCkgLyAxMDApLnRvTG9jYWxlU3RyaW5nKFwicHQtUFRcIilcbnBjID0geCA9PiBNYXRoLnJvdW5kKHggKiAxMDAwKSAvIDEwICsgXCIgJVwiXG5XID0ge1xuICBjb25zdCBuID0gNCwgcyA9IEFycmF5KG4pLmZpbGwobnVsbCksIGxvZyA9IFtdXG4gIGxldCB0QSA9IDAsIHRCID0gMFxuICBjb25zdCBlbXAgPSBbXVxuICBmb3IgKGxldCBpID0gMDsgaSA8IG47IGkrKykge1xuICAgIGlmIChQQVtpXSA+IFBCW2ldKSB7IHNbaV0gPSAxOyB0QSArPSBQQVtpXSB9XG4gICAgZWxzZSBpZiAoUEJbaV0gPiBQQVtpXSkgeyBzW2ldID0gMDsgdEIgKz0gUEJbaV0gfVxuICAgIGVsc2UgZW1wLnB1c2goaSlcbiAgfVxuICBmb3IgKGNvbnN0IGkgb2YgZW1wKSB7IGlmICh0QSA8PSB0QikgeyBzW2ldID0gMTsgdEEgKz0gUEFbaV0gfSBlbHNlIHsgc1tpXSA9IDA7IHRCICs9IFBCW2ldIH0gfVxuICBsb2cucHVzaChgMS7CqiBmYXNlOiBNYWRhbGVuYSAke3RBfSwgR29uw6dhbG8gJHt0Qn1gICsgKGVtcC5sZW5ndGggPyBgIChlbXBhdGU6ICR7ZW1wLm1hcChpID0+IGVtb1tpXSkuam9pbihcIiBcIil9KWAgOiBcIlwiKSlcbiAgaWYgKHRBICE9PSB0Qikge1xuICAgIGNvbnN0IGdBID0gdEEgPiB0QiwgR3YgPSBnQSA/IFBBIDogUEIsIFJ2ID0gZ0EgPyBQQiA6IFBBXG4gICAgbGV0IHRHID0gZ0EgPyB0QSA6IHRCLCB0UiA9IGdBID8gdEIgOiB0QVxuICAgIGNvbnN0IG93biA9IFsuLi5BcnJheShuKS5rZXlzKCldLmZpbHRlcihpID0+IChzW2ldID09PSAxKSA9PT0gZ0EpXG4gICAgICAuc29ydCgoaSwgaikgPT4gKFJ2W2ldID8gR3ZbaV0gLyBSdltpXSA6IEluZmluaXR5KSAtIChSdltqXSA/IEd2W2pdIC8gUnZbal0gOiBJbmZpbml0eSkpXG4gICAgZm9yIChjb25zdCBpIG9mIG93bikge1xuICAgICAgaWYgKHRHIC0gR3ZbaV0gPj0gdFIgKyBSdltpXSkge1xuICAgICAgICB0RyAtPSBHdltpXTsgdFIgKz0gUnZbaV07IHNbaV0gPSBnQSA/IDAgOiAxXG4gICAgICAgIGxvZy5wdXNoKGB0cmFuc2ZlcmUgJHtlbW9baV19IGludGVpcm9gKVxuICAgICAgICBpZiAodEcgPT09IHRSKSBicmVha1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgY29uc3QgeCA9ICh0RyAtIHRSKSAvIChHdltpXSArIFJ2W2ldKVxuICAgICAgICB0RyAtPSBHdltpXSAqIHg7IHRSICs9IFJ2W2ldICogeDsgc1tpXSA9IGdBID8gMSAtIHggOiB4XG4gICAgICAgIGxvZy5wdXNoKGBkaXZpZGUgJHtlbW9baV19OiBwYXNzYSAke3BjKHgpfSBwYXJhICR7Z0EgPyBcIm8gR29uw6dhbG9cIiA6IFwiYSBNYWRhbGVuYVwifWApXG4gICAgICAgIGJyZWFrXG4gICAgICB9XG4gICAgfVxuICB9XG4gIGNvbnN0IHZBID0gUEEucmVkdWNlKCh0LCBhLCBpKSA9PiB0ICsgYSAqIHNbaV0sIDApLCB2QiA9IFBCLnJlZHVjZSgodCwgYiwgaSkgPT4gdCArIGIgKiAoMSAtIHNbaV0pLCAwKVxuICByZXR1cm4ge3MsIGxvZywgdkEsIHZCfVxufVxuaHRtbGA8ZGl2IGNsYXNzPVwib2pzLXRhYmVsYVwiPlxuJHtQQVszXSA8IDAgfHwgUEJbM10gPCAwID8gaHRtbGA8cCBjbGFzcz1cIm5lZ1wiPuKaoCBPcyBwb250b3MgZGUgY2FkYSBqb2dhZG9yIG7Do28gcG9kZW0gcGFzc2FyIGRlIDEwMCE8L3A+YCA6IGh0bWxgPHRhYmxlPlxuPHRyPjx0aD5CZW08L3RoPjx0aD5NYWRhbGVuYTwvdGg+PHRoPkdvbsOnYWxvPC90aD48dGg+RmljYSBjb23igKY8L3RoPjwvdHI+XG4ke2Vtby5tYXAoKGUsIGkpID0+IGh0bWxgPHRyPjx0ZD4ke2V9PC90ZD48dGQ+JHtQQVtpXX08L3RkPjx0ZD4ke1BCW2ldfTwvdGQ+PHRkPiR7XG4gIFcuc1tpXSA9PT0gMSA/IFwiTWFkYWxlbmFcIiA6IFcuc1tpXSA9PT0gMCA/IFwiR29uw6dhbG9cIiA6IGBNICR7cGMoVy5zW2ldKX0gwrcgRyAke3BjKDEgLSBXLnNbaV0pfWB9PC90ZD48L3RyPmApfVxuPHRyPjx0ZD48Yj5Qb250b3M8L2I+PC90ZD48dGQ+PGI+JHtmMShXLnZBKX08L2I+PC90ZD48dGQ+PGI+JHtmMShXLnZCKX08L2I+PC90ZD48dGQ+PC90ZD48L3RyPlxuPC90YWJsZT5cbjxwPiR7Vy5sb2cuam9pbihcIiDihpIgXCIpfTwvcD5gfVxuPC9kaXY+YFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdNJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ0cnKSJ9XX0=
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../..";
+    window._ojs.paths.runtimeToRoot = "../../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiada");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiada");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
