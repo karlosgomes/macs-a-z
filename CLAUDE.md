@@ -17,6 +17,6 @@ O script gera as tabelas/linhas e os links para a app Python, faz `quarto render
 Multiplex: o professor abre o `-speaker.html` local; os alunos abrem a página publicada e seguem os diapositivos.
 
 ## Publicação
-- Repositório (a criar): https://github.com/karlosgomes/macs-a-z (ramo `main`), GitHub Pages a partir da raiz.
+- Repositório: https://github.com/karlosgomes/macs-a-z (ramo `main`), GitHub Pages a partir da raiz (desde 2026-11-15).
 - Publicar = `git commit` + `git push`. Pedir confirmação ao utilizador antes de fazer push.
-- O menu do weblog, do Matemática A...Z e das Apps de Matemática tem de ganhar o item «MACS A...Z» (à mão, como os outros).
+- O item «MACS A...Z» está nos menus do weblog, do Matemática A...Z e das Apps de Matemática (2026-11-15). Se o menu do weblog mudar, atualizar à mão a barra do `index.html` daqui e `~/MACS_26_27/Partilha/apresentacoes/_ferramentas/site/barra.html`.
