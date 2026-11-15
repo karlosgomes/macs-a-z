@@ -13,6 +13,7 @@ cd "$AQUI"
 python3 _ferramentas/links_python.py
 python3 _fonte_licitacoes/tabela.py
 python3 _fonte_marcadores/linhas.py
+python3 _fonte_ajuste/tabela_aw.py
 rm -rf _site
 quarto render --profile site
 mkdir -p "$DEST"

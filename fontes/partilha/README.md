@@ -35,10 +35,17 @@ A última apresentação termina com um quadro que compara os três métodos.
 
 Se mudar os dados, o texto explicativo à direita, que está no modelo, também tem de ser atualizado.
 
+## Atenção: não editar `02_ajuste_na_partilha.qmd` diretamente
+É **gerado** (desde 15/11/2026) a partir de `_fonte_ajuste/_02_ajuste_na_partilha_modelo.qmd` com `python3 _fonte_ajuste/tabela_aw.py`.
+- Cada `{{A:caso:estados}}` é a tabela de cálculos sempre presente.
+- Casos: `intro`, `camp`, `p1` … `p4`, `p5h`, `p5m`, `p5a`.
+- Estados: 1 pontos · 2 1.ª fase · 3 ordem do ajuste (razões) · 4 passar por inteiro? · 5 equação · 6 partilha e pontos finais · 7 parte do outro · 8 extra (pontos verdadeiros no P5).
+- Convenção: $x$ = fração do bem dividido que **passa** para o outro jogador ($V - vx = P + px$). Nunca usar $1 - x$.
+
 ## Atenção: não editar `03_marcadores.qmd` diretamente
 `03_marcadores.qmd` é **gerado**. Para mudar o texto ou as linhas de doces:
 1. Editar `_fonte_marcadores/_03_marcadores_modelo.qmd`.
-2. Se for preciso mudar as linhas de itens, editar também `_fonte_marcadores/linhas.py`. Cada `{{L:nome}}` do modelo corresponde a uma linha definida em `LINHAS`.
+2. Se for preciso mudar as linhas de itens, editar também `_fonte_marcadores/linhas.py`. Cada `{{L:nome}}` do modelo corresponde a uma linha definida em `LINHAS`. Cada `{{S:caso:estados}}` é a tabela de síntese sempre presente (jogadores × parte justa, marcas, recebe, vale), definida com `def_sintese`. Os estados são: 1 marcas e parte justa; depois um estado por atribuição, pela ordem; o excedente fica no estado da última atribuição; segue-se a escolha do excedente.
 3. Correr `python3 _fonte_marcadores/linhas.py`.
 4. Fazer `quarto render 03_marcadores.qmd`.
 

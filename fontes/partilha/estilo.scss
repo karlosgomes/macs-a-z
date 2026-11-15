@@ -173,3 +173,12 @@ $p1: $azul; $p2: $vermelho; $p3: $laranja; $p4: $violeta;
 .reveal a.app-python { display: inline-block; margin-top: .3em; font-size: .6em; font-weight: 700; color: #fff;
   background: #1d4ed8; border-radius: 6px; padding: .2em .8em; text-decoration: none; }
 .reveal a.app-python:hover { filter: brightness(1.1); }
+.reveal .tabela-metodo td.span { text-align: left; white-space: normal; }
+.reveal .tabela-metodo .nota { font-size: .75em; color: #64748b; margin-left: .3em; }
+.reveal .tabela-metodo tr.atual .nota { color: #9a3412; }
+.reveal .tabela-metodo.longa table { font-size: 19px; }
+.reveal .tabela-metodo.longa td { padding: .2em .35em; }
+.reveal .tabela-metodo.marcadores table { font-size: 22px; }
+.reveal .tabela-metodo.marcadores.quatro table { font-size: 18px; }
+.reveal .tabela-metodo.marcadores td { padding: .22em .35em; }
+.reveal .tabela-metodo .q { display: inline-block; width: .8em; height: .8em; border-radius: 3px; vertical-align: middle; }

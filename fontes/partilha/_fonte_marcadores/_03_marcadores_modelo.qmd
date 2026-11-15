@@ -36,81 +36,120 @@ Adaptado da ficha «Partilha equilibrada – caso discreto» (Snickers, Crunch e
 
 {{L:i0}}
 
-| | Total (para si) | Parte justa ($:3$) |
-|:--|:--:|:--:|
-| Teodoro | $9 \times 1 = 9$ € | **3 €** |
-| Vanessa | $3 \times 2 = 6$ € | **2 €** |
-| Rudy    | $3 \times 1{,}5 + 6 \times 0{,}75 = 9$ € | **3 €** |
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:1}}
+:::
+::: {.column width="42%" .texto-passo}
+Cada um soma o valor que dá aos 9 doces e divide por 3:
+
+- Teodoro: $9 : 3 = 3$ €
+- Vanessa: $6 : 3 = 2$ €
+- Rudy: $9 : 3 = 3$ €
 
 ::: {.destaque .fragment}
-Ideia: cada um **corta** a fila em **3 segmentos** que, para si, valem o mesmo (a sua parte justa). Para isso, coloca **2 marcas**.
+Cada um **corta** a fila em **3 segmentos** que, para si, valem o mesmo: coloca **2 marcas**.
+:::
+:::
 :::
 
 ## As marcas do Teodoro {auto-animate=true}
 
 {{L:i1}}
 
-::: {.legenda}
-[[]{.q .p1}Teodoro]{} [segmentos: 🍫🍫🍫 · 🍬🍬🍬 · 🍭🍭🍭 → 3 € cada]{}
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:2}}
 :::
+::: {.column width="42%" .texto-passo}
+🍫🍫🍫 · 🍬🍬🍬 · 🍭🍭🍭 → **3 €** cada segmento.
 
 As marcas são colocadas **em segredo** e só são reveladas no fim.
+:::
+:::
 
 ## As marcas da Vanessa {auto-animate=true}
 
 {{L:i2}}
 
-::: {.legenda}
-[[]{.q .p1}Teodoro]{} [[]{.q .p2}Vanessa]{} [segmentos da Vanessa: 1–4 · 5 · 6–9 → um 🍬 (2 €) em cada]{}
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:3}}
+:::
+::: {.column width="42%" .texto-passo}
+A Vanessa só gosta de 🍬: cada segmento tem **um** 🍬 (**2 €**): 1–4 · 5 · 6–9.
+:::
 :::
 
 ## As marcas do Rudy {auto-animate=true}
 
 {{L:i3}}
 
-::: {.legenda}
-[[]{.q .p1}Teodoro]{} [[]{.q .p2}Vanessa]{} [[]{.q .p3}Rudy]{} [segmentos do Rudy: 🍫🍫 · 🍫🍬🍬 · 🍬🍭🍭🍭 → 3 € cada]{}
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:4}}
 :::
+::: {.column width="42%" .texto-passo}
+🍫🍫 · 🍫🍬🍬 · 🍬🍭🍭🍭 → **3 €** cada segmento.
 
 [E agora? Quem fica com quê?]{.pergunta .fragment}
+:::
+:::
 
 ## 1.º: a primeira marca mais à esquerda {auto-animate=true}
 
 {{L:i4}}
 
-Percorre-se a fila da esquerda para a direita. A **primeira das 1.ªs marcas** é a do **Rudy** ($R_1$): ele fica com o seu 1.º segmento (🍫🍫) e **sai do jogo**, retirando as outras marcas.
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:5}}
+:::
+::: {.column width="42%" .texto-passo}
+Percorre-se a fila da esquerda para a direita. A **primeira das 1.ªs marcas** é a do **Rudy** ($R_1$): fica com o seu 1.º segmento (🍫🍫) e **sai do jogo**.
+:::
+:::
 
 ## 2.º: a segunda marca mais à esquerda {auto-animate=true}
 
 {{L:i5}}
 
-Entre os que restam, procura-se a **primeira das 2.ªs marcas**: $V_2$ (depois do 5) vem antes de $T_2$ (depois do 6). A **Vanessa** fica com o seu 2.º segmento: o doce 5 (🍬).
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:6}}
+:::
+::: {.column width="42%" .texto-passo}
+Entre os que restam, $V_2$ (depois do 5) vem antes de $T_2$ (depois do 6): a **Vanessa** fica com o seu 2.º segmento, o doce 5 (🍬).
+:::
+:::
 
 ## 3.º: o último fica com o último segmento {auto-animate=true}
 
 {{L:i6}}
 
-O **Teodoro** fica com o seu último segmento: 🍭🍭🍭. Os doces **3, 4 e 6** sobram: são o **excedente**.
+::: {.columns}
+::: {.column width="58%"}
+{{S:intro:7}}
+:::
+::: {.column width="42%" .texto-passo}
+O **Teodoro** fica com 🍭🍭🍭 (da sua última marca até ao fim).
+
+Os doces **3, 4 e 6** sobram: são o **excedente**.
+:::
+:::
 
 ## O excedente {auto-animate=true}
 
 {{L:i7}}
 
 ::: {.columns}
-::: {.column width="50%"}
-Sorteia-se uma ordem de escolha: **Vanessa, Rudy, Teodoro**.
-
-- A Vanessa escolhe um 🍬 (o 4);
-- o Rudy escolhe o 🍫 (o 3);
-- o Teodoro fica com o 🍬 que resta (o 6).
+::: {.column width="58%"}
+{{S:intro:8}}
 :::
-::: {.column width="50%"}
-::: {.fragment}
-| | Recebe | Vale (para si) | Parte justa |
-|:--|:--:|:--:|:--:|
-| Teodoro | 🍬🍭🍭🍭 | **4 €** | 3 € ✔ |
-| Vanessa | 🍬🍬 | **4 €** | 2 € ✔ |
-| Rudy | 🍫🍫🍫 | **4,50 €** | 3 € ✔ |
+::: {.column width="42%" .texto-passo}
+Sorteia-se a ordem de escolha: **Vanessa, Rudy, Teodoro**. A Vanessa escolhe um 🍬, o Rudy o 🍫 e o Teodoro o 🍬 que resta.
+
+::: {.destaque .teal .fragment}
+Todos acabam **acima** da parte justa: 4 €, 4 € e 4,50 €.
 :::
 :::
 :::
@@ -279,238 +318,303 @@ ${P.emp.length ? html`<p class="neg">⚠ Empate (${P.emp.join("; ")}): seria dec
 
 # Problemas {.capitulo data-rotulo="Método dos marcadores"}
 
-## Problema 1 · Ler as marcas [básico]{.etiqueta}
+## Problema 1 · Ler as marcas [básico]{.etiqueta} {auto-animate=true}
 
-Quatro jogadores, **A**, **B**, **C** e **D**, dividem 16 itens pelo método dos marcadores. As marcas ficam imediatamente **à direita** dos itens indicados:
+{{L:p1v}}
 
 ::: {.columns}
-::: {.column width="40%"}
-| Jogador | 1.ª | 2.ª | 3.ª |
-|:-------:|:---:|:---:|:---:|
-| A | 1 | 6 | 12 |
-| B | 3 | 8 | 15 |
-| C | 2 | 9 | 14 |
-| D | 2 | 7 | 12 |
+::: {.column width="55%"}
+{{S:p1:1}}
 :::
-::: {.column width="60%"}
+::: {.column width="45%" .texto-passo}
+Quatro jogadores dividem 16 itens. As marcas ficam imediatamente **à direita** dos itens indicados na tabela.
+
 ::: {.incremental .pequeno}
 a) Representa as marcas na fila de itens.
 b) Com que itens fica cada jogador?
 c) Que itens ficam no excedente?
 :::
-:::
-:::
-
-{{L:p1v}}
 
 [Adaptado da ficha «Partilha equilibrada – caso discreto»]{.fonte}
+:::
+:::
 
-## Problema 1 · Resolução {auto-animate=true}
+## Problema 1 · a) As marcas {auto-animate=true}
 
 {{L:p1m}}
 
-::: {.fragment}
+::: {.columns}
+::: {.column width="55%"}
+{{S:p1:1}}
+:::
+::: {.column width="45%" .texto-passo}
+Cada marca fica entre o item indicado e o seguinte. Há marcas no mesmo sítio ($C_1$ e $D_1$; $A_3$ e $D_3$).
+:::
+:::
+
+## Problema 1 · b) e c) {auto-animate=true}
+
 {{L:p1s}}
-:::
 
-::: {.columns .pequeno}
-::: {.column width="60%"}
-::: {.fragment}
-1. Primeira 1.ª marca: $A_1$ → **A** fica com o item **1**.
-2. Primeira 2.ª marca (B, C, D): $D_2$ → **D** fica com **3 a 7**.
-3. Primeira 3.ª marca (B, C): $C_3$ → **C** fica com **10 a 14**.
-4. **B** fica com o seu último segmento: item **16**.
+::: {.columns}
+::: {.column width="55%"}
+{{S:p1:2-5}}
 :::
-:::
-::: {.column width="40%"}
+::: {.column width="45%" .texto-passo}
+1. $A_1$ → **A**: item 1.
+2. Primeira 2.ª marca: $D_2$ → **D**: 3 a 7.
+3. Primeira 3.ª marca: $C_3$ → **C**: 10 a 14.
+4. **B**: item 16.
+
 ::: {.destaque .fragment}
-**Excedente:** itens 2, 8, 9 e 15.
+**Excedente:** 2, 8, 9 e 15.
 :::
 :::
 :::
 
-## Problema 2 · Marcas empatadas [empate]{.etiqueta}
-
-Quatro irmãs dividem 20 joias da avó. As marcas foram as seguintes:
+## Problema 2 · Marcas empatadas [empate]{.etiqueta} {auto-animate=true}
 
 {{L:p2m}}
 
-::: {.legenda}
-[[]{.q .p1}Ana]{} [[]{.q .p2}Beatriz]{} [[]{.q .p3}Clara]{} [[]{.q .p4}Diana]{}
+::: {.columns}
+::: {.column width="55%"}
+{{S:p2B:1}}
 :::
+::: {.column width="45%" .texto-passo}
+Quatro irmãs dividem 20 joias da avó.
 
 ::: {.incremental .pequeno}
-a) Faz a atribuição até surgir um problema. Qual é o problema?
-b) O empate decide-se por sorteio. Determina a partilha nos dois casos possíveis.
+a) Faz a atribuição até surgir um problema. Qual é?
+b) O empate decide-se por sorteio. Determina a partilha nos dois casos.
 c) O sorteio é indiferente para o excedente?
 :::
 
 [Adaptado de *Fair Division*, cap. 8]{.fonte}
+:::
+:::
 
-## Problema 2 · Resolução
+## Problema 2 · a) O empate {auto-animate=true}
 
-**a)** $C_1$ → **Clara** fica com 1 a 3. Primeira 2.ª marca: $D_2$ → **Diana** fica com 5 a 7. Nas 3.ªs marcas, $A_3$ e $B_3$ estão **no mesmo sítio** (depois do 14): **empate**!
+{{L:p2m}}
 
-::: {.panel-tabset}
-### O sorteio dá à Beatriz
+::: {.columns}
+::: {.column width="55%"}
+{{S:p2B:2,3}}
+:::
+::: {.column width="45%" .texto-passo}
+$C_1$ → **Clara**: 1 a 3. Primeira 2.ª marca: $D_2$ → **Diana**: 5 a 7.
+
+::: {.destaque .coral .fragment}
+Nas 3.ªs marcas, $A_3$ e $B_3$ estão **no mesmo sítio** (depois do 14): **empate**!
+:::
+:::
+:::
+
+## Problema 2 · b) O sorteio dá à Beatriz {auto-animate=true}
 
 {{L:p2B}}
 
-Beatriz: 10 a 14 · Ana: 15 a 20 · **Excedente: 4, 8, 9**
+::: {.columns}
+::: {.column width="55%"}
+{{S:p2B:4,5}}
+:::
+::: {.column width="45%" .texto-passo}
+**Beatriz:** 10 a 14 (2.º segmento dela).
+**Ana:** 15 a 20.
 
-### O sorteio dá à Ana
+**Excedente:** 4, 8, 9.
+:::
+:::
+
+## Problema 2 · b) O sorteio dá à Ana {auto-animate=true}
 
 {{L:p2A}}
 
-Ana: 9 a 14 · Beatriz: 15 a 20 · **Excedente: 4, 8**
+::: {.columns}
+::: {.column width="55%"}
+{{S:p2A:4,5}}
+:::
+::: {.column width="45%" .texto-passo}
+**Ana:** 9 a 14.
+**Beatriz:** 15 a 20.
 
-### c)
+**Excedente:** 4, 8.
 
-::: {.destaque .coral}
-**Não.** O resultado do sorteio muda os segmentos da Ana e da Beatriz **e** o excedente (3 joias ou 2 joias).
+::: {.destaque .coral .fragment}
+**c)** Não: o sorteio muda os segmentos **e** o excedente.
 :::
 :::
+:::
 
-## Problema 3 · Colocar as marcas [preferências]{.etiqueta}
-
-O Sérgio, o Leonardo e a Paula vão dividir estes doces:
+## Problema 3 · Colocar as marcas [preferências]{.etiqueta} {auto-animate=true}
 
 {{L:p3v}}
 
 ::: {.columns}
-::: {.column width="55%"}
-- O **Sérgio** só gosta de 🍬.
-- O **Leonardo** gosta de 🍫 e 🍭 por igual, mas não gosta de 🍬.
-- A **Paula** gosta de todos os doces por igual.
+::: {.column width="58%"}
+{{S:p3:0}}
 :::
-::: {.column width="45%"}
+::: {.column width="42%" .texto-passo}
+- O **Sérgio** só gosta de 🍬.
+- O **Leonardo** gosta de 🍫 e 🍭 por igual, mas não de 🍬.
+- A **Paula** gosta de todos por igual.
+
 ::: {.incremental .pequeno}
 a) Coloca as marcas de cada um.
 b) Faz a atribuição e indica o excedente.
 c) A ordem sorteada para o excedente é Leonardo, Paula, Sérgio. Com que doces fica cada um?
 :::
-:::
-:::
 
 [Adaptado do teste de avaliação de 9/12/2015]{.fonte}
+:::
+:::
 
-## Problema 3 · Resolução {auto-animate=true}
+## Problema 3 · a) As marcas {auto-animate=true}
 
 {{L:p3m}}
 
-::: {.legenda}
-[[]{.q .p1}Sérgio: 3 🍬 → 1 em cada segmento]{} [[]{.q .p2}Leonardo: 6 doces → 2 em cada]{} [[]{.q .p3}Paula: 9 doces → 3 em cada]{}
+::: {.columns}
+::: {.column width="58%"}
+{{S:p3:1}}
+:::
+::: {.column width="42%" .texto-passo}
+- Sérgio: 3 🍬 → **1** em cada segmento.
+- Leonardo: 6 doces → **2** em cada.
+- Paula: 9 doces → **3** em cada.
+
+(Valor de cada doce = 1; a parte justa conta doces de que gosta.)
+:::
 :::
 
-::: {.fragment}
+## Problema 3 · b) Atribuição {auto-animate=true}
+
 {{L:p3s}}
+
+::: {.columns}
+::: {.column width="58%"}
+{{S:p3:2-4}}
+:::
+::: {.column width="42%" .texto-passo}
+$S_1$ → **Sérgio**: 🍫🍬 (1–2). Depois, $P_2$ (6) antes de $L_2$ (7) → **Paula**: 4–6. **Leonardo**: 8–9.
+
+Excedente: **3 (🍬) e 7 (🍫)**.
+:::
 :::
 
-::: {.columns .pequeno}
-::: {.column width="50%"}
-::: {.fragment}
-**b)** $S_1$ → **Sérgio**: 🍫🍬 (1–2). Depois, $P_2$ (6) vem antes de $L_2$ (7) → **Paula**: 🍬🍭🍭 (4–6). **Leonardo**: 🍫🍭 (8–9). Excedente: **3 (🍬) e 7 (🍫)**.
+## Problema 3 · c) O excedente {auto-animate=true}
+
+{{L:p3s}}
+
+::: {.columns}
+::: {.column width="58%"}
+{{S:p3:5}}
 :::
-:::
-::: {.column width="50%"}
+::: {.column width="42%" .texto-passo}
+O Leonardo escolhe o 🍫 (7) e a Paula fica com o 🍬 (3).
+
 ::: {.destaque .coral .fragment}
-**c)** O Leonardo escolhe o 🍫 (7) e a Paula fica com o 🍬 (3). O **Sérgio**, o único que gosta de 🍬, **não recebe nada** do excedente!
+O **Sérgio**, o único que gosta de 🍬, **não recebe nada** do excedente!
 :::
 :::
 :::
 
-## Problema 4 · Há inveja? [inveja]{.etiqueta}
-
-A Rita, o Bruno e a Carla dividem estes doces:
+## Problema 4 · Há inveja? [inveja]{.etiqueta} {auto-animate=true}
 
 {{L:p4v}}
 
 ::: {.columns}
-::: {.column width="55%"}
-- A **Rita** só gosta de 🍭.
-- O **Bruno** gosta de 🍫 e 🍬 por igual, mas não gosta de 🍭.
-- A **Carla** gosta de todos os doces por igual.
+::: {.column width="58%"}
+{{S:p4:0}}
 :::
-::: {.column width="45%"}
+::: {.column width="42%" .texto-passo}
+- A **Rita** só gosta de 🍭.
+- O **Bruno** gosta de 🍫 e 🍬 por igual, mas não de 🍭.
+- A **Carla** gosta de todos por igual.
+
 ::: {.incremental .pequeno}
 a) Coloca as marcas e faz a atribuição.
-b) Antes de distribuir o excedente, algum deles tem inveja de outro? Justifica.
+b) Antes de distribuir o excedente, algum deles tem inveja de outro?
 :::
 :::
 :::
 
-## Problema 4 · Resolução {auto-animate=true}
+## Problema 4 · a) Marcas e atribuição {auto-animate=true}
 
-{{L:p4m}}
-
-::: {.fragment}
 {{L:p4s}}
+
+::: {.columns}
+::: {.column width="58%"}
+{{S:p4:1-4}}
+:::
+::: {.column width="42%" .texto-passo}
+Marcas: Rita 7 e 8; Bruno 2 e 4; Carla 3 e 6.
+
+**Bruno**: 🍫🍫; **Carla**: 🍬🍬🍬; **Rita**: 🍭. Excedente: 3, 7, 8.
+:::
 :::
 
-::: {.columns .pequeno}
-::: {.column width="50%"}
-::: {.fragment}
-**a)** Marcas: Rita 7 e 8; Bruno 2 e 4; Carla 3 e 6. **Bruno**: 🍫🍫 (1–2); **Carla**: 🍬🍬🍬 (4–6); **Rita**: 🍭 (9). Excedente: 3, 7, 8.
+## Problema 4 · b) Há inveja? {auto-animate=true}
+
+{{L:p4s}}
+
+::: {.columns}
+::: {.column width="58%"}
+{{S:p4:5}}
 :::
-:::
-::: {.column width="50%"}
+::: {.column width="42%" .texto-passo}
+Última coluna: quanto vale cada segmento **para o Bruno**.
+
 ::: {.destaque .coral .fragment}
-**b)** Para o Bruno, a sua parte vale **2** doces (a parte justa), mas a da Carla vale **3**: o Bruno **inveja a Carla**. O método é proporcional, mas **não é livre de inveja**.
+A sua parte vale **2** (a parte justa), mas a da Carla vale **3**: o Bruno **inveja a Carla**. O método é proporcional, mas **não é livre de inveja**.
 :::
 :::
 :::
 
-## Problema 5 · Quando não há cortes exatos [limitações]{.etiqueta}
-
-Quatro amigos dividem 18 livros de banda desenhada: **W**onder Woman, **S**uper-Homem, **G**reen Lantern e **B**atman. As marcas foram colocadas de modo que cada segmento ficasse **o mais próximo possível** da parte justa.
+## Problema 5 · Quando não há cortes exatos [limitações]{.etiqueta} {auto-animate=true}
 
 {{L:p5m}}
 
 ::: {.columns}
-::: {.column width="45%"}
-| Valor | W | S | G | B | Parte justa |
-|:--|:--:|:--:|:--:|:--:|:--:|
-| [Quintino]{style="color:#1d4ed8"} | 12 | 7 | 4 | 6 | 30 |
-| [Ramon]{style="color:#dc2626"} | 9 | 5 | 5 | 11 | 30 |
-| [Stephanie]{style="color:#ea580c"} | 8 | 7 | 6 | 14 | 36 |
-| [Tim]{style="color:#7c3aed"} | 5 | 4 | 4 | 7 | 21 |
+::: {.column width="58%"}
+{{S:p5:1}}
 :::
-::: {.column width="55%"}
+::: {.column width="42%" .texto-passo .compacto}
+18 livros de banda desenhada: **W**onder Woman, **S**uper-Homem, **G**reen Lantern, **B**atman. As marcas foram colocadas de modo que cada segmento ficasse **o mais próximo possível** da parte justa.
+
+| | W | S | G | B |
+|:--|:-:|:-:|:-:|:-:|
+| Q | 12 | 7 | 4 | 6 |
+| R | 9 | 5 | 5 | 11 |
+| S | 8 | 7 | 6 | 14 |
+| T | 5 | 4 | 4 | 7 |
+
 ::: {.incremental .pequeno}
 a) Faz a atribuição e indica o excedente.
-b) Quanto vale, para cada um, o segmento que recebeu? Todos recebem a sua parte justa?
-c) Porque é que isto acontece?
-:::
-:::
+b) Todos recebem a sua parte justa? Porquê?
 :::
 
 ::: notes
 Adaptado dos «Exercícios diversos» (2015/16) e de Tannenbaum, *Excursions in Modern Mathematics* (ex. 67).
-Marcas colocadas pela regra «segmento o mais próximo possível da parte justa», a que reproduz a solução do livro.
+Marcas pela regra «segmento o mais próximo possível da parte justa», a que reproduz a solução do livro.
+:::
+:::
 :::
 
 ## Problema 5 · Resolução {auto-animate=true}
 
 {{L:p5s}}
 
-::: {.columns .pequeno}
-::: {.column width="45%"}
-**a)** $Q_1$ → **Quintino**: 1–4. $R_2$ → **Ramon**: 6–8. $T_3$ (14) antes de $S_3$ (15) → **Tim**: 10–14. **Stephanie**: 16–18. Excedente: **5, 9, 15**.
+::: {.columns}
+::: {.column width="58%"}
+{{S:p5:2-5}}
 :::
-::: {.column width="55%"}
-::: {.fragment}
-| **b)** | Recebe | Vale | Parte justa |
-|:--|:--:|:--:|:--:|
-| Quintino | W S S G | 30 | 30 ✔ |
-| Ramon | W W B | 29 | 30 ✘ |
-| Tim | G G S G S | 20 | 21 ✘ |
-| Stephanie | S B B | 35 | 36 ✘ |
-:::
-:::
-:::
+::: {.column width="42%" .texto-passo .compacto}
+$Q_1$ → **Quintino**: 1–4. $R_2$ → **Ramon**: 6–8. $T_3$ (14) antes de $S_3$ (15) → **Tim**: 10–14. **Stephanie**: 16–18. Excedente: 5, 9, 15.
 
 ::: {.destaque .coral .fragment}
-**c)** Os livros não se podem cortar: nem sempre há segmentos com **exatamente** o mesmo valor. Com marcas aproximadas, o método **pode não garantir** a parte justa (mas o excedente ajuda a compensar).
+**b)** Não: Ramon, Tim e Stephanie ficam **abaixo** da parte justa. Os livros não se cortam: nem sempre há segmentos com **exatamente** o mesmo valor.
+:::
+:::
 :::
 
 ## Os três métodos do caso discreto

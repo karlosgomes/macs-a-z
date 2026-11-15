@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="libs/revealjs/dist/theme/quarto-6dd09dc97106117f45ecf7fdf005e32e.css">
+  <link rel="stylesheet" href="libs/revealjs/dist/theme/quarto-59ccfb57b6c0d0521e36547ac21e1a28.css">
   <link href="libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -310,182 +310,543 @@ MACS · 10.º ano
       }</style></aside>
 </section>
 <section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">100 pontos para distribuir</h2>
-<p>Cada um distribui, <strong>em segredo</strong>, <strong>100 pontos</strong> pelos bens, conforme a importância que lhes dá.</p>
-<div data-id="tabela">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Bem</th>
-<th style="text-align: center;">Madalena</th>
-<th style="text-align: center;">Gonçalo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">⛵ Iate</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">30</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">🐈 Gato</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">20</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">🏢 Apartamento</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">20</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">🖼️ Quadro</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">30</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: center;"><strong>100</strong></td>
-<td style="text-align: center;"><strong>100</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="destaque fragment">
-<p>Os pontos medem <strong>preferências</strong>: a Madalena dá metade da sua «riqueza» ao gato!</p>
-</div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">1.ª fase: cada bem para quem mais o valoriza</h2>
-<div data-id="tabela">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Bem</th>
-<th style="text-align: center;">Madalena</th>
-<th style="text-align: center;">Gonçalo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">⛵ Iate</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;"><span class="max">30</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">🐈 Gato</td>
-<td style="text-align: center;"><span class="max">50</span></td>
-<td style="text-align: center;">20</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">🏢 Apartamento</td>
-<td style="text-align: center;"><span class="max">30</span></td>
-<td style="text-align: center;">20</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">🖼️ Quadro</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;"><span class="max">30</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>Pontos obtidos</strong></td>
-<td style="text-align: center;"><strong>80</strong></td>
-<td style="text-align: center;"><strong>60</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
+<h2 data-id="quarto-animate-title">1.º passo: 100 pontos para distribuir</h2>
 <div class="columns">
-<div class="column" style="width:55%;">
-<div class="fragment">
-<p>A Madalena fica com <strong>mais pontos</strong> (<span class="math inline">\(80 &gt; 60\)</span>). A partilha <strong>não é equilibrada</strong>!</p>
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
+</tr>
+<tr class="atual even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="atual odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="atual even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="atual odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="futuro even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena">&nbsp;</td>
+<td data-id="c-fase1-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">&nbsp;</td>
+<td data-id="c-t0-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">&nbsp;</td>
+<td data-id="c-fica-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena">&nbsp;</td>
+<td data-id="c-final-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">&nbsp;</td>
+<td data-id="c-outro-Gonçalo">&nbsp;</td>
+</tr>
+</tbody>
+</table>
 </div>
-</div><div class="column" style="width:45%;">
-<div class="destaque coral fragment">
-<p>É preciso <strong>ajustar</strong>: a Madalena tem de passar bens (ou parte de um bem) para o Gonçalo.</p>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Cada um distribui, <strong>em segredo</strong>, <strong>100 pontos</strong> pelos bens, conforme a importância que lhes dá.</p>
+<div class="destaque fragment">
+<p>Os pontos medem <strong>preferências</strong>: a Madalena dá metade dos seus pontos ao gato!</p>
 </div>
 </div></div>
 </section>
 <section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">2.ª fase: o ajuste</h2>
-<p>Que bem deve a Madalena transferir <strong>primeiro</strong>? Calcula-se, para os bens dela, a <strong>razão</strong></p>
-<p><span class="math display">\[\frac{\text{pontos de quem tem o bem}}{\text{pontos do outro}}\]</span></p>
-<div data-id="tabela">
+<h2 data-id="quarto-animate-title">2.º passo: cada bem para quem mais o valoriza</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Bem da Madalena</th>
-<th style="text-align: center;">Madalena</th>
-<th style="text-align: center;">Gonçalo</th>
-<th style="text-align: center;">Razão</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">🏢 Apartamento</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;"><span class="max"><span class="math inline">\(30/20 = 1{,}5\)</span></span></td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🐈 Gato</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;"><span class="math inline">\(50/20 = 2{,}5\)</span></td>
+<tr class="feito even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td class="max" data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="feito odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="feito even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td class="max" data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="feito odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td class="max" data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena"><strong>80</strong></td>
+<td data-id="c-fase1-Gonçalo"><strong>60</strong><span class="nota"> → dador: Madalena</span></td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">&nbsp;</td>
+<td data-id="c-t0-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">&nbsp;</td>
+<td data-id="c-fica-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena">&nbsp;</td>
+<td data-id="c-final-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">&nbsp;</td>
+<td data-id="c-outro-Gonçalo">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="destaque teal fragment">
-<p>Transfere-se primeiro o bem com a <strong>menor razão</strong> (o mais próximo de 1): é o que <strong>custa menos</strong> à Madalena por cada ponto que o Gonçalo ganha.</p>
+</div><div class="column texto-passo" style="width:42%;">
+<ul>
+<li>⛵ e 🖼️ → <strong>Gonçalo</strong> (<span class="math inline">\(30 + 30 = 60\)</span>)</li>
+<li>🐈 e 🏢 → <strong>Madalena</strong> (<span class="math inline">\(50 + 30 = 80\)</span>)</li>
+</ul>
+<div class="destaque coral fragment">
+<p><span class="math inline">\(80 &gt; 60\)</span>: a partilha <strong>não é equilibrada</strong>. A Madalena é a <strong>vencedora inicial</strong> e vai ter de ceder bens (ou parte de um bem) ao Gonçalo.</p>
 </div>
+</div></div>
 </section>
 <section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Transferir o apartamento todo?</h2>
+<h2 data-id="quarto-animate-title">3.º passo: por onde começar?</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment">
-<p>Se o apartamento passar <strong>todo</strong> para o Gonçalo:</p>
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
+</tr>
+<tr class="feito even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td class="max" data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="feito odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="feito even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td class="max" data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="feito odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td class="max" data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena"><strong>80</strong></td>
+<td data-id="c-fase1-Gonçalo"><strong>60</strong><span class="nota"> → dador: Madalena</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🏢 \(30/20\) &lt; 🐈 \(50/20\)</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">&nbsp;</td>
+<td data-id="c-t0-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">&nbsp;</td>
+<td data-id="c-fica-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena">&nbsp;</td>
+<td data-id="c-final-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">&nbsp;</td>
+<td data-id="c-outro-Gonçalo">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Para os bens da Madalena calcula-se a <strong>razão</strong></p>
+<p><span class="math display">\[\frac{\text{pontos da Madalena}}{\text{pontos do Gonçalo}}\]</span></p>
+<p>🏢 <span class="math inline">\(\frac{30}{20} = 1{,}5\)</span> e 🐈 <span class="math inline">\(\frac{50}{20} = 2{,}5\)</span></p>
+<div class="destaque teal fragment">
+<p>Começa-se pela <strong>menor razão</strong> (o 🏢): é o bem que <strong>custa menos</strong> à Madalena por cada ponto que o Gonçalo ganha.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">4.º passo: passar o apartamento todo?</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
+</tr>
+<tr class="feito even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td class="max" data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="feito odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="feito even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td class="max" data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="feito odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td class="max" data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena"><strong>80</strong></td>
+<td data-id="c-fase1-Gonçalo"><strong>60</strong><span class="nota"> → dador: Madalena</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🏢 \(30/20\) &lt; 🐈 \(50/20\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">50</td>
+<td data-id="c-t0-Gonçalo">80<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">&nbsp;</td>
+<td data-id="c-fica-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena">&nbsp;</td>
+<td data-id="c-final-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">&nbsp;</td>
+<td data-id="c-outro-Gonçalo">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Se o 🏢 passasse <strong>todo</strong> para o Gonçalo:</p>
 <ul>
 <li>Madalena: <span class="math inline">\(80 - 30 = 50\)</span></li>
 <li>Gonçalo: <span class="math inline">\(60 + 20 = 80\)</span></li>
 </ul>
-<p>Agora é o Gonçalo que fica com mais! 😬</p>
-</div>
-</div><div class="column" style="width:50%;">
 <div class="fragment">
-<p>Então o apartamento é <strong>dividido</strong>. Seja <span class="math inline">\(x\)</span> a fração que <strong>fica com a Madalena</strong>:</p>
-<p><span class="math display">\[\underbrace{50 + 30x}_{\text{Madalena}} = \underbrace{60 + 20(1-x)}_{\text{Gonçalo}}\]</span></p>
+<p>Agora seria o Gonçalo a ficar com mais! 😬 Então o apartamento vai ser <strong>dividido</strong>.</p>
 </div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">5.º passo: a equação do ajuste</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
+</tr>
+<tr class="feito even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td class="max" data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="feito odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="feito even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td class="max" data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="feito odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td class="max" data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena"><strong>80</strong></td>
+<td data-id="c-fase1-Gonçalo"><strong>60</strong><span class="nota"> → dador: Madalena</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🏢 \(30/20\) &lt; 🐈 \(50/20\)</td>
+</tr>
+<tr class="feito even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">50</td>
+<td data-id="c-t0-Gonçalo">80<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">\(80-30x=60+20x\) ⟹ \(x=\)\(\tfrac{2}{5}\)</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">&nbsp;</td>
+<td data-id="c-fica-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena">&nbsp;</td>
+<td data-id="c-final-Gonçalo">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">&nbsp;</td>
+<td data-id="c-outro-Gonçalo">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Seja <span class="math inline">\(x\)</span> a fração do 🏢 que <strong>passa</strong> para o Gonçalo:</p>
+<p><span class="math display">\[\underbrace{80 - 30x}_{\text{Madalena}} = \underbrace{60 + 20x}_{\text{Gonçalo}}\]</span></p>
 <div class="fragment">
-<p><span class="math display">\[50x = 30 \iff x = \frac{3}{5}\]</span></p>
+<p><span class="math display">\[50x = 20 \iff x = \frac{2}{5}\]</span></p>
+<p>Passam <span class="math inline">\(\frac{2}{5}\)</span> do apartamento para o Gonçalo; a Madalena fica com <span class="math inline">\(\frac{3}{5}\)</span>.</p>
 </div>
 </div></div>
 </section>
 <section class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">O resultado</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="cartao coral quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><span class="tcartao">Madalena</span></p>
-<p>🐈 gato e <span class="math inline">\(\frac{3}{5}\)</span> do 🏢 apartamento</p>
-<p><span class="math inline">\(50 + 30 \times \frac{3}{5} = \mathbf{68}\)</span> pontos</p>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Madalena</th>
+<th data-quarto-table-cell-role="th">Gonçalo</th>
+</tr>
+<tr class="feito even" data-id="r-iate">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">⛵ Iate</td>
+<td data-id="c-iate-Madalena">10</td>
+<td class="max" data-id="c-iate-Gonçalo">30</td>
+</tr>
+<tr class="feito odd" data-id="r-gato">
+<td class="colpasso"></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Madalena">50</td>
+<td data-id="c-gato-Gonçalo">20</td>
+</tr>
+<tr class="feito even" data-id="r-apart">
+<td class="colpasso"></td>
+<td class="rot">🏢 Apartamento</td>
+<td class="max" data-id="c-apart-Madalena">30</td>
+<td data-id="c-apart-Gonçalo">20</td>
+</tr>
+<tr class="feito odd" data-id="r-quadro">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Quadro</td>
+<td data-id="c-quadro-Madalena">10</td>
+<td class="max" data-id="c-quadro-Gonçalo">30</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Madalena"><strong>80</strong></td>
+<td data-id="c-fase1-Gonçalo"><strong>60</strong><span class="nota"> → dador: Madalena</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🏢 \(30/20\) &lt; 🐈 \(50/20\)</td>
+</tr>
+<tr class="feito even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏢 todo?</td>
+<td data-id="c-t0-Madalena">50</td>
+<td data-id="c-t0-Gonçalo">80<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="feito odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏢</td>
+<td colspan="2" class="span">\(80-30x=60+20x\) ⟹ \(x=\)\(\tfrac{2}{5}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Madalena">🐈 + \(\tfrac{3}{5}\) 🏢</td>
+<td data-id="c-fica-Gonçalo">⛵ + \(\tfrac{2}{5}\) 🏢 + 🖼️</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Madalena"><strong>68</strong></td>
+<td data-id="c-final-Gonçalo"><strong>68</strong></td>
+</tr>
+<tr class="atual even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Madalena">32</td>
+<td data-id="c-outro-Gonçalo">32</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="cartao quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><span class="tcartao">Gonçalo</span></p>
-<p>⛵ iate, 🖼️ quadro e <span class="math inline">\(\frac{2}{5}\)</span> do 🏢 apartamento</p>
-<p><span class="math inline">\(30 + 30 + 20 \times \frac{2}{5} = \mathbf{68}\)</span> pontos</p>
-</div>
-</div>
-</div>
-<div class="fragment">
+</div><div class="column texto-passo" style="width:42%;">
 <ul>
-<li><strong>Equitativa</strong>: os dois ficam com o <strong>mesmo</strong> número de pontos (68).</li>
-<li><strong>Livre de inveja</strong>: para a Madalena, a parte do Gonçalo vale só <span class="math inline">\(10 + 10 + 30\times\frac{2}{5} = 32\)</span> pontos (e para o Gonçalo a parte dela também vale 32).</li>
+<li><strong>Madalena:</strong> 🐈 e <span class="math inline">\(\frac35\)</span> do 🏢 → <span class="math inline">\(80 - 30 \times \frac25 = \mathbf{68}\)</span></li>
+<li><strong>Gonçalo:</strong> ⛵, 🖼️ e <span class="math inline">\(\frac25\)</span> do 🏢 → <span class="math inline">\(60 + 20 \times \frac25 = \mathbf{68}\)</span></li>
 </ul>
+<div class="fragment">
+<p><strong>Equitativa</strong> (68 = 68) e <strong>livre de inveja</strong>: para cada um, a parte do outro vale só 32.</p>
 </div>
 <div class="destaque fragment">
-<p>Na prática: a Madalena usa o apartamento <span class="math inline">\(\frac{3}{5}\)</span> do ano (cerca de 7 meses), ou vende-se e o dinheiro é repartido na proporção <span class="math inline">\(3:2\)</span>.</p>
+<p>Na prática: a Madalena usa o apartamento <span class="math inline">\(\frac35\)</span> do ano (cerca de 7 meses), ou vende-se e o dinheiro é repartido na proporção <span class="math inline">\(3:2\)</span>.</p>
 </div>
+</div></div>
 </section>
 <section>
 <section class="title-slide slide level1 capitulo center" data-rotulo="Ajuste na Partilha">
@@ -531,19 +892,6 @@ MACS · 10.º ano
 <p>Passam <span class="math inline">\(\frac{2}{5}\)</span> do apartamento para o Gonçalo (a Madalena fica com <span class="math inline">\(\frac{3}{5}\)</span> ✔).</p>
 </div>
 </div></div>
-<aside class="notes">
-<p>As duas formas de escrever a equação são equivalentes: com x = fração que fica com quem tinha o bem (50 + 30x = 60 + 20(1 − x)) ou com x = fração transferida (80 − 30x = 60 + 20x).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section class="slide level2">
 <h2>Propriedades e limitações</h2>
@@ -570,62 +918,105 @@ MACS · 10.º ano
 </div>
 </div></div>
 </section>
-<section class="slide level2">
-<h2>Na vida real: Camp David (1978)</h2>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Na vida real: Camp David (1978)</h2>
 <div class="columns">
-<div class="column" style="width:55%;">
-<p>Brams e Taylor aplicaram o método, <strong>à posteriori</strong>, às negociações de paz entre <strong>Israel</strong> e o <strong>Egito</strong> (pontos estimados):</p>
+<div class="column" style="width:60%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Questão</th>
-<th style="text-align: center;">Israel</th>
-<th style="text-align: center;">Egito</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Península do Sinai</td>
-<td style="text-align: center;">35</td>
-<td style="text-align: center;"><span class="max">55</span></td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Israel</th>
+<th data-quarto-table-cell-role="th">Egito</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Reconhecimento diplomático</td>
-<td style="text-align: center;"><span class="max">10</span></td>
-<td style="text-align: center;">5</td>
+<tr class="feito even" data-id="r-sinai">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏜️ Sinai</td>
+<td data-id="c-sinai-Israel">35</td>
+<td class="max" data-id="c-sinai-Egito">55</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Cisjordânia e Gaza</td>
-<td style="text-align: center;"><span class="max">20</span></td>
-<td style="text-align: center;">10</td>
+<tr class="feito odd" data-id="r-rec">
+<td class="colpasso"></td>
+<td class="rot">🤝 Reconhecimento</td>
+<td class="max" data-id="c-rec-Israel">10</td>
+<td data-id="c-rec-Egito">5</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Ligação dos acordos</td>
-<td style="text-align: center;"><span class="max">10</span></td>
-<td style="text-align: center;">5</td>
+<tr class="feito even" data-id="r-cis">
+<td class="colpasso"></td>
+<td class="rot">🗺️ Cisjordânia e Gaza</td>
+<td class="max" data-id="c-cis-Israel">20</td>
+<td data-id="c-cis-Egito">10</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Direitos dos palestinianos</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;"><span class="max">20</span></td>
+<tr class="feito odd" data-id="r-lig">
+<td class="colpasso"></td>
+<td class="rot">🔗 Ligação dos acordos</td>
+<td class="max" data-id="c-lig-Israel">10</td>
+<td data-id="c-lig-Egito">5</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Jerusalém</td>
-<td style="text-align: center;"><span class="max">20</span></td>
-<td style="text-align: center;">5</td>
+<tr class="feito even" data-id="r-dir">
+<td class="colpasso"></td>
+<td class="rot">⚖️ Direitos palestinianos</td>
+<td data-id="c-dir-Israel">5</td>
+<td class="max" data-id="c-dir-Egito">20</td>
+</tr>
+<tr class="feito odd" data-id="r-jer">
+<td class="colpasso"></td>
+<td class="rot">🕌 Jerusalém</td>
+<td class="max" data-id="c-jer-Israel">20</td>
+<td data-id="c-jer-Egito">5</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Israel"><strong>60</strong></td>
+<td data-id="c-fase1-Egito"><strong>75</strong><span class="nota"> → dador: Egito</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🏜️ \(55/35\) &lt; ⚖️ \(20/5\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🏜️ todo?</td>
+<td data-id="c-t0-Israel">95</td>
+<td data-id="c-t0-Egito">20<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🏜️</td>
+<td colspan="2" class="span">\(75-55x=60+35x\) ⟹ \(x=\)\(\tfrac{1}{6}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Israel">\(\tfrac{1}{6}\) 🏜️ + 🤝 + 🗺️ + 🔗 + 🕌</td>
+<td data-id="c-fica-Egito">\(\tfrac{5}{6}\) 🏜️ + ⚖️</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Israel"><strong>\(\frac{395}{6}\approx 65{,}8\)</strong></td>
+<td data-id="c-final-Egito"><strong>\(\frac{395}{6}\approx 65{,}8\)</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Israel">&nbsp;</td>
+<td data-id="c-outro-Egito">&nbsp;</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:45%;">
-<div class="fragment">
-<p>1.ª fase: Israel <span class="math inline">\(60\)</span>, Egito <span class="math inline">\(75\)</span>.</p>
-<p>Razões do Egito: Sinai <span class="math inline">\(\frac{55}{35} \approx 1{,}57\)</span>; Direitos <span class="math inline">\(\frac{20}{5} = 4\)</span>.</p>
 </div>
+</div><div class="column texto-passo compacto" style="width:40%;">
+<p>Brams e Taylor aplicaram o método, <strong>à posteriori</strong>, às negociações de paz entre <strong>Israel</strong> e o <strong>Egito</strong> (pontos estimados).</p>
 <div class="fragment">
-<p><span class="math display">\[75 - 55x = 60 + 35x \iff x = \frac{1}{6}\]</span></p>
+<p>O Egito (75) cede a Israel (60) parte do 🏜️ Sinai, a menor razão (<span class="math inline">\(\frac{55}{35}\)</span>): <span class="math display">\[75 - 55x = 60 + 35x \iff x = \tfrac{1}{6}\]</span></p>
 </div>
 <div class="destaque teal fragment">
-<p>O Egito fica com <span class="math inline">\(\frac{5}{6}\)</span> do Sinai; cada um obtém <span class="math inline">\(\approx 65{,}8\)</span> pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.</p>
+<p>Cada um obtém <span class="math inline">\(\approx 65{,}8\)</span> pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.</p>
 </div>
 </div></div>
 </section>
@@ -671,16 +1062,16 @@ MACS · 10.º ano
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="322" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 321;"><span id="cb2-322"><a href=""></a>viewof M <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
-<span id="cb2-323"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena ⛵"</span>})<span class="op">,</span></span>
-<span id="cb2-324"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🐈"</span>})<span class="op">,</span></span>
-<span id="cb2-325"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🏢"</span>})</span>
-<span id="cb2-326"><a href=""></a>])</span>
-<span id="cb2-327"><a href=""></a>viewof G <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
-<span id="cb2-328"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo ⛵"</span>})<span class="op">,</span></span>
-<span id="cb2-329"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🐈"</span>})<span class="op">,</span></span>
-<span id="cb2-330"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🏢"</span>})</span>
-<span id="cb2-331"><a href=""></a>])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="314" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 313;"><span id="cb2-314"><a href=""></a>viewof M <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
+<span id="cb2-315"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena ⛵"</span>})<span class="op">,</span></span>
+<span id="cb2-316"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🐈"</span>})<span class="op">,</span></span>
+<span id="cb2-317"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Madalena 🏢"</span>})</span>
+<span id="cb2-318"><a href=""></a>])</span>
+<span id="cb2-319"><a href=""></a>viewof G <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">form</span>([</span>
+<span id="cb2-320"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo ⛵"</span>})<span class="op">,</span></span>
+<span id="cb2-321"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🐈"</span>})<span class="op">,</span></span>
+<span id="cb2-322"><a href=""></a>  Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">100</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Gonçalo 🏢"</span>})</span>
+<span id="cb2-323"><a href=""></a>])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -698,52 +1089,52 @@ MACS · 10.º ano
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="338" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 337;"><span id="cb3-338"><a href=""></a>emo <span class="op">=</span> [<span class="st">"⛵"</span><span class="op">,</span> <span class="st">"🐈"</span><span class="op">,</span> <span class="st">"🏢"</span><span class="op">,</span> <span class="st">"🖼️"</span>]</span>
-<span id="cb3-339"><a href=""></a>PA <span class="op">=</span> [<span class="op">...</span>M<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> M[<span class="dv">0</span>] <span class="op">-</span> M[<span class="dv">1</span>] <span class="op">-</span> M[<span class="dv">2</span>]]</span>
-<span id="cb3-340"><a href=""></a>PB <span class="op">=</span> [<span class="op">...</span>G<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> G[<span class="dv">0</span>] <span class="op">-</span> G[<span class="dv">1</span>] <span class="op">-</span> G[<span class="dv">2</span>]]</span>
-<span id="cb3-341"><a href=""></a>f1 <span class="op">=</span> x <span class="kw">=&gt;</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">100</span>) <span class="op">/</span> <span class="dv">100</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"pt-PT"</span>)</span>
-<span id="cb3-342"><a href=""></a>pc <span class="op">=</span> x <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">1000</span>) <span class="op">/</span> <span class="dv">10</span> <span class="op">+</span> <span class="st">" %"</span></span>
-<span id="cb3-343"><a href=""></a>W <span class="op">=</span> {</span>
-<span id="cb3-344"><a href=""></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="dv">4</span><span class="op">,</span> s <span class="op">=</span> <span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">fill</span>(<span class="kw">null</span>)<span class="op">,</span> log <span class="op">=</span> []</span>
-<span id="cb3-345"><a href=""></a>  <span class="kw">let</span> tA <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> tB <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-346"><a href=""></a>  <span class="kw">const</span> emp <span class="op">=</span> []</span>
-<span id="cb3-347"><a href=""></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb3-348"><a href=""></a>    <span class="cf">if</span> (PA[i] <span class="op">&gt;</span> PB[i]) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] }</span>
-<span id="cb3-349"><a href=""></a>    <span class="cf">else</span> <span class="cf">if</span> (PB[i] <span class="op">&gt;</span> PA[i]) { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] }</span>
-<span id="cb3-350"><a href=""></a>    <span class="cf">else</span> emp<span class="op">.</span><span class="fu">push</span>(i)</span>
-<span id="cb3-351"><a href=""></a>  }</span>
-<span id="cb3-352"><a href=""></a>  <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> emp) { <span class="cf">if</span> (tA <span class="op">&lt;=</span> tB) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] } <span class="cf">else</span> { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] } }</span>
-<span id="cb3-353"><a href=""></a>  log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`1.ª fase: Madalena </span><span class="sc">${</span>tA<span class="sc">}</span><span class="vs">, Gonçalo </span><span class="sc">${</span>tB<span class="sc">}</span><span class="vs">`</span> <span class="op">+</span> (emp<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">` (empate: </span><span class="sc">${</span>emp<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> emo[i])<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>)<span class="sc">}</span><span class="vs">)`</span> <span class="op">:</span> <span class="st">""</span>))</span>
-<span id="cb3-354"><a href=""></a>  <span class="cf">if</span> (tA <span class="op">!==</span> tB) {</span>
-<span id="cb3-355"><a href=""></a>    <span class="kw">const</span> gA <span class="op">=</span> tA <span class="op">&gt;</span> tB<span class="op">,</span> Gv <span class="op">=</span> gA <span class="op">?</span> PA <span class="op">:</span> PB<span class="op">,</span> Rv <span class="op">=</span> gA <span class="op">?</span> PB <span class="op">:</span> PA</span>
-<span id="cb3-356"><a href=""></a>    <span class="kw">let</span> tG <span class="op">=</span> gA <span class="op">?</span> tA <span class="op">:</span> tB<span class="op">,</span> tR <span class="op">=</span> gA <span class="op">?</span> tB <span class="op">:</span> tA</span>
-<span id="cb3-357"><a href=""></a>    <span class="kw">const</span> own <span class="op">=</span> [<span class="op">...</span><span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">keys</span>()]<span class="op">.</span><span class="fu">filter</span>(i <span class="kw">=&gt;</span> (s[i] <span class="op">===</span> <span class="dv">1</span>) <span class="op">===</span> gA)</span>
-<span id="cb3-358"><a href=""></a>      <span class="op">.</span><span class="fu">sort</span>((i<span class="op">,</span> j) <span class="kw">=&gt;</span> (Rv[i] <span class="op">?</span> Gv[i] <span class="op">/</span> Rv[i] <span class="op">:</span> <span class="kw">Infinity</span>) <span class="op">-</span> (Rv[j] <span class="op">?</span> Gv[j] <span class="op">/</span> Rv[j] <span class="op">:</span> <span class="kw">Infinity</span>))</span>
-<span id="cb3-359"><a href=""></a>    <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> own) {</span>
-<span id="cb3-360"><a href=""></a>      <span class="cf">if</span> (tG <span class="op">-</span> Gv[i] <span class="op">&gt;=</span> tR <span class="op">+</span> Rv[i]) {</span>
-<span id="cb3-361"><a href=""></a>        tG <span class="op">-=</span> Gv[i]<span class="op">;</span> tR <span class="op">+=</span> Rv[i]<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span></span>
-<span id="cb3-362"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`transfere </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs"> inteiro`</span>)</span>
-<span id="cb3-363"><a href=""></a>        <span class="cf">if</span> (tG <span class="op">===</span> tR) <span class="cf">break</span></span>
-<span id="cb3-364"><a href=""></a>      } <span class="cf">else</span> {</span>
-<span id="cb3-365"><a href=""></a>        <span class="kw">const</span> x <span class="op">=</span> (tG <span class="op">-</span> tR) <span class="op">/</span> (Gv[i] <span class="op">+</span> Rv[i])</span>
-<span id="cb3-366"><a href=""></a>        tG <span class="op">-=</span> Gv[i] <span class="op">*</span> x<span class="op">;</span> tR <span class="op">+=</span> Rv[i] <span class="op">*</span> x<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">:</span> x</span>
-<span id="cb3-367"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`divide </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs">: passa </span><span class="sc">${</span><span class="fu">pc</span>(x)<span class="sc">}</span><span class="vs"> para </span><span class="sc">${</span>gA <span class="op">?</span> <span class="st">"o Gonçalo"</span> <span class="op">:</span> <span class="st">"a Madalena"</span><span class="sc">}</span><span class="vs">`</span>)</span>
-<span id="cb3-368"><a href=""></a>        <span class="cf">break</span></span>
-<span id="cb3-369"><a href=""></a>      }</span>
-<span id="cb3-370"><a href=""></a>    }</span>
-<span id="cb3-371"><a href=""></a>  }</span>
-<span id="cb3-372"><a href=""></a>  <span class="kw">const</span> vA <span class="op">=</span> PA<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> a<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> a <span class="op">*</span> s[i]<span class="op">,</span> <span class="dv">0</span>)<span class="op">,</span> vB <span class="op">=</span> PB<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> b<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> b <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> s[i])<span class="op">,</span> <span class="dv">0</span>)</span>
-<span id="cb3-373"><a href=""></a>  <span class="cf">return</span> {s<span class="op">,</span> log<span class="op">,</span> vA<span class="op">,</span> vB}</span>
-<span id="cb3-374"><a href=""></a>}</span>
-<span id="cb3-375"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;div class="ojs-tabela"&gt;</span></span>
-<span id="cb3-376"><a href=""></a><span class="sc">${</span>PA[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> PB[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p class="neg"&gt;⚠ Os pontos de cada jogador não podem passar de 100!&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table&gt;</span></span>
-<span id="cb3-377"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;Bem&lt;/th&gt;&lt;th&gt;Madalena&lt;/th&gt;&lt;th&gt;Gonçalo&lt;/th&gt;&lt;th&gt;Fica com…&lt;/th&gt;&lt;/tr&gt;</span></span>
-<span id="cb3-378"><a href=""></a><span class="sc">${</span>emo<span class="op">.</span><span class="fu">map</span>((e<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PA[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PB[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span></span>
-<span id="cb3-379"><a href=""></a>  W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">1</span> <span class="op">?</span> <span class="st">"Madalena"</span> <span class="op">:</span> W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"Gonçalo"</span> <span class="op">:</span> <span class="vs">`M </span><span class="sc">${</span><span class="fu">pc</span>(W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs"> · G </span><span class="sc">${</span><span class="fu">pc</span>(<span class="dv">1</span> <span class="op">-</span> W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs">`</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
-<span id="cb3-380"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pontos&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vA</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vB</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</span></span>
-<span id="cb3-381"><a href=""></a><span class="vs">&lt;/table&gt;</span></span>
-<span id="cb3-382"><a href=""></a><span class="vs">&lt;p&gt;</span><span class="sc">${</span>W<span class="op">.</span><span class="at">log</span><span class="op">.</span><span class="fu">join</span>(<span class="st">" → "</span>)<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="sc">}</span></span>
-<span id="cb3-383"><a href=""></a><span class="vs">&lt;/div&gt;`</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="330" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 329;"><span id="cb3-330"><a href=""></a>emo <span class="op">=</span> [<span class="st">"⛵"</span><span class="op">,</span> <span class="st">"🐈"</span><span class="op">,</span> <span class="st">"🏢"</span><span class="op">,</span> <span class="st">"🖼️"</span>]</span>
+<span id="cb3-331"><a href=""></a>PA <span class="op">=</span> [<span class="op">...</span>M<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> M[<span class="dv">0</span>] <span class="op">-</span> M[<span class="dv">1</span>] <span class="op">-</span> M[<span class="dv">2</span>]]</span>
+<span id="cb3-332"><a href=""></a>PB <span class="op">=</span> [<span class="op">...</span>G<span class="op">,</span> <span class="dv">100</span> <span class="op">-</span> G[<span class="dv">0</span>] <span class="op">-</span> G[<span class="dv">1</span>] <span class="op">-</span> G[<span class="dv">2</span>]]</span>
+<span id="cb3-333"><a href=""></a>f1 <span class="op">=</span> x <span class="kw">=&gt;</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">100</span>) <span class="op">/</span> <span class="dv">100</span>)<span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">"pt-PT"</span>)</span>
+<span id="cb3-334"><a href=""></a>pc <span class="op">=</span> x <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(x <span class="op">*</span> <span class="dv">1000</span>) <span class="op">/</span> <span class="dv">10</span> <span class="op">+</span> <span class="st">" %"</span></span>
+<span id="cb3-335"><a href=""></a>W <span class="op">=</span> {</span>
+<span id="cb3-336"><a href=""></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="dv">4</span><span class="op">,</span> s <span class="op">=</span> <span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">fill</span>(<span class="kw">null</span>)<span class="op">,</span> log <span class="op">=</span> []</span>
+<span id="cb3-337"><a href=""></a>  <span class="kw">let</span> tA <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> tB <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-338"><a href=""></a>  <span class="kw">const</span> emp <span class="op">=</span> []</span>
+<span id="cb3-339"><a href=""></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-340"><a href=""></a>    <span class="cf">if</span> (PA[i] <span class="op">&gt;</span> PB[i]) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] }</span>
+<span id="cb3-341"><a href=""></a>    <span class="cf">else</span> <span class="cf">if</span> (PB[i] <span class="op">&gt;</span> PA[i]) { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] }</span>
+<span id="cb3-342"><a href=""></a>    <span class="cf">else</span> emp<span class="op">.</span><span class="fu">push</span>(i)</span>
+<span id="cb3-343"><a href=""></a>  }</span>
+<span id="cb3-344"><a href=""></a>  <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> emp) { <span class="cf">if</span> (tA <span class="op">&lt;=</span> tB) { s[i] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> tA <span class="op">+=</span> PA[i] } <span class="cf">else</span> { s[i] <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> tB <span class="op">+=</span> PB[i] } }</span>
+<span id="cb3-345"><a href=""></a>  log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`1.ª fase: Madalena </span><span class="sc">${</span>tA<span class="sc">}</span><span class="vs">, Gonçalo </span><span class="sc">${</span>tB<span class="sc">}</span><span class="vs">`</span> <span class="op">+</span> (emp<span class="op">.</span><span class="at">length</span> <span class="op">?</span> <span class="vs">` (empate: </span><span class="sc">${</span>emp<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> emo[i])<span class="op">.</span><span class="fu">join</span>(<span class="st">" "</span>)<span class="sc">}</span><span class="vs">)`</span> <span class="op">:</span> <span class="st">""</span>))</span>
+<span id="cb3-346"><a href=""></a>  <span class="cf">if</span> (tA <span class="op">!==</span> tB) {</span>
+<span id="cb3-347"><a href=""></a>    <span class="kw">const</span> gA <span class="op">=</span> tA <span class="op">&gt;</span> tB<span class="op">,</span> Gv <span class="op">=</span> gA <span class="op">?</span> PA <span class="op">:</span> PB<span class="op">,</span> Rv <span class="op">=</span> gA <span class="op">?</span> PB <span class="op">:</span> PA</span>
+<span id="cb3-348"><a href=""></a>    <span class="kw">let</span> tG <span class="op">=</span> gA <span class="op">?</span> tA <span class="op">:</span> tB<span class="op">,</span> tR <span class="op">=</span> gA <span class="op">?</span> tB <span class="op">:</span> tA</span>
+<span id="cb3-349"><a href=""></a>    <span class="kw">const</span> own <span class="op">=</span> [<span class="op">...</span><span class="bu">Array</span>(n)<span class="op">.</span><span class="fu">keys</span>()]<span class="op">.</span><span class="fu">filter</span>(i <span class="kw">=&gt;</span> (s[i] <span class="op">===</span> <span class="dv">1</span>) <span class="op">===</span> gA)</span>
+<span id="cb3-350"><a href=""></a>      <span class="op">.</span><span class="fu">sort</span>((i<span class="op">,</span> j) <span class="kw">=&gt;</span> (Rv[i] <span class="op">?</span> Gv[i] <span class="op">/</span> Rv[i] <span class="op">:</span> <span class="kw">Infinity</span>) <span class="op">-</span> (Rv[j] <span class="op">?</span> Gv[j] <span class="op">/</span> Rv[j] <span class="op">:</span> <span class="kw">Infinity</span>))</span>
+<span id="cb3-351"><a href=""></a>    <span class="cf">for</span> (<span class="kw">const</span> i <span class="kw">of</span> own) {</span>
+<span id="cb3-352"><a href=""></a>      <span class="cf">if</span> (tG <span class="op">-</span> Gv[i] <span class="op">&gt;=</span> tR <span class="op">+</span> Rv[i]) {</span>
+<span id="cb3-353"><a href=""></a>        tG <span class="op">-=</span> Gv[i]<span class="op">;</span> tR <span class="op">+=</span> Rv[i]<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb3-354"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`transfere </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs"> inteiro`</span>)</span>
+<span id="cb3-355"><a href=""></a>        <span class="cf">if</span> (tG <span class="op">===</span> tR) <span class="cf">break</span></span>
+<span id="cb3-356"><a href=""></a>      } <span class="cf">else</span> {</span>
+<span id="cb3-357"><a href=""></a>        <span class="kw">const</span> x <span class="op">=</span> (tG <span class="op">-</span> tR) <span class="op">/</span> (Gv[i] <span class="op">+</span> Rv[i])</span>
+<span id="cb3-358"><a href=""></a>        tG <span class="op">-=</span> Gv[i] <span class="op">*</span> x<span class="op">;</span> tR <span class="op">+=</span> Rv[i] <span class="op">*</span> x<span class="op">;</span> s[i] <span class="op">=</span> gA <span class="op">?</span> <span class="dv">1</span> <span class="op">-</span> x <span class="op">:</span> x</span>
+<span id="cb3-359"><a href=""></a>        log<span class="op">.</span><span class="fu">push</span>(<span class="vs">`divide </span><span class="sc">${</span>emo[i]<span class="sc">}</span><span class="vs">: passa </span><span class="sc">${</span><span class="fu">pc</span>(x)<span class="sc">}</span><span class="vs"> para </span><span class="sc">${</span>gA <span class="op">?</span> <span class="st">"o Gonçalo"</span> <span class="op">:</span> <span class="st">"a Madalena"</span><span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb3-360"><a href=""></a>        <span class="cf">break</span></span>
+<span id="cb3-361"><a href=""></a>      }</span>
+<span id="cb3-362"><a href=""></a>    }</span>
+<span id="cb3-363"><a href=""></a>  }</span>
+<span id="cb3-364"><a href=""></a>  <span class="kw">const</span> vA <span class="op">=</span> PA<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> a<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> a <span class="op">*</span> s[i]<span class="op">,</span> <span class="dv">0</span>)<span class="op">,</span> vB <span class="op">=</span> PB<span class="op">.</span><span class="fu">reduce</span>((t<span class="op">,</span> b<span class="op">,</span> i) <span class="kw">=&gt;</span> t <span class="op">+</span> b <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> s[i])<span class="op">,</span> <span class="dv">0</span>)</span>
+<span id="cb3-365"><a href=""></a>  <span class="cf">return</span> {s<span class="op">,</span> log<span class="op">,</span> vA<span class="op">,</span> vB}</span>
+<span id="cb3-366"><a href=""></a>}</span>
+<span id="cb3-367"><a href=""></a><span class="fu">html</span><span class="vs">`&lt;div class="ojs-tabela"&gt;</span></span>
+<span id="cb3-368"><a href=""></a><span class="sc">${</span>PA[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">||</span> PB[<span class="dv">3</span>] <span class="op">&lt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">`&lt;p class="neg"&gt;⚠ Os pontos de cada jogador não podem passar de 100!&lt;/p&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;table&gt;</span></span>
+<span id="cb3-369"><a href=""></a><span class="vs">&lt;tr&gt;&lt;th&gt;Bem&lt;/th&gt;&lt;th&gt;Madalena&lt;/th&gt;&lt;th&gt;Gonçalo&lt;/th&gt;&lt;th&gt;Fica com…&lt;/th&gt;&lt;/tr&gt;</span></span>
+<span id="cb3-370"><a href=""></a><span class="sc">${</span>emo<span class="op">.</span><span class="fu">map</span>((e<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;tr&gt;&lt;td&gt;</span><span class="sc">${</span>e<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PA[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span>PB[i]<span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;td&gt;</span><span class="sc">${</span></span>
+<span id="cb3-371"><a href=""></a>  W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">1</span> <span class="op">?</span> <span class="st">"Madalena"</span> <span class="op">:</span> W<span class="op">.</span><span class="at">s</span>[i] <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">"Gonçalo"</span> <span class="op">:</span> <span class="vs">`M </span><span class="sc">${</span><span class="fu">pc</span>(W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs"> · G </span><span class="sc">${</span><span class="fu">pc</span>(<span class="dv">1</span> <span class="op">-</span> W<span class="op">.</span><span class="at">s</span>[i])<span class="sc">}</span><span class="vs">`</span><span class="sc">}</span><span class="vs">&lt;/td&gt;&lt;/tr&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb3-372"><a href=""></a><span class="vs">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pontos&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vA</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;</span><span class="sc">${</span><span class="fu">f1</span>(W<span class="op">.</span><span class="at">vB</span>)<span class="sc">}</span><span class="vs">&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</span></span>
+<span id="cb3-373"><a href=""></a><span class="vs">&lt;/table&gt;</span></span>
+<span id="cb3-374"><a href=""></a><span class="vs">&lt;p&gt;</span><span class="sc">${</span>W<span class="op">.</span><span class="at">log</span><span class="op">.</span><span class="fu">join</span>(<span class="st">" → "</span>)<span class="sc">}</span><span class="vs">&lt;/p&gt;`</span><span class="sc">}</span></span>
+<span id="cb3-375"><a href=""></a><span class="vs">&lt;/div&gt;`</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -801,40 +1192,88 @@ MACS · 10.º ano
 <h1>Problemas</h1>
 
 </section>
-<section class="slide level2">
-<h2>Problema 1 · Os animais da avó <span class="etiqueta">básico</span></h2>
-<p>Uma irmã e um irmão herdaram os animais de estimação da avó e usam o método do Ajuste na Partilha:</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 1 · Os animais da avó <span class="etiqueta">básico</span></h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Animal</th>
-<th style="text-align: center;">Irmã</th>
-<th style="text-align: center;">Irmão</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">🐈 Gato</td>
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">10</td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Irmã</th>
+<th data-quarto-table-cell-role="th">Irmão</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🐕 Cão</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">50</td>
+<tr class="atual even" data-id="r-gato">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🐈 Gato</td>
+<td data-id="c-gato-Irmã">40</td>
+<td data-id="c-gato-Irmão">10</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">🦎 Iguana</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">30</td>
+<tr class="atual odd" data-id="r-cao">
+<td class="colpasso"></td>
+<td class="rot">🐕 Cão</td>
+<td data-id="c-cao-Irmã">30</td>
+<td data-id="c-cao-Irmão">50</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🦜 Papagaio</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">10</td>
+<tr class="atual even" data-id="r-iguana">
+<td class="colpasso"></td>
+<td class="rot">🦎 Iguana</td>
+<td data-id="c-iguana-Irmã">10</td>
+<td data-id="c-iguana-Irmão">30</td>
+</tr>
+<tr class="atual odd" data-id="r-papagaio">
+<td class="colpasso"></td>
+<td class="rot">🦜 Papagaio</td>
+<td data-id="c-papagaio-Irmã">20</td>
+<td data-id="c-papagaio-Irmão">10</td>
+</tr>
+<tr class="futuro even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Irmã">&nbsp;</td>
+<td data-id="c-fase1-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🐕 todo?</td>
+<td data-id="c-t0-Irmã">&nbsp;</td>
+<td data-id="c-t0-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🐕</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Irmã">&nbsp;</td>
+<td data-id="c-fica-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Irmã">&nbsp;</td>
+<td data-id="c-final-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Irmã">&nbsp;</td>
+<td data-id="c-outro-Irmão">&nbsp;</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Uma irmã e um irmão herdaram os animais de estimação da avó e usam o método do Ajuste na Partilha.</p>
 <div class="pequeno">
 <ol type="a">
 <li class="fragment">Faz a atribuição da 1.ª fase. Quem é o vencedor inicial?</li>
@@ -843,72 +1282,276 @@ MACS · 10.º ano
 </ol>
 </div>
 <p><span class="fonte">Adaptado da ficha «Partilha equilibrada – caso discreto»</span></p>
-</section>
-<section class="slide level2">
-<h2>Problema 1 · Resolução</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>a)</strong> Irmã: 🐈 e 🦜 → <span class="math inline">\(40 + 20 = 60\)</span> pontos</p>
-<p>Irmão: 🐕 e 🦎 → <span class="math inline">\(50 + 30 = 80\)</span> pontos</p>
-<p>O <strong>irmão</strong> é o vencedor inicial.</p>
-<div class="fragment">
-<p><strong>b)</strong> Razões dos bens do irmão: 🐕 <span class="math inline">\(\frac{50}{30} \approx 1{,}67\)</span>; 🦎 <span class="math inline">\(\frac{30}{10} = 3\)</span></p>
-<p>Começa-se pelo cão. Todo: irmão <span class="math inline">\(30\)</span>, irmã <span class="math inline">\(90\)</span> → inverte. Logo, <strong>divide-se o cão</strong>.</p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>c)</strong> <span class="math inline">\(x\)</span> = fração do cão que passa para a irmã: <span class="math display">\[80 - 50x = 60 + 30x \iff x = \frac{20}{80} = \frac{1}{4}\]</span></p>
-</div>
-<div class="destaque teal fragment">
-<p><strong>Irmã:</strong> 🐈, 🦜 e <span class="math inline">\(\frac14\)</span> do 🐕 → <span class="math inline">\(60 + 7{,}5 = 67{,}5\)</span> pontos</p>
-<p><strong>Irmão:</strong> 🦎 e <span class="math inline">\(\frac34\)</span> do 🐕 → <span class="math inline">\(30 + 37{,}5 = 67{,}5\)</span> pontos</p>
-</div>
 </div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 2 · Um empate <span class="etiqueta">empate</span></h2>
-<p>Num divórcio, o marido e a esposa atribuíram os seguintes pontos:</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 1 · a) e b)</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Bem</th>
-<th style="text-align: center;">Marido</th>
-<th style="text-align: center;">Esposa</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">🏠 Casa</td>
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">15</td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Irmã</th>
+<th data-quarto-table-cell-role="th">Irmão</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🚗 Automóvel</td>
-<td style="text-align: center;"><span class="max">25</span></td>
-<td style="text-align: center;"><span class="max">25</span></td>
+<tr class="feito even" data-id="r-gato">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Irmã">40</td>
+<td data-id="c-gato-Irmão">10</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">🛖 Cabana na serra</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">40</td>
+<tr class="feito odd" data-id="r-cao">
+<td class="colpasso"></td>
+<td class="rot">🐕 Cão</td>
+<td data-id="c-cao-Irmã">30</td>
+<td class="max" data-id="c-cao-Irmão">50</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🚤 Barco</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">15</td>
+<tr class="feito even" data-id="r-iguana">
+<td class="colpasso"></td>
+<td class="rot">🦎 Iguana</td>
+<td data-id="c-iguana-Irmã">10</td>
+<td class="max" data-id="c-iguana-Irmão">30</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">📺 Televisão</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3</td>
+<tr class="feito odd" data-id="r-papagaio">
+<td class="colpasso"></td>
+<td class="rot">🦜 Papagaio</td>
+<td class="max" data-id="c-papagaio-Irmã">20</td>
+<td data-id="c-papagaio-Irmão">10</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🔊 Sistema de som</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Irmã"><strong>60</strong></td>
+<td data-id="c-fase1-Irmão"><strong>80</strong><span class="nota"> → dador: Irmão</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🐕 \(50/30\) &lt; 🦎 \(30/10\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🐕 todo?</td>
+<td data-id="c-t0-Irmã">90</td>
+<td data-id="c-t0-Irmão">30<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🐕</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Irmã">&nbsp;</td>
+<td data-id="c-fica-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Irmã">&nbsp;</td>
+<td data-id="c-final-Irmão">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Irmã">&nbsp;</td>
+<td data-id="c-outro-Irmão">&nbsp;</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p><strong>a)</strong> Irmã: 🐈 e 🦜 → <span class="math inline">\(60\)</span>; irmão: 🐕 e 🦎 → <span class="math inline">\(80\)</span>. O <strong>irmão</strong> é o vencedor inicial.</p>
+<div class="fragment">
+<p><strong>b)</strong> Razões: 🐕 <span class="math inline">\(\frac{50}{30} \approx 1{,}67\)</span>; 🦎 <span class="math inline">\(\frac{30}{10} = 3\)</span>. Começa-se pelo cão; todo: <span class="math inline">\(30\)</span> contra <span class="math inline">\(90\)</span> → inverte. <strong>Divide-se o cão.</strong></p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 1 · c) Partilha final</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Irmã</th>
+<th data-quarto-table-cell-role="th">Irmão</th>
+</tr>
+<tr class="feito even" data-id="r-gato">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🐈 Gato</td>
+<td class="max" data-id="c-gato-Irmã">40</td>
+<td data-id="c-gato-Irmão">10</td>
+</tr>
+<tr class="feito odd" data-id="r-cao">
+<td class="colpasso"></td>
+<td class="rot">🐕 Cão</td>
+<td data-id="c-cao-Irmã">30</td>
+<td class="max" data-id="c-cao-Irmão">50</td>
+</tr>
+<tr class="feito even" data-id="r-iguana">
+<td class="colpasso"></td>
+<td class="rot">🦎 Iguana</td>
+<td data-id="c-iguana-Irmã">10</td>
+<td class="max" data-id="c-iguana-Irmão">30</td>
+</tr>
+<tr class="feito odd" data-id="r-papagaio">
+<td class="colpasso"></td>
+<td class="rot">🦜 Papagaio</td>
+<td class="max" data-id="c-papagaio-Irmã">20</td>
+<td data-id="c-papagaio-Irmão">10</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Irmã"><strong>60</strong></td>
+<td data-id="c-fase1-Irmão"><strong>80</strong><span class="nota"> → dador: Irmão</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🐕 \(50/30\) &lt; 🦎 \(30/10\)</td>
+</tr>
+<tr class="feito even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🐕 todo?</td>
+<td data-id="c-t0-Irmã">90</td>
+<td data-id="c-t0-Irmão">30<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🐕</td>
+<td colspan="2" class="span">\(80-50x=60+30x\) ⟹ \(x=\)\(\tfrac{1}{4}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Irmã">🐈 + \(\tfrac{1}{4}\) 🐕 + 🦜</td>
+<td data-id="c-fica-Irmão">\(\tfrac{3}{4}\) 🐕 + 🦎</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Irmã"><strong>67,5</strong></td>
+<td data-id="c-final-Irmão"><strong>67,5</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Irmã">&nbsp;</td>
+<td data-id="c-outro-Irmão">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p><span class="math inline">\(x\)</span> = fração do 🐕 que passa para a irmã: <span class="math display">\[80 - 50x = 60 + 30x \iff x = \frac{1}{4}\]</span></p>
+<div class="destaque teal fragment">
+<p><strong>Irmã:</strong> 🐈, 🦜 e <span class="math inline">\(\frac14\)</span> do 🐕 → <span class="math inline">\(67{,}5\)</span> pontos. <strong>Irmão:</strong> 🦎 e <span class="math inline">\(\frac34\)</span> do 🐕 → <span class="math inline">\(67{,}5\)</span> pontos.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 2 · Um empate <span class="etiqueta">empate</span></h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Marido</th>
+<th data-quarto-table-cell-role="th">Esposa</th>
+</tr>
+<tr class="atual even" data-id="r-casa">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏠 Casa</td>
+<td data-id="c-casa-Marido">30</td>
+<td data-id="c-casa-Esposa">15</td>
+</tr>
+<tr class="atual odd" data-id="r-auto">
+<td class="colpasso"></td>
+<td class="rot">🚗 Automóvel <span class="small">(empate)</span></td>
+<td data-id="c-auto-Marido">25</td>
+<td data-id="c-auto-Esposa">25</td>
+</tr>
+<tr class="atual even" data-id="r-cabana">
+<td class="colpasso"></td>
+<td class="rot">🛖 Cabana</td>
+<td data-id="c-cabana-Marido">20</td>
+<td data-id="c-cabana-Esposa">40</td>
+</tr>
+<tr class="atual odd" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td data-id="c-barco-Marido">16</td>
+<td data-id="c-barco-Esposa">15</td>
+</tr>
+<tr class="atual even" data-id="r-tv">
+<td class="colpasso"></td>
+<td class="rot">📺 Televisão</td>
+<td data-id="c-tv-Marido">5</td>
+<td data-id="c-tv-Esposa">3</td>
+</tr>
+<tr class="atual odd" data-id="r-som">
+<td class="colpasso"></td>
+<td class="rot">🔊 Som</td>
+<td data-id="c-som-Marido">4</td>
+<td data-id="c-som-Esposa">2</td>
+</tr>
+<tr class="futuro even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Marido">&nbsp;</td>
+<td data-id="c-fase1-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🚗 todo?</td>
+<td data-id="c-t0-Marido">&nbsp;</td>
+<td data-id="c-t0-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🚗</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Marido">&nbsp;</td>
+<td data-id="c-fica-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Marido">&nbsp;</td>
+<td data-id="c-final-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Marido">&nbsp;</td>
+<td data-id="c-outro-Esposa">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Num divórcio, o marido e a esposa atribuíram estes pontos aos bens.</p>
 <div class="pequeno">
 <ol type="a">
 <li class="fragment">Que dificuldade surge na 1.ª fase? Como se resolve?</li>
@@ -916,169 +1559,748 @@ MACS · 10.º ano
 </ol>
 </div>
 <p><span class="fonte">Adaptado da ficha «Partilha equilibrada – caso discreto»</span></p>
-</section>
-<section class="slide level2">
-<h2>Problema 2 · Resolução</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>a)</strong> Sem o automóvel: marido 🏠 🚤 📺 🔊 → <span class="math inline">\(55\)</span>; esposa 🛖 → <span class="math inline">\(40\)</span>.</p>
-<p>O automóvel (empate) vai para quem tem <strong>menos</strong> pontos: a <strong>esposa</strong>, que fica com <span class="math inline">\(40 + 25 = 65\)</span>.</p>
-<div class="fragment">
-<p><strong>b)</strong> A esposa é a vencedora inicial. Razões: 🚗 <span class="math inline">\(\frac{25}{25} = 1\)</span>; 🛖 <span class="math inline">\(\frac{40}{20} = 2\)</span></p>
-<p>Todo o 🚗 para o marido: <span class="math inline">\(80\)</span> contra <span class="math inline">\(40\)</span> → inverte. <strong>Divide-se o automóvel</strong>.</p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><span class="math display">\[65 - 25x = 55 + 25x \iff x = \frac{1}{5}\]</span></p>
-</div>
-<div class="destaque teal fragment">
-<p><strong>Marido:</strong> 🏠 🚤 📺 🔊 e <span class="math inline">\(\frac15\)</span> do 🚗 → <strong>60</strong> pontos</p>
-<p><strong>Esposa:</strong> 🛖 e <span class="math inline">\(\frac45\)</span> do 🚗 → <strong>60</strong> pontos</p>
-</div>
-<div class="destaque fragment">
-<p>Se o automóvel fosse dado ao marido, o resultado final seria <strong>o mesmo</strong> (experimenta!).</p>
-</div>
 </div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 3 · Dividir o trabalho <span class="etiqueta">vários passos</span></h2>
-<p>O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 pontos pelas atividades, conforme o <strong>interesse</strong> em ficar com cada uma:</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 2 · a) O empate</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Atividade</th>
-<th style="text-align: center;">Leonido</th>
-<th style="text-align: center;">Marco</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Campanha de promoção</td>
-<td style="text-align: center;">40</td>
-<td style="text-align: center;">32</td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Marido</th>
+<th data-quarto-table-cell-role="th">Esposa</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Análise do preço inicial</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">20</td>
+<tr class="feito even" data-id="r-casa">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏠 Casa</td>
+<td class="max" data-id="c-casa-Marido">30</td>
+<td data-id="c-casa-Esposa">15</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Design do produto</td>
-<td style="text-align: center;">18</td>
-<td style="text-align: center;">16</td>
+<tr class="feito odd" data-id="r-auto">
+<td class="colpasso"></td>
+<td class="rot">🚗 Automóvel <span class="small">(empate)</span></td>
+<td data-id="c-auto-Marido">25</td>
+<td class="max" data-id="c-auto-Esposa">25</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Análise do custo da promoção</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">9</td>
+<tr class="feito even" data-id="r-cabana">
+<td class="colpasso"></td>
+<td class="rot">🛖 Cabana</td>
+<td data-id="c-cabana-Marido">20</td>
+<td class="max" data-id="c-cabana-Esposa">40</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Manufatura do protótipo</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">14</td>
+<tr class="feito odd" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td class="max" data-id="c-barco-Marido">16</td>
+<td data-id="c-barco-Esposa">15</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Análise do custo do produto</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
+<tr class="feito even" data-id="r-tv">
+<td class="colpasso"></td>
+<td class="rot">📺 Televisão</td>
+<td class="max" data-id="c-tv-Marido">5</td>
+<td data-id="c-tv-Esposa">3</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Teste de mercado</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
+<tr class="feito odd" data-id="r-som">
+<td class="colpasso"></td>
+<td class="rot">🔊 Som</td>
+<td class="max" data-id="c-som-Marido">4</td>
+<td data-id="c-som-Esposa">2</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Marido"><strong>55</strong></td>
+<td data-id="c-fase1-Esposa"><strong>65</strong><span class="nota"> → dador: Esposa</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🚗 \(25/25\) &lt; 🛖 \(40/20\)</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🚗 todo?</td>
+<td data-id="c-t0-Marido">&nbsp;</td>
+<td data-id="c-t0-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🚗</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Marido">&nbsp;</td>
+<td data-id="c-fica-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Marido">&nbsp;</td>
+<td data-id="c-final-Esposa">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Marido">&nbsp;</td>
+<td data-id="c-outro-Esposa">&nbsp;</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Sem o 🚗: marido <span class="math inline">\(55\)</span> (🏠 🚤 📺 🔊), esposa <span class="math inline">\(40\)</span> (🛖).</p>
+<p>O 🚗 (25 = 25) vai para quem tem <strong>menos</strong> pontos: a <strong>esposa</strong>, que fica com <span class="math inline">\(65\)</span> e passa a ser a vencedora inicial.</p>
+<div class="fragment">
+<p>Razões: 🚗 <span class="math inline">\(\frac{25}{25} = 1\)</span>; 🛖 <span class="math inline">\(\frac{40}{20} = 2\)</span>.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 2 · b) Partilha final</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Marido</th>
+<th data-quarto-table-cell-role="th">Esposa</th>
+</tr>
+<tr class="feito even" data-id="r-casa">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏠 Casa</td>
+<td class="max" data-id="c-casa-Marido">30</td>
+<td data-id="c-casa-Esposa">15</td>
+</tr>
+<tr class="feito odd" data-id="r-auto">
+<td class="colpasso"></td>
+<td class="rot">🚗 Automóvel <span class="small">(empate)</span></td>
+<td data-id="c-auto-Marido">25</td>
+<td class="max" data-id="c-auto-Esposa">25</td>
+</tr>
+<tr class="feito even" data-id="r-cabana">
+<td class="colpasso"></td>
+<td class="rot">🛖 Cabana</td>
+<td data-id="c-cabana-Marido">20</td>
+<td class="max" data-id="c-cabana-Esposa">40</td>
+</tr>
+<tr class="feito odd" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td class="max" data-id="c-barco-Marido">16</td>
+<td data-id="c-barco-Esposa">15</td>
+</tr>
+<tr class="feito even" data-id="r-tv">
+<td class="colpasso"></td>
+<td class="rot">📺 Televisão</td>
+<td class="max" data-id="c-tv-Marido">5</td>
+<td data-id="c-tv-Esposa">3</td>
+</tr>
+<tr class="feito odd" data-id="r-som">
+<td class="colpasso"></td>
+<td class="rot">🔊 Som</td>
+<td class="max" data-id="c-som-Marido">4</td>
+<td data-id="c-som-Esposa">2</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Marido"><strong>55</strong></td>
+<td data-id="c-fase1-Esposa"><strong>65</strong><span class="nota"> → dador: Esposa</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🚗 \(25/25\) &lt; 🛖 \(40/20\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🚗 todo?</td>
+<td data-id="c-t0-Marido">80</td>
+<td data-id="c-t0-Esposa">40<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🚗</td>
+<td colspan="2" class="span">\(65-25x=55+25x\) ⟹ \(x=\)\(\tfrac{1}{5}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Marido">🏠 + \(\tfrac{1}{5}\) 🚗 + 🚤 + 📺 + 🔊</td>
+<td data-id="c-fica-Esposa">\(\tfrac{4}{5}\) 🚗 + 🛖</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Marido"><strong>60</strong></td>
+<td data-id="c-final-Esposa"><strong>60</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Marido">&nbsp;</td>
+<td data-id="c-outro-Esposa">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Todo o 🚗 para o marido: <span class="math inline">\(40\)</span> contra <span class="math inline">\(80\)</span> → inverte. Divide-se o automóvel: <span class="math display">\[65 - 25x = 55 + 25x \iff x = \frac{1}{5}\]</span></p>
+<div class="destaque teal fragment">
+<p>Cada um fica com <strong>60</strong> pontos. Se o 🚗 tivesse ido para o marido na 1.ª fase, o resultado final seria o mesmo.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 3 · Dividir o trabalho <span class="etiqueta">vários passos</span></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Leonido</th>
+<th data-quarto-table-cell-role="th">Marco</th>
+</tr>
+<tr class="atual even" data-id="r-cpd">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">📣 Campanha de promoção</td>
+<td data-id="c-cpd-Leonido">40</td>
+<td data-id="c-cpd-Marco">32</td>
+</tr>
+<tr class="atual odd" data-id="r-api">
+<td class="colpasso"></td>
+<td class="rot">💲 Preço inicial</td>
+<td data-id="c-api-Leonido">13</td>
+<td data-id="c-api-Marco">20</td>
+</tr>
+<tr class="atual even" data-id="r-dp">
+<td class="colpasso"></td>
+<td class="rot">🎨 Design do produto</td>
+<td data-id="c-dp-Leonido">18</td>
+<td data-id="c-dp-Marco">16</td>
+</tr>
+<tr class="atual odd" data-id="r-acp">
+<td class="colpasso"></td>
+<td class="rot">🧾 Custo da promoção</td>
+<td data-id="c-acp-Leonido">6</td>
+<td data-id="c-acp-Marco">9</td>
+</tr>
+<tr class="atual even" data-id="r-mp">
+<td class="colpasso"></td>
+<td class="rot">🛠️ Protótipo</td>
+<td data-id="c-mp-Leonido">16</td>
+<td data-id="c-mp-Marco">14</td>
+</tr>
+<tr class="atual odd" data-id="r-acpo">
+<td class="colpasso"></td>
+<td class="rot">📊 Custo do produto</td>
+<td data-id="c-acpo-Leonido">5</td>
+<td data-id="c-acpo-Marco">6</td>
+</tr>
+<tr class="atual even" data-id="r-tm">
+<td class="colpasso"></td>
+<td class="rot">🧪 Teste de mercado</td>
+<td data-id="c-tm-Leonido">2</td>
+<td data-id="c-tm-Marco">3</td>
+</tr>
+<tr class="futuro odd" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Leonido">&nbsp;</td>
+<td data-id="c-fase1-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎨 todo?</td>
+<td data-id="c-t0-Leonido">&nbsp;</td>
+<td data-id="c-t0-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t1">
+<td class="colpasso"></td>
+<td class="rot">Passar 🛠️ todo?</td>
+<td data-id="c-t1-Leonido">&nbsp;</td>
+<td data-id="c-t1-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🛠️</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Leonido">&nbsp;</td>
+<td data-id="c-fica-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Leonido">&nbsp;</td>
+<td data-id="c-final-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Leonido">&nbsp;</td>
+<td data-id="c-outro-Marco">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo compacto" style="width:40%;">
+<p>O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 pontos pelas atividades, conforme o <strong>interesse</strong> em ficar com cada uma.</p>
 <p><span class="pergunta fragment">Descreve todos os passos do método e indica a partilha final.</span></p>
 <p><span class="fonte">Adaptado do teste de avaliação de 9/12/2015</span></p>
+</div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 3 · Resolução</h2>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 3 · 1.ª fase e razões</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>1.ª fase.</strong> Leonido: campanha, design e protótipo → <span class="math inline">\(74\)</span> pontos. Marco: as outras quatro → <span class="math inline">\(38\)</span> pontos.</p>
-<div class="fragment">
-<p><strong>Razões</strong> (bens do Leonido):</p>
+<div class="column" style="width:60%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Design</th>
-<th style="text-align: center;">Protótipo</th>
-<th style="text-align: center;">Campanha</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\frac{18}{16} = 1{,}125\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{16}{14} \approx 1{,}143\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{40}{32} = 1{,}25\)</span></td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Leonido</th>
+<th data-quarto-table-cell-role="th">Marco</th>
+</tr>
+<tr class="feito even" data-id="r-cpd">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">📣 Campanha de promoção</td>
+<td class="max" data-id="c-cpd-Leonido">40</td>
+<td data-id="c-cpd-Marco">32</td>
+</tr>
+<tr class="feito odd" data-id="r-api">
+<td class="colpasso"></td>
+<td class="rot">💲 Preço inicial</td>
+<td data-id="c-api-Leonido">13</td>
+<td class="max" data-id="c-api-Marco">20</td>
+</tr>
+<tr class="feito even" data-id="r-dp">
+<td class="colpasso"></td>
+<td class="rot">🎨 Design do produto</td>
+<td class="max" data-id="c-dp-Leonido">18</td>
+<td data-id="c-dp-Marco">16</td>
+</tr>
+<tr class="feito odd" data-id="r-acp">
+<td class="colpasso"></td>
+<td class="rot">🧾 Custo da promoção</td>
+<td data-id="c-acp-Leonido">6</td>
+<td class="max" data-id="c-acp-Marco">9</td>
+</tr>
+<tr class="feito even" data-id="r-mp">
+<td class="colpasso"></td>
+<td class="rot">🛠️ Protótipo</td>
+<td class="max" data-id="c-mp-Leonido">16</td>
+<td data-id="c-mp-Marco">14</td>
+</tr>
+<tr class="feito odd" data-id="r-acpo">
+<td class="colpasso"></td>
+<td class="rot">📊 Custo do produto</td>
+<td data-id="c-acpo-Leonido">5</td>
+<td class="max" data-id="c-acpo-Marco">6</td>
+</tr>
+<tr class="feito even" data-id="r-tm">
+<td class="colpasso"></td>
+<td class="rot">🧪 Teste de mercado</td>
+<td data-id="c-tm-Leonido">2</td>
+<td class="max" data-id="c-tm-Marco">3</td>
+</tr>
+<tr class="atual odd" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Leonido"><strong>74</strong></td>
+<td data-id="c-fase1-Marco"><strong>38</strong><span class="nota"> → dador: Leonido</span></td>
+</tr>
+<tr class="atual even" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🎨 \(18/16\) &lt; 🛠️ \(16/14\) &lt; 📣 \(40/32\)</td>
+</tr>
+<tr class="futuro odd" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎨 todo?</td>
+<td data-id="c-t0-Leonido">&nbsp;</td>
+<td data-id="c-t0-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t1">
+<td class="colpasso"></td>
+<td class="rot">Passar 🛠️ todo?</td>
+<td data-id="c-t1-Leonido">&nbsp;</td>
+<td data-id="c-t1-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🛠️</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Leonido">&nbsp;</td>
+<td data-id="c-fica-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Leonido">&nbsp;</td>
+<td data-id="c-final-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Leonido">&nbsp;</td>
+<td data-id="c-outro-Marco">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div><div class="column texto-passo compacto" style="width:40%;">
+<p>Leonido: 📣 🎨 🛠️ → <span class="math inline">\(74\)</span>; Marco: as outras quatro → <span class="math inline">\(38\)</span>.</p>
 <div class="fragment">
-<p><strong>Design</strong> inteiro para o Marco: Leonido <span class="math inline">\(56\)</span>, Marco <span class="math inline">\(54\)</span>. Ainda não inverte ✔</p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>Protótipo</strong> inteiro: Leonido <span class="math inline">\(40\)</span>, Marco <span class="math inline">\(68\)</span> → inverte! Divide-se: <span class="math display">\[56 - 16x = 54 + 14x\]</span> <span class="math display">\[30x = 2 \iff x = \frac{1}{15}\]</span></p>
-</div>
-<div class="destaque teal fragment">
-<p><strong>Leonido:</strong> campanha e <span class="math inline">\(\frac{14}{15}\)</span> do protótipo</p>
-<p><strong>Marco:</strong> as restantes atividades, o design e <span class="math inline">\(\frac{1}{15}\)</span> do protótipo</p>
-<p>Cada um: <span class="math inline">\(56 - \frac{16}{15} = \frac{824}{15} \approx 54{,}9\)</span> pontos</p>
+<p>Razões dos bens do Leonido, por ordem crescente: 🎨 <span class="math inline">\(1{,}125\)</span> &lt; 🛠️ <span class="math inline">\(\approx 1{,}143\)</span> &lt; 📣 <span class="math inline">\(1{,}25\)</span>.</p>
 </div>
 </div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 4 · Será preciso partilhar? <span class="etiqueta">justificar</span></h2>
-<p>O Paulo e a Rosa dividem os bens de uma herança:</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 3 · Transferências e equação</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Bem</th>
-<th style="text-align: center;">Paulo</th>
-<th style="text-align: center;">Rosa</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">🏺 Porcelana chinesa</td>
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">30</td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Leonido</th>
+<th data-quarto-table-cell-role="th">Marco</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🪑 Mesa</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">9</td>
+<tr class="feito even" data-id="r-cpd">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">📣 Campanha de promoção</td>
+<td class="max" data-id="c-cpd-Leonido">40</td>
+<td data-id="c-cpd-Marco">32</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">🎹 Piano</td>
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">23</td>
+<tr class="feito odd" data-id="r-api">
+<td class="colpasso"></td>
+<td class="rot">💲 Preço inicial</td>
+<td data-id="c-api-Leonido">13</td>
+<td class="max" data-id="c-api-Marco">20</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🏖️ Casa de férias</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">28</td>
+<tr class="feito even" data-id="r-dp">
+<td class="colpasso"></td>
+<td class="rot">🎨 Design do produto</td>
+<td class="max" data-id="c-dp-Leonido">18</td>
+<td data-id="c-dp-Marco">16</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">🚤 Barco</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">5</td>
+<tr class="feito odd" data-id="r-acp">
+<td class="colpasso"></td>
+<td class="rot">🧾 Custo da promoção</td>
+<td data-id="c-acp-Leonido">6</td>
+<td class="max" data-id="c-acp-Marco">9</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">⌚ Coleção de relógios</td>
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">5</td>
+<tr class="feito even" data-id="r-mp">
+<td class="colpasso"></td>
+<td class="rot">🛠️ Protótipo</td>
+<td class="max" data-id="c-mp-Leonido">16</td>
+<td data-id="c-mp-Marco">14</td>
+</tr>
+<tr class="feito odd" data-id="r-acpo">
+<td class="colpasso"></td>
+<td class="rot">📊 Custo do produto</td>
+<td data-id="c-acpo-Leonido">5</td>
+<td class="max" data-id="c-acpo-Marco">6</td>
+</tr>
+<tr class="feito even" data-id="r-tm">
+<td class="colpasso"></td>
+<td class="rot">🧪 Teste de mercado</td>
+<td data-id="c-tm-Leonido">2</td>
+<td class="max" data-id="c-tm-Marco">3</td>
+</tr>
+<tr class="feito odd" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Leonido"><strong>74</strong></td>
+<td data-id="c-fase1-Marco"><strong>38</strong><span class="nota"> → dador: Leonido</span></td>
+</tr>
+<tr class="feito even" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🎨 \(18/16\) &lt; 🛠️ \(16/14\) &lt; 📣 \(40/32\)</td>
+</tr>
+<tr class="atual odd" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎨 todo?</td>
+<td data-id="c-t0-Leonido">56</td>
+<td data-id="c-t0-Marco">54<span class="nota"> ✔ passa</span></td>
+</tr>
+<tr class="atual even" data-id="r-t1">
+<td class="colpasso"></td>
+<td class="rot">Passar 🛠️ todo?</td>
+<td data-id="c-t1-Leonido">40</td>
+<td data-id="c-t1-Marco">68<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🛠️</td>
+<td colspan="2" class="span">\(56-16x=54+14x\) ⟹ \(x=\)\(\tfrac{1}{15}\)</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Leonido">&nbsp;</td>
+<td data-id="c-fica-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Leonido">&nbsp;</td>
+<td data-id="c-final-Marco">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Leonido">&nbsp;</td>
+<td data-id="c-outro-Marco">&nbsp;</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div><div class="column texto-passo compacto" style="width:40%;">
+<ul>
+<li>🎨 todo para o Marco: <span class="math inline">\(56\)</span> contra <span class="math inline">\(54\)</span> → <strong>passa</strong> ✔</li>
+<li>🛠️ todo: <span class="math inline">\(40\)</span> contra <span class="math inline">\(68\)</span> → inverte ✘</li>
+</ul>
+<div class="fragment">
+<p>Divide-se o protótipo: <span class="math display">\[56 - 16x = 54 + 14x \iff x = \frac{1}{15}\]</span></p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 3 · Partilha final</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Leonido</th>
+<th data-quarto-table-cell-role="th">Marco</th>
+</tr>
+<tr class="feito even" data-id="r-cpd">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">📣 Campanha de promoção</td>
+<td class="max" data-id="c-cpd-Leonido">40</td>
+<td data-id="c-cpd-Marco">32</td>
+</tr>
+<tr class="feito odd" data-id="r-api">
+<td class="colpasso"></td>
+<td class="rot">💲 Preço inicial</td>
+<td data-id="c-api-Leonido">13</td>
+<td class="max" data-id="c-api-Marco">20</td>
+</tr>
+<tr class="feito even" data-id="r-dp">
+<td class="colpasso"></td>
+<td class="rot">🎨 Design do produto</td>
+<td class="max" data-id="c-dp-Leonido">18</td>
+<td data-id="c-dp-Marco">16</td>
+</tr>
+<tr class="feito odd" data-id="r-acp">
+<td class="colpasso"></td>
+<td class="rot">🧾 Custo da promoção</td>
+<td data-id="c-acp-Leonido">6</td>
+<td class="max" data-id="c-acp-Marco">9</td>
+</tr>
+<tr class="feito even" data-id="r-mp">
+<td class="colpasso"></td>
+<td class="rot">🛠️ Protótipo</td>
+<td class="max" data-id="c-mp-Leonido">16</td>
+<td data-id="c-mp-Marco">14</td>
+</tr>
+<tr class="feito odd" data-id="r-acpo">
+<td class="colpasso"></td>
+<td class="rot">📊 Custo do produto</td>
+<td data-id="c-acpo-Leonido">5</td>
+<td class="max" data-id="c-acpo-Marco">6</td>
+</tr>
+<tr class="feito even" data-id="r-tm">
+<td class="colpasso"></td>
+<td class="rot">🧪 Teste de mercado</td>
+<td data-id="c-tm-Leonido">2</td>
+<td class="max" data-id="c-tm-Marco">3</td>
+</tr>
+<tr class="feito odd" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Leonido"><strong>74</strong></td>
+<td data-id="c-fase1-Marco"><strong>38</strong><span class="nota"> → dador: Leonido</span></td>
+</tr>
+<tr class="feito even" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🎨 \(18/16\) &lt; 🛠️ \(16/14\) &lt; 📣 \(40/32\)</td>
+</tr>
+<tr class="feito odd" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎨 todo?</td>
+<td data-id="c-t0-Leonido">56</td>
+<td data-id="c-t0-Marco">54<span class="nota"> ✔ passa</span></td>
+</tr>
+<tr class="feito even" data-id="r-t1">
+<td class="colpasso"></td>
+<td class="rot">Passar 🛠️ todo?</td>
+<td data-id="c-t1-Leonido">40</td>
+<td data-id="c-t1-Marco">68<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="feito odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🛠️</td>
+<td colspan="2" class="span">\(56-16x=54+14x\) ⟹ \(x=\)\(\tfrac{1}{15}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Leonido">📣 + \(\tfrac{14}{15}\) 🛠️</td>
+<td data-id="c-fica-Marco">💲 + 🎨 + 🧾 + \(\tfrac{1}{15}\) 🛠️ + 📊 + 🧪</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Leonido"><strong>\(\frac{824}{15}\approx 54{,}9\)</strong></td>
+<td data-id="c-final-Marco"><strong>\(\frac{824}{15}\approx 54{,}9\)</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Leonido">&nbsp;</td>
+<td data-id="c-outro-Marco">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo compacto" style="width:40%;">
+<div class="destaque teal">
+<p><strong>Leonido:</strong> 📣 e <span class="math inline">\(\frac{14}{15}\)</span> de 🛠️.</p>
+<p><strong>Marco:</strong> as restantes atividades, o 🎨 e <span class="math inline">\(\frac{1}{15}\)</span> de 🛠️.</p>
+<p>Cada um: <span class="math inline">\(\frac{824}{15} \approx 54{,}9\)</span> pontos.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 4 · Será preciso partilhar? <span class="etiqueta">justificar</span></h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Paulo</th>
+<th data-quarto-table-cell-role="th">Rosa</th>
+</tr>
+<tr class="atual even" data-id="r-porc">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏺 Porcelana</td>
+<td data-id="c-porc-Paulo">25</td>
+<td data-id="c-porc-Rosa">30</td>
+</tr>
+<tr class="atual odd" data-id="r-mesa">
+<td class="colpasso"></td>
+<td class="rot">🪑 Mesa</td>
+<td data-id="c-mesa-Paulo">20</td>
+<td data-id="c-mesa-Rosa">9</td>
+</tr>
+<tr class="atual even" data-id="r-piano">
+<td class="colpasso"></td>
+<td class="rot">🎹 Piano</td>
+<td data-id="c-piano-Paulo">20</td>
+<td data-id="c-piano-Rosa">23</td>
+</tr>
+<tr class="atual odd" data-id="r-ferias">
+<td class="colpasso"></td>
+<td class="rot">🏖️ Casa de férias</td>
+<td data-id="c-ferias-Paulo">10</td>
+<td data-id="c-ferias-Rosa">28</td>
+</tr>
+<tr class="atual even" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td data-id="c-barco-Paulo">10</td>
+<td data-id="c-barco-Rosa">5</td>
+</tr>
+<tr class="atual odd" data-id="r-rel">
+<td class="colpasso"></td>
+<td class="rot">⌚ Relógios</td>
+<td data-id="c-rel-Paulo">15</td>
+<td data-id="c-rel-Rosa">5</td>
+</tr>
+<tr class="futuro even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Paulo">&nbsp;</td>
+<td data-id="c-fase1-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎹 todo?</td>
+<td data-id="c-t0-Paulo">&nbsp;</td>
+<td data-id="c-t0-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🎹</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Paulo">&nbsp;</td>
+<td data-id="c-fica-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Paulo">&nbsp;</td>
+<td data-id="c-final-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Paulo">&nbsp;</td>
+<td data-id="c-outro-Rosa">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>O Paulo e a Rosa dividem os bens de uma herança.</p>
 <div class="pequeno">
 <ol type="a">
 <li class="fragment">O Paulo e a Rosa terão de partilhar algum dos bens? Justifica.</li>
@@ -1086,86 +2308,486 @@ MACS · 10.º ano
 </ol>
 </div>
 <p><span class="fonte">Adaptado do mini-teste «Partilha equilibrada»</span></p>
-</section>
-<section class="slide level2">
-<h2>Problema 4 · Resolução</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>1.ª fase.</strong> Paulo: 🪑 🚤 ⌚ → <span class="math inline">\(45\)</span>; Rosa: 🏺 🎹 🏖️ → <span class="math inline">\(81\)</span>.</p>
-<div class="fragment">
-<p>Razões (bens da Rosa): 🎹 <span class="math inline">\(\frac{23}{20} = 1{,}15\)</span>; 🏺 <span class="math inline">\(\frac{30}{25} = 1{,}2\)</span>; 🏖️ <span class="math inline">\(\frac{28}{10} = 2{,}8\)</span></p>
-</div>
-<div class="fragment">
-<p><strong>a)</strong> Sim. Transferindo o piano <strong>todo</strong>, o Paulo ficaria com <span class="math inline">\(45 + 20 = 65\)</span> e a Rosa com <span class="math inline">\(81 - 23 = 58\)</span>: a situação inverte-se. Logo, o <strong>piano</strong> tem de ser partilhado.</p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment">
-<p><strong>b)</strong> <span class="math inline">\(x\)</span> = fração do piano que passa para o Paulo: <span class="math display">\[81 - 23x = 45 + 20x\]</span> <span class="math display">\[43x = 36 \iff x = \frac{36}{43} \approx 0{,}837\]</span></p>
-</div>
-<div class="destaque teal fragment">
-<p>Paulo: <strong>≈ 83,7 %</strong> do piano; Rosa: <strong>≈ 16,3 %</strong>.</p>
-<p>Cada um fica com <span class="math inline">\(\frac{2655}{43} \approx 61{,}7\)</span> pontos.</p>
-</div>
 </div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 5 · Vale a pena mentir? <span class="etiqueta">estratégia</span></h2>
-<p>A Ana e o Bruno vão dividir dois quadros. Os pontos <strong>verdadeiros</strong> são:</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 4 · a)</h2>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Quadro</th>
-<th style="text-align: center;">Ana</th>
-<th style="text-align: center;">Bruno</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">🖼️ Matisse</td>
-<td style="text-align: center;">75</td>
-<td style="text-align: center;">25</td>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Paulo</th>
+<th data-quarto-table-cell-role="th">Rosa</th>
 </tr>
-<tr class="even">
-<td style="text-align: left;">🖼️ Picasso</td>
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">75</td>
+<tr class="feito even" data-id="r-porc">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏺 Porcelana</td>
+<td data-id="c-porc-Paulo">25</td>
+<td class="max" data-id="c-porc-Rosa">30</td>
+</tr>
+<tr class="feito odd" data-id="r-mesa">
+<td class="colpasso"></td>
+<td class="rot">🪑 Mesa</td>
+<td class="max" data-id="c-mesa-Paulo">20</td>
+<td data-id="c-mesa-Rosa">9</td>
+</tr>
+<tr class="feito even" data-id="r-piano">
+<td class="colpasso"></td>
+<td class="rot">🎹 Piano</td>
+<td data-id="c-piano-Paulo">20</td>
+<td class="max" data-id="c-piano-Rosa">23</td>
+</tr>
+<tr class="feito odd" data-id="r-ferias">
+<td class="colpasso"></td>
+<td class="rot">🏖️ Casa de férias</td>
+<td data-id="c-ferias-Paulo">10</td>
+<td class="max" data-id="c-ferias-Rosa">28</td>
+</tr>
+<tr class="feito even" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td class="max" data-id="c-barco-Paulo">10</td>
+<td data-id="c-barco-Rosa">5</td>
+</tr>
+<tr class="feito odd" data-id="r-rel">
+<td class="colpasso"></td>
+<td class="rot">⌚ Relógios</td>
+<td class="max" data-id="c-rel-Paulo">15</td>
+<td data-id="c-rel-Rosa">5</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Paulo"><strong>45</strong></td>
+<td data-id="c-fase1-Rosa"><strong>81</strong><span class="nota"> → dador: Rosa</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🎹 \(23/20\) &lt; 🏺 \(30/25\) &lt; 🏖️ \(28/10\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎹 todo?</td>
+<td data-id="c-t0-Paulo">65</td>
+<td data-id="c-t0-Rosa">58<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="futuro odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🎹</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Paulo">&nbsp;</td>
+<td data-id="c-fica-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Paulo">&nbsp;</td>
+<td data-id="c-final-Rosa">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Paulo">&nbsp;</td>
+<td data-id="c-outro-Rosa">&nbsp;</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:55%;">
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>1.ª fase: Paulo <span class="math inline">\(45\)</span>; Rosa <span class="math inline">\(81\)</span>. Razões: 🎹 <span class="math inline">\(1{,}15\)</span> &lt; 🏺 <span class="math inline">\(1{,}2\)</span> &lt; 🏖️ <span class="math inline">\(2{,}8\)</span>.</p>
+<div class="fragment">
+<p><strong>Sim.</strong> Passando o 🎹 <strong>todo</strong>, o Paulo ficaria com <span class="math inline">\(65\)</span> e a Rosa com <span class="math inline">\(58\)</span>: a situação inverte-se. O <strong>piano</strong> tem de ser partilhado.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 4 · b)</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw longa" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Paulo</th>
+<th data-quarto-table-cell-role="th">Rosa</th>
+</tr>
+<tr class="feito even" data-id="r-porc">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🏺 Porcelana</td>
+<td data-id="c-porc-Paulo">25</td>
+<td class="max" data-id="c-porc-Rosa">30</td>
+</tr>
+<tr class="feito odd" data-id="r-mesa">
+<td class="colpasso"></td>
+<td class="rot">🪑 Mesa</td>
+<td class="max" data-id="c-mesa-Paulo">20</td>
+<td data-id="c-mesa-Rosa">9</td>
+</tr>
+<tr class="feito even" data-id="r-piano">
+<td class="colpasso"></td>
+<td class="rot">🎹 Piano</td>
+<td data-id="c-piano-Paulo">20</td>
+<td class="max" data-id="c-piano-Rosa">23</td>
+</tr>
+<tr class="feito odd" data-id="r-ferias">
+<td class="colpasso"></td>
+<td class="rot">🏖️ Casa de férias</td>
+<td data-id="c-ferias-Paulo">10</td>
+<td class="max" data-id="c-ferias-Rosa">28</td>
+</tr>
+<tr class="feito even" data-id="r-barco">
+<td class="colpasso"></td>
+<td class="rot">🚤 Barco</td>
+<td class="max" data-id="c-barco-Paulo">10</td>
+<td data-id="c-barco-Rosa">5</td>
+</tr>
+<tr class="feito odd" data-id="r-rel">
+<td class="colpasso"></td>
+<td class="rot">⌚ Relógios</td>
+<td class="max" data-id="c-rel-Paulo">15</td>
+<td data-id="c-rel-Rosa">5</td>
+</tr>
+<tr class="feito even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Paulo"><strong>45</strong></td>
+<td data-id="c-fase1-Rosa"><strong>81</strong><span class="nota"> → dador: Rosa</span></td>
+</tr>
+<tr class="feito odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">🎹 \(23/20\) &lt; 🏺 \(30/25\) &lt; 🏖️ \(28/10\)</td>
+</tr>
+<tr class="feito even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar 🎹 todo?</td>
+<td data-id="c-t0-Paulo">65</td>
+<td data-id="c-t0-Rosa">58<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se 🎹</td>
+<td colspan="2" class="span">\(81-23x=45+20x\) ⟹ \(x=\)\(\tfrac{36}{43}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Paulo">🪑 + \(\tfrac{36}{43}\) 🎹 + 🚤 + ⌚</td>
+<td data-id="c-fica-Rosa">🏺 + \(\tfrac{7}{43}\) 🎹 + 🏖️</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Paulo"><strong>\(\frac{2655}{43}\approx 61{,}7\)</strong></td>
+<td data-id="c-final-Rosa"><strong>\(\frac{2655}{43}\approx 61{,}7\)</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Paulo">&nbsp;</td>
+<td data-id="c-outro-Rosa">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p><span class="math inline">\(x\)</span> = fração do 🎹 que passa para o Paulo: <span class="math display">\[81 - 23x = 45 + 20x \iff x = \frac{36}{43} \approx 0{,}837\]</span></p>
+<div class="destaque teal fragment">
+<p>Paulo: <strong>≈ 83,7 %</strong> do piano; Rosa: <strong>≈ 16,3 %</strong>. Cada um fica com <span class="math inline">\(\approx 61{,}7\)</span> pontos.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 5 · Vale a pena mentir? <span class="etiqueta">estratégia</span></h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Ana</th>
+<th data-quarto-table-cell-role="th">Bruno</th>
+</tr>
+<tr class="atual even" data-id="r-mat">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🖼️ Matisse</td>
+<td data-id="c-mat-Ana">75</td>
+<td data-id="c-mat-Bruno">25</td>
+</tr>
+<tr class="atual odd" data-id="r-pic">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Picasso</td>
+<td data-id="c-pic-Ana">25</td>
+<td data-id="c-pic-Bruno">75</td>
+</tr>
+<tr class="futuro even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Ana">&nbsp;</td>
+<td data-id="c-fase1-Bruno">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ajuste</td>
+<td colspan="2" class="span">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Ana">&nbsp;</td>
+<td data-id="c-fica-Bruno">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Ana">&nbsp;</td>
+<td data-id="c-final-Bruno">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Ana">&nbsp;</td>
+<td data-id="c-outro-Bruno">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>A Ana e o Bruno vão dividir dois quadros. Estes são os pontos <strong>verdadeiros</strong>.</p>
 <div class="pequeno">
 <ol type="a">
 <li class="fragment">Qual é a partilha se ambos forem honestos?</li>
-<li class="fragment">A Ana sabe os pontos do Bruno e declara <strong>26</strong> para o Matisse e <strong>74</strong> para o Picasso. Qual é a partilha? Quantos pontos <strong>verdadeiros</strong> obtém a Ana?</li>
-<li class="fragment">E se o Bruno também mentir, declarando <strong>74</strong> para o Matisse e <strong>26</strong> para o Picasso?</li>
+<li class="fragment">A Ana sabe os pontos do Bruno e declara <strong>26</strong> e <strong>74</strong>. Qual é a partilha? Quantos pontos <strong>verdadeiros</strong> obtém?</li>
+<li class="fragment">E se o Bruno também mentir, declarando <strong>74</strong> e <strong>26</strong>?</li>
 </ol>
 </div>
-</div></div>
 <p><span class="fonte">Adaptado de Brams e Taylor, <em>Fair Division</em> (1996)</span></p>
+</div></div>
 </section>
-<section class="slide level2">
-<h2>Problema 5 · Resolução</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">a) Honestos</a></li><li><a href="#tabset-1-2">b) A Ana mente</a></li><li><a href="#tabset-1-3">c) Ambos mentem</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<p>Cada um fica com o quadro de que mais gosta: Ana 🖼️ Matisse (<strong>75</strong>), Bruno 🖼️ Picasso (<strong>75</strong>). Os totais são iguais: <strong>não há ajuste</strong>.</p>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 5 · a) Honestos</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Ana</th>
+<th data-quarto-table-cell-role="th">Bruno</th>
+</tr>
+<tr class="feito even" data-id="r-mat">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🖼️ Matisse</td>
+<td class="max" data-id="c-mat-Ana">75</td>
+<td data-id="c-mat-Bruno">25</td>
+</tr>
+<tr class="feito odd" data-id="r-pic">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Picasso</td>
+<td data-id="c-pic-Ana">25</td>
+<td class="max" data-id="c-pic-Bruno">75</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Ana"><strong>75</strong></td>
+<td data-id="c-fase1-Bruno"><strong>75</strong></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ajuste</td>
+<td colspan="2" class="span">Totais iguais: <strong>não há ajuste</strong></td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Ana">Matisse</td>
+<td data-id="c-fica-Bruno">Picasso</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Ana"><strong>75</strong></td>
+<td data-id="c-final-Bruno"><strong>75</strong></td>
+</tr>
+<tr class="futuro even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Ana">&nbsp;</td>
+<td data-id="c-outro-Bruno">&nbsp;</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="tabset-1-2">
-<p>1.ª fase: Ana Matisse (<span class="math inline">\(26 &gt; 25\)</span>) → <span class="math inline">\(26\)</span>; Bruno Picasso (<span class="math inline">\(75 &gt; 74\)</span>) → <span class="math inline">\(75\)</span>. O Bruno é o vencedor inicial: <span class="math display">\[75 - 75x = 26 + 74x \iff x = \frac{49}{149} \approx 0{,}33\]</span></p>
-<p>A Ana fica com o Matisse e <strong>≈ 33 %</strong> do Picasso. Em pontos <strong>verdadeiros</strong>: <span class="math display">\[75 + 25 \times \frac{49}{149} \approx 83{,}2 \text{ pontos} \quad (\text{em vez de } 75)\]</span></p>
-<p>O Bruno desce para <span class="math inline">\(\approx 50{,}3\)</span> pontos.</p>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Cada um fica com o quadro de que mais gosta: <strong>75 = 75</strong>. Os totais são iguais: <strong>não há ajuste</strong>.</p>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 5 · b) A Ana mente</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Ana</th>
+<th data-quarto-table-cell-role="th">Bruno</th>
+</tr>
+<tr class="feito even" data-id="r-mat">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🖼️ Matisse</td>
+<td class="max" data-id="c-mat-Ana">26</td>
+<td data-id="c-mat-Bruno">25</td>
+</tr>
+<tr class="feito odd" data-id="r-pic">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Picasso</td>
+<td data-id="c-pic-Ana">74</td>
+<td class="max" data-id="c-pic-Bruno">75</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Ana"><strong>26</strong></td>
+<td data-id="c-fase1-Bruno"><strong>75</strong><span class="nota"> → dador: Bruno</span></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ordem (razão)</td>
+<td colspan="2" class="span">Picasso \(75/74\)</td>
+</tr>
+<tr class="atual even" data-id="r-t0">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Passar Picasso todo?</td>
+<td data-id="c-t0-Ana">100</td>
+<td data-id="c-t0-Bruno">0<span class="nota"> ✘ inverte</span></td>
+</tr>
+<tr class="atual odd" data-id="r-eq">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Divide-se Picasso</td>
+<td colspan="2" class="span">\(75-75x=26+74x\) ⟹ \(x=\)\(\tfrac{49}{149}\)</td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Ana">Matisse + \(\tfrac{49}{149}\) Picasso</td>
+<td data-id="c-fica-Bruno">\(\tfrac{100}{149}\) Picasso</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Ana"><strong>\(\frac{7500}{149}\approx 50{,}3\)</strong></td>
+<td data-id="c-final-Bruno"><strong>\(\frac{7500}{149}\approx 50{,}3\)</strong></td>
+</tr>
+<tr class="atual even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Ana">\(\frac{7400}{149}\approx 49{,}7\)</td>
+<td data-id="c-outro-Bruno">\(\frac{7400}{149}\approx 49{,}7\)</td>
+</tr>
+<tr class="atual odd" data-id="r-extra">
+<td class="colpasso"><span class="npasso">?</span></td>
+<td class="rot">Pontos verdadeiros</td>
+<td data-id="c-extra-Ana"><strong>\(\frac{12400}{149}\approx 83{,}2\)</strong></td>
+<td data-id="c-extra-Bruno"><strong>\(\frac{7500}{149}\approx 50{,}3\)</strong></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="tabset-1-3">
-<p>Declarações: Ana 26 / 74, Bruno 74 / 26. A Ana fica com o <strong>Picasso</strong> e o Bruno com o <strong>Matisse</strong> (74 pontos declarados cada).</p>
-<div class="destaque coral">
-<p>Em pontos verdadeiros, cada um fica só com <strong>25</strong>! Mentir é arriscado: a estratégia honesta garante sempre <strong>pelo menos 50 pontos</strong>.</p>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Com os pontos <strong>declarados</strong>, a Ana ganha o Matisse (<span class="math inline">\(26 &gt; 25\)</span>) e o Bruno é o vencedor inicial (<span class="math inline">\(75\)</span>): <span class="math display">\[75 - 75x = 26 + 74x \iff x = \frac{49}{149} \approx 0{,}33\]</span></p>
+<div class="destaque coral fragment">
+<p>Em pontos <strong>verdadeiros</strong>, a Ana fica com <span class="math inline">\(75 + 25 \times \frac{49}{149} \approx 83{,}2\)</span> (em vez de 75); o Bruno desce para <span class="math inline">\(\approx 50{,}3\)</span>.</p>
 </div>
+</div></div>
+</section>
+<section class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 5 · c) Ambos mentem</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<div class="tabela-metodo aw" data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(pontos)</th>
+<th data-quarto-table-cell-role="th">Ana</th>
+<th data-quarto-table-cell-role="th">Bruno</th>
+</tr>
+<tr class="feito even" data-id="r-mat">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">🖼️ Matisse</td>
+<td data-id="c-mat-Ana">26</td>
+<td class="max" data-id="c-mat-Bruno">74</td>
+</tr>
+<tr class="feito odd" data-id="r-pic">
+<td class="colpasso"></td>
+<td class="rot">🖼️ Picasso</td>
+<td class="max" data-id="c-pic-Ana">74</td>
+<td data-id="c-pic-Bruno">26</td>
+</tr>
+<tr class="atual even" data-id="r-fase1">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">1.ª fase</td>
+<td data-id="c-fase1-Ana"><strong>74</strong></td>
+<td data-id="c-fase1-Bruno"><strong>74</strong></td>
+</tr>
+<tr class="atual odd" data-id="r-ordem">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Ajuste</td>
+<td colspan="2" class="span">Totais iguais: <strong>não há ajuste</strong></td>
+</tr>
+<tr class="atual even" data-id="r-fica">
+<td class="colpasso"><span class="npasso">6</span></td>
+<td class="rot">Fica com</td>
+<td data-id="c-fica-Ana">Picasso</td>
+<td data-id="c-fica-Bruno">Matisse</td>
+</tr>
+<tr class="atual odd" data-id="r-final">
+<td class="colpasso"></td>
+<td class="rot">Pontos finais</td>
+<td data-id="c-final-Ana"><strong>74</strong></td>
+<td data-id="c-final-Bruno"><strong>74</strong></td>
+</tr>
+<tr class="atual even" data-id="r-outro">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Parte do outro vale</td>
+<td data-id="c-outro-Ana">26</td>
+<td data-id="c-outro-Bruno">26</td>
+</tr>
+<tr class="atual odd" data-id="r-extra">
+<td class="colpasso"><span class="npasso">?</span></td>
+<td class="rot">Pontos verdadeiros</td>
+<td data-id="c-extra-Ana"><strong>25</strong></td>
+<td data-id="c-extra-Bruno"><strong>25</strong></td>
+</tr>
+</tbody>
+</table>
 </div>
+</div><div class="column texto-passo" style="width:42%;">
+<p>Declarações: Ana 26 / 74, Bruno 74 / 26. A Ana fica com o <strong>Picasso</strong> e o Bruno com o <strong>Matisse</strong> (74 = 74 declarados).</p>
+<div class="destaque coral fragment">
+<p>Em pontos verdadeiros, cada um fica só com <strong>25</strong>! A estratégia honesta garante sempre <strong>pelo menos 50 pontos</strong>.</p>
 </div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 <h2>Para recordar</h2>
@@ -1230,7 +2852,7 @@ MACS · 10.º ano
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
 'chalkboard': {"buttons":true,"theme":"whiteboard","boardmarkerWidth":4,"chalkWidth":5},
-'multiplex': {"secret":null,"id":"7a52401e0aac41c9760d3e2f34acf3dab305a85f5fffbc93ea4e071b141d39cf","url":"https://multiplex.up.railway.app/"},
+'multiplex': {"secret":null,"id":"5a567a13368a331e3e54fe4a32b64d43ce37b88718adeb38edd65995b0a484bc","url":"https://multiplex.up.railway.app/"},
 'smaller': false,
  
         // Display controls in the bottom right corner

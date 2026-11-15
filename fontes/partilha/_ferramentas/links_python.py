@@ -8,7 +8,7 @@ APP = "https://karlosgomes.github.io/apps-matematica/python/"
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 FONTES = {
     "_fonte_licitacoes/_01_licitacoes_secretas_modelo.qmd": "licitacoes_secretas.py",
-    "02_ajuste_na_partilha.qmd": "ajuste_na_partilha.py",
+    "_fonte_ajuste/_02_ajuste_na_partilha_modelo.qmd": "ajuste_na_partilha.py",
     "_fonte_marcadores/_03_marcadores_modelo.qmd": "marcadores.py",
 }
 BLOCO = re.compile(r"(```\{\.python[^}]*\}\n)(.*?)(\n```\n)((?:\n\[[^\n]*\{\.app-python[^\n]*\}\n)*)", re.S)
