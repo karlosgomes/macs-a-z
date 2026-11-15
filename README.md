@@ -7,7 +7,7 @@ Página: https://karlosgomes.github.io/macs-a-z/
 
 ## Capítulo 1 · Divisão Justa (caso discreto)
 - [1.1 Licitações secretas](https://karlosgomes.github.io/macs-a-z/#/lic): [problemas](https://karlosgomes.github.io/macs-a-z/#/lic-problemas)
-- [1.2 Ajuste na Partilha (Adjusted Winner)](https://karlosgomes.github.io/macs-a-z/#/aw): [problemas](https://karlosgomes.github.io/macs-a-z/#/aw-problemas)
+- [1.2 Ajuste na Partilha](https://karlosgomes.github.io/macs-a-z/#/aw): [problemas](https://karlosgomes.github.io/macs-a-z/#/aw-problemas)
 - [1.3 Marcadores](https://karlosgomes.github.io/macs-a-z/#/mk): [problemas](https://karlosgomes.github.io/macs-a-z/#/mk-problemas)
 
 Fontes (Quarto e Python): `fontes/`.

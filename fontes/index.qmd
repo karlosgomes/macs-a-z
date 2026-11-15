@@ -9,7 +9,7 @@ pagetitle: "MACS A...Z — Matemática Aplicada às Ciências Sociais"
   <div class="topico">
     <p class="nome-topico">Divisão Justa</p>
     <p class="links-topico"><span class="metodo">Licitações secretas</span> · <a href="#/lic">Resumo</a> · <a href="#/lic-problemas">Problemas</a></p>
-    <p class="links-topico"><span class="metodo">Ajuste na Partilha</span> <span class="en">(Adjusted Winner)</span> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></p>
+    <p class="links-topico"><span class="metodo">Ajuste na Partilha</span> · <a href="#/aw">Resumo</a> · <a href="#/aw-problemas">Problemas</a></p>
     <p class="links-topico"><span class="metodo">Marcadores</span> · <a href="#/mk">Resumo</a> · <a href="#/mk-problemas">Problemas</a></p>
     <p class="links-topico"><a href="#/sintese">Síntese: os três métodos</a> · <a href="#/inveja">Proporcional ou livre de inveja?</a></p>
   </div>

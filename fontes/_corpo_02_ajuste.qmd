@@ -1,4 +1,4 @@
-# Método do Ajuste na Partilha <span class="en">(Adjusted Winner)</span> {#aw .capitulo data-rotulo="1.2 · Resumo"}
+# Método do Ajuste na Partilha {#aw .capitulo data-rotulo="1.2 · Resumo"}
 
 <!-- FICHEIRO GERADO: editar _fonte_ajuste/_02_ajuste_na_partilha_modelo.qmd e correr python3 _fonte_ajuste/tabela_aw.py -->
 
@@ -161,7 +161,7 @@ Na prática: a Madalena usa o apartamento $\frac35$ do ano (cerca de 7 meses), o
 :::
 :::
 
-## Método do Ajuste na Partilha (*Adjusted Winner*)
+## Método do Ajuste na Partilha
 
 [Steven Brams e Alan Taylor (1996). **Dois** jogadores e vários itens.]{.pequeno}
 
