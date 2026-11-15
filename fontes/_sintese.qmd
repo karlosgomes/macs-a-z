@@ -1,0 +1,17 @@
+# Os três métodos do caso discreto {#sintese}
+
+::: {style="font-size: .9em"}
+| | Licitações secretas | Ajuste na Partilha | Marcadores |
+|:--|:--:|:--:|:--:|
+| **Jogadores** | 2 ou mais | só 2 | 2 ou mais |
+| **Bens** | indivisíveis | pelo menos um divisível | muitos, pequenos e semelhantes |
+| **Avaliação** | em dinheiro | 100 pontos | marcas numa fila |
+| **Precisa de dinheiro?** | sim | não | não |
+| **Parte justa garantida?** | sim | sim | sim (com marcas exatas) |
+| **Livre de inveja?** | não | sim | não |
+| **O que sobra** | excedente em dinheiro | — | itens (sorteio) |
+:::
+
+::: {.destaque .teal .fragment}
+Não há um método «melhor»: a escolha depende da **situação** (heranças, divórcios, tarefas, doces…).
+:::

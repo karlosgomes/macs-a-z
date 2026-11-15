@@ -1,0 +1,39 @@
+# MACS A...Z — livro de apresentações (uma só apresentação Reveal.js com capa, índice e capítulos).
+# Compilar e publicar: _ferramentas/publicar_site.sh
+project:
+  type: default
+  output-dir: _site
+  render:
+    - index.qmd
+
+lang: pt
+
+format:
+  revealjs:
+    theme: [default, estilo.scss]
+    width: 1600
+    height: 900
+    margin: 0.05
+    navigation-mode: vertical
+    transition: slide
+    background-transition: fade
+    slide-number: c/t
+    show-slide-number: all
+    progress: true
+    controls: true
+    controls-layout: bottom-right
+    menu:
+      side: left
+      width: normal
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 4
+      chalk-width: 5
+    preview-links: auto
+    code-line-numbers: true
+    highlight-style: github
+    html-math-method: mathjax
+    footer: "MACS 10.º ano · Divisão Justa"
+    include-in-header: _ferramentas/site/cabecalho.html
+    include-before-body: _ferramentas/site/barra.html
+    include-after-body: _ferramentas/site/navegacao.html

@@ -9,3 +9,7 @@ fontes/**/.quarto/
 fontes/**/_ferramentas/capturas/
 fontes/**/_ferramentas/.perfil*/
 __pycache__/
+# compilações locais do livro (o publicado é ../index.html)
+fontes/_site/
+fontes/index.html
+fontes/index_files/

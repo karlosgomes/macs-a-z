@@ -1,0 +1,43 @@
+---
+pagetitle: "MACS A...Z — Matemática Aplicada às Ciências Sociais"
+---
+
+# MACS A...Z {#capa .capa}
+
+[Matemática Aplicada às Ciências Sociais · 10.º ano]{.subtitulo2}
+
+```{=html}
+<table class="ajuda">
+  <tr><td><kbd>→</kbd></td><td>capítulo ou secção seguinte</td><td><kbd>↓</kbd></td><td>descer: resumo e problemas</td></tr>
+  <tr><td><kbd>F</kbd></td><td>ecrã inteiro</td><td><kbd>Esc</kbd></td><td>ver todos os diapositivos</td></tr>
+  <tr><td><kbd>C</kbd></td><td>escrever por cima</td><td><kbd>B</kbd></td><td>quadro branco</td></tr>
+  <tr><td><kbd>M</kbd></td><td>menu</td><td><kbd>Del</kbd></td><td>apagar desenhos</td></tr>
+</table>
+```
+
+[Os botões no canto inferior esquerdo fazem o mesmo. Os diapositivos «Experimenta!» têm controlos para mexer.]{.pequeno .centro}
+
+# Índice {#indice}
+
+::: {.indice}
+::: {.topico}
+[Capítulo 1 · Divisão Justa]{.nome-topico}
+[Modelos matemáticos na partilha · caso discreto]{.sub-topico}
+
+1. **Licitações secretas** · [Resumo](#/lic) · [Problemas](#/lic-problemas)
+2. **Ajuste na Partilha** *(Adjusted Winner)* · [Resumo](#/aw) · [Problemas](#/aw-problemas)
+3. **Marcadores** · [Resumo](#/mk) · [Problemas](#/mk-problemas)
+
+[Síntese: os três métodos](#/sintese) · *Caso contínuo: em preparação*
+:::
+:::
+
+# Divisão Justa {#dj .capitulo data-rotulo="Capítulo 1"}
+
+{{< include _corpo_01_licitacoes.qmd >}}
+
+{{< include _corpo_02_ajuste.qmd >}}
+
+{{< include _corpo_03_marcadores.qmd >}}
+
+{{< include _sintese.qmd >}}

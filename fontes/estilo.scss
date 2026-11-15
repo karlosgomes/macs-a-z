@@ -1,0 +1,201 @@
+/*-- scss:defaults --*/
+// Estilo «clean» ao jeito do projeto Matemática A...Z (karlosgomes.github.io/matematica-a-z):
+// fundo branco do tema white do Reveal.js, títulos azuis em Source Sans, capa e capítulos em Palatino.
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Fira+Code&display=swap');
+
+$body-bg: #ffffff;
+$body-color: #222222;
+$link-color: #2a76dd;
+$font-family-sans-serif: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-monospace: "Fira Code", "DejaVu Sans Mono", monospace;
+$presentation-font-size-root: 38px;
+$presentation-heading-font: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$presentation-heading-color: #1d4ed8;
+$presentation-heading-font-weight: 600;
+$presentation-h1-font-size: 2.3em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1.05em;
+$code-block-font-size: 0.56em;
+
+// paleta (cores do Matemática A...Z)
+$azul: #1d4ed8;  $azul-claro: #eff6ff;
+$vermelho: #dc2626; $vermelho-claro: #fef2f2;
+$laranja: #ea580c; $laranja-claro: #fff7ed;
+$verde: #16a34a; $verde-claro: #f0fdf4;
+$violeta: #7c3aed;
+$rosa: #db2777;
+$cinza: #64748b; $linha: #e2e8f0; $borda: #cbd5e1;
+$escuro: #170C3A;  // faixa do weblog
+$palatino: "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", serif;
+
+/*-- scss:rules --*/
+.reveal pre code, .reveal code { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
+.reveal h2 { text-align: left; margin-bottom: .5em; }
+.reveal strong { color: inherit; font-weight: 700; }
+.reveal em { color: inherit; }
+
+// ---------- capa: faixa escura do weblog + subtítulo em Palatino ----------
+.reveal .slides section.quarto-title-block { text-align: center; }
+.reveal .slides section.quarto-title-block .title {
+  font-family: "Jost", $font-family-sans-serif; font-weight: 600; color: #fff; background: $escuro;
+  font-size: 1.75em; padding: .55em 1em; margin: 0 -2em .7em; border-radius: 0;
+}
+.reveal .slides section.quarto-title-block .subtitle { font-family: $palatino; color: $cinza; font-size: 1.3em; letter-spacing: .03em; font-weight: 400; }
+.reveal .slides section.quarto-title-block .quarto-title-authors, .reveal .slides section.quarto-title-block .author, .reveal .slides section.quarto-title-block .institute { font-family: $palatino; color: $cinza; }
+
+// ---------- capítulos (antes «O método» e «Problemas»): nome ao centro, sublinhado azul ----------
+.reveal .slides section.capitulo { text-align: center; }
+.reveal .slides section.capitulo::before {
+  content: attr(data-rotulo); display: block; margin: 0 0 18px; font-family: $palatino; font-size: .85em;
+  color: $cinza; letter-spacing: .08em; text-transform: uppercase;
+}
+.reveal .slides section.capitulo h1 {
+  display: inline-block; font-family: $palatino; color: #111; font-weight: 600; font-size: 2.1em;
+  border-bottom: 5px solid $azul; padding-bottom: 18px; margin: 0;
+}
+
+// ---------- rodapé e número do diapositivo ----------
+.reveal .footer { font-size: .45em !important; color: $cinza; bottom: 14px !important; }
+.reveal .slide-number { top: auto !important; bottom: 12px !important; right: 90px !important;
+  background: transparent !important; color: $cinza !important; font-size: 14px; }
+
+// ---------- tabelas ----------
+.reveal table { font-size: .8em; border-collapse: collapse; margin: .4em auto; }
+.reveal table th { color: $azul; background: transparent; border: none; border-bottom: 2px solid #94a3b8; padding: .25em .7em; font-weight: 700; }
+.reveal table td { padding: .2em .7em; border: none; border-bottom: 1px solid $linha; }
+.reveal table td.max, .reveal .max { background: #ffedd5 !important; color: #9a3412; font-weight: 700; border-radius: 5px; }
+.reveal .pos { color: $verde; font-weight: 700; }
+.reveal .neg { color: $vermelho; font-weight: 700; }
+
+// ---------- cartões ----------
+.reveal .cartao {
+  background: #fff; border: 1px solid $linha; border-top: 5px solid $azul; border-radius: 10px;
+  padding: .45em .7em; margin: .2em; font-size: .8em; box-shadow: 0 2px 6px rgba(15, 23, 42, .06);
+}
+.reveal .cartao.coral { border-top-color: $vermelho; }
+.reveal .cartao.mostarda { border-top-color: $laranja; }
+.reveal .cartao.verde { border-top-color: $verde; }
+.reveal .cartao.roxo { border-top-color: $violeta; }
+.reveal .tcartao { display: block; font-weight: 700; color: #111; font-size: 1.1em; margin-bottom: .2em; }
+.reveal .emoji { font-size: 2.1em; line-height: 1.15; display: block; text-align: center; }
+
+// ---------- passos do método ----------
+.reveal .passo {
+  margin: .3em 0; font-size: .85em; padding-left: 2.2em; text-indent: -2.2em;
+  .num { display: inline-block; text-indent: 0; width: 1.55em; height: 1.55em; line-height: 1.55em; border-radius: 50%;
+         background: $azul; color: #fff; text-align: center; font-weight: 700; margin-right: .6em; }
+}
+
+// ---------- caixas de destaque (como .destaque do Matemática A...Z) ----------
+.reveal .destaque { border: 2px solid $laranja; background: $laranja-claro; border-radius: 10px; padding: .4em .8em; margin: .4em 0; font-size: .9em; }
+.reveal .destaque.teal { border-color: $azul; background: $azul-claro; }
+.reveal .destaque.coral { border-color: $vermelho; background: $vermelho-claro; }
+
+.reveal .pergunta { font-size: 1.1em; font-weight: 700; color: $azul; text-align: center; margin-top: 1em; }
+.reveal .pequeno { font-size: .7em; }
+.reveal .fonte { display: block; font-size: .5em; color: $cinza; text-align: right; margin-top: .6em; font-style: italic; }
+.reveal .centro { text-align: center; }
+.reveal .enorme { font-size: 2.2em; font-weight: 700; color: $azul; text-align: center; }
+.reveal .etiqueta { display: inline-block; background: #e0e7ff; color: #312e81; border-radius: 6px;
+  padding: .05em .55em; font-size: .55em; font-weight: 700; vertical-align: middle; }
+.reveal ol[type="a"] > li::marker { content: counter(list-item, lower-alpha) ") "; font-weight: 700; color: $rosa; }
+
+// ---------- Observable ----------
+.reveal .cell-output-display form, .reveal form[class^="inputs"] { font-size: 26px; --label-width: 150px; --input-width: 260px; }
+.reveal form[class^="inputs"] label { width: 150px; }
+.reveal form[class^="inputs"] input[type="number"] { width: 70px; font-size: 20px; }
+.reveal input[type="range"] { accent-color: $azul; }
+.reveal .ojs-tabela table { font-size: 28px; }
+.reveal .ojs-tabela p { font-size: 22px; }
+.reveal .panel-tabset { font-size: .9em; }
+
+// ---------- linhas de itens (método dos marcadores) ----------
+$p1: $azul; $p2: $vermelho; $p3: $laranja; $p4: $violeta;
+.reveal .linha { display: flex; justify-content: center; align-items: stretch; margin: .4em auto .2em; }
+.reveal .linha .it {
+  width: 76px; margin-top: 100px; display: flex; flex-direction: column; align-items: center;
+  background: #fff; border-radius: 10px; border: 2px solid $linha; padding: 4px 0 2px;
+  .e { font-size: 46px; line-height: 1.15; }
+  .n { font-size: 15px; color: $cinza; font-weight: 600; }
+}
+.reveal .linha .gap { width: 30px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; }
+.reveal .linha .gap .barra { width: 3px; flex: 1 1 auto; max-height: 74px; min-height: 70px; border-radius: 2px; background: #334155; margin-top: 2px; }
+.reveal .linha .gap .barras { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.reveal .linha .mk { font-size: 15px; font-weight: 700; color: #fff; border-radius: 4px; padding: 0 4px; line-height: 1.35; white-space: nowrap; }
+.reveal .linha .mk sub { font-size: 10px; }
+.reveal .linha .mk.p1 { background: $p1; } .reveal .linha .mk.p2 { background: $p2; }
+.reveal .linha .mk.p3 { background: $p3; } .reveal .linha .mk.p4 { background: $p4; }
+.reveal .linha .it.p1 { background: lighten($p1, 45%); border-color: $p1; }
+.reveal .linha .it.p2 { background: lighten($p2, 42%); border-color: $p2; }
+.reveal .linha .it.p3 { background: lighten($p3, 45%); border-color: $p3; }
+.reveal .linha .it.p4 { background: lighten($p4, 38%); border-color: $p4; }
+.reveal .linha .it.sobra { background: #f8fafc; border: 2px dashed #94a3b8; }
+.reveal .linha .it.apagado { opacity: .3; }
+.reveal .linha.compacta .it { width: 56px; .e { font-size: 32px; } .n { font-size: 14px; } }
+.reveal .linha.compacta .gap { width: 20px; }
+.reveal .linha.compacta .mk { font-size: 12px; padding: 0 2px; }
+.reveal .linha .it .e.letra { font-weight: 700; font-size: 24px; color: #111; }
+.reveal .legenda { font-size: .65em; text-align: center; color: #334155; }
+.reveal .legenda span { display: inline-block; margin: 0 .5em; }
+.reveal .legenda .q { display: inline-block; width: .9em; height: .9em; border-radius: 3px; vertical-align: middle; margin-right: .25em; }
+.reveal .q.p1 { background: $p1; } .reveal .q.p2 { background: $p2; } .reveal .q.p3 { background: $p3; } .reveal .q.p4 { background: $p4; }
+.reveal .q.sobra { background: #f8fafc; border: 2px dashed #94a3b8; }
+
+// ---------- tabela de cálculos sempre presente (licitações secretas) ----------
+.reveal .tabela-metodo table { font-size: 29px; margin: .2em 0; width: 100%; }
+.reveal .tabela-metodo th { padding: .2em .4em; }
+.reveal .tabela-metodo td { padding: .3em .4em; text-align: center; white-space: nowrap; transition: all .5s; }
+.reveal .tabela-metodo td.rot { text-align: left; font-weight: 600; white-space: nowrap; }
+.reveal .tabela-metodo td.colpasso { width: 1.6em; padding: 0 .2em; }
+.reveal .tabela-metodo .npasso { display: inline-block; width: 1.45em; height: 1.45em; line-height: 1.45em; border-radius: 50%;
+  background: #cbd5e1; color: #fff; font-weight: 700; font-size: .8em; text-align: center; }
+.reveal .tabela-metodo tr td { background: transparent !important; }
+.reveal .tabela-metodo tr.feito td { color: #222; }
+.reveal .tabela-metodo tr.feito .npasso { background: $azul; }
+.reveal .tabela-metodo tr.futuro td { color: #b6c0cc; border-bottom: 1px dashed $linha; }
+.reveal .tabela-metodo tr.futuro td.rot { font-weight: 400; }
+.reveal .tabela-metodo tr.atual td { background: $laranja-claro !important; }
+.reveal .tabela-metodo tr.atual td:first-child { box-shadow: inset 4px 0 $laranja; }
+.reveal .tabela-metodo tr.atual td.rot { color: $laranja; }
+.reveal .tabela-metodo tr.atual .npasso { background: $laranja; }
+.reveal .tabela-metodo td.max { background: #ffedd5 !important; color: #9a3412; font-weight: 700; border-radius: 5px; }
+.reveal .tabela-metodo.quatro table { font-size: 23px; }
+.reveal .texto-passo { font-size: .9em; }
+.reveal .texto-passo.compacto { font-size: .78em; }
+.reveal a.app-python { display: inline-block; margin-top: .3em; font-size: .6em; font-weight: 700; color: #fff;
+  background: #1d4ed8; border-radius: 6px; padding: .2em .8em; text-decoration: none; }
+.reveal a.app-python:hover { filter: brightness(1.1); }
+.reveal .tabela-metodo td.span { text-align: left; white-space: normal; }
+.reveal .tabela-metodo .nota { font-size: .75em; color: #64748b; margin-left: .3em; }
+.reveal .tabela-metodo tr.atual .nota { color: #9a3412; }
+.reveal .tabela-metodo.longa table { font-size: 26px; }
+.reveal .tabela-metodo.longa td { padding: .24em .35em; }
+.reveal .tabela-metodo.marcadores table { font-size: 26px; }
+.reveal .tabela-metodo.marcadores.quatro table { font-size: 25px; }
+.reveal .tabela-metodo.marcadores td { padding: .22em .35em; }
+.reveal .tabela-metodo .q { display: inline-block; width: .8em; height: .8em; border-radius: 3px; vertical-align: middle; }
+
+
+// ---------- livro: capa, índice, diapositivos de nível 1 com conteúdo, links de regresso ----------
+.reveal .slides section.capa > h1 { display: none; }
+.reveal .slides section.capa { padding-top: 190px; text-align: center; }
+.reveal .capa .subtitulo2 { display: block; font-family: $palatino; font-size: 1.7em; color: $cinza; letter-spacing: .03em; margin-bottom: 1.2em; }
+.reveal .capa table.ajuda { margin: 0 auto 1em; font-size: .62em; color: #475569; }
+.reveal .capa table.ajuda td { border: none; padding: 6px 14px; text-align: left; }
+.reveal .capa table.ajuda td:nth-child(odd) { text-align: right; white-space: nowrap; }
+.reveal .capa table.ajuda td:nth-child(3) { padding-left: 60px; }
+.reveal kbd { font-family: inherit; font-size: .9em; padding: 1px 8px; border: 1px solid #94a3b8; border-bottom-width: 3px;
+  border-radius: 5px; background: #f8fafc; color: #1e293b; }
+// diapositivos de nível 1 com conteúdo (índice, listas de problemas, síntese): título como os outros
+.reveal .slides section.level1:not(.capitulo):not(.capa) > h1 {
+  font-family: $font-family-sans-serif; color: $azul; font-size: 1.3em; text-align: left; font-weight: 600; margin-bottom: .5em; }
+.reveal .indice { text-align: left; margin: 20px auto 0; width: 1150px; font-size: 1.05em; line-height: 1.7; }
+.reveal .indice .topico { border-left: 5px solid $azul; padding: 4px 0 4px 24px; }
+.reveal .indice .nome-topico { display: block; font-size: 1.25em; font-weight: 600; color: #111; }
+.reveal .indice .sub-topico { display: block; color: $cinza; font-size: .8em; margin-bottom: .4em; }
+.reveal .indice ol { margin-left: 1.2em; }
+.reveal .indice-problemas { width: 1150px; margin: 10px auto 0; font-size: 1.05em; line-height: 1.8; border-left: 5px solid $azul; padding-left: 24px; }
+.reveal .indice-problemas .rotulo-cap { display: block; color: $cinza; font-size: .8em; letter-spacing: .06em; text-transform: uppercase; }
+.reveal .indice a, .reveal .indice-problemas a { color: $link-color; }
+.reveal a.voltar { position: absolute; top: -6px; right: 0; font-size: .45em; color: $cinza; z-index: 10; }
+.reveal .capitulo .en { font-style: italic; color: $cinza; font-size: .6em; display: block; }

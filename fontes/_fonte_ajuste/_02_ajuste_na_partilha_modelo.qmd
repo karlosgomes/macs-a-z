@@ -1,0 +1,672 @@
+# Método do Ajuste na Partilha <span class="en">(Adjusted Winner)</span> {#aw .capitulo data-rotulo="1.2 · Resumo"}
+
+<!-- FICHEIRO GERADO: editar _fonte_ajuste/_02_ajuste_na_partilha_modelo.qmd e correr python3 _fonte_ajuste/tabela_aw.py -->
+
+
+## Um divórcio sem dinheiro
+
+A **Madalena** e o **Gonçalo** vão divorciar-se e têm de dividir quatro bens. Nenhum deles tem dinheiro para «comprar» a parte do outro.
+
+::: {layout-ncol=4}
+::: {.cartao .fragment}
+[⛵]{.emoji}
+
+[Iate]{.tcartao}
+:::
+
+::: {.cartao .coral .fragment}
+[🐈]{.emoji}
+
+[Gato]{.tcartao}
+:::
+
+::: {.cartao .mostarda .fragment}
+[🏢]{.emoji}
+
+[Apartamento]{.tcartao}
+em Sintra
+:::
+
+::: {.cartao .verde .fragment}
+[🖼️]{.emoji}
+
+[Quadro]{.tcartao}
+de Eurico Gonçalves
+:::
+:::
+
+[Sem dinheiro, as licitações secretas não servem. Como fazer?]{.pergunta .fragment}
+
+::: notes
+Exemplo adaptado do trabalho «Aplicação dos métodos de partilha» (alunos de MACS). Discutir: um gato não se divide,
+mas um apartamento pode ser usado parte do ano por cada um (ou vendido e o dinheiro repartido).
+:::
+
+## 1.º passo: 100 pontos para distribuir {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:1}}
+:::
+::: {.column width="42%" .texto-passo}
+Cada um distribui, **em segredo**, **100 pontos** pelos bens, conforme a importância que lhes dá.
+
+::: {.destaque .fragment}
+Os pontos medem **preferências**: a Madalena dá metade dos seus pontos ao gato!
+:::
+:::
+:::
+
+## 2.º passo: cada bem para quem mais o valoriza {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:2}}
+:::
+::: {.column width="42%" .texto-passo}
+- ⛵ e 🖼️ → **Gonçalo** ($30 + 30 = 60$)
+- 🐈 e 🏢 → **Madalena** ($50 + 30 = 80$)
+
+::: {.destaque .coral .fragment}
+$80 > 60$: a partilha **não é equilibrada**. A Madalena é a **vencedora inicial** e vai ter de ceder bens (ou parte de um bem) ao Gonçalo.
+:::
+:::
+:::
+
+## 3.º passo: por onde começar? {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:3}}
+:::
+::: {.column width="42%" .texto-passo}
+Para os bens da Madalena calcula-se a **razão**
+
+$$\frac{\text{pontos da Madalena}}{\text{pontos do Gonçalo}}$$
+
+🏢 $\frac{30}{20} = 1{,}5$ e 🐈 $\frac{50}{20} = 2{,}5$
+
+::: {.destaque .teal .fragment}
+Começa-se pela **menor razão** (o 🏢): é o bem que **custa menos** à Madalena por cada ponto que o Gonçalo ganha.
+:::
+:::
+:::
+
+## 4.º passo: passar o apartamento todo? {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:4}}
+:::
+::: {.column width="42%" .texto-passo}
+Se o 🏢 passasse **todo** para o Gonçalo:
+
+- Madalena: $80 - 30 = 50$
+- Gonçalo: $60 + 20 = 80$
+
+::: {.fragment}
+Agora seria o Gonçalo a ficar com mais! 😬 Então o apartamento vai ser **dividido**.
+:::
+:::
+:::
+
+## 5.º passo: a equação do ajuste {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:5}}
+:::
+::: {.column width="42%" .texto-passo}
+Seja $x$ a fração do 🏢 que **passa** para o Gonçalo:
+
+$$\underbrace{80 - 30x}_{\text{Madalena}} = \underbrace{60 + 20x}_{\text{Gonçalo}}$$
+
+::: {.fragment}
+$$50x = 20 \iff x = \frac{2}{5}$$
+
+Passam $\frac{2}{5}$ do apartamento para o Gonçalo; a Madalena fica com $\frac{3}{5}$.
+:::
+:::
+:::
+
+## O resultado {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:intro:6,7}}
+:::
+::: {.column width="42%" .texto-passo}
+- **Madalena:** 🐈 e $\frac35$ do 🏢 → $80 - 30 \times \frac25 = \mathbf{68}$
+- **Gonçalo:** ⛵, 🖼️ e $\frac25$ do 🏢 → $60 + 20 \times \frac25 = \mathbf{68}$
+
+::: {.fragment}
+**Equitativa** (68 = 68) e **livre de inveja**: para cada um, a parte do outro vale só 32.
+:::
+
+::: {.destaque .fragment}
+Na prática: a Madalena usa o apartamento $\frac35$ do ano (cerca de 7 meses), ou vende-se e o dinheiro é repartido na proporção $3:2$.
+:::
+:::
+:::
+
+## Método do Ajuste na Partilha (*Adjusted Winner*)
+
+[Steven Brams e Alan Taylor (1996). **Dois** jogadores e vários bens.]{.pequeno}
+
+::: {.passo .fragment}
+[1]{.num} **Pontos.** Cada jogador distribui, em segredo, **100 pontos** pelos bens.
+:::
+::: {.passo .fragment}
+[2]{.num} **1.ª fase.** Cada bem vai para quem lhe deu **mais pontos**. Bens com pontos iguais vão para quem tem, nesse momento, **menos pontos**.
+:::
+::: {.passo .fragment}
+[3]{.num} Se os totais forem **iguais**, a partilha termina. Senão, quem tem **mais** pontos é o **vencedor inicial** e vai ceder bens.
+:::
+::: {.passo .fragment}
+[4]{.num} **2.ª fase (ajuste).** Ordenam-se os bens do vencedor inicial pela razão $\dfrac{\text{pontos do vencedor}}{\text{pontos do outro}}$, da menor para a maior, e transferem-se **por essa ordem**…
+:::
+::: {.passo .fragment}
+[5]{.num} …até que um bem, transferido por inteiro, inverta a situação. Esse bem é **dividido** de modo a que ambos fiquem com o mesmo número de pontos.
+:::
+
+## A equação do ajuste
+
+::: {.columns}
+::: {.column width="55%"}
+Quando se chega ao bem que vai ser dividido:
+
+$$V - v\,x = P + p\,x \iff x = \frac{V - P}{v + p}$$
+
+::: {.pequeno}
+- $V$, $P$: pontos do vencedor inicial e do outro jogador, **nesse momento**;
+- $v$, $p$: pontos que cada um deu ao bem a dividir;
+- $x$: fração do bem que **passa** para o outro jogador.
+:::
+:::
+
+::: {.column width="45%"}
+::: {.fragment}
+**No divórcio:** $V = 80$, $P = 60$, $v = 30$, $p = 20$
+
+$$80 - 30x = 60 + 20x$$
+$$x = \frac{80-60}{30+20} = \frac{2}{5}$$
+
+Passam $\frac{2}{5}$ do apartamento para o Gonçalo (a Madalena fica com $\frac{3}{5}$ ✔).
+:::
+:::
+:::
+
+
+## Propriedades e limitações
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.cartao .verde}
+[✔ Equitativo]{.tcartao}
+Os dois ficam com o mesmo número de pontos.
+:::
+::: {.cartao .verde .fragment}
+[✔ Livre de inveja]{.tcartao}
+Cada um recebe pelo menos 50 pontos; a parte do outro vale, para si, no máximo 50.
+:::
+::: {.cartao .verde .fragment}
+[✔ Eficiente]{.tcartao}
+Não há outra partilha que melhore um sem piorar o outro. **No máximo um bem** é dividido.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.cartao .coral .fragment}
+[✘ Só 2 jogadores]{.tcartao}
+Com 3 ou mais, estas propriedades deixam de estar garantidas.
+:::
+::: {.cartao .coral .fragment}
+[✘ Bens divisíveis]{.tcartao}
+Pode ser preciso dividir um bem, e não se sabe à partida qual.
+:::
+::: {.cartao .coral .fragment}
+[✘ Honestidade]{.tcartao}
+Quem conhece os pontos do outro pode tirar partido disso (**Problema 5**).
+:::
+:::
+:::
+
+## Na vida real: Camp David (1978) {auto-animate=true}
+
+::: {.columns}
+::: {.column width="60%"}
+{{A:camp:2-6}}
+:::
+::: {.column width="40%" .texto-passo .compacto}
+Brams e Taylor aplicaram o método, **à posteriori**, às negociações de paz entre **Israel** e o **Egito** (pontos estimados).
+
+::: {.fragment}
+O Egito (75) cede a Israel (60) parte do 🏜️ Sinai, a menor razão ($\frac{55}{35}$):
+$$75 - 55x = 60 + 35x \iff x = \tfrac{1}{6}$$
+:::
+
+::: {.destaque .teal .fragment}
+Cada um obtém $\approx 65{,}8$ pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.
+:::
+:::
+:::
+
+## O algoritmo em Python
+
+```{.python code-line-numbers="|1-3|4-7|8-10|11-19"}
+bens = ["iate", "gato", "apartamento", "quadro"]
+A = [10, 50, 30, 10]                     # pontos da Madalena
+B = [30, 20, 20, 30]                     # pontos do Gonçalo
+# 1.ª fase: cada bem para quem dá mais pontos (sem empates)
+fica_A = [A[i] > B[i] for i in range(4)]
+tA = sum(A[i] for i in range(4) if fica_A[i])
+tB = sum(B[i] for i in range(4) if not fica_A[i])
+# 2.ª fase: bens da Madalena (tA > tB) por ordem crescente da razão A/B
+dela = [i for i in range(4) if fica_A[i]]
+dela.sort(key=lambda i: A[i] / B[i])
+for i in dela:
+    if tA - A[i] >= tB + B[i]:           # transferir o bem todo ainda não inverte
+        tA, tB = tA - A[i], tB + B[i]
+        print("Transfere", bens[i])
+    else:                                # divide-se este bem
+        x = (tA - tB) / (A[i] + B[i])
+        print("Passa", x, "do(a)", bens[i])          # 0.4 do apartamento
+        print("Pontos finais:", tA - A[i] * x, tB + B[i] * x)   # 68.0 68.0
+        break
+```
+
+[▶ Abrir e correr na app Python](https://karlosgomes.github.io/apps-matematica/python/#codigo=YmVucyA9IFsiaWF0ZSIsICJnYXRvIiwgImFwYXJ0YW1lbnRvIiwgInF1YWRybyJdCkEgPSBbMTAsIDUwLCAzMCwgMTBdICAgICAgICAgICAgICAgICAgICAgIyBwb250b3MgZGEgTWFkYWxlbmEKQiA9IFszMCwgMjAsIDIwLCAzMF0gICAgICAgICAgICAgICAgICAgICAjIHBvbnRvcyBkbyBHb27Dp2FsbwojIDEuwqogZmFzZTogY2FkYSBiZW0gcGFyYSBxdWVtIGTDoSBtYWlzIHBvbnRvcyAoc2VtIGVtcGF0ZXMpCmZpY2FfQSA9IFtBW2ldID4gQltpXSBmb3IgaSBpbiByYW5nZSg0KV0KdEEgPSBzdW0oQVtpXSBmb3IgaSBpbiByYW5nZSg0KSBpZiBmaWNhX0FbaV0pCnRCID0gc3VtKEJbaV0gZm9yIGkgaW4gcmFuZ2UoNCkgaWYgbm90IGZpY2FfQVtpXSkKIyAyLsKqIGZhc2U6IGJlbnMgZGEgTWFkYWxlbmEgKHRBID4gdEIpIHBvciBvcmRlbSBjcmVzY2VudGUgZGEgcmF6w6NvIEEvQgpkZWxhID0gW2kgZm9yIGkgaW4gcmFuZ2UoNCkgaWYgZmljYV9BW2ldXQpkZWxhLnNvcnQoa2V5PWxhbWJkYSBpOiBBW2ldIC8gQltpXSkKZm9yIGkgaW4gZGVsYToKICAgIGlmIHRBIC0gQVtpXSA%2BPSB0QiArIEJbaV06ICAgICAgICAgICAjIHRyYW5zZmVyaXIgbyBiZW0gdG9kbyBhaW5kYSBuw6NvIGludmVydGUKICAgICAgICB0QSwgdEIgPSB0QSAtIEFbaV0sIHRCICsgQltpXQogICAgICAgIHByaW50KCJUcmFuc2ZlcmUiLCBiZW5zW2ldKQogICAgZWxzZTogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgZGl2aWRlLXNlIGVzdGUgYmVtCiAgICAgICAgeCA9ICh0QSAtIHRCKSAvIChBW2ldICsgQltpXSkKICAgICAgICBwcmludCgiUGFzc2EiLCB4LCAiZG8oYSkiLCBiZW5zW2ldKSAgICAgICAgICAjIDAuNCBkbyBhcGFydGFtZW50bwogICAgICAgIHByaW50KCJQb250b3MgZmluYWlzOiIsIHRBIC0gQVtpXSAqIHgsIHRCICsgQltpXSAqIHgpICAgIyA2OC4wIDY4LjAKICAgICAgICBicmVhawo%3D&nome=ajuste_na_partilha.py){.app-python target="_blank"}
+
+::: notes
+Versão simplificada: supõe que a Madalena é a vencedora inicial e que não há empates. Pode pedir-se aos alunos que
+generalizem (trocar os papéis quando tB > tA; tratar empates).
+:::
+
+## Experimenta!
+
+Muda os pontos (o 4.º bem recebe o que falta para 100).
+
+::: {.columns}
+::: {.column width="40%"}
+```{ojs}
+//| echo: false
+viewof M = Inputs.form([
+  Inputs.range([0, 100], {value: 10, step: 1, label: "Madalena ⛵"}),
+  Inputs.range([0, 100], {value: 50, step: 1, label: "Madalena 🐈"}),
+  Inputs.range([0, 100], {value: 30, step: 1, label: "Madalena 🏢"})
+])
+viewof G = Inputs.form([
+  Inputs.range([0, 100], {value: 30, step: 1, label: "Gonçalo ⛵"}),
+  Inputs.range([0, 100], {value: 20, step: 1, label: "Gonçalo 🐈"}),
+  Inputs.range([0, 100], {value: 20, step: 1, label: "Gonçalo 🏢"})
+])
+```
+:::
+
+::: {.column width="60%"}
+```{ojs}
+//| echo: false
+emo = ["⛵", "🐈", "🏢", "🖼️"]
+PA = [...M, 100 - M[0] - M[1] - M[2]]
+PB = [...G, 100 - G[0] - G[1] - G[2]]
+f1 = x => (Math.round(x * 100) / 100).toLocaleString("pt-PT")
+pc = x => Math.round(x * 1000) / 10 + " %"
+W = {
+  const n = 4, s = Array(n).fill(null), log = []
+  let tA = 0, tB = 0
+  const emp = []
+  for (let i = 0; i < n; i++) {
+    if (PA[i] > PB[i]) { s[i] = 1; tA += PA[i] }
+    else if (PB[i] > PA[i]) { s[i] = 0; tB += PB[i] }
+    else emp.push(i)
+  }
+  for (const i of emp) { if (tA <= tB) { s[i] = 1; tA += PA[i] } else { s[i] = 0; tB += PB[i] } }
+  log.push(`1.ª fase: Madalena ${tA}, Gonçalo ${tB}` + (emp.length ? ` (empate: ${emp.map(i => emo[i]).join(" ")})` : ""))
+  if (tA !== tB) {
+    const gA = tA > tB, Gv = gA ? PA : PB, Rv = gA ? PB : PA
+    let tG = gA ? tA : tB, tR = gA ? tB : tA
+    const own = [...Array(n).keys()].filter(i => (s[i] === 1) === gA)
+      .sort((i, j) => (Rv[i] ? Gv[i] / Rv[i] : Infinity) - (Rv[j] ? Gv[j] / Rv[j] : Infinity))
+    for (const i of own) {
+      if (tG - Gv[i] >= tR + Rv[i]) {
+        tG -= Gv[i]; tR += Rv[i]; s[i] = gA ? 0 : 1
+        log.push(`transfere ${emo[i]} inteiro`)
+        if (tG === tR) break
+      } else {
+        const x = (tG - tR) / (Gv[i] + Rv[i])
+        tG -= Gv[i] * x; tR += Rv[i] * x; s[i] = gA ? 1 - x : x
+        log.push(`divide ${emo[i]}: passa ${pc(x)} para ${gA ? "o Gonçalo" : "a Madalena"}`)
+        break
+      }
+    }
+  }
+  const vA = PA.reduce((t, a, i) => t + a * s[i], 0), vB = PB.reduce((t, b, i) => t + b * (1 - s[i]), 0)
+  return {s, log, vA, vB}
+}
+html`<div class="ojs-tabela">
+${PA[3] < 0 || PB[3] < 0 ? html`<p class="neg">⚠ Os pontos de cada jogador não podem passar de 100!</p>` : html`<table>
+<tr><th>Bem</th><th>Madalena</th><th>Gonçalo</th><th>Fica com…</th></tr>
+${emo.map((e, i) => html`<tr><td>${e}</td><td>${PA[i]}</td><td>${PB[i]}</td><td>${
+  W.s[i] === 1 ? "Madalena" : W.s[i] === 0 ? "Gonçalo" : `M ${pc(W.s[i])} · G ${pc(1 - W.s[i])}`}</td></tr>`)}
+<tr><td><b>Pontos</b></td><td><b>${f1(W.vA)}</b></td><td><b>${f1(W.vB)}</b></td><td></td></tr>
+</table>
+<p>${W.log.join(" → ")}</p>`}
+</div>`
+```
+:::
+:::
+
+## Para recordar
+
+::: {layout-ncol=3}
+::: {.cartao}
+[💯]{.emoji}
+
+Cada jogador distribui **100 pontos** pelos bens
+:::
+
+::: {.cartao .coral}
+[🏆]{.emoji}
+
+1.ª fase: cada bem para quem lhe dá **mais pontos**
+:::
+
+::: {.cartao .mostarda}
+[⚖️]{.emoji}
+
+Ajuste por ordem **crescente da razão**; no máximo um bem é dividido
+:::
+:::
+
+::: {.destaque .teal .fragment}
+Para **dois** jogadores, a partilha é **equitativa**, **livre de inveja** e **eficiente**, mas pode obrigar a dividir um bem.
+:::
+
+# Ajuste na Partilha · Problemas {#aw-problemas .lista-problemas}
+
+::: {.indice-problemas}
+[1.2 · Ajuste na Partilha]{.rotulo-cap}
+
+1. [Os animais da avó](#/aw-p1)
+2. [Um empate](#/aw-p2)
+3. [Dividir o trabalho](#/aw-p3)
+4. [Será preciso partilhar?](#/aw-p4)
+5. [Vale a pena mentir?](#/aw-p5)
+:::
+
+## Problema 1 · Os animais da avó [básico]{.etiqueta} {#aw-p1 auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p1:1}}
+:::
+::: {.column width="42%" .texto-passo}
+Uma irmã e um irmão herdaram os animais de estimação da avó e usam o método do Ajuste na Partilha.
+
+::: {.incremental .pequeno}
+a) Faz a atribuição da 1.ª fase. Quem é o vencedor inicial?
+b) Que animal terá de ser «partilhado»? Justifica.
+c) Determina a partilha final e o número de pontos de cada um.
+:::
+
+[Adaptado da ficha «Partilha equilibrada – caso discreto»]{.fonte}
+:::
+:::
+
+## Problema 1 · a) e b) {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p1:2-4}}
+:::
+::: {.column width="42%" .texto-passo}
+**a)** Irmã: 🐈 e 🦜 → $60$; irmão: 🐕 e 🦎 → $80$. O **irmão** é o vencedor inicial.
+
+::: {.fragment}
+**b)** Razões: 🐕 $\frac{50}{30} \approx 1{,}67$; 🦎 $\frac{30}{10} = 3$. Começa-se pelo cão; todo: $30$ contra $90$ → inverte. **Divide-se o cão.**
+:::
+:::
+:::
+
+## Problema 1 · c) Partilha final {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p1:5,6}}
+:::
+::: {.column width="42%" .texto-passo}
+$x$ = fração do 🐕 que passa para a irmã:
+$$80 - 50x = 60 + 30x \iff x = \frac{1}{4}$$
+
+::: {.destaque .teal .fragment}
+**Irmã:** 🐈, 🦜 e $\frac14$ do 🐕 → $67{,}5$ pontos.
+**Irmão:** 🦎 e $\frac34$ do 🐕 → $67{,}5$ pontos.
+:::
+:::
+:::
+
+## Problema 2 · Um empate [empate]{.etiqueta} {#aw-p2 auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p2:1}}
+:::
+::: {.column width="42%" .texto-passo}
+Num divórcio, o marido e a esposa atribuíram estes pontos aos bens.
+
+::: {.incremental .pequeno}
+a) Que dificuldade surge na 1.ª fase? Como se resolve?
+b) Determina a partilha final.
+:::
+
+[Adaptado da ficha «Partilha equilibrada – caso discreto»]{.fonte}
+:::
+:::
+
+## Problema 2 · a) O empate {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p2:2,3}}
+:::
+::: {.column width="42%" .texto-passo}
+Sem o 🚗: marido $55$ (🏠 🚤 📺 🔊), esposa $40$ (🛖).
+
+O 🚗 (25 = 25) vai para quem tem **menos** pontos: a **esposa**, que fica com $65$ e passa a ser a vencedora inicial.
+
+::: {.fragment}
+Razões: 🚗 $\frac{25}{25} = 1$; 🛖 $\frac{40}{20} = 2$.
+:::
+:::
+:::
+
+## Problema 2 · b) Partilha final {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p2:4-6}}
+:::
+::: {.column width="42%" .texto-passo}
+Todo o 🚗 para o marido: $40$ contra $80$ → inverte. Divide-se o automóvel:
+$$65 - 25x = 55 + 25x \iff x = \frac{1}{5}$$
+
+::: {.destaque .teal .fragment}
+Cada um fica com **60** pontos. Se o 🚗 tivesse ido para o marido na 1.ª fase, o resultado final seria o mesmo.
+:::
+:::
+:::
+
+## Problema 3 · Dividir o trabalho [vários passos]{.etiqueta} {#aw-p3 auto-animate=true}
+
+::: {.columns}
+::: {.column width="60%"}
+{{A:p3:1}}
+:::
+::: {.column width="40%" .texto-passo .compacto}
+O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 pontos pelas atividades, conforme o **interesse** em ficar com cada uma.
+
+[Descreve todos os passos do método e indica a partilha final.]{.pergunta .fragment}
+
+[Adaptado do teste de avaliação de 9/12/2015]{.fonte}
+:::
+:::
+
+## Problema 3 · 1.ª fase e razões {auto-animate=true}
+
+::: {.columns}
+::: {.column width="60%"}
+{{A:p3:2,3}}
+:::
+::: {.column width="40%" .texto-passo .compacto}
+Leonido: 📣 🎨 🛠️ → $74$; Marco: as outras quatro → $38$.
+
+::: {.fragment}
+Razões dos bens do Leonido, por ordem crescente: 🎨 $1{,}125$ < 🛠️ $\approx 1{,}143$ < 📣 $1{,}25$.
+:::
+:::
+:::
+
+## Problema 3 · Transferências e equação {auto-animate=true}
+
+::: {.columns}
+::: {.column width="60%"}
+{{A:p3:4,5}}
+:::
+::: {.column width="40%" .texto-passo .compacto}
+- 🎨 todo para o Marco: $56$ contra $54$ → **passa** ✔
+- 🛠️ todo: $40$ contra $68$ → inverte ✘
+
+::: {.fragment}
+Divide-se o protótipo:
+$$56 - 16x = 54 + 14x \iff x = \frac{1}{15}$$
+:::
+:::
+:::
+
+## Problema 3 · Partilha final {auto-animate=true}
+
+::: {.columns}
+::: {.column width="60%"}
+{{A:p3:6}}
+:::
+::: {.column width="40%" .texto-passo .compacto}
+::: {.destaque .teal}
+**Leonido:** 📣 e $\frac{14}{15}$ de 🛠️.
+
+**Marco:** as restantes atividades, o 🎨 e $\frac{1}{15}$ de 🛠️.
+
+Cada um: $\frac{824}{15} \approx 54{,}9$ pontos.
+:::
+:::
+:::
+
+## Problema 4 · Será preciso partilhar? [justificar]{.etiqueta} {#aw-p4 auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p4:1}}
+:::
+::: {.column width="42%" .texto-passo}
+O Paulo e a Rosa dividem os bens de uma herança.
+
+::: {.incremental .pequeno}
+a) O Paulo e a Rosa terão de partilhar algum dos bens? Justifica.
+b) Que percentagem do piano fica com cada um?
+:::
+
+[Adaptado do mini-teste «Partilha equilibrada»]{.fonte}
+:::
+:::
+
+## Problema 4 · a) {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p4:2-4}}
+:::
+::: {.column width="42%" .texto-passo}
+1.ª fase: Paulo $45$; Rosa $81$. Razões: 🎹 $1{,}15$ < 🏺 $1{,}2$ < 🏖️ $2{,}8$.
+
+::: {.fragment}
+**Sim.** Passando o 🎹 **todo**, o Paulo ficaria com $65$ e a Rosa com $58$: a situação inverte-se. O **piano** tem de ser partilhado.
+:::
+:::
+:::
+
+## Problema 4 · b) {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p4:5,6}}
+:::
+::: {.column width="42%" .texto-passo}
+$x$ = fração do 🎹 que passa para o Paulo:
+$$81 - 23x = 45 + 20x \iff x = \frac{36}{43} \approx 0{,}837$$
+
+::: {.destaque .teal .fragment}
+Paulo: **≈ 83,7 %** do piano; Rosa: **≈ 16,3 %**. Cada um fica com $\approx 61{,}7$ pontos.
+:::
+:::
+:::
+
+## Problema 5 · Vale a pena mentir? [estratégia]{.etiqueta} {#aw-p5 auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p5h:1}}
+:::
+::: {.column width="42%" .texto-passo}
+A Ana e o Bruno vão dividir dois quadros. Estes são os pontos **verdadeiros**.
+
+::: {.incremental .pequeno}
+a) Qual é a partilha se ambos forem honestos?
+b) A Ana sabe os pontos do Bruno e declara **26** e **74**. Qual é a partilha? Quantos pontos **verdadeiros** obtém?
+c) E se o Bruno também mentir, declarando **74** e **26**?
+:::
+
+[Adaptado de Brams e Taylor, *Fair Division* (1996)]{.fonte}
+:::
+:::
+
+## Problema 5 · a) Honestos {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p5h:2-6}}
+:::
+::: {.column width="42%" .texto-passo}
+Cada um fica com o quadro de que mais gosta: **75 = 75**. Os totais são iguais: **não há ajuste**.
+:::
+:::
+
+## Problema 5 · b) A Ana mente {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p5m:2-8}}
+:::
+::: {.column width="42%" .texto-passo}
+Com os pontos **declarados**, a Ana ganha o Matisse ($26 > 25$) e o Bruno é o vencedor inicial ($75$):
+$$75 - 75x = 26 + 74x \iff x = \frac{49}{149} \approx 0{,}33$$
+
+::: {.destaque .coral .fragment}
+Em pontos **verdadeiros**, a Ana fica com $75 + 25 \times \frac{49}{149} \approx 83{,}2$ (em vez de 75); o Bruno desce para $\approx 50{,}3$.
+:::
+:::
+:::
+
+## Problema 5 · c) Ambos mentem {auto-animate=true}
+
+::: {.columns}
+::: {.column width="58%"}
+{{A:p5a:2-8}}
+:::
+::: {.column width="42%" .texto-passo}
+Declarações: Ana 26 / 74, Bruno 74 / 26. A Ana fica com o **Picasso** e o Bruno com o **Matisse** (74 = 74 declarados).
+
+::: {.destaque .coral .fragment}
+Em pontos verdadeiros, cada um fica só com **25**! A estratégia honesta garante sempre **pelo menos 50 pontos**.
+:::
+:::
+:::
+

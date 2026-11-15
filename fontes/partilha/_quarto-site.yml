@@ -1,9 +1,0 @@
-# Perfil «site»: versão publicada em ~/site/macs-a-z (MACS A...Z).
-# Usado por _ferramentas/publicar_site.sh  (quarto render --profile site)
-project:
-  output-dir: _site
-
-format:
-  revealjs:
-    include-in-header: _ferramentas/site/cabecalho.html
-    include-before-body: _ferramentas/site/barra.html

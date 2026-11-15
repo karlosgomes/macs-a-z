@@ -1,0 +1,28 @@
+<script>
+// Links de regresso (como no Matemática A...Z): resumos e aberturas → índice; problemas → lista de problemas.
+// E a faixa escura do título só aparece na capa.
+(function () {
+  function preparar() {
+    const fora = new Set(["capa", "indice"]);
+    document.querySelectorAll(".reveal .slides > section").forEach(col => {
+      const filhos = col.classList.contains("stack") ? [...col.querySelectorAll(":scope > section")] : [col];
+      const cabeca = filhos[0];
+      if (!cabeca || fora.has(cabeca.id)) return;
+      const lista = cabeca.id.endsWith("-problemas");
+      filhos.forEach((s, k) => {
+        const a = document.createElement("a");
+        a.className = "voltar";
+        if (lista && k > 0) { a.href = "#/" + cabeca.id; a.textContent = "↩ problemas"; }
+        else { a.href = "#/indice"; a.textContent = "↩ índice"; }
+        s.appendChild(a);
+      });
+    });
+  }
+  function capa() {
+    const s = Reveal.getCurrentSlide();
+    document.documentElement.classList.toggle("na-capa", !!s && s.id === "capa");
+  }
+  Reveal.on("ready", () => { preparar(); capa(); });
+  Reveal.on("slidechanged", capa);
+})();
+</script>
