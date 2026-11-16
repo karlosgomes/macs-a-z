@@ -396,17 +396,20 @@ Ajuste por ordem **crescente da razão**; no máximo um item é dividido
 Para **dois** jogadores, a partilha é **equitativa**, **livre de inveja** e **eficiente**, mas pode obrigar a dividir um item.
 :::
 
-# Ajuste na Partilha · Problemas {#aw-problemas .lista-problemas}
+# Ajuste na Partilha — Problemas {#aw-problemas .lista-problemas}
 
-::: {.indice-problemas}
-[1.2 · Ajuste na Partilha]{.rotulo-cap}
-
-1. [Os animais da avó](#aw-p1)
-2. [Um empate](#aw-p2)
-3. [Dividir o trabalho](#aw-p3)
-4. [Será preciso partilhar?](#aw-p4)
-5. [Vale a pena mentir?](#aw-p5)
-:::
+```{=html}
+<div class="indice largo">
+  <p class="links-topico"><a href="#/aw">Ver o resumo teórico</a></p>
+  <ol class="duas-colunas">
+    <li><a href="#/aw-p1">Os animais da avó — a irmã e o irmão dividem quatro animais</a></li>
+    <li><a href="#/aw-p2">Um empate — o marido e a esposa dão os mesmos pontos ao automóvel</a></li>
+    <li><a href="#/aw-p3">Dividir o trabalho — Leonido e Marco, sete itens</a></li>
+    <li><a href="#/aw-p4">Será preciso partilhar? — a herança do Paulo e da Rosa</a></li>
+    <li><a href="#/aw-p5">Vale a pena mentir? — a Ana e o Bruno: pontos declarados e verdadeiros</a></li>
+  </ol>
+</div>
+```
 
 ## Problema 1 · Os animais da avó [básico]{.etiqueta} {#aw-p1 auto-animate=true}
 

@@ -439,17 +439,20 @@ O **excedente** ($\geq 0$) é dividido em partes iguais
 Todos recebem **pelo menos** a sua parte justa, mas o método **não garante ausência de inveja** e exige **dinheiro** e **honestidade**.
 :::
 
-# Licitações secretas · Problemas {#lic-problemas .lista-problemas}
+# Licitações secretas — Problemas {#lic-problemas .lista-problemas}
 
-::: {.indice-problemas}
-[1.1 · Licitações secretas]{.rotulo-cap}
-
-1. [O prémio do jornal da escola](#lic-p1)
-2. [O prémio da agência de viagens](#lic-p2)
-3. [A herança do senhor Francisco](#lic-p3)
-4. [A licitação desconhecida](#lic-p4)
-5. [Partes diferentes](#lic-p5)
-:::
+```{=html}
+<div class="indice largo">
+  <p class="links-topico"><a href="#/lic">Ver o resumo teórico</a></p>
+  <ol class="duas-colunas">
+    <li><a href="#/lic-p1">O prémio do jornal da escola — Exame 2026, Época especial</a></li>
+    <li><a href="#/lic-p2">O prémio da agência de viagens — Exame 2015, 1.ª fase, e a inveja da Alice</a></li>
+    <li><a href="#/lic-p3">A herança do senhor Francisco — Exame 2010, 1.ª fase: quatro herdeiras</a></li>
+    <li><a href="#/lic-p4">A licitação desconhecida — Exame 2022, 1.ª fase: descobrir <em>a</em></a></li>
+    <li><a href="#/lic-p5">Partes diferentes — Exame 2021, Época especial: 50 %, 30 % e 20 %</a></li>
+  </ol>
+</div>
+```
 
 ## Problema 1 · O prémio do jornal da escola [exame]{.etiqueta} {#lic-p1 auto-animate=true}
 

@@ -346,17 +346,20 @@ ${P.emp.length ? html`<p class="neg">⚠ Empate (${P.emp.join("; ")}): seria dec
 
 
 
-# Marcadores · Problemas {#mk-problemas .lista-problemas}
+# Marcadores — Problemas {#mk-problemas .lista-problemas}
 
-::: {.indice-problemas}
-[1.3 · Marcadores]{.rotulo-cap}
-
-1. [Ler as marcas](#mk-p1)
-2. [Marcas empatadas](#mk-p2)
-3. [Colocar as marcas](#mk-p3)
-4. [Há inveja?](#mk-p4)
-5. [Quando não há cortes exatos](#mk-p5)
-:::
+```{=html}
+<div class="indice largo">
+  <p class="links-topico"><a href="#/mk">Ver o resumo teórico</a></p>
+  <ol class="duas-colunas">
+    <li><a href="#/mk-p1">Ler as marcas — 16 presentes e quatro jogadores</a></li>
+    <li><a href="#/mk-p2">Marcas empatadas — 20 joias e um sorteio</a></li>
+    <li><a href="#/mk-p3">Colocar as marcas — as preferências do Sérgio, do Leonardo e da Paula</a></li>
+    <li><a href="#/mk-p4">Há inveja? — a Rita, o Bruno e a Carla</a></li>
+    <li><a href="#/mk-p5">Quando não há cortes exatos — banda desenhada e marcas aproximadas</a></li>
+  </ol>
+</div>
+```
 
 ## Problema 1 · Ler as marcas [básico]{.etiqueta} {#mk-p1 auto-animate=true}
 

@@ -48,7 +48,12 @@
     div.appendChild(ul);
     document.querySelector(".reveal").appendChild(div);
   }
-  Reveal.on("ready", () => { preparar(); botoes(); capa(); });
+  // listas de problemas: o título fica em cima, como no Matemática A...Z (o Quarto centra na vertical os diapositivos de nível 1)
+  function listas() {
+    document.querySelectorAll(".reveal .slides section.lista-problemas").forEach(s => { s.classList.remove("center"); s.style.top = "0px"; });
+  }
+  Reveal.on("ready", () => { preparar(); botoes(); listas(); capa(); Reveal.layout(); });
+  Reveal.on("slidechanged", listas);
   ["slidechanged", "resize", "overviewshown", "overviewhidden"].forEach(e => Reveal.on(e, capa));
   document.addEventListener("fullscreenchange", () => setTimeout(capa, 50));
 })();

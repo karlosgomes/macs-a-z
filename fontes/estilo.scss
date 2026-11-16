@@ -191,10 +191,21 @@ $p1: $azul; $p2: $vermelho; $p3: $laranja; $p4: $violeta;
 .reveal kbd { font-family: inherit; font-size: .9em; padding: 1px 8px; border: 1px solid #94a3b8; border-bottom-width: 3px;
   border-radius: 5px; background: #f8fafc; color: #1e293b; }
 // diapositivos de nível 1 com conteúdo (listas de problemas, síntese): título como os outros
-.reveal .slides section.level1:not(.capitulo):not(#indice) > h1 {
+.reveal .slides section.level1:not(.capitulo):not(#indice):not(.lista-problemas) > h1 {
   font-family: $font-family-sans-serif; color: $azul; font-size: 1.3em; text-align: left; font-weight: 600; margin-bottom: .5em; }
 .reveal .indice-problemas { width: 1150px; margin: 10px auto 0; font-size: 1.05em; line-height: 1.8; border-left: 5px solid $azul; padding-left: 24px; }
 .reveal .indice-problemas .rotulo-cap { display: block; color: $cinza; font-size: .8em; letter-spacing: .06em; text-transform: uppercase; }
 .reveal .indice a, .reveal .indice-problemas a { color: $link-color; }
 .reveal a.voltar { position: absolute; top: -6px; right: 0; font-size: .45em; color: $cinza; z-index: 10; }
 .reveal .capitulo .en { font-style: italic; color: $cinza; font-size: .6em; display: block; }
+
+// ---------- listas de problemas: como no Matemática A...Z (título ao centro, «Ver o resumo teórico», duas colunas) ----------
+.reveal .slides section.lista-problemas { font-family: $palatino; }
+.reveal .slides section.lista-problemas > h1 { font-family: $palatino; color: #222; font-weight: 600; font-size: 46px; margin: 0 0 10px; text-align: center; }
+.reveal .lista-problemas .indice.largo { text-align: left; margin: 30px auto 0; width: 1500px; font-size: 24px; line-height: 1.45; }
+.reveal .lista-problemas .indice .links-topico { margin: 4px 0 16px; }
+.reveal .lista-problemas .indice ol.duas-colunas { display: block; margin-left: 1.4em; column-count: 2; column-gap: 60px; }
+.reveal .lista-problemas .indice ol.duas-colunas { margin-top: 0; }
+.reveal .lista-problemas .indice ol.duas-colunas li { break-inside: avoid; margin: 0 0 .55em; padding: 0; }
+.reveal .lista-problemas .indice a { color: $link-color; }
+

@@ -34,7 +34,7 @@ O MACS A...Z é uma só apresentação Reveal.js, feita com Quarto (1.9), organi
 ## Regras de cada subcapítulo
 - **Cabeçalho do subcapítulo:** `# Título {#lic .capitulo data-rotulo="1.1 · Resumo"}`, com os diapositivos do resumo por baixo, em `##`.
 - **Problemas:**
-  - `# Licitações secretas · Problemas {#lic-problemas .lista-problemas}`, com a lista de links `#/lic-p1` … e depois os problemas;
+  - `# Licitações secretas — Problemas {#lic-problemas .lista-problemas}`, como no Matemática A...Z: HTML com `div.indice.largo`, o link «Ver o resumo teórico» (`#/lic`) e `ol.duas-colunas` com «Título — pormenor» a ligar a `#/lic-p1` …; o título fica em cima (o `navegacao.html` tira a classe `center` que o Quarto põe nos diapositivos de nível 1). Depois vêm os problemas;
   - cada enunciado tem o id: `## Problema 1 · … {#lic-p1 auto-animate=true}`.
 - **Tabela de síntese sempre presente**, em todos os métodos: tabela à esquerda, com as linhas do passo em curso destacadas, e explicações e cálculos à direita.
 - **Ajuste na Partilha:** $x$ é sempre a fração do bem dividido que **passa** para o outro jogador, $V - vx = P + px$. Nunca usar $1-x$.
