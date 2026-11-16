@@ -1283,6 +1283,7 @@ document.addEventListener('fullscreenchange', () => {
     <li><a href="#/lic-p3">A herança do senhor Francisco — Exame 2010, 1.ª fase: quatro herdeiras</a></li>
     <li><a href="#/lic-p4">A licitação desconhecida — Exame 2022, 1.ª fase: descobrir <em>a</em></a></li>
     <li><a href="#/lic-p5">Partes diferentes — Exame 2021, Época especial: 50 %, 30 % e 20 %</a></li>
+    <li><a href="#/lic-p6">A licitação que falta — desafio: uma equação com frações</a></li>
   </ol>
 </div>
 </section>
@@ -3364,6 +3365,320 @@ document.addEventListener('fullscreenchange', () => {
 </ul>
 <div class="fragment">
 <p>Confirma: <span class="math inline">\(3{,}40 + 5{,}60 = 9\)</span> ✔</p>
+</div>
+</div></div>
+</section>
+<section id="lic-p6" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 6 · A licitação que falta <span class="etiqueta">desafio</span></h2>
+<p>A Alice e o Beto dividiram quatro bens pelo método das licitações secretas.</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Bem</th>
+<th style="text-align: center;">Alice</th>
+<th style="text-align: center;">Beto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1500</td>
+<td style="text-align: center;">1600</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">700</td>
+<td style="text-align: center;"><span class="max"><span class="math inline">\(x\)</span></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">300</td>
+<td style="text-align: center;">200</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">500</td>
+<td style="text-align: center;">200</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<p>No final, a <strong>Alice ficou com os bens 3 e 4</strong> e <strong>recebeu 850&nbsp;€</strong>.</p>
+<p><span class="pergunta fragment">Qual foi a licitação <span class="math inline">\(x\)</span> do Beto pelo bem 2?</span></p>
+</div></div>
+<p><span class="fonte">Adaptado da ficha «Partilha equilibrada – caso discreto»</span></p>
+</section>
+<section id="problema-6-parte-justa-e-bens" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 6 · Parte justa e bens</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="tabela-metodo " data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(€)</th>
+<th data-quarto-table-cell-role="th">Alice</th>
+<th data-quarto-table-cell-role="th">Beto</th>
+</tr>
+<tr class="feito even" data-id="r-b1">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">Bem 1</td>
+<td data-id="c-b1-Alice">1500</td>
+<td class="max" data-id="c-b1-Beto">1600</td>
+</tr>
+<tr class="feito odd" data-id="r-b2">
+<td class="colpasso"></td>
+<td class="rot">Bem 2</td>
+<td data-id="c-b2-Alice">700</td>
+<td class="max" data-id="c-b2-Beto">\(x\)</td>
+</tr>
+<tr class="feito even" data-id="r-b3">
+<td class="colpasso"></td>
+<td class="rot">Bem 3</td>
+<td class="max" data-id="c-b3-Alice">300</td>
+<td data-id="c-b3-Beto">200</td>
+</tr>
+<tr class="feito odd" data-id="r-b4">
+<td class="colpasso"></td>
+<td class="rot">Bem 4</td>
+<td class="max" data-id="c-b4-Alice">500</td>
+<td data-id="c-b4-Beto">200</td>
+</tr>
+<tr class="atual even" data-id="r-total">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">Total</td>
+<td data-id="c-total-Alice">3000</td>
+<td data-id="c-total-Beto">\(2000+x\)</td>
+</tr>
+<tr class="atual odd" data-id="r-pj">
+<td class="colpasso"></td>
+<td class="rot">Parte justa</td>
+<td data-id="c-pj-Alice"><strong>1500</strong></td>
+<td data-id="c-pj-Beto"><strong>\(1000+\frac{x}{2}\)</strong></td>
+</tr>
+<tr class="atual even" data-id="r-bens">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Bens recebidos</td>
+<td data-id="c-bens-Alice">3 e 4: 800</td>
+<td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td>
+</tr>
+<tr class="futuro odd" data-id="r-ini">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Alocação provisória</td>
+<td data-id="c-ini-Alice">&nbsp;</td>
+<td data-id="c-ini-Beto">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-exc">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Excedente</td>
+<td data-id="c-exc-Alice">&nbsp;</td>
+<td data-id="c-exc-Beto">&nbsp;</td>
+</tr>
+<tr class="futuro odd" data-id="r-fin">
+<td class="colpasso"></td>
+<td class="rot">Alocação final</td>
+<td data-id="c-fin-Alice">&nbsp;</td>
+<td data-id="c-fin-Beto">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-prop">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Com \(x = 800\)</td>
+<td data-id="c-prop-Alice">&nbsp;</td>
+<td data-id="c-prop-Beto">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:45%;">
+<p>A Alice ficou com os bens 3 e 4, logo o Beto ficou com o 1 e o 2: <span class="math inline">\(x \geq 700\)</span> (com <span class="math inline">\(x = 700\)</span> haveria empate no bem 2, decidido por sorteio).</p>
+<ul>
+<li>Alice: <span class="math inline">\(3000 : 2 = 1500\)</span></li>
+<li>Beto: <span class="math inline">\((2000 + x) : 2 = 1000 + \dfrac{x}{2}\)</span></li>
+</ul>
+</div></div>
+</section>
+<section id="problema-6-alocação-provisória-e-excedente" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 6 · Alocação provisória e excedente</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="tabela-metodo " data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(€)</th>
+<th data-quarto-table-cell-role="th">Alice</th>
+<th data-quarto-table-cell-role="th">Beto</th>
+</tr>
+<tr class="feito even" data-id="r-b1">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">Bem 1</td>
+<td data-id="c-b1-Alice">1500</td>
+<td class="max" data-id="c-b1-Beto">1600</td>
+</tr>
+<tr class="feito odd" data-id="r-b2">
+<td class="colpasso"></td>
+<td class="rot">Bem 2</td>
+<td data-id="c-b2-Alice">700</td>
+<td class="max" data-id="c-b2-Beto">\(x\)</td>
+</tr>
+<tr class="feito even" data-id="r-b3">
+<td class="colpasso"></td>
+<td class="rot">Bem 3</td>
+<td class="max" data-id="c-b3-Alice">300</td>
+<td data-id="c-b3-Beto">200</td>
+</tr>
+<tr class="feito odd" data-id="r-b4">
+<td class="colpasso"></td>
+<td class="rot">Bem 4</td>
+<td class="max" data-id="c-b4-Alice">500</td>
+<td data-id="c-b4-Beto">200</td>
+</tr>
+<tr class="feito even" data-id="r-total">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">Total</td>
+<td data-id="c-total-Alice">3000</td>
+<td data-id="c-total-Beto">\(2000+x\)</td>
+</tr>
+<tr class="feito odd" data-id="r-pj">
+<td class="colpasso"></td>
+<td class="rot">Parte justa</td>
+<td data-id="c-pj-Alice"><strong>1500</strong></td>
+<td data-id="c-pj-Beto"><strong>\(1000+\frac{x}{2}\)</strong></td>
+</tr>
+<tr class="feito even" data-id="r-bens">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Bens recebidos</td>
+<td data-id="c-bens-Alice">3 e 4: 800</td>
+<td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td>
+</tr>
+<tr class="atual odd" data-id="r-ini">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Alocação provisória</td>
+<td data-id="c-ini-Alice"><span class="pos">recebe 700</span></td>
+<td data-id="c-ini-Beto"><span class="neg">paga \(600+\frac{x}{2}\)</span></td>
+</tr>
+<tr class="atual even" data-id="r-exc">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Excedente</td>
+<td data-id="c-exc-Alice">\(+\frac{x}{4}-50\)</td>
+<td data-id="c-exc-Beto">\(+\frac{x}{4}-50\)</td>
+</tr>
+<tr class="futuro odd" data-id="r-fin">
+<td class="colpasso"></td>
+<td class="rot">Alocação final</td>
+<td data-id="c-fin-Alice">&nbsp;</td>
+<td data-id="c-fin-Beto">&nbsp;</td>
+</tr>
+<tr class="futuro even" data-id="r-prop">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Com \(x = 800\)</td>
+<td data-id="c-prop-Alice">&nbsp;</td>
+<td data-id="c-prop-Beto">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:45%;">
+<ul>
+<li>Alice: <span class="math inline">\(800 - 1500\)</span> → <span class="pos">recebe 700</span></li>
+<li>Beto: <span class="math inline">\((1600 + x) - \left(1000 + \dfrac{x}{2}\right)\)</span> → <span class="neg">paga <span class="math inline">\(600 + \dfrac{x}{2}\)</span></span></li>
+</ul>
+<div class="fragment">
+<p>Excedente: <span class="math inline">\(600 + \dfrac{x}{2} - 700 = \dfrac{x}{2} - 100\)</span>, ou seja, <span class="math inline">\(\dfrac{x}{4} - 50\)</span> para cada.</p>
+</div>
+</div></div>
+</section>
+<section id="problema-6-a-equação" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Problema 6 · A equação</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="tabela-metodo " data-id="tabmetodo">
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">(€)</th>
+<th data-quarto-table-cell-role="th">Alice</th>
+<th data-quarto-table-cell-role="th">Beto</th>
+</tr>
+<tr class="feito even" data-id="r-b1">
+<td class="colpasso"><span class="npasso">1</span></td>
+<td class="rot">Bem 1</td>
+<td data-id="c-b1-Alice">1500</td>
+<td class="max" data-id="c-b1-Beto">1600</td>
+</tr>
+<tr class="feito odd" data-id="r-b2">
+<td class="colpasso"></td>
+<td class="rot">Bem 2</td>
+<td data-id="c-b2-Alice">700</td>
+<td class="max" data-id="c-b2-Beto">\(x\)</td>
+</tr>
+<tr class="feito even" data-id="r-b3">
+<td class="colpasso"></td>
+<td class="rot">Bem 3</td>
+<td class="max" data-id="c-b3-Alice">300</td>
+<td data-id="c-b3-Beto">200</td>
+</tr>
+<tr class="feito odd" data-id="r-b4">
+<td class="colpasso"></td>
+<td class="rot">Bem 4</td>
+<td class="max" data-id="c-b4-Alice">500</td>
+<td data-id="c-b4-Beto">200</td>
+</tr>
+<tr class="feito even" data-id="r-total">
+<td class="colpasso"><span class="npasso">2</span></td>
+<td class="rot">Total</td>
+<td data-id="c-total-Alice">3000</td>
+<td data-id="c-total-Beto">\(2000+x\)</td>
+</tr>
+<tr class="feito odd" data-id="r-pj">
+<td class="colpasso"></td>
+<td class="rot">Parte justa</td>
+<td data-id="c-pj-Alice"><strong>1500</strong></td>
+<td data-id="c-pj-Beto"><strong>\(1000+\frac{x}{2}\)</strong></td>
+</tr>
+<tr class="feito even" data-id="r-bens">
+<td class="colpasso"><span class="npasso">3</span></td>
+<td class="rot">Bens recebidos</td>
+<td data-id="c-bens-Alice">3 e 4: 800</td>
+<td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td>
+</tr>
+<tr class="feito odd" data-id="r-ini">
+<td class="colpasso"><span class="npasso">4</span></td>
+<td class="rot">Alocação provisória</td>
+<td data-id="c-ini-Alice"><span class="pos">recebe 700</span></td>
+<td data-id="c-ini-Beto"><span class="neg">paga \(600+\frac{x}{2}\)</span></td>
+</tr>
+<tr class="feito even" data-id="r-exc">
+<td class="colpasso"><span class="npasso">5</span></td>
+<td class="rot">Excedente</td>
+<td data-id="c-exc-Alice">\(+\frac{x}{4}-50\)</td>
+<td data-id="c-exc-Beto">\(+\frac{x}{4}-50\)</td>
+</tr>
+<tr class="atual odd" data-id="r-fin">
+<td class="colpasso"></td>
+<td class="rot">Alocação final</td>
+<td data-id="c-fin-Alice"><span class="pos">recebe \(650+\frac{x}{4}\)</span></td>
+<td data-id="c-fin-Beto"><span class="neg">paga \(650+\frac{x}{4}\)</span></td>
+</tr>
+<tr class="atual even" data-id="r-prop">
+<td class="colpasso"><span class="npasso">✔</span></td>
+<td class="rot">Com \(x = 800\)</td>
+<td data-id="c-prop-Alice"><span class="pos"><strong>recebe 850</strong></span></td>
+<td data-id="c-prop-Beto"><span class="neg"><strong>paga 850</strong></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="column texto-passo" style="width:45%;">
+<p>A Alice recebe no total:</p>
+<p><span class="math display">\[\begin{aligned} 700 + \tfrac{x}{4} - 50 &amp;= 850 \\ \iff 650 + \tfrac{x}{4} &amp;= 850 \\ \iff \tfrac{x}{4} &amp;= 200 \\ \iff x &amp;= 800 \end{aligned}\]</span></p>
+<div class="destaque teal fragment">
+<p>O Beto licitou <strong>800 €</strong> pelo bem 2 (e <span class="math inline">\(800 &gt; 700\)</span> ✔).</p>
 </div>
 </div></div>
 </section></section>

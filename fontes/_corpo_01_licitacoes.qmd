@@ -450,6 +450,7 @@ Todos recebem **pelo menos** a sua parte justa, mas o método **não garante aus
     <li><a href="#/lic-p3">A herança do senhor Francisco — Exame 2010, 1.ª fase: quatro herdeiras</a></li>
     <li><a href="#/lic-p4">A licitação desconhecida — Exame 2022, 1.ª fase: descobrir <em>a</em></a></li>
     <li><a href="#/lic-p5">Partes diferentes — Exame 2021, Época especial: 50 %, 30 % e 20 %</a></li>
+    <li><a href="#/lic-p6">A licitação que falta — desafio: uma equação com frações</a></li>
   </ol>
 </div>
 ```
@@ -847,6 +848,82 @@ Excedente: $7 + 8 - 3 = 12$, repartido em $50\%$, $30\%$ e $20\%$: $6$; $3{,}60$
 
 ::: {.fragment}
 Confirma: $3{,}40 + 5{,}60 = 9$ ✔
+:::
+:::
+:::
+
+## Problema 6 · A licitação que falta [desafio]{.etiqueta} {#lic-p6 auto-animate=true}
+
+A Alice e o Beto dividiram quatro bens pelo método das licitações secretas.
+
+::: {.columns}
+::: {.column width="45%"}
+| Bem | Alice | Beto |
+|:---:|:-----:|:----:|
+| 1   | 1500  | 1600 |
+| 2   | 700   | [$x$]{.max} |
+| 3   | 300   | 200  |
+| 4   | 500   | 200  |
+:::
+
+::: {.column width="55%"}
+No final, a **Alice ficou com os bens 3 e 4** e **recebeu 850&nbsp;€**.
+
+[Qual foi a licitação $x$ do Beto pelo bem 2?]{.pergunta .fragment}
+:::
+:::
+
+[Adaptado da ficha «Partilha equilibrada – caso discreto»]{.fonte}
+
+## Problema 6 · Parte justa e bens {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+```{=html}
+<div class="tabela-metodo " data-id="tabmetodo"><table><tr><th></th><th>(€)</th><th>Alice</th><th>Beto</th></tr><tr class="feito" data-id="r-b1"><td class="colpasso"><span class="npasso">1</span></td><td class="rot">Bem 1</td><td data-id="c-b1-Alice">1500</td><td class="max" data-id="c-b1-Beto">1600</td></tr><tr class="feito" data-id="r-b2"><td class="colpasso"></td><td class="rot">Bem 2</td><td data-id="c-b2-Alice">700</td><td class="max" data-id="c-b2-Beto">\(x\)</td></tr><tr class="feito" data-id="r-b3"><td class="colpasso"></td><td class="rot">Bem 3</td><td class="max" data-id="c-b3-Alice">300</td><td data-id="c-b3-Beto">200</td></tr><tr class="feito" data-id="r-b4"><td class="colpasso"></td><td class="rot">Bem 4</td><td class="max" data-id="c-b4-Alice">500</td><td data-id="c-b4-Beto">200</td></tr><tr class="atual" data-id="r-total"><td class="colpasso"><span class="npasso">2</span></td><td class="rot">Total</td><td data-id="c-total-Alice">3000</td><td data-id="c-total-Beto">\(2000+x\)</td></tr><tr class="atual" data-id="r-pj"><td class="colpasso"></td><td class="rot">Parte justa</td><td data-id="c-pj-Alice"><b>1500</b></td><td data-id="c-pj-Beto"><b>\(1000+\frac{x}{2}\)</b></td></tr><tr class="atual" data-id="r-bens"><td class="colpasso"><span class="npasso">3</span></td><td class="rot">Bens recebidos</td><td data-id="c-bens-Alice">3 e 4: 800</td><td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td></tr><tr class="futuro" data-id="r-ini"><td class="colpasso"><span class="npasso">4</span></td><td class="rot">Alocação provisória</td><td data-id="c-ini-Alice">&nbsp;</td><td data-id="c-ini-Beto">&nbsp;</td></tr><tr class="futuro" data-id="r-exc"><td class="colpasso"><span class="npasso">5</span></td><td class="rot">Excedente</td><td data-id="c-exc-Alice">&nbsp;</td><td data-id="c-exc-Beto">&nbsp;</td></tr><tr class="futuro" data-id="r-fin"><td class="colpasso"></td><td class="rot">Alocação final</td><td data-id="c-fin-Alice">&nbsp;</td><td data-id="c-fin-Beto">&nbsp;</td></tr><tr class="futuro" data-id="r-prop"><td class="colpasso"><span class="npasso">✔</span></td><td class="rot">Com \(x = 800\)</td><td data-id="c-prop-Alice">&nbsp;</td><td data-id="c-prop-Beto">&nbsp;</td></tr></table></div>
+```
+:::
+::: {.column width="45%" .texto-passo}
+A Alice ficou com os bens 3 e 4, logo o Beto ficou com o 1 e o 2: $x \geq 700$ (com $x = 700$ haveria empate no bem 2, decidido por sorteio).
+
+- Alice: $3000 : 2 = 1500$
+- Beto: $(2000 + x) : 2 = 1000 + \dfrac{x}{2}$
+:::
+:::
+
+## Problema 6 · Alocação provisória e excedente {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+```{=html}
+<div class="tabela-metodo " data-id="tabmetodo"><table><tr><th></th><th>(€)</th><th>Alice</th><th>Beto</th></tr><tr class="feito" data-id="r-b1"><td class="colpasso"><span class="npasso">1</span></td><td class="rot">Bem 1</td><td data-id="c-b1-Alice">1500</td><td class="max" data-id="c-b1-Beto">1600</td></tr><tr class="feito" data-id="r-b2"><td class="colpasso"></td><td class="rot">Bem 2</td><td data-id="c-b2-Alice">700</td><td class="max" data-id="c-b2-Beto">\(x\)</td></tr><tr class="feito" data-id="r-b3"><td class="colpasso"></td><td class="rot">Bem 3</td><td class="max" data-id="c-b3-Alice">300</td><td data-id="c-b3-Beto">200</td></tr><tr class="feito" data-id="r-b4"><td class="colpasso"></td><td class="rot">Bem 4</td><td class="max" data-id="c-b4-Alice">500</td><td data-id="c-b4-Beto">200</td></tr><tr class="feito" data-id="r-total"><td class="colpasso"><span class="npasso">2</span></td><td class="rot">Total</td><td data-id="c-total-Alice">3000</td><td data-id="c-total-Beto">\(2000+x\)</td></tr><tr class="feito" data-id="r-pj"><td class="colpasso"></td><td class="rot">Parte justa</td><td data-id="c-pj-Alice"><b>1500</b></td><td data-id="c-pj-Beto"><b>\(1000+\frac{x}{2}\)</b></td></tr><tr class="feito" data-id="r-bens"><td class="colpasso"><span class="npasso">3</span></td><td class="rot">Bens recebidos</td><td data-id="c-bens-Alice">3 e 4: 800</td><td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td></tr><tr class="atual" data-id="r-ini"><td class="colpasso"><span class="npasso">4</span></td><td class="rot">Alocação provisória</td><td data-id="c-ini-Alice"><span class="pos">recebe 700</span></td><td data-id="c-ini-Beto"><span class="neg">paga \(600+\frac{x}{2}\)</span></td></tr><tr class="atual" data-id="r-exc"><td class="colpasso"><span class="npasso">5</span></td><td class="rot">Excedente</td><td data-id="c-exc-Alice">\(+\frac{x}{4}-50\)</td><td data-id="c-exc-Beto">\(+\frac{x}{4}-50\)</td></tr><tr class="futuro" data-id="r-fin"><td class="colpasso"></td><td class="rot">Alocação final</td><td data-id="c-fin-Alice">&nbsp;</td><td data-id="c-fin-Beto">&nbsp;</td></tr><tr class="futuro" data-id="r-prop"><td class="colpasso"><span class="npasso">✔</span></td><td class="rot">Com \(x = 800\)</td><td data-id="c-prop-Alice">&nbsp;</td><td data-id="c-prop-Beto">&nbsp;</td></tr></table></div>
+```
+:::
+::: {.column width="45%" .texto-passo}
+- Alice: $800 - 1500$ → [recebe 700]{.pos}
+- Beto: $(1600 + x) - \left(1000 + \dfrac{x}{2}\right)$ → [paga $600 + \dfrac{x}{2}$]{.neg}
+
+::: {.fragment}
+Excedente: $600 + \dfrac{x}{2} - 700 = \dfrac{x}{2} - 100$, ou seja, $\dfrac{x}{4} - 50$ para cada.
+:::
+:::
+:::
+
+## Problema 6 · A equação {auto-animate=true}
+
+::: {.columns}
+::: {.column width="55%"}
+```{=html}
+<div class="tabela-metodo " data-id="tabmetodo"><table><tr><th></th><th>(€)</th><th>Alice</th><th>Beto</th></tr><tr class="feito" data-id="r-b1"><td class="colpasso"><span class="npasso">1</span></td><td class="rot">Bem 1</td><td data-id="c-b1-Alice">1500</td><td class="max" data-id="c-b1-Beto">1600</td></tr><tr class="feito" data-id="r-b2"><td class="colpasso"></td><td class="rot">Bem 2</td><td data-id="c-b2-Alice">700</td><td class="max" data-id="c-b2-Beto">\(x\)</td></tr><tr class="feito" data-id="r-b3"><td class="colpasso"></td><td class="rot">Bem 3</td><td class="max" data-id="c-b3-Alice">300</td><td data-id="c-b3-Beto">200</td></tr><tr class="feito" data-id="r-b4"><td class="colpasso"></td><td class="rot">Bem 4</td><td class="max" data-id="c-b4-Alice">500</td><td data-id="c-b4-Beto">200</td></tr><tr class="feito" data-id="r-total"><td class="colpasso"><span class="npasso">2</span></td><td class="rot">Total</td><td data-id="c-total-Alice">3000</td><td data-id="c-total-Beto">\(2000+x\)</td></tr><tr class="feito" data-id="r-pj"><td class="colpasso"></td><td class="rot">Parte justa</td><td data-id="c-pj-Alice"><b>1500</b></td><td data-id="c-pj-Beto"><b>\(1000+\frac{x}{2}\)</b></td></tr><tr class="feito" data-id="r-bens"><td class="colpasso"><span class="npasso">3</span></td><td class="rot">Bens recebidos</td><td data-id="c-bens-Alice">3 e 4: 800</td><td data-id="c-bens-Beto">1 e 2: \(1600+x\)</td></tr><tr class="feito" data-id="r-ini"><td class="colpasso"><span class="npasso">4</span></td><td class="rot">Alocação provisória</td><td data-id="c-ini-Alice"><span class="pos">recebe 700</span></td><td data-id="c-ini-Beto"><span class="neg">paga \(600+\frac{x}{2}\)</span></td></tr><tr class="feito" data-id="r-exc"><td class="colpasso"><span class="npasso">5</span></td><td class="rot">Excedente</td><td data-id="c-exc-Alice">\(+\frac{x}{4}-50\)</td><td data-id="c-exc-Beto">\(+\frac{x}{4}-50\)</td></tr><tr class="atual" data-id="r-fin"><td class="colpasso"></td><td class="rot">Alocação final</td><td data-id="c-fin-Alice"><span class="pos">recebe \(650+\frac{x}{4}\)</span></td><td data-id="c-fin-Beto"><span class="neg">paga \(650+\frac{x}{4}\)</span></td></tr><tr class="atual" data-id="r-prop"><td class="colpasso"><span class="npasso">✔</span></td><td class="rot">Com \(x = 800\)</td><td data-id="c-prop-Alice"><span class="pos"><b>recebe 850</b></span></td><td data-id="c-prop-Beto"><span class="neg"><b>paga 850</b></span></td></tr></table></div>
+```
+:::
+::: {.column width="45%" .texto-passo}
+A Alice recebe no total:
+
+$$\begin{aligned} 700 + \tfrac{x}{4} - 50 &= 850 \\ \iff 650 + \tfrac{x}{4} &= 850 \\ \iff \tfrac{x}{4} &= 200 \\ \iff x &= 800 \end{aligned}$$
+
+::: {.destaque .teal .fragment}
+O Beto licitou **800 €** pelo bem 2 (e $800 > 700$ ✔).
 :::
 :::
 :::
