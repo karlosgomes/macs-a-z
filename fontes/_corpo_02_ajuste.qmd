@@ -169,7 +169,7 @@ Na prática: a Madalena usa o apartamento $\frac35$ do ano (cerca de 7 meses), o
 [1]{.num} **Pontos.** Cada jogador distribui, em segredo, **100 pontos** pelos itens.
 :::
 ::: {.passo .fragment}
-[2]{.num} **1.ª fase.** Cada item vai para quem lhe deu **mais pontos**. Itens com pontos iguais vão para quem tem, nesse momento, **menos pontos**.
+[2]{.num} **1.ª fase.** Cada item vai para quem lhe deu **mais pontos**. Itens com pontos iguais vão para quem tem, nesse momento, **menos pontos** (se também aí estiverem iguais, **sorteio**).
 :::
 ::: {.passo .fragment}
 [3]{.num} Se os totais forem **iguais**, a partilha termina. Senão, quem tem **mais** pontos é o **vencedor inicial** e vai ceder itens.
@@ -334,8 +334,13 @@ W = {
     else if (PB[i] > PA[i]) { s[i] = 0; tB += PB[i] }
     else emp.push(i)
   }
-  for (const i of emp) { if (tA <= tB) { s[i] = 1; tA += PA[i] } else { s[i] = 0; tB += PB[i] } }
+  const sorteio = []   // empates com totais iguais nesse momento: a regra não decide, é por sorteio
+  for (const i of emp) {
+    if (tA === tB) sorteio.push(`${emo[i]}: empate e totais iguais (${tA}), decide-se por sorteio (aqui fica com a Madalena)`)
+    if (tA <= tB) { s[i] = 1; tA += PA[i] } else { s[i] = 0; tB += PB[i] }
+  }
   log.push(`1.ª fase: Madalena ${tA}, Gonçalo ${tB}` + (emp.length ? ` (empate: ${emp.map(i => emo[i]).join(" ")})` : ""))
+  sorteio.forEach(t => log.push(t))
   if (tA !== tB) {
     const gA = tA > tB, Gv = gA ? PA : PB, Rv = gA ? PB : PA
     let tG = gA ? tA : tB, tR = gA ? tB : tA
