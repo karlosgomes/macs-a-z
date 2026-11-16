@@ -207,7 +207,6 @@ e3 = Caso(["Ana", "Berta", "Carla", "Daniela"],
           [("auto", "🚗 Automóvel", "🚗"), ("terreno", "🏞️ Terreno", "🏞️"), ("casa", "🏠 Casa", "🏠")],
           {"Ana": dict(auto=15000, terreno=33000, casa=117000), "Berta": dict(auto=18000, terreno=20000, casa=150000),
            "Carla": dict(auto=15600, terreno=27000, casa=120000), "Daniela": dict(auto=16500, terreno=30000, casa=180000)}, "(€)")
-e3.acerto_curto = True
 e3.rot["pj"] = "Porção justa"
 CASOS["e3"] = e3
 
