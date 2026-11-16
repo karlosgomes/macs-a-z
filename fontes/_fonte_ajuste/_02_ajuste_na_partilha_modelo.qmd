@@ -310,7 +310,7 @@ emo = ["⛵", "🐈", "🏢", "🖼️"]
 PA = [...M, 100 - M[0] - M[1] - M[2]]
 PB = [...G, 100 - G[0] - G[1] - G[2]]
 f1 = x => (Math.round(x * 100) / 100).toLocaleString("pt-PT")
-pc = x => Math.round(x * 1000) / 10 + " %"
+pc = x => (Math.round(x * 1000) / 10).toLocaleString("pt-PT") + " %"
 W = {
   const n = 4, s = Array(n).fill(null), log = []
   let tA = 0, tB = 0
@@ -331,7 +331,9 @@ W = {
     const gA = tA > tB, Gv = gA ? PA : PB, Rv = gA ? PB : PA
     let tG = gA ? tA : tB, tR = gA ? tB : tA
     const own = [...Array(n).keys()].filter(i => (s[i] === 1) === gA)
-      .sort((i, j) => (Rv[i] ? Gv[i] / Rv[i] : Infinity) - (Rv[j] ? Gv[j] / Rv[j] : Infinity))
+      .sort((i, j) => Gv[i] * Rv[j] - Gv[j] * Rv[i])   // razões comparadas sem divisões (sem ∞ − ∞)
+    // razões iguais: tanto faz a ordem (os pontos finais são os mesmos)
+    own.forEach((i, k) => { const j = own[k + 1]; if (j != null && Gv[i] * Rv[j] === Gv[j] * Rv[i]) log.push(`${emo[i]} e ${emo[j]} têm a mesma razão (tanto faz a ordem)`) })
     for (const i of own) {
       if (tG - Gv[i] >= tR + Rv[i]) {
         tG -= Gv[i]; tR += Rv[i]; s[i] = gA ? 0 : 1
@@ -609,7 +611,7 @@ b) Que percentagem do piano fica com cada um?
 :::
 ::: {.column width="42%" .texto-passo}
 $x$ = fração do 🎹 que passa para o Paulo:
-$$81 - 23x = 45 + 20x \iff x = \frac{36}{43} \approx 0{,}837$$
+$$\begin{aligned} 81 - 23x &= 45 + 20x \\ \iff x &= \frac{36}{43} \approx 0{,}837 \end{aligned}$$
 
 ::: {.destaque .teal .fragment}
 Paulo: **≈ 83,7 %** do piano; Rosa: **≈ 16,3 %**. Cada um fica com $\approx 61{,}7$ pontos.
@@ -655,7 +657,7 @@ Cada um fica com o quadro de que mais gosta: **75 = 75**. Os totais são iguais:
 :::
 ::: {.column width="42%" .texto-passo}
 Com os pontos **declarados**, a Ana ganha o Matisse ($26 > 25$) e o Bruno é o vencedor inicial ($75$):
-$$75 - 75x = 26 + 74x \iff x = \frac{49}{149} \approx 0{,}33$$
+$$\begin{aligned} 75 - 75x &= 26 + 74x \\ \iff x &= \frac{49}{149} \approx 0{,}33 \end{aligned}$$
 
 ::: {.destaque .coral .fragment}
 Em pontos **verdadeiros**, a Ana fica com $75 + 25 \times \frac{49}{149} \approx 83{,}2$ (em vez de 75); o Bruno desce para $\approx 50{,}3$.

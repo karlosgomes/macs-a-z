@@ -195,13 +195,13 @@ Todos acabam **acima** da parte justa: 4 €, 4 € e 4,50 €.
 [1]{.num} **Licitação.** Cada jogador coloca, em segredo, $N-1$ **marcas**, dividindo a fila em $N$ segmentos que considera justos.
 :::
 ::: {.passo .fragment}
-[2]{.num} **Atribuição.** Da esquerda para a direita: o dono da **primeira 1.ª marca** recebe o seu 1.º segmento e sai; entre os restantes, o dono da **primeira 2.ª marca** recebe o seu 2.º segmento e sai; e assim sucessivamente.
+[2]{.num} **Atribuição.** Da esquerda para a direita: o dono da **primeira 1.ª marca** recebe o seu 1.º segmento e sai; entre os restantes, o dono da **primeira 2.ª marca** recebe o seu 2.º segmento e sai; e assim sucessivamente (marcas no mesmo sítio: **sorteio**).
 :::
 ::: {.passo .fragment}
 [3]{.num} O **último** jogador recebe o seu último segmento (da sua última marca até ao fim).
 :::
 ::: {.passo .fragment}
-[4]{.num} **Excedente.** Os itens que sobram são distribuídos por **sorteio** (cada um escolhe à vez) ou aplicando de novo o método.
+[4]{.num} **Excedente.** Os itens que sobram distribuem-se por **sorteio** (por uma ordem sorteada, cada um escolhe um item à vez) ou aplicando de novo o método.
 :::
 
 ## Porque é que cada um recebe a sua parte justa?
@@ -265,7 +265,7 @@ N = len(marcas)
 em_jogo = list(marcas)
 for j in range(N - 1):
     # quem tem a (j+1)-ésima marca mais à esquerda?
-    vencedor = min(em_jogo, key=lambda p: marcas[p][j])
+    vencedor = min(em_jogo, key=lambda p: marcas[p][j])  # empate: o 1.º (sorteio)
     if j == 0:
         inicio = 1
     else:
@@ -277,7 +277,7 @@ print(ultimo, "recebe os itens", marcas[ultimo][N - 2] + 1, "a", n_itens)
 # Rudy 1 a 2 · Vanessa 5 a 5 · Teodoro 7 a 9
 ```
 
-[▶ Abrir e correr na app Python](https://karlosgomes.github.io/apps-matematica/python/#codigo=bWFyY2FzID0geyJUZW9kb3JvIjogWzMsIDZdLCAiVmFuZXNzYSI6IFs0LCA1XSwgIlJ1ZHkiOiBbMiwgNV19Cm5faXRlbnMgPSA5Ck4gPSBsZW4obWFyY2FzKQplbV9qb2dvID0gbGlzdChtYXJjYXMpCmZvciBqIGluIHJhbmdlKE4gLSAxKToKICAgICMgcXVlbSB0ZW0gYSAoaisxKS3DqXNpbWEgbWFyY2EgbWFpcyDDoCBlc3F1ZXJkYT8KICAgIHZlbmNlZG9yID0gbWluKGVtX2pvZ28sIGtleT1sYW1iZGEgcDogbWFyY2FzW3BdW2pdKQogICAgaWYgaiA9PSAwOgogICAgICAgIGluaWNpbyA9IDEKICAgIGVsc2U6CiAgICAgICAgaW5pY2lvID0gbWFyY2FzW3ZlbmNlZG9yXVtqIC0gMV0gKyAxCiAgICBwcmludCh2ZW5jZWRvciwgInJlY2ViZSBvcyBpdGVucyIsIGluaWNpbywgImEiLCBtYXJjYXNbdmVuY2Vkb3JdW2pdKQogICAgZW1fam9nby5yZW1vdmUodmVuY2Vkb3IpCnVsdGltbyA9IGVtX2pvZ29bMF0KcHJpbnQodWx0aW1vLCAicmVjZWJlIG9zIGl0ZW5zIiwgbWFyY2FzW3VsdGltb11bTiAtIDJdICsgMSwgImEiLCBuX2l0ZW5zKQojIFJ1ZHkgMSBhIDIgwrcgVmFuZXNzYSA1IGEgNSDCtyBUZW9kb3JvIDcgYSA5Cg%3D%3D&nome=marcadores.py){.app-python target="_blank"}
+[▶ Abrir e correr na app Python](https://karlosgomes.github.io/apps-matematica/python/#codigo=bWFyY2FzID0geyJUZW9kb3JvIjogWzMsIDZdLCAiVmFuZXNzYSI6IFs0LCA1XSwgIlJ1ZHkiOiBbMiwgNV19Cm5faXRlbnMgPSA5Ck4gPSBsZW4obWFyY2FzKQplbV9qb2dvID0gbGlzdChtYXJjYXMpCmZvciBqIGluIHJhbmdlKE4gLSAxKToKICAgICMgcXVlbSB0ZW0gYSAoaisxKS3DqXNpbWEgbWFyY2EgbWFpcyDDoCBlc3F1ZXJkYT8KICAgIHZlbmNlZG9yID0gbWluKGVtX2pvZ28sIGtleT1sYW1iZGEgcDogbWFyY2FzW3BdW2pdKSAgIyBlbXBhdGU6IG8gMS7CuiAoc29ydGVpbykKICAgIGlmIGogPT0gMDoKICAgICAgICBpbmljaW8gPSAxCiAgICBlbHNlOgogICAgICAgIGluaWNpbyA9IG1hcmNhc1t2ZW5jZWRvcl1baiAtIDFdICsgMQogICAgcHJpbnQodmVuY2Vkb3IsICJyZWNlYmUgb3MgaXRlbnMiLCBpbmljaW8sICJhIiwgbWFyY2FzW3ZlbmNlZG9yXVtqXSkKICAgIGVtX2pvZ28ucmVtb3ZlKHZlbmNlZG9yKQp1bHRpbW8gPSBlbV9qb2dvWzBdCnByaW50KHVsdGltbywgInJlY2ViZSBvcyBpdGVucyIsIG1hcmNhc1t1bHRpbW9dW04gLSAyXSArIDEsICJhIiwgbl9pdGVucykKIyBSdWR5IDEgYSAyIMK3IFZhbmVzc2EgNSBhIDUgwrcgVGVvZG9ybyA3IGEgOQo%3D&nome=marcadores.py){.app-python target="_blank"}
 
 ::: notes
 As marcas são dadas pela posição: a marca 3 fica imediatamente à direita do item 3. Em caso de empate, min escolhe o
@@ -339,7 +339,7 @@ ${Object.keys(MK).map(p => {
   const pj = {Teodoro: 3, Vanessa: 2, Rudy: 3}[p]
   return html`<tr><td><span class="q ${cor[p]}" style="display:inline-block;width:.8em;height:.8em;border-radius:3px"></span> ${p}</td><td>${a === b ? a : a + "–" + b}</td><td class="${v >= pj ? "pos" : "neg"}">${fmtE(v)}</td><td>${fmtE(pj)}</td></tr>`
 })}</table>
-${P.emp.length ? html`<p class="neg">⚠ Empate (${P.emp.join("; ")}): seria decidido por sorteio.</p>` : ""}</div>`}`
+${P.emp.length ? html`<p class="neg">⚠ Empate (${P.emp.join("; ")}): seria decidido por sorteio; aqui ficou com o primeiro.</p>` : ""}</div>`}`
 ```
 :::
 :::
