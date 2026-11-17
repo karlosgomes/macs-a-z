@@ -107,12 +107,12 @@ O Carlos não fica com nenhum bem… mas vai ser compensado em dinheiro.
 ::: {.column width="42%" .texto-passo}
 Para cada jogador: **parte justa − valor dos bens recebidos**.
 
-- Afonso: $100 - 200 =$ [−100]{.neg}
-- Beatriz: $110 - 180 =$ [−70]{.neg}
-- Carlos: $80 - 0 =$ [+80]{.pos}
+- Afonso: $100 - 200 = \textcolor{#DC2626}{\mathbf{-100}}$
+- Beatriz: $110 - 180 = \textcolor{#DC2626}{\mathbf{-70}}$
+- Carlos: $80 - 0 = \textcolor{#16A34A}{\mathbf{+80}}$
 
 ::: {.destaque .fragment}
-[+]{.pos} **recebe** do fundo comum (recebeu **menos** do que a parte justa); [−]{.neg} **paga** para o fundo comum (recebeu **mais**).
+$\textcolor{#16A34A}{\mathbf{+}}$ **recebe** do fundo comum (recebeu **menos** do que a parte justa); $\textcolor{#DC2626}{\mathbf{-}}$ **paga** para o fundo comum (recebeu **mais**).
 :::
 :::
 :::
@@ -128,8 +128,8 @@ Para cada jogador: **parte justa − valor dos bens recebidos**.
 ::: {.column width="42%" .texto-passo}
 Do ponto de vista do **fundo comum**:
 
-- o que o Afonso e a Beatriz pagam ([−]{.neg}) **entra**: $+100$, $+70$
-- o que o Carlos recebe ([+]{.pos}) **sai**: $-80$
+- o que o Afonso e a Beatriz pagam ($\textcolor{#DC2626}{\mathbf{-}}$) **entra**: $+100$, $+70$
+- o que o Carlos recebe ($\textcolor{#16A34A}{\mathbf{+}}$) **sai**: $-80$
 
 ::: {.fragment}
 Fundo: $100 + 70 - 80 = 90$ mil €
@@ -152,9 +152,9 @@ O **excedente** divide-se em partes iguais: $90 : 3 = 30$ para cada um.
 ::: {.column width="42%" .texto-passo}
 Soma-se a cada um a sua parte do excedente, $+30$:
 
-- Afonso: $-100 + 30 =$ [−70]{.neg} (paga)
-- Beatriz: $-70 + 30 =$ [−40]{.neg} (paga)
-- Carlos: $80 + 30 =$ [+110]{.pos} (recebe)
+- Afonso: $-100 + 30 = \textcolor{#DC2626}{\mathbf{-70}}$ (paga)
+- Beatriz: $-70 + 30 = \textcolor{#DC2626}{\mathbf{-40}}$ (paga)
+- Carlos: $80 + 30 = \textcolor{#16A34A}{\mathbf{+110}}$ (recebe)
 
 ::: {.fragment}
 Confirma: $-70 - 40 + 110 = 0$ ✔
@@ -199,7 +199,7 @@ Cada um recebe **a sua parte justa + 30**: todos ficam com **mais** do que consi
 [3]{.num} **Atribuição.** Cada item vai para quem fez a licitação mais alta (empate: sorteio).
 :::
 ::: {.passo .fragment}
-[4]{.num} **Alocação provisória.** Cada jogador calcula **parte justa − valor dos itens recebidos**: se for [+]{.pos}, **recebe** esse valor do fundo comum; se for [−]{.neg}, **paga** para o fundo comum.
+[4]{.num} **Alocação provisória.** Cada jogador calcula **parte justa − valor dos itens recebidos**: se for $\textcolor{#16A34A}{\mathbf{+}}$, **recebe** esse valor do fundo comum; se for $\textcolor{#DC2626}{\mathbf{-}}$, **paga** para o fundo comum.
 :::
 ::: {.passo .fragment}
 [5]{.num} **Excedente.** O dinheiro que sobra no fundo é dividido em partes iguais e **soma-se** à alocação provisória → **alocação final**.
@@ -498,9 +498,9 @@ Partes justas ($: 3$): $240 : 3 = 80$; $210 : 3 = 70$; $150 : 3 = 50$.
 ```
 :::
 ::: {.column width="42%" .texto-passo}
-- Ana: $80 - 140 =$ [−60]{.neg}
-- Bruno: $70 - 180 =$ [−110]{.neg}
-- Carlos: $50 - 0 =$ [+50]{.pos}
+- Ana: $80 - 140 = \textcolor{#DC2626}{\mathbf{-60}}$
+- Bruno: $70 - 180 = \textcolor{#DC2626}{\mathbf{-110}}$
+- Carlos: $50 - 0 = \textcolor{#16A34A}{\mathbf{+50}}$
 
 ::: {.fragment}
 Fundo: $60 + 110 - 50 = 120$ → $+40$ para cada.
@@ -517,9 +517,9 @@ Fundo: $60 + 110 - 50 = 120$ → $+40$ para cada.
 ```
 :::
 ::: {.column width="42%" .texto-passo}
-- **Ana:** fica com a 📷 e $-60 + 40 =$ [−20 €]{.neg} (paga)
-- **Bruno:** fica com o 📱 e $-110 + 40 =$ [−70 €]{.neg} (paga)
-- **Carlos:** $50 + 40 =$ [+90 €]{.pos} (recebe)
+- **Ana:** fica com a 📷 e $-60 + 40 = \textcolor{#DC2626}{\mathbf{-20}}$ € (paga)
+- **Bruno:** fica com o 📱 e $-110 + 40 = \textcolor{#DC2626}{\mathbf{-70}}$ € (paga)
+- **Carlos:** $50 + 40 = \textcolor{#16A34A}{\mathbf{+90}}$ € (recebe)
 
 ::: {.destaque .teal .fragment}
 Confirma: $-20 - 70 + 90 = 0$ ✔. Cada um fica com a sua parte justa $+ 40$.
@@ -573,9 +573,9 @@ Partes justas: $1800 : 3 = 600$; $2250 : 3 = 750$; $1860 : 3 = 620$.
 ```
 :::
 ::: {.column width="42%" .texto-passo}
-- Alice: $600 - 350 =$ [+250]{.pos}
-- Bernardo: $750 - 1950 =$ [−1200]{.neg}
-- Camila: $620 - 0 =$ [+620]{.pos}
+- Alice: $600 - 350 = \textcolor{#16A34A}{\mathbf{+250}}$
+- Bernardo: $750 - 1950 = \textcolor{#DC2626}{\mathbf{-1200}}$
+- Camila: $620 - 0 = \textcolor{#16A34A}{\mathbf{+620}}$
 
 ::: {.fragment}
 Fundo: $-250 + 1200 - 620 = 330$ → $+110$ para cada.
@@ -592,9 +592,9 @@ Fundo: $-250 + 1200 - 620 = 330$ → $+110$ para cada.
 ```
 :::
 ::: {.column width="42%" .texto-passo}
-- **Alice:** 📱 e [+360 €]{.pos} (recebe)
-- **Bernardo:** 💻 e 🚌 e [−1090 €]{.neg} (paga)
-- **Camila:** [+730 €]{.pos} (recebe)
+- **Alice:** 📱 e $\textcolor{#16A34A}{\mathbf{+360}}$ € (recebe)
+- **Bernardo:** 💻 e 🚌 e $\textcolor{#DC2626}{\mathbf{-1090}}$ € (paga)
+- **Camila:** $\textcolor{#16A34A}{\mathbf{+730}}$ € (recebe)
 
 ::: {.fragment}
 Confirma: $360 - 1090 + 730 = 0$ ✔
@@ -667,10 +667,10 @@ Porção justa ($: 4$): $41\,250$; $47\,000$; $40\,650$; $56\,625$.
 ```
 :::
 ::: {.column width="36%" .texto-passo .compacto}
-- Ana: $41\,250 - 33\,000 =$ [+8250]{.pos}
-- Berta: $47\,000 - 18\,000 =$ [+29 000]{.pos}
-- Carla: $40\,650 - 0 =$ [+40 650]{.pos}
-- Daniela: $56\,625 - 180\,000 =$ [−123 375]{.neg}
+- Ana: $41\,250 - 33\,000 = \textcolor{#16A34A}{\mathbf{+8250}}$
+- Berta: $47\,000 - 18\,000 = \textcolor{#16A34A}{\mathbf{+29\,000}}$
+- Carla: $40\,650 - 0 = \textcolor{#16A34A}{\mathbf{+40\,650}}$
+- Daniela: $56\,625 - 180\,000 = \textcolor{#DC2626}{\mathbf{-123\,375}}$
 
 ::: {.fragment}
 Fundo: $-8250 - 29\,000 - 40\,650 + 123\,375 = 45\,475$ → $+11\,368{,}75$ € para cada.
@@ -687,10 +687,10 @@ Fundo: $-8250 - 29\,000 - 40\,650 + 123\,375 = 45\,475$ → $+11\,368{,}75$ € 
 ```
 :::
 ::: {.column width="36%" .texto-passo .compacto}
-- **Ana:** 🏞️ e [+19 618,75 €]{.pos} (recebe)
-- **Berta:** 🚗 e [+40 368,75 €]{.pos} (recebe)
-- **Carla:** [+52 018,75 €]{.pos} (recebe)
-- **Daniela:** 🏠 e [−112 006,25 €]{.neg} (paga)
+- **Ana:** 🏞️ e $\textcolor{#16A34A}{\mathbf{+19\,618{,}75}}$ € (recebe)
+- **Berta:** 🚗 e $\textcolor{#16A34A}{\mathbf{+40\,368{,}75}}$ € (recebe)
+- **Carla:** $\textcolor{#16A34A}{\mathbf{+52\,018{,}75}}$ € (recebe)
+- **Daniela:** 🏠 e $\textcolor{#DC2626}{\mathbf{-112\,006{,}25}}$ € (paga)
 
 ::: {.fragment}
 Confirma: o que a Ana, a Berta e a Carla recebem soma $112\,006{,}25$ ✔
@@ -749,8 +749,8 @@ Parte justa do Guilherme: $2950 : 2 = 1475$.
 - Z → **Célia** ($600 > 550$)
 
 ::: {.fragment}
-- Célia: $1550 - 2100 =$ [−550]{.neg}
-- Guilherme: $1475 - 1400 =$ [+75]{.pos}
+- Célia: $1550 - 2100 = \textcolor{#DC2626}{\mathbf{-550}}$
+- Guilherme: $1475 - 1400 = \textcolor{#16A34A}{\mathbf{+75}}$
 :::
 :::
 :::
@@ -767,9 +767,9 @@ Parte justa do Guilherme: $2950 : 2 = 1475$.
 Fundo: $550 - 75 = 475$ → $+237{,}50$ para cada.
 
 ::: {.destaque .teal .fragment}
-O **Guilherme** fica com a viagem **X**: $75 + 237{,}50 =$ [+312,50 €]{.pos} (recebe).
+O **Guilherme** fica com a viagem **X**: $75 + 237{,}50 = \textcolor{#16A34A}{\mathbf{+312{,}50}}$ € (recebe).
 
-A Célia fica com Y e Z: $-550 + 237{,}50 =$ [−312,50 €]{.neg} (paga).
+A Célia fica com Y e Z: $-550 + 237{,}50 = \textcolor{#DC2626}{\mathbf{-312{,}50}}$ € (paga).
 :::
 :::
 :::
@@ -821,9 +821,9 @@ A **porção justa** de cada um é a sua percentagem do valor global, e o **exce
 ```
 :::
 ::: {.column width="40%" .texto-passo .compacto}
-- Dora: $43 - 40 =$ [+3]{.pos}
-- Elsa: $27 - 34 =$ [−7]{.neg}
-- Fernando: $18 - 26 =$ [−8]{.neg}
+- Dora: $43 - 40 = \textcolor{#16A34A}{\mathbf{+3}}$
+- Elsa: $27 - 34 = \textcolor{#DC2626}{\mathbf{-7}}$
+- Fernando: $18 - 26 = \textcolor{#DC2626}{\mathbf{-8}}$
 
 ::: {.fragment}
 Fundo: $-3 + 7 + 8 = 12$, repartido em $50\%$, $30\%$ e $20\%$: $6$; $3{,}60$; $2{,}40$.
@@ -840,9 +840,9 @@ Fundo: $-3 + 7 + 8 = 12$, repartido em $50\%$, $30\%$ e $20\%$: $6$; $3{,}60$; $
 ```
 :::
 ::: {.column width="40%" .texto-passo .compacto}
-- **Dora:** 🎟️ e $3 + 6 =$ [+9 €]{.pos} (recebe)
-- **Elsa:** 💿 e $-7 + 3{,}60 =$ [−3,40 €]{.neg} (paga)
-- **Fernando:** 👕 e $-8 + 2{,}40 =$ [−5,60 €]{.neg} (paga)
+- **Dora:** 🎟️ e $3 + 6 = \textcolor{#16A34A}{\mathbf{+9}}$ € (recebe)
+- **Elsa:** 💿 e $-7 + 3{,}60 = \textcolor{#DC2626}{\mathbf{-3{,}40}}$ € (paga)
+- **Fernando:** 👕 e $-8 + 2{,}40 = \textcolor{#DC2626}{\mathbf{-5{,}60}}$ € (paga)
 
 ::: {.fragment}
 Confirma: $9 - 3{,}40 - 5{,}60 = 0$ ✔
@@ -898,8 +898,8 @@ A Alice ficou com os bens 3 e 4, logo o Beto ficou com o 1 e o 2: $x \geq 700$ (
 ```
 :::
 ::: {.column width="45%" .texto-passo}
-- Alice: $1500 - 800 =$ [+700]{.pos}
-- Beto: $\left(1000 + \dfrac{x}{2}\right) - (1600 + x) =$ [$-\left(600 + \dfrac{x}{2}\right)$]{.neg}
+- Alice: $1500 - 800 = \textcolor{#16A34A}{\mathbf{+700}}$
+- Beto: $\left(1000 + \dfrac{x}{2}\right) - (1600 + x) = \textcolor{#DC2626}{\boldsymbol{-\left(600 + \dfrac{x}{2}\right)}}$
 
 ::: {.fragment}
 Fundo: $-700 + 600 + \dfrac{x}{2} = \dfrac{x}{2} - 100$ → $+\left(\dfrac{x}{4} - 50\right)$ para cada.

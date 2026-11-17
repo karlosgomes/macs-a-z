@@ -701,12 +701,12 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column texto-passo" style="width:42%;">
 <p>Para cada jogador: <strong>parte justa − valor dos bens recebidos</strong>.</p>
 <ul>
-<li>Afonso: <span class="math inline">\(100 - 200 =\)</span> <span class="neg">−100</span></li>
-<li>Beatriz: <span class="math inline">\(110 - 180 =\)</span> <span class="neg">−70</span></li>
-<li>Carlos: <span class="math inline">\(80 - 0 =\)</span> <span class="pos">+80</span></li>
+<li>Afonso: <span class="math inline">\(100 - 200 = \textcolor{#DC2626}{\mathbf{-100}}\)</span></li>
+<li>Beatriz: <span class="math inline">\(110 - 180 = \textcolor{#DC2626}{\mathbf{-70}}\)</span></li>
+<li>Carlos: <span class="math inline">\(80 - 0 = \textcolor{#16A34A}{\mathbf{+80}}\)</span></li>
 </ul>
 <div class="destaque fragment">
-<p><span class="pos">+</span> <strong>recebe</strong> do fundo comum (recebeu <strong>menos</strong> do que a parte justa); <span class="neg">−</span> <strong>paga</strong> para o fundo comum (recebeu <strong>mais</strong>).</p>
+<p><span class="math inline">\(\textcolor{#16A34A}{\mathbf{+}}\)</span> <strong>recebe</strong> do fundo comum (recebeu <strong>menos</strong> do que a parte justa); <span class="math inline">\(\textcolor{#DC2626}{\mathbf{-}}\)</span> <strong>paga</strong> para o fundo comum (recebeu <strong>mais</strong>).</p>
 </div>
 </div></div>
 </section>
@@ -793,8 +793,8 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column texto-passo" style="width:42%;">
 <p>Do ponto de vista do <strong>fundo comum</strong>:</p>
 <ul>
-<li>o que o Afonso e a Beatriz pagam (<span class="neg">−</span>) <strong>entra</strong>: <span class="math inline">\(+100\)</span>, <span class="math inline">\(+70\)</span></li>
-<li>o que o Carlos recebe (<span class="pos">+</span>) <strong>sai</strong>: <span class="math inline">\(-80\)</span></li>
+<li>o que o Afonso e a Beatriz pagam (<span class="math inline">\(\textcolor{#DC2626}{\mathbf{-}}\)</span>) <strong>entra</strong>: <span class="math inline">\(+100\)</span>, <span class="math inline">\(+70\)</span></li>
+<li>o que o Carlos recebe (<span class="math inline">\(\textcolor{#16A34A}{\mathbf{+}}\)</span>) <strong>sai</strong>: <span class="math inline">\(-80\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(100 + 70 - 80 = 90\)</span> mil €</p>
@@ -887,9 +887,9 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column texto-passo" style="width:42%;">
 <p>Soma-se a cada um a sua parte do excedente, <span class="math inline">\(+30\)</span>:</p>
 <ul>
-<li>Afonso: <span class="math inline">\(-100 + 30 =\)</span> <span class="neg">−70</span> (paga)</li>
-<li>Beatriz: <span class="math inline">\(-70 + 30 =\)</span> <span class="neg">−40</span> (paga)</li>
-<li>Carlos: <span class="math inline">\(80 + 30 =\)</span> <span class="pos">+110</span> (recebe)</li>
+<li>Afonso: <span class="math inline">\(-100 + 30 = \textcolor{#DC2626}{\mathbf{-70}}\)</span> (paga)</li>
+<li>Beatriz: <span class="math inline">\(-70 + 30 = \textcolor{#DC2626}{\mathbf{-40}}\)</span> (paga)</li>
+<li>Carlos: <span class="math inline">\(80 + 30 = \textcolor{#16A34A}{\mathbf{+110}}\)</span> (recebe)</li>
 </ul>
 <div class="fragment">
 <p>Confirma: <span class="math inline">\(-70 - 40 + 110 = 0\)</span> ✔</p>
@@ -1002,7 +1002,7 @@ document.addEventListener('fullscreenchange', () => {
 <p><span class="num">3</span> <strong>Atribuição.</strong> Cada item vai para quem fez a licitação mais alta (empate: sorteio).</p>
 </div>
 <div class="passo fragment">
-<p><span class="num">4</span> <strong>Alocação provisória.</strong> Cada jogador calcula <strong>parte justa − valor dos itens recebidos</strong>: se for <span class="pos">+</span>, <strong>recebe</strong> esse valor do fundo comum; se for <span class="neg">−</span>, <strong>paga</strong> para o fundo comum.</p>
+<p><span class="num">4</span> <strong>Alocação provisória.</strong> Cada jogador calcula <strong>parte justa − valor dos itens recebidos</strong>: se for <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+}}\)</span>, <strong>recebe</strong> esse valor do fundo comum; se for <span class="math inline">\(\textcolor{#DC2626}{\mathbf{-}}\)</span>, <strong>paga</strong> para o fundo comum.</p>
 </div>
 <div class="passo fragment">
 <p><span class="num">5</span> <strong>Excedente.</strong> O dinheiro que sobra no fundo é dividido em partes iguais e <strong>soma-se</strong> à alocação provisória → <strong>alocação final</strong>.</p>
@@ -1544,9 +1544,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo" style="width:42%;">
 <ul>
-<li>Ana: <span class="math inline">\(80 - 140 =\)</span> <span class="neg">−60</span></li>
-<li>Bruno: <span class="math inline">\(70 - 180 =\)</span> <span class="neg">−110</span></li>
-<li>Carlos: <span class="math inline">\(50 - 0 =\)</span> <span class="pos">+50</span></li>
+<li>Ana: <span class="math inline">\(80 - 140 = \textcolor{#DC2626}{\mathbf{-60}}\)</span></li>
+<li>Bruno: <span class="math inline">\(70 - 180 = \textcolor{#DC2626}{\mathbf{-110}}\)</span></li>
+<li>Carlos: <span class="math inline">\(50 - 0 = \textcolor{#16A34A}{\mathbf{+50}}\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(60 + 110 - 50 = 120\)</span> → <span class="math inline">\(+40\)</span> para cada.</p>
@@ -1635,9 +1635,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo" style="width:42%;">
 <ul>
-<li><strong>Ana:</strong> fica com a 📷 e <span class="math inline">\(-60 + 40 =\)</span> <span class="neg">−20 €</span> (paga)</li>
-<li><strong>Bruno:</strong> fica com o 📱 e <span class="math inline">\(-110 + 40 =\)</span> <span class="neg">−70 €</span> (paga)</li>
-<li><strong>Carlos:</strong> <span class="math inline">\(50 + 40 =\)</span> <span class="pos">+90 €</span> (recebe)</li>
+<li><strong>Ana:</strong> fica com a 📷 e <span class="math inline">\(-60 + 40 = \textcolor{#DC2626}{\mathbf{-20}}\)</span> € (paga)</li>
+<li><strong>Bruno:</strong> fica com o 📱 e <span class="math inline">\(-110 + 40 = \textcolor{#DC2626}{\mathbf{-70}}\)</span> € (paga)</li>
+<li><strong>Carlos:</strong> <span class="math inline">\(50 + 40 = \textcolor{#16A34A}{\mathbf{+90}}\)</span> € (recebe)</li>
 </ul>
 <div class="destaque teal fragment">
 <p>Confirma: <span class="math inline">\(-20 - 70 + 90 = 0\)</span> ✔. Cada um fica com a sua parte justa <span class="math inline">\(+ 40\)</span>.</p>
@@ -1946,9 +1946,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo" style="width:42%;">
 <ul>
-<li>Alice: <span class="math inline">\(600 - 350 =\)</span> <span class="pos">+250</span></li>
-<li>Bernardo: <span class="math inline">\(750 - 1950 =\)</span> <span class="neg">−1200</span></li>
-<li>Camila: <span class="math inline">\(620 - 0 =\)</span> <span class="pos">+620</span></li>
+<li>Alice: <span class="math inline">\(600 - 350 = \textcolor{#16A34A}{\mathbf{+250}}\)</span></li>
+<li>Bernardo: <span class="math inline">\(750 - 1950 = \textcolor{#DC2626}{\mathbf{-1200}}\)</span></li>
+<li>Camila: <span class="math inline">\(620 - 0 = \textcolor{#16A34A}{\mathbf{+620}}\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(-250 + 1200 - 620 = 330\)</span> → <span class="math inline">\(+110\)</span> para cada.</p>
@@ -2051,9 +2051,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo" style="width:42%;">
 <ul>
-<li><strong>Alice:</strong> 📱 e <span class="pos">+360 €</span> (recebe)</li>
-<li><strong>Bernardo:</strong> 💻 e 🚌 e <span class="neg">−1090 €</span> (paga)</li>
-<li><strong>Camila:</strong> <span class="pos">+730 €</span> (recebe)</li>
+<li><strong>Alice:</strong> 📱 e <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+360}}\)</span> € (recebe)</li>
+<li><strong>Bernardo:</strong> 💻 e 🚌 e <span class="math inline">\(\textcolor{#DC2626}{\mathbf{-1090}}\)</span> € (paga)</li>
+<li><strong>Camila:</strong> <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+730}}\)</span> € (recebe)</li>
 </ul>
 <div class="fragment">
 <p>Confirma: <span class="math inline">\(360 - 1090 + 730 = 0\)</span> ✔</p>
@@ -2478,10 +2478,10 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo compacto" style="width:36%;">
 <ul>
-<li>Ana: <span class="math inline">\(41\,250 - 33\,000 =\)</span> <span class="pos">+8250</span></li>
-<li>Berta: <span class="math inline">\(47\,000 - 18\,000 =\)</span> <span class="pos">+29 000</span></li>
-<li>Carla: <span class="math inline">\(40\,650 - 0 =\)</span> <span class="pos">+40 650</span></li>
-<li>Daniela: <span class="math inline">\(56\,625 - 180\,000 =\)</span> <span class="neg">−123 375</span></li>
+<li>Ana: <span class="math inline">\(41\,250 - 33\,000 = \textcolor{#16A34A}{\mathbf{+8250}}\)</span></li>
+<li>Berta: <span class="math inline">\(47\,000 - 18\,000 = \textcolor{#16A34A}{\mathbf{+29\,000}}\)</span></li>
+<li>Carla: <span class="math inline">\(40\,650 - 0 = \textcolor{#16A34A}{\mathbf{+40\,650}}\)</span></li>
+<li>Daniela: <span class="math inline">\(56\,625 - 180\,000 = \textcolor{#DC2626}{\mathbf{-123\,375}}\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(-8250 - 29\,000 - 40\,650 + 123\,375 = 45\,475\)</span> → <span class="math inline">\(+11\,368{,}75\)</span> € para cada.</p>
@@ -2588,10 +2588,10 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo compacto" style="width:36%;">
 <ul>
-<li><strong>Ana:</strong> 🏞️ e <span class="pos">+19 618,75 €</span> (recebe)</li>
-<li><strong>Berta:</strong> 🚗 e <span class="pos">+40 368,75 €</span> (recebe)</li>
-<li><strong>Carla:</strong> <span class="pos">+52 018,75 €</span> (recebe)</li>
-<li><strong>Daniela:</strong> 🏠 e <span class="neg">−112 006,25 €</span> (paga)</li>
+<li><strong>Ana:</strong> 🏞️ e <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+19\,618{,}75}}\)</span> € (recebe)</li>
+<li><strong>Berta:</strong> 🚗 e <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+40\,368{,}75}}\)</span> € (recebe)</li>
+<li><strong>Carla:</strong> <span class="math inline">\(\textcolor{#16A34A}{\mathbf{+52\,018{,}75}}\)</span> € (recebe)</li>
+<li><strong>Daniela:</strong> 🏠 e <span class="math inline">\(\textcolor{#DC2626}{\mathbf{-112\,006{,}25}}\)</span> € (paga)</li>
 </ul>
 <div class="fragment">
 <p>Confirma: o que a Ana, a Berta e a Carla recebem soma <span class="math inline">\(112\,006{,}25\)</span> ✔</p>
@@ -2848,8 +2848,8 @@ document.addEventListener('fullscreenchange', () => {
 </ul>
 <div class="fragment">
 <ul>
-<li>Célia: <span class="math inline">\(1550 - 2100 =\)</span> <span class="neg">−550</span></li>
-<li>Guilherme: <span class="math inline">\(1475 - 1400 =\)</span> <span class="pos">+75</span></li>
+<li>Célia: <span class="math inline">\(1550 - 2100 = \textcolor{#DC2626}{\mathbf{-550}}\)</span></li>
+<li>Guilherme: <span class="math inline">\(1475 - 1400 = \textcolor{#16A34A}{\mathbf{+75}}\)</span></li>
 </ul>
 </div>
 </div></div>
@@ -2933,8 +2933,8 @@ document.addEventListener('fullscreenchange', () => {
 </div><div class="column texto-passo" style="width:45%;">
 <p>Fundo: <span class="math inline">\(550 - 75 = 475\)</span> → <span class="math inline">\(+237{,}50\)</span> para cada.</p>
 <div class="destaque teal fragment">
-<p>O <strong>Guilherme</strong> fica com a viagem <strong>X</strong>: <span class="math inline">\(75 + 237{,}50 =\)</span> <span class="pos">+312,50 €</span> (recebe).</p>
-<p>A Célia fica com Y e Z: <span class="math inline">\(-550 + 237{,}50 =\)</span> <span class="neg">−312,50 €</span> (paga).</p>
+<p>O <strong>Guilherme</strong> fica com a viagem <strong>X</strong>: <span class="math inline">\(75 + 237{,}50 = \textcolor{#16A34A}{\mathbf{+312{,}50}}\)</span> € (recebe).</p>
+<p>A Célia fica com Y e Z: <span class="math inline">\(-550 + 237{,}50 = \textcolor{#DC2626}{\mathbf{-312{,}50}}\)</span> € (paga).</p>
 </div>
 </div></div>
 </section>
@@ -3250,9 +3250,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo compacto" style="width:40%;">
 <ul>
-<li>Dora: <span class="math inline">\(43 - 40 =\)</span> <span class="pos">+3</span></li>
-<li>Elsa: <span class="math inline">\(27 - 34 =\)</span> <span class="neg">−7</span></li>
-<li>Fernando: <span class="math inline">\(18 - 26 =\)</span> <span class="neg">−8</span></li>
+<li>Dora: <span class="math inline">\(43 - 40 = \textcolor{#16A34A}{\mathbf{+3}}\)</span></li>
+<li>Elsa: <span class="math inline">\(27 - 34 = \textcolor{#DC2626}{\mathbf{-7}}\)</span></li>
+<li>Fernando: <span class="math inline">\(18 - 26 = \textcolor{#DC2626}{\mathbf{-8}}\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(-3 + 7 + 8 = 12\)</span>, repartido em <span class="math inline">\(50\%\)</span>, <span class="math inline">\(30\%\)</span> e <span class="math inline">\(20\%\)</span>: <span class="math inline">\(6\)</span>; <span class="math inline">\(3{,}60\)</span>; <span class="math inline">\(2{,}40\)</span>.</p>
@@ -3358,9 +3358,9 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo compacto" style="width:40%;">
 <ul>
-<li><strong>Dora:</strong> 🎟️ e <span class="math inline">\(3 + 6 =\)</span> <span class="pos">+9 €</span> (recebe)</li>
-<li><strong>Elsa:</strong> 💿 e <span class="math inline">\(-7 + 3{,}60 =\)</span> <span class="neg">−3,40 €</span> (paga)</li>
-<li><strong>Fernando:</strong> 👕 e <span class="math inline">\(-8 + 2{,}40 =\)</span> <span class="neg">−5,60 €</span> (paga)</li>
+<li><strong>Dora:</strong> 🎟️ e <span class="math inline">\(3 + 6 = \textcolor{#16A34A}{\mathbf{+9}}\)</span> € (recebe)</li>
+<li><strong>Elsa:</strong> 💿 e <span class="math inline">\(-7 + 3{,}60 = \textcolor{#DC2626}{\mathbf{-3{,}40}}\)</span> € (paga)</li>
+<li><strong>Fernando:</strong> 👕 e <span class="math inline">\(-8 + 2{,}40 = \textcolor{#DC2626}{\mathbf{-5{,}60}}\)</span> € (paga)</li>
 </ul>
 <div class="fragment">
 <p>Confirma: <span class="math inline">\(9 - 3{,}40 - 5{,}60 = 0\)</span> ✔</p>
@@ -3583,8 +3583,8 @@ document.addEventListener('fullscreenchange', () => {
 </div>
 </div><div class="column texto-passo" style="width:45%;">
 <ul>
-<li>Alice: <span class="math inline">\(1500 - 800 =\)</span> <span class="pos">+700</span></li>
-<li>Beto: <span class="math inline">\(\left(1000 + \dfrac{x}{2}\right) - (1600 + x) =\)</span> <span class="neg"><span class="math inline">\(-\left(600 + \dfrac{x}{2}\right)\)</span></span></li>
+<li>Alice: <span class="math inline">\(1500 - 800 = \textcolor{#16A34A}{\mathbf{+700}}\)</span></li>
+<li>Beto: <span class="math inline">\(\left(1000 + \dfrac{x}{2}\right) - (1600 + x) = \textcolor{#DC2626}{\boldsymbol{-\left(600 + \dfrac{x}{2}\right)}}\)</span></li>
 </ul>
 <div class="fragment">
 <p>Fundo: <span class="math inline">\(-700 + 600 + \dfrac{x}{2} = \dfrac{x}{2} - 100\)</span> → <span class="math inline">\(+\left(\dfrac{x}{4} - 50\right)\)</span> para cada.</p>
