@@ -86,6 +86,14 @@ $palatino: "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "U
 .reveal .destaque { border: 2px solid $laranja; background: $laranja-claro; border-radius: 10px; padding: .4em .8em; margin: .4em 0; font-size: .9em; }
 .reveal .destaque.teal { border-color: $azul; background: $azul-claro; }
 .reveal .destaque.coral { border-color: $vermelho; background: $vermelho-claro; }
+// caixa do fundo comum (licitações), como uma tcolorbox com título em caixa ao centro
+.reveal .cofre { position: relative; border: 3px solid $azul; background: $azul-claro; border-radius: 10px;
+  padding: 1.1em .9em .45em; margin: 1.1em 0 .5em; font-size: .9em; }
+.reveal .cofre::before { content: "Fundo comum (cofre)"; position: absolute; top: 0; left: 50%; transform: translate(-50%, -55%);
+  background: $vermelho; color: #fff; font-weight: 700; font-size: .85em; line-height: 1.3; padding: .12em .7em;
+  border: 2px solid darken($vermelho, 12%); border-radius: 7px; white-space: nowrap; }
+.reveal .cofre > :first-child { margin-top: 0; }
+.reveal .cofre > :last-child { margin-bottom: 0; }
 
 .reveal .pergunta { font-size: 1.1em; font-weight: 700; color: $azul; text-align: center; margin-top: 1em; }
 .reveal .pequeno { font-size: .7em; }

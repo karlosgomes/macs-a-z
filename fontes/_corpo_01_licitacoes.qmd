@@ -126,13 +126,15 @@ $\textcolor{#16A34A}{\mathbf{+}}$ **recebe** do fundo comum (recebeu **menos** d
 ```
 :::
 ::: {.column width="42%" .texto-passo}
+::: {.cofre}
 Do ponto de vista do **fundo comum**:
 
 - o que o Afonso e a Beatriz pagam ($\textcolor{#DC2626}{\mathbf{-}}$) **entra**: $+100$, $+70$
 - o que o Carlos recebe ($\textcolor{#16A34A}{\mathbf{+}}$) **sai**: $-80$
 
 ::: {.fragment}
-Fundo: $100 + 70 - 80 = 90$ mil €
+$100 + 70 - 80 = 90$ mil €
+:::
 :::
 
 ::: {.destaque .teal .fragment}
@@ -502,8 +504,9 @@ Partes justas ($: 3$): $240 : 3 = 80$; $210 : 3 = 70$; $150 : 3 = 50$.
 - Bruno: $70 - 180 = \textcolor{#DC2626}{\mathbf{-110}}$
 - Carlos: $50 - 0 = \textcolor{#16A34A}{\mathbf{+50}}$
 
-::: {.fragment}
-Fundo: $60 + 110 - 50 = 120$ → $+40$ para cada.
+::: {.cofre .fragment}
+$60 + 110 - 50 = 120$\
+→ $+40$ para cada.
 :::
 :::
 :::
@@ -577,8 +580,9 @@ Partes justas: $1800 : 3 = 600$; $2250 : 3 = 750$; $1860 : 3 = 620$.
 - Bernardo: $750 - 1950 = \textcolor{#DC2626}{\mathbf{-1200}}$
 - Camila: $620 - 0 = \textcolor{#16A34A}{\mathbf{+620}}$
 
-::: {.fragment}
-Fundo: $-250 + 1200 - 620 = 330$ → $+110$ para cada.
+::: {.cofre .fragment}
+$-250 + 1200 - 620 = 330$\
+→ $+110$ para cada.
 :::
 :::
 :::
@@ -672,8 +676,9 @@ Porção justa ($: 4$): $41\,250$; $47\,000$; $40\,650$; $56\,625$.
 - Carla: $40\,650 - 0 = \textcolor{#16A34A}{\mathbf{+40\,650}}$
 - Daniela: $56\,625 - 180\,000 = \textcolor{#DC2626}{\mathbf{-123\,375}}$
 
-::: {.fragment}
-Fundo: $-8250 - 29\,000 - 40\,650 + 123\,375 = 45\,475$ → $+11\,368{,}75$ € para cada.
+::: {.cofre .fragment}
+$-8250 - 29\,000 - 40\,650 + 123\,375$\
+$= 45\,475$ → $+11\,368{,}75$ € para cada.
 :::
 :::
 :::
@@ -764,7 +769,10 @@ Parte justa do Guilherme: $2950 : 2 = 1475$.
 ```
 :::
 ::: {.column width="45%" .texto-passo}
-Fundo: $550 - 75 = 475$ → $+237{,}50$ para cada.
+::: {.cofre}
+$550 - 75 = 475$\
+→ $+237{,}50$ para cada.
+:::
 
 ::: {.destaque .teal .fragment}
 O **Guilherme** fica com a viagem **X**: $75 + 237{,}50 = \textcolor{#16A34A}{\mathbf{+312{,}50}}$ € (recebe).
@@ -825,8 +833,9 @@ A **porção justa** de cada um é a sua percentagem do valor global, e o **exce
 - Elsa: $27 - 34 = \textcolor{#DC2626}{\mathbf{-7}}$
 - Fernando: $18 - 26 = \textcolor{#DC2626}{\mathbf{-8}}$
 
-::: {.fragment}
-Fundo: $-3 + 7 + 8 = 12$, repartido em $50\%$, $30\%$ e $20\%$: $6$; $3{,}60$; $2{,}40$.
+::: {.cofre .fragment}
+$-3 + 7 + 8 = 12$\
+repartido em $50\%$, $30\%$ e $20\%$: $6$; $3{,}60$; $2{,}40$.
 :::
 :::
 :::
@@ -901,8 +910,9 @@ A Alice ficou com os bens 3 e 4, logo o Beto ficou com o 1 e o 2: $x \geq 700$ (
 - Alice: $1500 - 800 = \textcolor{#16A34A}{\mathbf{+700}}$
 - Beto: $\left(1000 + \dfrac{x}{2}\right) - (1600 + x) = \textcolor{#DC2626}{\boldsymbol{-\left(600 + \dfrac{x}{2}\right)}}$
 
-::: {.fragment}
-Fundo: $-700 + 600 + \dfrac{x}{2} = \dfrac{x}{2} - 100$ → $+\left(\dfrac{x}{4} - 50\right)$ para cada.
+::: {.cofre .fragment}
+$-700 + 600 + \dfrac{x}{2} = \dfrac{x}{2} - 100$\
+→ $+\left(\dfrac{x}{4} - 50\right)$ para cada.
 :::
 :::
 :::
