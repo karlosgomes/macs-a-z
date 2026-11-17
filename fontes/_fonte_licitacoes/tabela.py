@@ -254,11 +254,9 @@ P2_LINHAS = [
     ("bens", "Bens recebidos", 3, 3, {"Alice": "3 e 4: 800", "Beto": "1 e 2: " + _m("1600+x")}, None),
     ("ini", "Alocação provisória", 4, 4, {"Alice": '<span class="pos">+700</span>',
                                           "Beto": '<span class="neg">' + _m("-\\left(600+\\frac{x}{2}\\right)") + "</span>"}, None),
-    ("exc", "Excedente", 5, 5, {p: '<span class="pos">' + _m("+\\left(\\frac{x}{4}-50\\right)") + "</span>" for p in ("Alice", "Beto")}, None),
-    ("fin", "Alocação final", 6, None, {"Alice": '<span class="pos">' + _m("+\\left(650+\\frac{x}{4}\\right)") + "</span>",
-                                        "Beto": '<span class="neg">' + _m("-\\left(650+\\frac{x}{4}\\right)") + "</span>"}, None),
-    ("prop", "Com \\(x = 800\\)", 7, "✔", {"Alice": '<span class="pos"><b>+850</b></span>',
-                                            "Beto": '<span class="neg"><b>−850</b></span>'}, None),
+    ("exc", "Excedente", 5, 5, {p: '<span class="pos">+150</span>' for p in ("Alice", "Beto")}, None),
+    ("fin", "Alocação final", 6, None, {"Alice": '<span class="pos"><b>+850</b></span>',
+                                        "Beto": '<span class="neg"><b>−850</b></span>'}, None),
 ]
 # verificação numérica do problema 2
 _c = Caso(P2_JOG, [(1, "", ""), (2, "", ""), (3, "", ""), (4, "", "")],
