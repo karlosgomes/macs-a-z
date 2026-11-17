@@ -20,6 +20,7 @@ Livro de apresentações de MACS (10.º ano, currículo português), feito como 
 - **Multiplex:** não é usado, por decisão do utilizador. As apresentações são para projetar.
 - **Tabela de síntese sempre à esquerda**, com as linhas do passo em curso destacadas, e cálculos à direita, em todos os métodos.
 - **Licitações secretas (desde 2026-11-16):** ponto de vista do jogador, como no Tannenbaum: alocação provisória = parte justa − valor dos bens recebidos; valores sempre com sinal, [+]{.pos} verde = recebe, [−]{.neg} vermelho = paga; o excedente calcula-se do ponto de vista do **fundo** (os sinais trocam: quem tem − entra com +, quem tem + entra com −; ex.: «Fundo: 100 + 70 − 80 = 90»); a parte do excedente soma-se (+30) e a alocação final é provisória + excedente. Nos textos finais junta-se «(paga)»/«(recebe)». Nas contas ao lado das tabelas, o resultado colorido vai dentro do LaTeX: `\textcolor{#16A34A}{\mathbf{+80}}` / `\textcolor{#DC2626}{\mathbf{-100}}` (o MathJax não aceita `\textcolor[HTML]{…}`); nas tabelas, texto com `.pos`/`.neg`. A app Divisão Justa faz o mesmo. (O exame só pede «paga/recebe»; os critérios do IAVE não usam sinais.)
+- **Caixa do fundo:** os cálculos do fundo comum vão numa `::: {.cofre}` (estilo em `estilo.scss`: título «Fundo comum (cofre)» numa etiqueta vermelha ao centro do rebordo azul, como uma tcolorbox), com a conta partida em duas linhas se for comprida.
 - **Ajuste na Partilha:** $x$ é a fração que **passa** para o outro jogador.
 - **Capítulo novo** (por exemplo, partilha no caso contínuo, eleições, finanças):
   - um corpo `_corpo_…qmd` com `# … {#id .capitulo data-rotulo="2.1 · Resumo"}` e `# … · Problemas {#id-problemas .lista-problemas}`;
@@ -28,5 +29,5 @@ Livro de apresentações de MACS (10.º ano, currículo português), feito como 
 
 ## Publicação
 - **Repositório:** https://github.com/karlosgomes/macs-a-z (ramo `main`), com GitHub Pages a partir da raiz. Endereço: https://karlosgomes.github.io/macs-a-z/ (links por diapositivo: `#/lic-p3`).
-- **Publicar** = `publicar_site.sh` + `git commit` + `git push`. **Perguntar ao utilizador antes do push.**
+- **Publicar** = `publicar_site.sh` + `git commit` + `git push`. Se o `estilo.scss` mudou, o tema gerado muda de nome (`libs/revealjs/dist/theme/quarto-<hash>.css`): fazer `git add -A libs`, senão o site fica sem tema. **Perguntar ao utilizador antes do push.**
 - **Menu:** o item «MACS A...Z» está nos menus do weblog, do Matemática A...Z e das Apps de Matemática. Se o menu do weblog mudar, atualizar à mão `fontes/_ferramentas/site/barra.html`.
