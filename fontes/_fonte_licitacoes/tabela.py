@@ -27,10 +27,12 @@ def num(x):
 
 
 def acerto(x, zero="0"):
+    """x > 0: o jogador paga (internamente, bens − parte justa). Mostra-se do ponto de vista do jogador:
+    − (vermelho) paga, + (verde) recebe."""
     if x > 0:
-        return f'<span class="neg">paga {num(x)}</span>'
+        return f'<span class="neg">−{num(x)}</span>'
     if x < 0:
-        return f'<span class="pos">recebe {num(-x)}</span>'
+        return f'<span class="pos">+{num(-x)}</span>'
     return zero
 
 
@@ -76,14 +78,7 @@ class Caso:
         return getattr(self, "sep", "").join(e for b, _, e in self.bens if self.dono[b] == p)
 
     def ac(self, x, zero="0"):
-        """acerto: por extenso (paga/recebe) ou, nas tabelas largas, com sinal e cor"""
-        if not getattr(self, "acerto_curto", False):
-            return acerto(x, zero)
-        if x > 0:
-            return f'<span class="neg">−{num(x)}</span>'
-        if x < 0:
-            return f'<span class="pos">+{num(-x)}</span>'
-        return zero
+        return acerto(x, zero)
 
     def linhas(self):
         J, R = self.jog, self.rot
@@ -99,7 +94,7 @@ class Caso:
         L.append(("bens", R["bens"], 3, 3,
                   {p: (f"{self.emojis(p)} {num(self.val[p])}" if self.emojis(p) else "—") for p in J}, None))
         L.append(("ini", R["ini"], 4, 4, {p: self.ac(self.ini[p]) for p in J}, None))
-        L.append(("exc", R["exc"], 5, 5, {p: f"+{num(self.quotas[p] * self.E)}" for p in J}, None))
+        L.append(("exc", R["exc"], 5, 5, {p: f'<span class="pos">+{num(self.quotas[p] * self.E)}</span>' for p in J}, None))
         L.append(("fin", R["fin"], 6, None, {p: f"<b>{self.ac(self.fin[p], '<b>0</b>')}</b>" for p in J}, None))
         if not self.sem_prop:
             L.append(("prop", R["prop"], 7, "✔", {p: f"<b>{num(self.prop[p])}</b>" for p in J}, None))
@@ -257,13 +252,13 @@ P2_LINHAS = [
     ("total", "Total", 2, 2, {"Alice": "3000", "Beto": _m("2000+x")}, None),
     ("pj", "Parte justa", 2, None, {"Alice": "<b>1500</b>", "Beto": "<b>" + _m("1000+\\frac{x}{2}") + "</b>"}, None),
     ("bens", "Bens recebidos", 3, 3, {"Alice": "3 e 4: 800", "Beto": "1 e 2: " + _m("1600+x")}, None),
-    ("ini", "Alocação provisória", 4, 4, {"Alice": '<span class="pos">recebe 700</span>',
-                                          "Beto": '<span class="neg">paga ' + _m("600+\\frac{x}{2}") + "</span>"}, None),
-    ("exc", "Excedente", 5, 5, {"Alice": _m("+\\frac{x}{4}-50"), "Beto": _m("+\\frac{x}{4}-50")}, None),
-    ("fin", "Alocação final", 6, None, {"Alice": '<span class="pos">recebe ' + _m("650+\\frac{x}{4}") + "</span>",
-                                        "Beto": '<span class="neg">paga ' + _m("650+\\frac{x}{4}") + "</span>"}, None),
-    ("prop", "Com \\(x = 800\\)", 7, "✔", {"Alice": '<span class="pos"><b>recebe 850</b></span>',
-                                            "Beto": '<span class="neg"><b>paga 850</b></span>'}, None),
+    ("ini", "Alocação provisória", 4, 4, {"Alice": '<span class="pos">+700</span>',
+                                          "Beto": '<span class="neg">' + _m("-\\left(600+\\frac{x}{2}\\right)") + "</span>"}, None),
+    ("exc", "Excedente", 5, 5, {p: '<span class="pos">' + _m("+\\left(\\frac{x}{4}-50\\right)") + "</span>" for p in ("Alice", "Beto")}, None),
+    ("fin", "Alocação final", 6, None, {"Alice": '<span class="pos">' + _m("+\\left(650+\\frac{x}{4}\\right)") + "</span>",
+                                        "Beto": '<span class="neg">' + _m("-\\left(650+\\frac{x}{4}\\right)") + "</span>"}, None),
+    ("prop", "Com \\(x = 800\\)", 7, "✔", {"Alice": '<span class="pos"><b>+850</b></span>',
+                                            "Beto": '<span class="neg"><b>−850</b></span>'}, None),
 ]
 # verificação numérica do problema 2
 _c = Caso(P2_JOG, [(1, "", ""), (2, "", ""), (3, "", ""), (4, "", "")],
