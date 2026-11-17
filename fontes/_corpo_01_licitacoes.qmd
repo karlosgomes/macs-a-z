@@ -126,7 +126,7 @@ Para cada jogador: **parte justa − valor dos bens recebidos**.
 ```
 :::
 ::: {.column width="42%" .texto-passo}
-Do ponto de vista do **fundo comum**, os sinais trocam:
+Do ponto de vista do **fundo comum**:
 
 - o que o Afonso e a Beatriz pagam ([−]{.neg}) **entra**: $+100$, $+70$
 - o que o Carlos recebe ([+]{.pos}) **sai**: $-80$
