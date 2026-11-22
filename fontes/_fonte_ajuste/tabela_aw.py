@@ -2,7 +2,10 @@
 
 Uso: python3 tabela_aw.py  -> lê _02_ajuste_na_partilha_modelo.qmd e escreve ../02_ajuste_na_partilha.qmd
 No modelo, {{A:caso:estados}} é substituído pela tabela do «caso» com as linhas dos «estados» destacadas
-(um número, uma lista 3,4 ou um intervalo 3-6). Estados das linhas:
+(um número, uma lista 3,4 ou um intervalo 3-6). Opcional: {{A:caso:estados:frag}}, com frag = «3-5@1;6@2»:
+as linhas desses estados só aparecem com o fragmento de índice 1 (2, …), que no modelo é o fragmento da
+coluna da direita com o cálculo que decide (`::: {.fragment fragment-index=1}`). Assim a tabela não mostra
+o item a partilhar antes de o cálculo à direita o decidir (pedido do utilizador, 2026-11-22). Estados das linhas:
   1 pontos · 2 1.ª fase (totais) · 3 ordem do ajuste (razões) · 4 transferências por inteiro (testes)
   5 equação do ajuste · 6 partilha final e pontos finais · 7 parte do outro (inveja) · 8 linha extra
 Convenção: x = fração do item dividido que PASSA do vencedor inicial para o outro jogador:
@@ -136,13 +139,24 @@ class Caso:
         return L
 
 
-def render(caso, estados, unidade="(pontos)"):
+_nfrag = __import__("itertools").count(1)
+
+
+def render(caso, estados, frag=None, unidade="(pontos)"):
     S = set(estados); A, B = caso.jog
+    fidx = {}                                  # estado -> índice do fragmento em que a linha aparece
+    for grupo in (frag or "").split(";"):
+        if grupo:
+            est, i = grupo.split("@")
+            for e in globals()["estados"](est):
+                fidx[e] = int(i)
     longa = " longa" if len(caso.bens) >= 6 else ""
     h = [f'<div class="tabela-metodo aw{longa}" data-id="tabmetodo"><table>',
          f'<tr><th></th><th>{unidade}</th><th>{A}</th><th>{B}</th></tr>']
     for r in caso.linhas():
         est = r["est"]
+        # linha-fragmento: data-id único (nem igual ao do diapositivo anterior), para o auto-animate não a mostrar logo
+        sf = f"-f{next(_nfrag)}" if est in fidx else ""
         cls = "atual" if est in S else ("feito" if est < min(S) else "futuro")
         badge = f'<span class="npasso">{r["passo"]}</span>' if r.get("passo") is not None else ""
         visivel = est <= max(S)
@@ -155,9 +169,10 @@ def render(caso, estados, unidade="(pontos)"):
                 v = r["cel"][q] if visivel else "&nbsp;"
                 if visivel and q == caso.jog[1] and r.get("nota"):
                     v += f'<span class="nota">{r["nota"]}</span>'
-                tds.append(f'<td{" class=\"max\"" if mx else ""} data-id="c-{r["id"]}-{q}">{v}</td>')
+                tds.append(f'<td{" class=\"max\"" if mx else ""} data-id="c-{r["id"]}-{q}{sf}">{v}</td>')
             corpo = "".join(tds)
-        h.append(f'<tr class="{cls}" data-id="r-{r["id"]}"><td class="colpasso">{badge}</td>'
+        fr = f' fragment" data-fragment-index="{fidx[est]}' if est in fidx else ""
+        h.append(f'<tr class="{cls}{fr}" data-id="r-{r["id"]}{sf}"><td class="colpasso">{badge}</td>'
                  f'<td class="rot">{r["rot"]}</td>{corpo}</tr>')
     h.append("</table></div>")
     return "```{=html}\n" + "".join(h) + "\n```"
@@ -214,7 +229,8 @@ def estados(s):
 if __name__ == "__main__":
     aqui = pathlib.Path(__file__).parent
     modelo = (aqui / "_02_ajuste_na_partilha_modelo.qmd").read_text()
-    saida = re.sub(r"\{\{A:(\w+):([\d,\-]+)\}\}", lambda mm: render(CASOS[mm.group(1)], estados(mm.group(2))), modelo)
+    saida = re.sub(r"\{\{A:(\w+):([\d,\-]+)(?::([\d,\-@;]+))?\}\}",
+                   lambda mm: render(CASOS[mm.group(1)], estados(mm.group(2)), mm.group(3)), modelo)
     assert "{{A:" not in saida
     (aqui.parent / "_corpo_02_ajuste.qmd").write_text(saida)
     for k, c in CASOS.items():

@@ -96,7 +96,7 @@ Começa-se pela **menor razão** (o 🏢): é o bem que **custa menos** à Madal
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:intro:4}}
+{{A:intro:4:4@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Se o 🏢 passasse **todo** para o Gonçalo:
@@ -104,7 +104,7 @@ Se o 🏢 passasse **todo** para o Gonçalo:
 - Madalena: $80 - 30 = 50$
 - Gonçalo: $60 + 20 = 80$
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 Agora seria o Gonçalo a ficar com mais! 😬 Então o apartamento vai ser **dividido**.
 :::
 :::
@@ -114,14 +114,14 @@ Agora seria o Gonçalo a ficar com mais! 😬 Então o apartamento vai ser **div
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:intro:5}}
+{{A:intro:5:5@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Seja $x$ a fração do 🏢 que **passa** para o Gonçalo:
 
 $$\underbrace{80 - 30x}_{\text{Madalena}} = \underbrace{60 + 20x}_{\text{Gonçalo}}$$
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 $$50x = 20 \iff x = \frac{2}{5}$$
 
 Passam $\frac{2}{5}$ do apartamento para o Gonçalo; a Madalena fica com $\frac{3}{5}$.
@@ -133,13 +133,13 @@ Passam $\frac{2}{5}$ do apartamento para o Gonçalo; a Madalena fica com $\frac{
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:intro:6,7}}
+{{A:intro:6,7:7@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 - **Madalena:** 🐈 e $\frac35$ do 🏢 → $80 - 30 \times \frac25 = \mathbf{68}$
 - **Gonçalo:** ⛵, 🖼️ e $\frac25$ do 🏢 → $60 + 20 \times \frac25 = \mathbf{68}$
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 **Equitativa** (68 = 68) e **livre de inveja**: para cada um, a parte do outro vale só 32.
 :::
 
@@ -235,17 +235,17 @@ Quem conhece os pontos do outro pode tirar partido disso (**Problema 5**).
 
 ::: {.columns}
 ::: {.column width="60%"}
-{{A:camp:2-6}}
+{{A:camp:2-6:3-5@1;6@2}}
 :::
 ::: {.column width="40%" .texto-passo .compacto}
 Brams e Taylor aplicaram o método, **à posteriori**, às negociações de paz entre **Israel** e o **Egito** (pontos estimados).
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 O Egito (75) cede a Israel (60) parte do 🏜️ Sinai, a menor razão ($\frac{55}{35}$):
 $$75 - 55x = 60 + 35x \iff x = \tfrac{1}{6}$$
 :::
 
-::: {.destaque .teal .fragment}
+::: {.destaque .teal .fragment fragment-index=2}
 Cada um obtém $\approx 65{,}8$ pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.
 :::
 :::
@@ -427,12 +427,12 @@ c) Determina a partilha final e o número de pontos de cada um.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p1:2-4}}
+{{A:p1:2-4:3,4@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 **a)** Irmã: 🐈 e 🦜 → $60$; irmão: 🐕 e 🦎 → $80$. O **irmão** é o vencedor inicial.
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 **b)** Razões: 🐕 $\frac{50}{30} \approx 1{,}67$; 🦎 $\frac{30}{10} = 3$. Começa-se pelo cão; todo: $30$ contra $90$ → inverte. **Divide-se o cão.**
 :::
 :::
@@ -442,13 +442,13 @@ c) Determina a partilha final e o número de pontos de cada um.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p1:5,6}}
+{{A:p1:5,6:6@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 $x$ = fração do 🐕 que passa para a irmã:
 $$80 - 50x = 60 + 30x \iff x = \frac{1}{4}$$
 
-::: {.destaque .teal .fragment}
+::: {.destaque .teal .fragment fragment-index=1}
 **Irmã:** 🐈, 🦜 e $\frac14$ do 🐕 → $67{,}5$ pontos.
 **Irmão:** 🦎 e $\frac34$ do 🐕 → $67{,}5$ pontos.
 :::
@@ -477,14 +477,14 @@ b) Determina a partilha final.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p2:2,3}}
+{{A:p2:2,3:3@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Sem o 🚗: marido $55$ (🏠 🚤 📺 🔊), esposa $40$ (🛖).
 
 O 🚗 (25 = 25) vai para quem tem **menos** pontos: a **esposa**, que fica com $65$ e passa a ser a vencedora inicial.
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 Razões: 🚗 $\frac{25}{25} = 1$; 🛖 $\frac{40}{20} = 2$.
 :::
 :::
@@ -494,13 +494,13 @@ Razões: 🚗 $\frac{25}{25} = 1$; 🛖 $\frac{40}{20} = 2$.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p2:4-6}}
+{{A:p2:4-6:6@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Todo o 🚗 para o marido: $40$ contra $80$ → inverte. Divide-se o automóvel:
 $$65 - 25x = 55 + 25x \iff x = \frac{1}{5}$$
 
-::: {.destaque .teal .fragment}
+::: {.destaque .teal .fragment fragment-index=1}
 Cada um fica com **60** pontos. Se o 🚗 tivesse ido para o marido na 1.ª fase, o resultado final seria o mesmo.
 :::
 :::
@@ -525,12 +525,12 @@ O Leonido e o Marco são sócios e vão lançar um produto. Distribuíram 100 po
 
 ::: {.columns}
 ::: {.column width="60%"}
-{{A:p3:2,3}}
+{{A:p3:2,3:3@1}}
 :::
 ::: {.column width="40%" .texto-passo .compacto}
 Leonido: 📣 🎨 🛠️ → $74$; Marco: as outras quatro → $38$.
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 Razões dos itens do Leonido, por ordem crescente: 🎨 $1{,}125$ < 🛠️ $\approx 1{,}143$ < 📣 $1{,}25$.
 :::
 :::
@@ -540,13 +540,13 @@ Razões dos itens do Leonido, por ordem crescente: 🎨 $1{,}125$ < 🛠️ $\ap
 
 ::: {.columns}
 ::: {.column width="60%"}
-{{A:p3:4,5}}
+{{A:p3:4,5:5@1}}
 :::
 ::: {.column width="40%" .texto-passo .compacto}
 - 🎨 todo para o Marco: $56$ contra $54$ → **passa** ✔
 - 🛠️ todo: $40$ contra $68$ → inverte ✘
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 Divide-se o protótipo:
 $$56 - 16x = 54 + 14x \iff x = \frac{1}{15}$$
 :::
@@ -592,12 +592,12 @@ b) Que percentagem do piano fica com cada um?
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p4:2-4}}
+{{A:p4:2-4:4@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 1.ª fase: Paulo $45$; Rosa $81$. Razões: 🎹 $1{,}15$ < 🏺 $1{,}2$ < 🏖️ $2{,}8$.
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 **Sim.** Passando o 🎹 **todo**, o Paulo ficaria com $65$ e a Rosa com $58$: a situação inverte-se. O **piano** tem de ser partilhado.
 :::
 :::
@@ -607,13 +607,13 @@ b) Que percentagem do piano fica com cada um?
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p4:5,6}}
+{{A:p4:5,6:6@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 $x$ = fração do 🎹 que passa para o Paulo:
 $$\begin{aligned} 81 - 23x &= 45 + 20x \\ \iff x &= \frac{36}{43} \approx 0{,}837 \end{aligned}$$
 
-::: {.destaque .teal .fragment}
+::: {.destaque .teal .fragment fragment-index=1}
 Paulo: **≈ 83,7 %** do piano; Rosa: **≈ 16,3 %**. Cada um fica com $\approx 61{,}7$ pontos.
 :::
 :::
@@ -653,13 +653,13 @@ Cada um fica com o quadro de que mais gosta: **75 = 75**. Os totais são iguais:
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p5m:2-8}}
+{{A:p5m:2-8:8@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Com os pontos **declarados**, a Ana ganha o Matisse ($26 > 25$) e o Bruno é o vencedor inicial ($75$):
 $$\begin{aligned} 75 - 75x &= 26 + 74x \\ \iff x &= \frac{49}{149} \approx 0{,}33 \end{aligned}$$
 
-::: {.destaque .coral .fragment}
+::: {.destaque .coral .fragment fragment-index=1}
 Em pontos **verdadeiros**, a Ana fica com $75 + 25 \times \frac{49}{149} \approx 83{,}2$ (em vez de 75); o Bruno desce para $\approx 50{,}3$.
 :::
 :::
@@ -669,12 +669,12 @@ Em pontos **verdadeiros**, a Ana fica com $75 + 25 \times \frac{49}{149} \approx
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p5a:2-8}}
+{{A:p5a:2-8:8@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Declarações: Ana 26 / 74, Bruno 74 / 26. A Ana fica com o **Picasso** e o Bruno com o **Matisse** (74 = 74 declarados).
 
-::: {.destaque .coral .fragment}
+::: {.destaque .coral .fragment fragment-index=1}
 Em pontos verdadeiros, cada um fica só com **25**! A estratégia honesta garante sempre **pelo menos 50 pontos**.
 :::
 :::
