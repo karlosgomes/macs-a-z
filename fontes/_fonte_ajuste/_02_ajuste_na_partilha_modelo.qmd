@@ -235,7 +235,7 @@ Quem conhece os pontos do outro pode tirar partido disso (**Problema 5**).
 
 ::: {.columns}
 ::: {.column width="60%"}
-{{A:camp:2-6:3-5@1;6@2}}
+{{A:camp:2-7:3-5@1;6@2;7@3}}
 :::
 ::: {.column width="40%" .texto-passo .compacto}
 Brams e Taylor aplicaram o método, **à posteriori**, às negociações de paz entre **Israel** e o **Egito** (pontos estimados).
@@ -247,6 +247,10 @@ $$75 - 55x = 60 + 35x \iff x = \tfrac{1}{6}$$
 
 ::: {.destaque .teal .fragment fragment-index=2}
 Cada um obtém $\approx 65{,}8$ pontos. No acordo real, o Egito recuperou o Sinai e Israel manteve garantias de segurança.
+:::
+
+::: {.fragment fragment-index=3}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 65{,}8 \approx 34{,}2$.
 :::
 :::
 :::
@@ -442,7 +446,7 @@ c) Determina a partilha final e o número de pontos de cada um.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p1:5,6:6@1}}
+{{A:p1:5-7:6@1;7@2}}
 :::
 ::: {.column width="42%" .texto-passo}
 $x$ = fração do 🐕 que passa para a irmã:
@@ -451,6 +455,10 @@ $$80 - 50x = 60 + 30x \iff x = \frac{1}{4}$$
 ::: {.destaque .teal .fragment fragment-index=1}
 **Irmã:** 🐈, 🦜 e $\frac14$ do 🐕 → $67{,}5$ pontos.
 **Irmão:** 🦎 e $\frac34$ do 🐕 → $67{,}5$ pontos.
+:::
+
+::: {.fragment fragment-index=2}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 67{,}5 = 32{,}5$, menos do que a sua.
 :::
 :::
 :::
@@ -494,7 +502,7 @@ Razões: 🚗 $\frac{25}{25} = 1$; 🛖 $\frac{40}{20} = 2$.
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p2:4-6:6@1}}
+{{A:p2:4-7:6@1;7@2}}
 :::
 ::: {.column width="42%" .texto-passo}
 Todo o 🚗 para o marido: $40$ contra $80$ → inverte. Divide-se o automóvel:
@@ -502,6 +510,10 @@ $$65 - 25x = 55 + 25x \iff x = \frac{1}{5}$$
 
 ::: {.destaque .teal .fragment fragment-index=1}
 Cada um fica com **60** pontos. Se o 🚗 tivesse ido para o marido na 1.ª fase, o resultado final seria o mesmo.
+:::
+
+::: {.fragment fragment-index=2}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 60 = 40$, menos do que a sua.
 :::
 :::
 :::
@@ -557,7 +569,7 @@ $$56 - 16x = 54 + 14x \iff x = \frac{1}{15}$$
 
 ::: {.columns}
 ::: {.column width="60%"}
-{{A:p3:6}}
+{{A:p3:6,7:7@1}}
 :::
 ::: {.column width="40%" .texto-passo .compacto}
 ::: {.destaque .teal}
@@ -566,6 +578,10 @@ $$56 - 16x = 54 + 14x \iff x = \frac{1}{15}$$
 **Marco:** as restantes atividades, o 🎨 e $\frac{1}{15}$ de 🛠️.
 
 Cada um: $\frac{824}{15} \approx 54{,}9$ pontos.
+:::
+
+::: {.fragment fragment-index=1}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 54{,}9 \approx 45{,}1$, menos do que a sua.
 :::
 :::
 :::
@@ -607,7 +623,7 @@ b) Que percentagem do piano fica com cada um?
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p4:5,6:6@1}}
+{{A:p4:5-7:6@1;7@2}}
 :::
 ::: {.column width="42%" .texto-passo}
 $x$ = fração do 🎹 que passa para o Paulo:
@@ -615,6 +631,10 @@ $$\begin{aligned} 81 - 23x &= 45 + 20x \\ \iff x &= \frac{36}{43} \approx 0{,}83
 
 ::: {.destaque .teal .fragment fragment-index=1}
 Paulo: **≈ 83,7 %** do piano; Rosa: **≈ 16,3 %**. Cada um fica com $\approx 61{,}7$ pontos.
+:::
+
+::: {.fragment fragment-index=2}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 61{,}7 \approx 38{,}3$, menos do que a sua.
 :::
 :::
 :::
@@ -642,10 +662,14 @@ c) E se o Bruno também mentir, declarando **74** e **26**?
 
 ::: {.columns}
 ::: {.column width="58%"}
-{{A:p5h:2-6}}
+{{A:p5h:2-7:7@1}}
 :::
 ::: {.column width="42%" .texto-passo}
 Cada um fica com o quadro de que mais gosta: **75 = 75**. Os totais são iguais: **não há ajuste**.
+
+::: {.fragment fragment-index=1}
+**Livre de inveja:** para cada um, a parte do outro vale $100 - 75 = 25$.
+:::
 :::
 :::
 
