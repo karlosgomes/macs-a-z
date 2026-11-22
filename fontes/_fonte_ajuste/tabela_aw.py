@@ -108,7 +108,7 @@ class Caso:
         L = []
         for i, (b, rot, e) in enumerate(self.bens):
             tag = " <small>(empate)</small>" if b in self.empates else ""
-            L.append(dict(id=b, rot=rot + tag, est=1, passo=1 if i == 0 else None,
+            L.append(dict(id=b, rot=rot + tag, rotf=rot, est=1, passo=1 if i == 0 else None,
                           cel={A: str(self.pts[A][b]), B: str(self.pts[B][b])},
                           max={q: self.dono[b] == q for q in self.jog}))
         nota = "" if self.dador is None else f" → dador: {self.dador}"
@@ -122,13 +122,13 @@ class Caso:
             L.append(dict(id="ordem", rot="Ordem (razão)", est=3, passo=3, span=ordem))
             for k, (b, tg, tr, ok) in enumerate(self.testes):
                 cel = {G: num(tg), R: num(tr)}
-                L.append(dict(id=f"t{k}", rot=f"Passar {self.emo[b]} todo?",
+                L.append(dict(id=f"t{k}", rot=f"Passar {self.emo[b]} todo?", rotf="Passar … todo?",
                               est=4, passo=4 if k == 0 else None, cel=cel,
                               nota=" ✔ passa" if ok else " ✘ inverte"))
             if self.dividido is not None:
                 b = self.dividido
                 eq = m(f"{num(self.V)}-{self.v}x={num(self.P)}+{self.p}x") + " ⟹ " + m("x=") + frac(self.x)
-                L.append(dict(id="eq", rot=f"Divide-se {self.emo[b]}", est=5, passo=5, span=eq))
+                L.append(dict(id="eq", rot=f"Divide-se {self.emo[b]}", rotf="Divide-se …", est=5, passo=5, span=eq))
         L.append(dict(id="fica", rot="Fica com", est=6, passo=6, cel={q: self.fica(q) for q in self.jog}))
         L.append(dict(id="final", rot="Pontos finais", est=6, passo=None,
                       cel={q: f"<b>{num(self.tf[q])}</b>" for q in self.jog}))
@@ -160,6 +160,9 @@ def render(caso, estados, frag=None, unidade="(pontos)"):
         cls = "atual" if est in S else ("feito" if est < min(S) else "futuro")
         badge = f'<span class="npasso">{r["passo"]}</span>' if r.get("passo") is not None else ""
         visivel = est <= max(S)
+        # o rótulo de uma linha ainda por fazer não pode revelar o item (pedido do utilizador, 2026-11-22):
+        # «Passar … todo?», «Divide-se …»; o «(empate)» só a partir da 1.ª fase
+        rot = r["rot"] if visivel and not (est == 1 and max(S) < 2) else r.get("rotf", r["rot"])
         if "span" in r:
             corpo = f'<td colspan="2" class="span">{r["span"] if visivel else "&nbsp;"}</td>'
         else:
@@ -173,7 +176,7 @@ def render(caso, estados, frag=None, unidade="(pontos)"):
             corpo = "".join(tds)
         fr = f' fragment" data-fragment-index="{fidx[est]}' if est in fidx else ""
         h.append(f'<tr class="{cls}{fr}" data-id="r-{r["id"]}{sf}"><td class="colpasso">{badge}</td>'
-                 f'<td class="rot">{r["rot"]}</td>{corpo}</tr>')
+                 f'<td class="rot">{rot}</td>{corpo}</tr>')
     h.append("</table></div>")
     return "```{=html}\n" + "".join(h) + "\n```"
 
