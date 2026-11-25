@@ -204,7 +204,8 @@ $p1: $azul; $p2: $vermelho; $p3: $laranja; $p4: $violeta;
 .reveal .indice-problemas { width: 1150px; margin: 10px auto 0; font-size: 1.05em; line-height: 1.8; border-left: 5px solid $azul; padding-left: 24px; }
 .reveal .indice-problemas .rotulo-cap { display: block; color: $cinza; font-size: .8em; letter-spacing: .06em; text-transform: uppercase; }
 .reveal .indice a, .reveal .indice-problemas a { color: $link-color; }
-.reveal a.voltar { position: absolute; top: -6px; right: 0; font-size: .45em; color: $cinza; z-index: 10; }
+.reveal a.voltar { position: absolute; top: -6px; right: 0; font-size: .54em; font-weight: 600; color: #EE6A24; z-index: 10; }   // mais visível, como no Matemática A...Z (2026-11-26)
+.reveal a.voltar:hover { color: #c2410c; text-decoration: underline; }
 .reveal .capitulo .en { font-style: italic; color: $cinza; font-size: .6em; display: block; }
 
 // ---------- listas de problemas: como no Matemática A...Z (título ao centro, «Ver o resumo teórico», duas colunas) ----------
